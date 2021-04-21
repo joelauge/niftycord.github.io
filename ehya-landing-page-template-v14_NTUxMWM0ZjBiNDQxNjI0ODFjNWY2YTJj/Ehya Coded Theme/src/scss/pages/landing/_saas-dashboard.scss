@@ -1,0 +1,509 @@
+body.landing-saas-dashboard {
+  .section-title {
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 1.3;
+    letter-spacing: 0.2px;
+    color: #183b56;
+  }
+
+  .section-desc {
+    font-size: 18px;
+    line-height: 1.78;
+    color: #5a7184;
+  }
+}
+
+header.landing-saas-dashboard {
+
+  .hero {
+    padding-top: 78px;
+
+    .hero-title {
+      font-size: 56px;
+      font-weight: bold;
+      line-height: 1.21;
+      letter-spacing: 0.2px;
+      text-align: center;
+      color: #183b56;
+      width: 557px;
+    }
+
+    .section-desc {
+      width: 555px;
+    }
+
+    .hero-image {
+      width: 1177px;
+
+      img {
+        margin-bottom: -480px; //-447, -480
+        margin-left: -34px;
+      }
+    }
+
+    .btn-black:hover {
+      color: #ffffff;
+    }
+  }
+}
+
+.landing-saas-dashboard-partners {
+  padding-top: 562px;
+
+  .container {
+    border-bottom: 1px solid #e3e7ed;
+  }
+
+  .flex {
+    padding: 0 15px;
+  }
+}
+
+.landing-saas-dashboard-advantage {
+  .advantage-text-container {
+    width: 485px;
+
+    .section-title {
+      margin-right: 95px;
+    }
+
+    .flex {
+      >div {
+        font-size: 14px;
+        line-height: 1.71;
+        color: #5a7184;
+      }
+    }
+  }
+
+  .advantage-image {
+    width: 575px;
+    height: 401px;
+  }
+
+  .advantage-big-image {
+    width: 945px;
+    height: 384px;
+  }
+
+  .flex-row-reverse {
+    img {
+      margin-left: -40px;
+    }
+  }
+
+  .dashed-borders {
+    width: 485px;
+    height: 1px;
+    background-image: url(../../../dist/assets/images/pattern/dashed-border.svg);
+    background-repeat: repeat-x;
+    background-size: 9px 1px;
+  }
+
+  .audience-activity-left {
+    width: 419px;
+  }
+
+  .audience-number {
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 1.3;
+    letter-spacing: 0.2px;
+    color: #faad13;
+  }
+
+  .audience-activity {
+    font-size: 14px;
+    line-height: 1.71;
+    color: #5a7184;
+  }
+}
+
+.landing-saas-dashboard-hashtag {
+  .container {
+    border-bottom: solid 1px #e3e7ed;
+  }
+
+  .section-desc {
+    width: 616px;
+  }
+
+  .bg-white {
+    padding: {
+      top: 34px;
+      bottom: 48px;
+    }
+  }
+
+  .hashtag-title {
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1.33;
+    letter-spacing: 0.2px;
+    color: #183b56;
+  }
+
+  .hashtag-desc {
+    font-size: 16px;
+    line-height: 1.75;
+    color: #5a7184;
+  }
+
+  .col-md-6:first-child {
+    img {
+      width: 358px;
+      height: 251px;
+      margin-bottom: 41px;
+    }
+
+    .hashtag-desc {
+      width: 321px;
+    }
+  }
+
+  .col-md-6:nth-child(2) {
+    img {
+      width: 320px;
+      height: 246px;
+      margin-bottom: 38px;
+    }
+
+    .hashtag-desc {
+      width: 357px;
+    }
+  }
+
+  .col-md-6:nth-child(3) {
+    img {
+      width: 378px;
+      height: 273px;
+      margin-bottom: 18px;
+    }
+
+    .hashtag-desc {
+      width: 340px;
+    }
+  }
+
+  .col-md-6:last-child {
+    img {
+      width: 385px;
+      height: 262px;
+      margin-bottom: 30px;
+    }
+
+    .hashtag-desc {
+      width: 342px;
+    }
+  }
+}
+
+.landing-saas-dashboard-reviews {
+  .carousel-container {
+    margin-left: 51px;
+    margin-right: -149px;
+  }
+
+  .review-card-box {
+    padding: 0 15px;
+  }
+
+  .review-card {
+    width: 555px;
+    border: solid 1px #e5eaf4;
+    box-shadow: 0 15px 35px 0 rgba(0, 0, 0, 0.05);
+  }
+
+  img {
+    width: 56px !important;
+  }
+
+  .star-gray {
+    color: #e0e0e0;
+  }
+
+  .review-comment {
+    font-size: 20px;
+    line-height: 1.8;
+    color: #183b56;
+  }
+
+  .review-author {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: 0.2px;
+    color: #183b56;
+  }
+
+  .review-position {
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.75;
+    letter-spacing: normal;
+    color: #5a7184;
+  }
+
+  .btn-container {
+    i:hover {
+      color: #183b56 !important;
+      border-color: #183b56 !important;
+      cursor: pointer;
+    }
+  }
+}
+
+.landing-saas-dashboard-social {
+  background-image: url(../../../dist/assets/images/landing-saas-dashboard/bg-left.svg),
+    url(../../../dist/assets/images/landing-saas-dashboard/bg-right.svg);
+  background-position: left 184px, right 144px;
+  background-repeat: no-repeat;
+
+  padding: {
+    top: 232px;
+    bottom: 207px;
+  }
+
+  .section-title {
+    width: 464px;
+  }
+}
+
+@media (min-width: $breakpoints-xl - 120px) {
+  .landing-saas-dashboard-social {
+    background-position: -5% 184px, 105% 144px;
+  }
+}
+
+// Mobile-Tab devices (tablets, < 1200px)
+@media (min-width: $breakpoints-lg) and (max-width: $breakpoints-xl - 0.02px) {
+  .landing-saas-dashboard-social {
+    background-size: 25%;
+    background-position: left 184px, right 144px;
+  }
+}
+
+@media (max-width: ($breakpoints-lg - 0.02px)) {
+  .landing-saas-dashboard-social {
+    background-position: -35% center, 135% center;
+  }
+
+  .landing-saas-dashboard-partners {
+    padding-top: 333px;
+  }
+
+  .landing-saas-dashboard-advantage {
+    .md-absolute {
+      bottom: 0;
+    }
+
+    .advantage-big-image+div {
+      .flex {
+        gap: 56px;
+      }
+    }
+  }
+
+  .landing-saas-dashboard-hashtag {
+    .hashtag-desc {
+      font-size: 10px;
+    }
+  }
+
+  .landing-saas-dashboard-reviews {
+    .review-card {
+      width: 388px;
+    }
+
+    .fa-star {
+      font-size: 14px !important;
+    }
+
+    img {
+      width: 39px !important;
+    }
+  }
+}
+
+@media (max-width: ($breakpoints-lg - 57px)) {
+  .landing-saas-dashboard-social {
+    background-position: -40% center, 140% center;
+  }
+}
+
+@media (max-width: ($breakpoints-lg - 82px)) {
+  .landing-saas-dashboard-social {
+    background-position: -50% center, 150% center;
+  }
+}
+
+@media (max-width: ($breakpoints-lg - 132px)) {
+  .landing-saas-dashboard-social {
+    background-position: -60% center, 160% center;
+  }
+}
+
+@media (max-width: ($breakpoints-lg - 162px)) {
+  .landing-saas-dashboard-social {
+    background-position: -70% center, 170% center;
+  }
+}
+
+@media (max-width: ($breakpoints-lg - 202px)) {
+  .landing-saas-dashboard-social {
+    background-position: -80% center, 180% center;
+  }
+}
+
+@media (max-width: ($breakpoints-md - 0.02px)) {
+  .sm-absolute {
+    bottom: 0;
+  }
+
+  .landing-saas-dashboard-hashtag {
+    .row {
+      row-gap: 30px;
+    }
+  }
+
+  .landing-saas-dashboard-social {
+    background-position: -100% center, 200% center;
+  }
+}
+
+@media (max-width: ($breakpoints-md - 58px)) {
+  .landing-saas-dashboard-social {
+    background-position: -120% center, 220% center;
+  }
+}
+
+@media (max-width: ($breakpoints-md - 98px)) {
+  .landing-saas-dashboard-social {
+    background-position: -140% center, 240% center;
+  }
+}
+
+@media (max-width: ($breakpoints-md - 128px)) {
+  .landing-saas-dashboard-social {
+    background-position: -160% center, 260% center;
+  }
+}
+
+@media (max-width: ($breakpoints-md - 148px)) {
+  .landing-saas-dashboard-social {
+    background-position: -180% center, 280% center;
+  }
+}
+
+@media (max-width: ($breakpoints-md - 168px)) {
+  .landing-saas-dashboard-social {
+    background-position: -200% center, 300% center;
+  }
+}
+
+@media (max-width: ($breakpoints-md - 188px)) {
+  .landing-saas-dashboard-social {
+    background-position: -250% center, 350% center;
+  }
+}
+
+@media (max-width: ($breakpoints-sm - 0.02px)) {
+  header.landing-saas-dashboard {
+    .hero-image {
+      img {
+        margin-bottom: -40% !important;
+      }
+    }
+  }
+
+  .landing-saas-dashboard-partners {
+    padding-top: 50%;
+
+    .flex {
+      row-gap: 33px;
+    }
+  }
+
+  .landing-saas-dashboard-advantage {
+    .advantage-big-image+div {
+      .flex {
+        gap: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: ($breakpoints-sm - 30px)) {
+  .landing-saas-dashboard-social {
+    background-position: -280% center, 380% center;
+  }
+}
+
+@media (max-width: ($breakpoints-sm - 40px)) {
+  .landing-saas-dashboard-social {
+    background-position: -310% center, 410% center;
+  }
+}
+
+@media (max-width: ($breakpoints-sm - 55px)) {
+  .landing-saas-dashboard-social {
+    background-position: -340% center, 470% center;
+  }
+}
+
+@media (max-width: ($breakpoints-sm - 70px)) {
+  .landing-saas-dashboard-social {
+    background-position: -370% center, 530% center;
+  }
+}
+
+@media (max-width: ($breakpoints-sm - 70px)) {
+  .landing-saas-dashboard-social {
+    background-position: -410% center, 570% center;
+  }
+}
+
+@media (max-width: ($breakpoints-sm - 85px)) {
+  .landing-saas-dashboard-social {
+    background-position: -460% center, 630% center;
+  }
+}
+
+@media (max-width: ($breakpoints-sm - 95px)) {
+  .landing-saas-dashboard-social {
+    background-position: -530% center, 720% center;
+  }
+}
+
+@media (max-width: ($breakpoints-sm - 105px)) {
+  .landing-saas-dashboard-social {
+    background-position: -660% center, 900% center;
+  }
+}
+
+@media (max-width: ($breakpoints-sm - 115px)) {
+  .landing-saas-dashboard-social {
+    background-position: -730% center, 990% center;
+  }
+}
+
+@media (max-width: ($breakpoints-sm - 120px)) {
+  .landing-saas-dashboard-social {
+    background-position: -800% center, 1100% center;
+  }
+}
+
+@media (max-width: ($breakpoints-sm - 250px)) {
+  .landing-saas-dashboard-social {
+    background-position: 430% -20%, -315% 10%;
+  }
+}
+
+@media (min-width: ($breakpoints-sm - 250px)) and (max-width: ($breakpoints-sm - 121px)) {
+  .landing-saas-dashboard-social {
+    background-image: none;
+  }
+}

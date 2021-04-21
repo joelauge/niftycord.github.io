@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="56px" height="56px" viewBox="0 0 56 56" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Icon</title>
+    <g id="Desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="50---Cryptocurrency" transform="translate(-150.000000, -3144.000000)">
+            <g id="Offering" transform="translate(150.000000, 2541.000000)">
+                <g id="Icon" transform="translate(0.000000, 603.000000)">
+                    <circle id="Base" fill="#FFFFFF" cx="28" cy="28" r="28"></circle>
+                    <g transform="translate(12.000000, 12.000000)" id="Path">
+                        <polygon points="0 0 32 0 32 32 0 32"></polygon>
+                        <path d="M18.1840767,13.2485285 L22.0700091,15.0022642 C22.9912899,15.4180416 23.3428831,16.4437349 22.7571847,17.2367185 L13.9342862,29.1821382 C13.5470826,29.7063776 12.7155513,29.3839982 12.7829107,28.7357573 L13.8199935,18.75528 L9.93406098,17.0015443 C9.01278024,16.5857669 8.66118702,15.5600736 9.24688546,14.76709 L18.0697839,2.82167027 C18.4569876,2.29743093 19.2885189,2.61981031 19.2211594,3.26805123 L18.1840767,13.2485285 Z" fill="#3B5AFB" fill-rule="nonzero"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

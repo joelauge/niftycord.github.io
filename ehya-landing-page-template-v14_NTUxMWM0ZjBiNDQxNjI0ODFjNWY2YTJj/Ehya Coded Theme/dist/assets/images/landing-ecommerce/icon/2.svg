@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="66px" height="66px" viewBox="0 0 66 66" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>iconspace_android phone</title>
+    <g id="[NEW-UPDATE-Landing]" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linejoin="round">
+        <g id="51---E-Commerce" transform="translate(-395.000000, -2818.000000)">
+            <g id="Ccategories" transform="translate(150.000000, 2787.000000)">
+                <g id="Item" transform="translate(195.000000, 0.000000)">
+                    <g id="iconspace_android-phone" transform="translate(51.000000, 32.000000)">
+                        <circle id="Shape" cx="32" cy="32" r="32"></circle>
+                        <path d="M44,14 L44,50 C44,51.1045695 43.1045695,52 42,52 L22,52 C20.8954305,52 20,51.1045695 20,50 L20,14 C20,12.8954305 20.8954305,12 22,12 L42,12 C43.1045695,12 44,12.8954305 44,14 Z" id="Shape" fill="#FFFFFF"></path>
+                        <path d="M45,14 L45,50 C45,51.6568542 43.6568542,53 42,53 L22,53 C20.3431458,53 19,51.6568542 19,50 L19,14 C19,12.3431458 20.3431458,11 22,11 L42,11 C43.6568542,11 45,12.3431458 45,14 Z M43,14 C43,13.4477153 42.5522847,13 42,13 L22,13 C21.4477153,13 21,13.4477153 21,14 L21,50 C21,50.5522847 21.4477153,51 22,51 L42,51 C42.5522847,51 43,50.5522847 43,50 L43,14 Z" id="Shape" fill="#183B56" fill-rule="nonzero"></path>
+                        <path d="M30,49 L34,49 C34.5522847,49 35,48.5522847 35,48 C35,47.4477153 34.5522847,47 34,47 L30,47 C29.4477153,47 29,47.4477153 29,48 C29,48.5522847 29.4477153,49 30,49 Z" id="Shape" fill="#FFC200" fill-rule="nonzero"></path>
+                        <path d="M24,15 L40,15 C40.5522847,15 41,15.4477153 41,16 L41,44 C41,44.5522847 40.5522847,45 40,45 L24,45 C23.4477153,45 23,44.5522847 23,44 L23,16 C23,15.4477153 23.4477153,15 24,15 Z" id="Shape" fill="#36B37E"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

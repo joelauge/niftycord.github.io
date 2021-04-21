@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="244px" height="80px" viewBox="0 0 244 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 2</title>
+    <g id="Mobile" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="33----Photography----Mobile" transform="translate(-38.000000, -100.000000)">
+            <g id="Hero" transform="translate(-138.000000, 100.000000)">
+                <g id="Tittle" transform="translate(158.000000, 0.000000)">
+                    <g id="Group-2" transform="translate(18.000000, 0.000000)">
+                        <rect id="Shape" fill="#00B8D9" x="89" y="34" width="153" height="6"></rect>
+                        <text id="Make-Everything-Memo" font-family="Helvetica" font-size="32" font-weight="normal" line-spacing="40" letter-spacing="0.2" fill="#183B56">
+                            <tspan x="1.3359375" y="31">Make Everything</tspan>
+                            <tspan x="41.06875" y="71">Memorable</tspan>
+                        </text>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

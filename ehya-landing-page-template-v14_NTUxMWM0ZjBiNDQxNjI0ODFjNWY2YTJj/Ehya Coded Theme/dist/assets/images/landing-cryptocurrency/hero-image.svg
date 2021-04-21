@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="944px" height="489px" viewBox="0 0 944 489" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Dashboard</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="944" height="70"></rect>
+        <filter x="-0.1%" y="-0.7%" width="100.1%" height="101.4%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="-1" in="SourceAlpha" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0.929411765   0 0 0 0 0.937254902   0 0 0 0 0.952941176  0 0 0 1 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-3">
+            <stop stop-color="#2D9CEC" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" offset="100%"></stop>
+        </linearGradient>
+        <rect id="path-4" x="0" y="0" width="944" height="70"></rect>
+        <filter x="-0.1%" y="-0.7%" width="100.1%" height="101.4%" filterUnits="objectBoundingBox" id="filter-5">
+            <feOffset dx="0" dy="-1" in="SourceAlpha" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0.929411765   0 0 0 0 0.937254902   0 0 0 0 0.952941176  0 0 0 1 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-6">
+            <stop stop-color="#2D9CEC" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" offset="100%"></stop>
+        </linearGradient>
+        <rect id="path-7" x="0" y="0" width="944" height="70"></rect>
+        <filter x="-0.1%" y="-0.7%" width="100.1%" height="101.4%" filterUnits="objectBoundingBox" id="filter-8">
+            <feOffset dx="0" dy="-1" in="SourceAlpha" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0.929411765   0 0 0 0 0.937254902   0 0 0 0 0.952941176  0 0 0 1 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-9">
+            <stop stop-color="#F68D61" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" offset="100%"></stop>
+        </linearGradient>
+        <rect id="path-10" x="0" y="0" width="944" height="70"></rect>
+        <filter x="-0.1%" y="-0.7%" width="100.1%" height="101.4%" filterUnits="objectBoundingBox" id="filter-11">
+            <feOffset dx="0" dy="-1" in="SourceAlpha" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0.929411765   0 0 0 0 0.937254902   0 0 0 0 0.952941176  0 0 0 1 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+        <rect id="path-12" x="0" y="0" width="944" height="70"></rect>
+        <filter x="-0.1%" y="-0.7%" width="100.1%" height="101.4%" filterUnits="objectBoundingBox" id="filter-13">
+            <feOffset dx="0" dy="-1" in="SourceAlpha" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0.929411765   0 0 0 0 0.937254902   0 0 0 0 0.952941176  0 0 0 1 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-14">
+            <stop stop-color="#F68D61" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="50---Cryptocurrency" transform="translate(-248.000000, -460.000000)">
+            <g id="Dashboard" transform="translate(248.000000, 460.000000)">
+                <rect id="Base" fill="#FFFFFF" x="0" y="0" width="944" height="489" rx="12"></rect>
+                <text id="#" font-family="OpenSans-Regular, Open Sans" font-size="16" font-weight="normal" line-spacing="28" fill="#5A7184">
+                    <tspan x="40" y="37">#</tspan>
+                </text>
+                <text id="Name" font-family="OpenSans-Regular, Open Sans" font-size="16" font-weight="normal" line-spacing="28" fill="#5A7184">
+                    <tspan x="93" y="37">Name</tspan>
+                </text>
+                <text id="Price" font-family="OpenSans-Regular, Open Sans" font-size="16" font-weight="normal" line-spacing="28" fill="#5A7184">
+                    <tspan x="406" y="37">Price</tspan>
+                </text>
+                <text id="Change" font-family="OpenSans-Regular, Open Sans" font-size="16" font-weight="normal" line-spacing="28" fill="#5A7184">
+                    <tspan x="621" y="37">Change</tspan>
+                </text>
+                <text id="Chart" font-family="OpenSans-Regular, Open Sans" font-size="16" font-weight="normal" line-spacing="28" fill="#5A7184">
+                    <tspan x="742" y="37.2">Chart</tspan>
+                </text>
+                <text id="Trade" font-family="OpenSans-Regular, Open Sans" font-size="16" font-weight="normal" line-spacing="28" fill="#5A7184">
+                    <tspan x="847" y="37">Trade</tspan>
+                </text>
+                <g id="Item" transform="translate(0.000000, 89.000000)">
+                    <g id="Shape">
+                        <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                        <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                    </g>
+                    <g id="BTC" transform="translate(93.000000, 19.000000)">
+                        <path d="M29.8725821,15.0740896 C29.8725821,23.3172239 23.1903433,29.9994627 14.947209,29.9994627 C6.70407463,29.9994627 0.0218358209,23.3172239 0.0218358209,15.0740896 C0.0218358209,6.83095522 6.70407463,0.148716418 14.947209,0.148716418 C23.1903433,0.148716418 29.8725821,6.83095522 29.8725821,15.0740896" id="Fill-504" fill="#F7931A"></path>
+                        <path d="M18.5710448,19.4361194 C18.4461194,19.8559701 18.1650746,20.2019403 17.7797015,20.4102985 C17.3943284,20.6189552 16.9510448,20.6649254 16.531194,20.5398507 L12.3280597,19.2880597 L13.2644776,16.1443284 L17.4673134,17.3962687 L17.4674627,17.3962687 C18.3340299,17.6543284 18.8292537,18.569403 18.5710448,19.4361194 M19.9886567,12.9935821 C20.1970149,13.3789552 20.2429851,13.8222388 20.1180597,14.2422388 C19.8598507,15.1086567 18.9443284,15.6035821 18.078209,15.3459701 L18.0780597,15.3459701 L13.8750746,14.0941791 L14.811194,10.9504478 L19.0143284,12.2022388 C19.4341791,12.3273134 19.7801493,12.608209 19.9886567,12.9935821 M21.8701493,11.9756716 C21.3897015,11.0877612 20.5922388,10.44 19.6249254,10.1519403 L19.068806,9.98641791 L19.8473134,7.37238806 L17.8498507,6.77746269 L17.0713433,9.39149254 L15.3659701,8.88358209 L16.1446269,6.26955224 L15.6661194,6.12701493 L13.7276119,5.54970149 L12.9771642,8.06940299 L10.6147761,7.3658209 L9.9480597,9.60462687 L12.3104478,10.3083582 L9.88343284,18.4573134 L7.52104478,17.7537313 L6.85432836,19.9926866 L9.21656716,20.6961194 L8.58328358,22.8228358 L9.06164179,22.9653731 L11.0001493,23.5426866 L11.6616418,21.3216418 L13.3710448,21.8307463 L12.7095522,24.0519403 L14.6989552,24.6444776 L15.3604478,22.4232836 L15.9204478,22.59 C16.2774627,22.6962687 16.6420896,22.7489552 17.0044776,22.7489552 C17.6238806,22.7489552 18.2374627,22.5950746 18.7976119,22.2919403 C19.6855224,21.8114925 20.3331343,21.0141791 20.6213433,20.0465672 C20.9243284,19.028806 20.7747761,17.9832836 20.2928358,17.1226866 C21.1677612,16.6661194 21.8649254,15.8710448 22.168209,14.8528358 C22.4564179,13.8852239 22.3504478,12.8634328 21.8701493,11.9756716" id="Fill-505" fill="#FFFFFF"></path>
+                    </g>
+                    <g id="Buttons/Primary/Large" transform="translate(846.500000, 17.000000)">
+                        <g id="Background">
+                            <rect id="Shadow" x="0" y="0" width="69" height="36" rx="8"></rect>
+                            <rect id="Fill" fill="#36B37E" x="0" y="0" width="69" height="36" rx="8"></rect>
+                        </g>
+                        <g id="Content" transform="translate(20.000000, 8.900000)" fill="#FFFFFF" font-family="OpenSans-Bold, Open Sans" font-size="14" font-weight="bold" line-spacing="20">
+                            <text id="Label">
+                                <tspan x="0.137695312" y="15">BUY</tspan>
+                            </text>
+                        </g>
+                    </g>
+                    <g id="Graph" transform="translate(724.000000, 18.000000)">
+                        <rect id="Shape" x="0" y="0" width="77" height="34"></rect>
+                        <g transform="translate(0.000000, 10.500000)">
+                            <polyline id="Line" stroke="#1464D6" points="0 15.5 8 7.5 12 11.5 18 11.5 26.5 0 32 0 36 5 42 5 47.5 8 53.5 14 59 5 63 8 67.5 11.5 71 5 77 0"></polyline>
+                            <polygon id="Shape" fill="url(#linearGradient-3)" opacity="0.100000001" points="0 15.5 8 7.5 12 11.5 18 11.5 26.5 0 32 0 36 5 42 5 47.5 8 53.5 14 59 5 63 8 67.5 11.5 71 5 77 0 77 23.5 0 23.5"></polygon>
+                        </g>
+                    </g>
+                    <text id="1" font-family="HKGrotesk-SemiBold, HK Grotesk" font-size="16" font-weight="500" line-spacing="20" letter-spacing="0.2" fill="#5A7184">
+                        <tspan x="40" y="42.2">1</tspan>
+                    </text>
+                    <text id="Bitcoin---BTC" font-family="HKGrotesk-SemiBold, HK Grotesk" font-size="16" font-weight="500" line-spacing="20" letter-spacing="0.2">
+                        <tspan x="137" y="41" fill="#183B56">Bitcoin - </tspan>
+                        <tspan x="202.168" y="41" fill="#B3BAC5">BTC</tspan>
+                    </text>
+                    <text id="IDR-100,433,120.19" font-family="HKGrotesk-SemiBold, HK Grotesk" font-size="16" font-weight="500" line-spacing="20" letter-spacing="0.2" fill="#183B56">
+                        <tspan x="406" y="42.2">IDR 100,433,120.19</tspan>
+                    </text>
+                    <text id="+0.75%" font-family="HKGrotesk-SemiBold, HK Grotesk" font-size="16" font-weight="500" line-spacing="20" letter-spacing="0.2" fill="#36B37E">
+                        <tspan x="621" y="42.2">+0.75%</tspan>
+                    </text>
+                </g>
+                <g id="Item" transform="translate(0.000000, 169.000000)">
+                    <g id="Shape">
+                        <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-4"></use>
+                        <use fill="black" fill-opacity="1" filter="url(#filter-5)" xlink:href="#path-4"></use>
+                    </g>
+                    <g id="Graph" transform="translate(724.000000, 18.000000)">
+                        <rect id="Shape" x="0" y="0" width="77" height="34"></rect>
+                        <g transform="translate(0.000000, 5.500000)">
+                            <polyline id="Line" stroke="#1464D6" points="0 20.5 8 12.5 12 16.5 18 16.5 26.5 15 32 5 36 1.02304276e-12 42 10 47.5 13 53.5 19 59 20 63 13 67.5 16.5 71 10 77 5"></polyline>
+                            <polygon id="Shape" fill="url(#linearGradient-6)" opacity="0.100000001" points="0 20.5 8 12.5 12 16.5 18 16.5 26.5 15 32 5 36 -5.97230598e-13 42 10 47.5 13 53.5 19 59 20 63 13 67.5 16.5 71 10 77 5 77 28.5 0 28.5"></polygon>
+                        </g>
+                    </g>
+                    <g id="ETH" transform="translate(93.000000, 19.000000)">
+                        <path d="M29.9869851,15.0740896 C29.9869851,23.3172239 23.3047463,29.9994627 15.0616119,29.9994627 C6.81862687,29.9994627 0.136238806,23.3172239 0.136238806,15.0740896 C0.136238806,6.83095522 6.81862687,0.148716418 15.0616119,0.148716418 C23.3047463,0.148716418 29.9869851,6.83095522 29.9869851,15.0740896" id="Fill-506" fill="#497391"></path>
+                        <polygon id="Fill-507" fill="#FFFFFF" points="8.4530597 16.9234328 14.8548507 3.73641791 14.8548507 20.2932836"></polygon>
+                        <polygon id="Fill-508" fill="#FFFFFF" points="21.670403 16.9234328 15.2459254 20.2932836 15.2459254 3.7319403"></polygon>
+                        <polygon id="Fill-509" fill="#FFFFFF" points="8.4530597 17.4058209 14.8548507 20.611194 14.8548507 25.7655224"></polygon>
+                        <polygon id="Fill-510" fill="#FFFFFF" points="21.670403 17.4058209 15.2459254 25.7655224 15.2459254 20.611194"></polygon>
+                    </g>
+                    <g id="Buttons/Primary/Large" transform="translate(846.500000, 17.000000)">
+                        <g id="Background">
+                            <rect id="Shadow" x="0" y="0" width="69" height="36" rx="8"></rect>
+                            <rect id="Fill" fill="#36B37E" x="0" y="0" width="69" height="36" rx="8"></rect>
+                        </g>
+                        <g id="Content" transform="translate(20.000000, 8.900000)" fill="#FFFFFF" font-family="OpenSans-Bold, Open Sans" font-size="14" font-weight="bold" line-spacing="20">
+                            <text id="Label">
+                                <tspan x="0.137695312" y="15">BUY</tspan>
+                            </text>
+                        </g>
+                    </g>
+                    <text id="2" font-family="HKGrotesk-SemiBold, HK Grotesk" font-size="16" font-weight="500" line-spacing="20" letter-spacing="0.2" fill="#5A7184">
+                        <tspan x="40" y="42.2">2</tspan>
+                    </text>
+                    <text id="Ethereum---ETH" font-family="HKGrotesk-SemiBold, HK Grotesk" font-size="16" font-weight="500" line-spacing="20" letter-spacing="0.2">
+                        <tspan x="137" y="41" fill="#183B56">Ethereum - </tspan>
+                        <tspan x="222.368" y="41" fill="#B3BAC5">ETH</tspan>
+                    </text>
+                    <text id="IDR-2,718,781.78" font-family="HKGrotesk-SemiBold, HK Grotesk" font-size="16" font-weight="500" line-spacing="20" letter-spacing="0.2" fill="#183B56">
+                        <tspan x="406" y="42.2">IDR 2,718,781.78</tspan>
+                    </text>
+                    <text id="+0.38%" font-family="HKGrotesk-SemiBold, HK Grotesk" font-size="16" font-weight="500" line-spacing="20" letter-spacing="0.2" fill="#36B37E">
+                        <tspan x="621" y="42.2">+0.38%</tspan>
+                    </text>
+                </g>
+                <g id="Item" transform="translate(0.000000, 249.000000)">
+                    <g id="Shape">
+                        <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-7"></use>
+                        <use fill="black" fill-opacity="1" filter="url(#filter-8)" xlink:href="#path-7"></use>
+                    </g>
+                    <g id="Graph" transform="translate(724.000000, 18.000000)">
+                        <rect id="Shape" x="0" y="0" width="77" height="34"></rect>
+                        <g transform="translate(0.000000, 10.500000)">
+                            <polyline id="Line" stroke="#E95432" points="0 5.5 8 7.5 12 11.5 18 11.5 26.5 14 32 1.55431223e-15 36 5 42 5 47.5 12 53.5 4 59 5 63 8 67.5 11.5 71 5 77 -2.27240449e-12"></polyline>
+                            <polygon id="Shape" fill="url(#linearGradient-9)" opacity="0.100000001" points="0 5.5 8 7.5 12 11.5 18 11.5 26.5 14 32 6.52256027e-16 36 5 42 5 47.5 12 53.5 4 59 5 63 8 67.5 11.5 71 5 77 6.52256027e-16 77 23.5 0 23.5"></polygon>
+                        </g>
+                    </g>
+                    <g id="XMR" transform="translate(93.000000, 20.000000)">
+                        <path d="M29.9732239,14.9600299 C29.9732239,23.2031642 23.2909851,29.885403 15.0478507,29.885403 C6.80471642,29.885403 0.122477612,23.2031642 0.122477612,14.9600299 C0.122477612,6.71689552 6.80471642,0.0346567164 15.0478507,0.0346567164 C23.2909851,0.0346567164 29.9732239,6.71689552 29.9732239,14.9600299" id="Fill-609" fill="#FFFFFF"></path>
+                        <path d="M27.748403,22.802194 C26.9388507,24.1126418 25.9306418,25.2875672 24.7670597,26.2869701 C24.7000448,26.3450299 24.6330299,26.4020448 24.5646716,26.4577164 C23.7464627,27.1368209 22.8533284,27.7287612 21.9009403,28.2208507 C21.747806,28.3018955 21.5936269,28.3789104 21.4367612,28.451 C19.500194,29.3718955 17.3334776,29.8854776 15.047806,29.8854776 C12.7130299,29.8854776 10.5031791,29.3490597 8.5351194,28.391597 C8.43258209,28.3435373 8.33138806,28.2929403 8.23034328,28.239806 C7.27661194,27.7502537 6.38228358,27.1596567 5.56138806,26.481597 C5.46914925,26.4069701 5.37795522,26.3299552 5.28825373,26.252791 C4.1409403,25.2611493 3.14810448,24.0974179 2.34735821,22.802194 L8.5351194,22.802194 L8.5351194,14.8550299 L12.8622836,19.182194 L13.5046716,19.8247313 L15.0757164,21.3956269 L16.6454179,19.8247313 L17.2891493,19.182194 L21.4367612,15.0333881 L21.4367612,22.802194 L27.748403,22.802194 Z" id="Fill-610" fill="#4C4C4C"></path>
+                        <path d="M29.9732239,14.9600299 C29.9732239,16.6639104 29.687403,18.3004776 29.1612836,19.8246567 L24.7671045,19.8246567 L24.7671045,7.276 L21.436806,10.6064478 L15.0757612,16.9686866 L5.28814925,7.18107463 L5.28814925,19.8246567 L0.934567164,19.8246567 C0.408298507,18.3004776 0.122477612,16.6639104 0.122477612,14.9600299 C0.122477612,12.4897313 0.723223881,10.1598806 1.78695522,8.10704478 C2.27904478,7.15465672 2.87113433,6.26152239 3.55038806,5.44316418 C4.07904478,4.80450746 4.66083582,4.21002985 5.28814925,3.66734328 C6.26725373,2.82107463 7.35755224,2.09898507 8.53501493,1.52853731 C10.5032239,0.570925373 12.7129254,0.0346567164 15.0478507,0.0346567164 C17.3333731,0.0346567164 19.5002388,0.548238806 21.436806,1.46898507 C22.6445672,2.04077612 23.7639701,2.7718209 24.7671045,3.63316418 C25.4196418,4.19361194 26.0244179,4.80958209 26.5694925,5.47361194 C27.247403,6.29450746 27.8381493,7.18868657 28.3277015,8.14241791 C29.3799403,10.1864478 29.9732239,12.5036119 29.9732239,14.9600299" id="Fill-611" fill="#FF6600"></path>
+                    </g>
+                    <g id="Buttons/Primary/Large" transform="translate(846.500000, 17.000000)">
+                        <g id="Background">
+                            <rect id="Shadow" x="0" y="0" width="69" height="36" rx="8"></rect>
+                            <rect id="Fill" fill="#36B37E" x="0" y="0" width="69" height="36" rx="8"></rect>
+                        </g>
+                        <g id="Content" transform="translate(20.000000, 8.900000)" fill="#FFFFFF" font-family="OpenSans-Bold, Open Sans" font-size="14" font-weight="bold" line-spacing="20">
+                            <text id="Label">
+                                <tspan x="0.137695312" y="15">BUY</tspan>
+                            </text>
+                        </g>
+                    </g>
+                    <text id="3" font-family="HKGrotesk-SemiBold, HK Grotesk" font-size="16" font-weight="500" line-spacing="20" letter-spacing="0.2" fill="#5A7184">
+                        <tspan x="40" y="42.2">3</tspan>
+                    </text>
+                    <text id="Monero---XMR" font-family="HKGrotesk-SemiBold, HK Grotesk" font-size="16" font-weight="500" line-spacing="20" letter-spacing="0.2">
+                        <tspan x="137" y="41" fill="#183B56">Monero - </tspan>
+                        <tspan x="207.568" y="41" fill="#B3BAC5">XMR</tspan>
+                    </text>
+                    <text id="IDR-1,987,060.24" font-family="HKGrotesk-SemiBold, HK Grotesk" font-size="16" font-weight="500" line-spacing="20" letter-spacing="0.2" fill="#183B56">
+                        <tspan x="406" y="42.2">IDR 1,987,060.24</tspan>
+                    </text>
+                    <text id="-0.42%" font-family="HKGrotesk-SemiBold, HK Grotesk" font-size="16" font-weight="500" line-spacing="20" letter-spacing="0.2" fill="#E95432">
+                        <tspan x="621" y="42.2">-0.42%</tspan>
+                    </text>
+                </g>
+                <g id="Item" transform="translate(0.000000, 329.000000)">
+                    <g id="Shape">
+                        <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-10"></use>
+                        <use fill="black" fill-opacity="1" filter="url(#filter-11)" xlink:href="#path-10"></use>
+                    </g>
+                    <g id="Graph" transform="translate(724.000000, 18.000000)">
+                        <rect id="Shape" x="0" y="0" width="77" height="34"></rect>
+                        <g transform="translate(0.000000, 10.500000)">
+                            <polyline id="Line" stroke="#1464D6" points="0 15.5 8 7.5 12 15.5 18.5 5 26.5 8 32 0 36 5 42 5 47.5 8 53.5 14 59 5 63 8 67.5 11.5 71 5 77 0"></polyline>
+                            <polygon id="Shape" fill="url(#linearGradient-3)" opacity="0.100000001" points="0 15.5 8 7.5 12 15.5 18 5.5 26.5 8 32 0 36 5 42 5 47.5 8 53.5 14 59 5 63 8 67.5 11.5 71 5 77 0 77 23.5 0 23.5"></polygon>
+                        </g>
+                    </g>
+                    <g id="LTC" transform="translate(93.000000, 20.000000)">
+                        <path d="M14.9350299,0.116 C6.69189552,0.116 0.00965671642,6.79823881 0.00965671642,15.0413731 C0.00965671642,23.2845075 6.69189552,29.9667463 14.9350299,29.9667463 C23.1781642,29.9667463 29.860403,23.2845075 29.860403,15.0413731 C29.860403,6.79823881 23.1781642,0.116 14.9350299,0.116" id="Fill-491" fill="#3D3E3C"></path>
+                        <path d="M14.9350299,1.35980597 C22.4790597,1.35980597 28.6166716,7.49741791 28.6166716,15.0414478 C28.6166716,22.5853284 22.4790597,28.7229403 14.9350299,28.7229403 C7.391,28.7229403 1.25338806,22.5853284 1.25338806,15.0414478 C1.25338806,7.49741791 7.391,1.35980597 14.9350299,1.35980597" id="Fill-492" fill="#FFFFFF"></path>
+                        <path d="M24.3407164,9.49537313 C24.0099701,8.93522388 23.6219104,8.4 23.1823582,7.8938806 L7.78758209,23.2886567 C8.29370149,23.7280597 8.82892537,24.1162687 9.38907463,24.4470149 L24.3407164,9.49537313 Z" id="Fill-493" fill="#B6B7BA"></path>
+                        <path d="M21.9161493,6.65116418 C21.3995821,6.22026866 20.8522687,5.84549254 20.2825672,5.52504478 L5.41868657,20.3887761 C5.73913433,20.9586269 6.11391045,21.505791 6.54495522,22.0223582 L21.9161493,6.65116418 Z" id="Fill-494" fill="#B6B7BA"></path>
+                        <path d="M18.5573582,4.74110448 C17.8297463,4.4858806 17.0803433,4.31229851 16.3227313,4.2158806 L4.10959701,16.4291642 C4.20616418,17.1864776 4.37944776,17.9360299 4.6348209,18.6636418 L18.5573582,4.74110448 Z" id="Fill-495" fill="#B6B7BA"></path>
+                        <path d="M13.8501045,4.17958209 C11.4281642,4.42002985 9.07129851,5.46704478 7.21607463,7.32226866 C5.36085075,9.17749254 4.31368657,11.5345075 4.07323881,13.9564478 L13.8501045,4.17958209 Z" id="Fill-496" fill="#B6B7BA"></path>
+                        <path d="M25.7234179,13.3815821 C25.6096866,12.638597 25.4178955,11.9057612 25.1505821,11.1945672 L11.088194,25.256806 C11.7993881,25.5241194 12.5322239,25.7160597 13.275209,25.8296418 L25.7234179,13.3815821 Z" id="Fill-497" fill="#B6B7BA"></path>
+                        <path d="M25.8227612,15.7911343 L15.6848507,25.9290448 C18.2235075,25.7553134 20.7135075,24.7011343 22.6541045,22.7603881 C24.5948507,20.8196418 25.6490299,18.3299403 25.8227612,15.7911343" id="Fill-498" fill="#B6B7BA"></path>
+                        <polygon id="Fill-499" fill="#F8F9F7" points="13.7248955 18.8576119 14.3641493 14.2626866 18.3992239 11.3585075 18.3992239 8.57238806 14.7950448 11.1656716 15.534 5.8541791 11.1241493 5.8541791 10.1780299 14.4876119 7.3701194 16.5079104 7.3701194 19.2962687 9.84638806 17.5141791 9.31504478 22.3628358 13.7248955 22.3628358 23.7437015 22.3628358 23.7437015 18.8576119"></polygon>
+                        <path d="M9.68950746,22.027209 L23.4081642,22.027209 L23.4081642,19.1931791 L13.339209,19.1931791 L14.051597,14.0742239 L18.0638358,11.1866119 L18.0638358,9.22735821 L14.3545821,11.8960149 L15.1484627,6.18974627 L11.4251791,6.18974627 L10.4954776,14.6727313 L7.70577612,16.6800448 L7.70577612,18.6412388 L10.262194,16.8013881 L9.68950746,22.027209 Z M24.079209,22.698403 L8.94070149,22.698403 L9.43085075,18.2269104 L7.03458209,19.9512388 L7.03458209,16.3360149 L9.86070149,14.3025821 L10.8233881,5.51855224 L15.9196567,5.51855224 L15.2351791,10.4354179 L18.7348806,7.91765672 L18.7348806,11.5303433 L14.6765224,14.4510896 L14.1105522,18.5221343 L24.079209,18.5221343 L24.079209,22.698403 Z" id="Fill-500" fill="#3D3E3C"></path>
+                    </g>
+                    <g id="Buttons/Primary/Large" transform="translate(846.500000, 17.000000)">
+                        <g id="Background">
+                            <rect id="Shadow" x="0" y="0" width="69" height="36" rx="8"></rect>
+                            <rect id="Fill" fill="#36B37E" x="0" y="0" width="69" height="36" rx="8"></rect>
+                        </g>
+                        <g id="Content" transform="translate(20.000000, 8.900000)" fill="#FFFFFF" font-family="OpenSans-Bold, Open Sans" font-size="14" font-weight="bold" line-spacing="20">
+                            <text id="Label">
+                                <tspan x="0.137695312" y="15">BUY</tspan>
+                            </text>
+                        </g>
+                    </g>
+                    <text id="4" font-family="HKGrotesk-SemiBold, HK Grotesk" font-size="16" font-weight="500" line-spacing="20" letter-spacing="0.2" fill="#5A7184">
+                        <tspan x="40" y="42.2">4</tspan>
+                    </text>
+                    <text id="Litecoin---LTC" font-family="HKGrotesk-SemiBold, HK Grotesk" font-size="16" font-weight="500" line-spacing="20" letter-spacing="0.2">
+                        <tspan x="137" y="41" fill="#183B56">Litecoin - </tspan>
+                        <tspan x="209.04" y="41" fill="#B3BAC5">LTC</tspan>
+                    </text>
+                    <text id="IDR-717,253.19" font-family="HKGrotesk-SemiBold, HK Grotesk" font-size="16" font-weight="500" line-spacing="20" letter-spacing="0.2" fill="#183B56">
+                        <tspan x="406" y="42.2">IDR 717,253.19</tspan>
+                    </text>
+                    <text id="+1.64%" font-family="HKGrotesk-SemiBold, HK Grotesk" font-size="16" font-weight="500" line-spacing="20" letter-spacing="0.2" fill="#36B37E">
+                        <tspan x="621" y="42.2">+1.64%</tspan>
+                    </text>
+                </g>
+                <g id="Item" transform="translate(0.000000, 409.000000)">
+                    <g id="Shape">
+                        <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-12"></use>
+                        <use fill="black" fill-opacity="1" filter="url(#filter-13)" xlink:href="#path-12"></use>
+                    </g>
+                    <g id="KMD" transform="translate(93.000000, 20.000000)">
+                        <path d="M25.4913731,4.47365672 L21.6607761,8.30350746 C21.5568955,8.19947761 21.4316716,8.115 21.2930149,8.05783582 L15.3710746,5.60485075 C15.0930149,5.49022388 14.7809254,5.49022388 14.5028657,5.60485075 L8.58092537,8.05783582 C8.44226866,8.115 8.31734328,8.19947761 8.21316418,8.30350746 L4.38256716,4.47365672 C4.54689552,4.31007463 4.74197015,4.17828358 4.96062687,4.08783582 L14.2558507,0.237537313 C14.6921194,0.056641791 15.1819701,0.056641791 15.6183881,0.237537313 L24.9133134,4.08783582 C25.1319701,4.17828358 25.3270448,4.31007463 25.4913731,4.47365672" id="Fill-118" fill="#FCB000"></path>
+                        <path d="M29.7267463,15.7092985 L25.877194,25.0036269 C25.7868955,25.2221343 25.6549552,25.4173582 25.4913731,25.5816866 C25.3270448,25.7452687 25.1319701,25.8770597 24.9133134,25.9675075 L15.6183881,29.817806 C15.1819701,29.9985522 14.6921194,29.9985522 14.2558507,29.817806 L4.96062687,25.9675075 C4.7421194,25.8770597 4.54689552,25.7452687 4.38256716,25.5816866 C4.21913433,25.4173582 4.08719403,25.2221343 3.99674627,25.0036269 L0.14719403,15.7092985 C-0.0335522388,15.2730299 -0.0335522388,14.7822836 0.14719403,14.3460149 L3.99674627,5.05168657 C4.08719403,4.83377612 4.21913433,4.63795522 4.38256716,4.47362687 L8.21316418,8.30347761 C8.31734328,8.19959701 8.44241791,8.1151194 8.58092537,8.05780597 L14.5028657,5.6048209 C14.7809254,5.49019403 15.0930149,5.49019403 15.3710746,5.6048209 L21.2930149,8.05780597 C21.4316716,8.1151194 21.5568955,8.19959701 21.6607761,8.30347761 L25.4913731,4.47362687 C25.6549552,4.63795522 25.7868955,4.83377612 25.877194,5.05168657 L29.7267463,14.3460149 C29.9076418,14.7822836 29.9076418,15.2730299 29.7267463,15.7092985" id="Fill-120" fill="#3D6E6E"></path>
+                        <path d="M24.3594478,15.4620896 L21.9064627,21.3832836 C21.8492985,21.5219403 21.7655672,21.6470149 21.660791,21.7510448 C21.5569104,21.8558209 21.4316866,21.939403 21.2930299,21.9974627 L15.3710896,24.4504478 C15.0930299,24.5650746 14.7809403,24.5650746 14.5028806,24.4504478 L8.5809403,21.9974627 C8.44228358,21.939403 8.31735821,21.8558209 8.2131791,21.7510448 C8.10855224,21.6470149 8.02497015,21.5219403 7.96765672,21.3832836 L5.51452239,15.4620896 C5.39929851,15.1840299 5.39929851,14.8713433 5.51452239,14.5931343 L7.96765672,8.6719403 C8.02497015,8.53253731 8.10855224,8.40820896 8.2131791,8.30358209 C8.31735821,8.19955224 8.44228358,8.11507463 8.5809403,8.05776119 L14.5028806,5.60477612 C14.7809403,5.49014925 15.0930299,5.49014925 15.3710896,5.60477612 L21.2930299,8.05776119 C21.4316866,8.11507463 21.5569104,8.19955224 21.660791,8.30358209 C21.7655672,8.40820896 21.8492985,8.53253731 21.9064627,8.6719403 L24.3594478,14.5931343 C24.4746716,14.8713433 24.4746716,15.1840299 24.3594478,15.4620896" id="Fill-122" fill="#FFFFFF"></path>
+                        <path d="M19.3880149,10.1465373 L15.2411493,8.42877612 C15.0463731,8.3481791 14.8275672,8.3481791 14.6330896,8.42877612 L10.4859254,10.1465373 C10.2912985,10.2271343 10.1366716,10.3819104 10.0560746,10.5765373 L8.33831343,14.7235522 C8.25756716,14.9181791 8.25756716,15.1369851 8.33831343,15.3316119 L10.0560746,19.4786269 C10.1366716,19.6732537 10.2912985,19.8280299 10.4859254,19.9086269 L14.6330896,21.6263881 C14.8275672,21.7069851 15.0463731,21.7069851 15.2411493,21.6263881 L19.3880149,19.9086269 C19.582791,19.8280299 19.7374179,19.6732537 19.8180149,19.4786269 L21.5357761,15.3316119 C21.6165224,15.1369851 21.6165224,14.9181791 21.5357761,14.7235522 L19.8180149,10.5765373 C19.7374179,10.3819104 19.582791,10.2271343 19.3880149,10.1465373" id="Fill-124" fill="#3F7070"></path>
+                    </g>
+                    <g id="Graph" transform="translate(724.000000, 18.000000)">
+                        <rect id="Shape" x="0" y="0" width="77" height="34"></rect>
+                        <g transform="translate(0.000000, 4.500000)">
+                            <polyline id="Line" stroke="#E95432" points="0 21.5 8 13.5 12 21.5 18.5 11 26.5 14 32 16 36 11 42 8 47.5 14 53.5 1.30687128e-12 59 11 63 14 67.5 17.5 71 11 77 6"></polyline>
+                            <polygon id="Shape" fill="url(#linearGradient-14)" opacity="0.100000001" points="0 21.5 8 13.5 12 21.5 18 11.5 26.5 14 32 16 36 11 42 8 47.5 14 53.5 8.5154106e-14 59 11 63 14 67.5 17.5 71 11 77 6 77 29.5 0 29.5"></polygon>
+                        </g>
+                    </g>
+                    <g id="Buttons/Primary/Large" transform="translate(846.500000, 17.000000)">
+                        <g id="Background">
+                            <rect id="Shadow" x="0" y="0" width="69" height="36" rx="8"></rect>
+                            <rect id="Fill" fill="#36B37E" x="0" y="0" width="69" height="36" rx="8"></rect>
+                        </g>
+                        <g id="Content" transform="translate(20.000000, 8.900000)" fill="#FFFFFF" font-family="OpenSans-Bold, Open Sans" font-size="14" font-weight="bold" line-spacing="20">
+                            <text id="Label">
+                                <tspan x="0.137695312" y="15">BUY</tspan>
+                            </text>
+                        </g>
+                    </g>
+                    <text id="5" font-family="HKGrotesk-SemiBold, HK Grotesk" font-size="16" font-weight="500" line-spacing="20" letter-spacing="0.2" fill="#5A7184">
+                        <tspan x="40" y="42.2">5</tspan>
+                    </text>
+                    <text id="Komodo---KMD" font-family="HKGrotesk-SemiBold, HK Grotesk" font-size="16" font-weight="500" line-spacing="20" letter-spacing="0.2">
+                        <tspan x="137" y="41" fill="#183B56">Komodo - </tspan>
+                        <tspan x="212.256" y="41" fill="#B3BAC5">KMD</tspan>
+                    </text>
+                    <text id="IDR-580,869.40" font-family="HKGrotesk-SemiBold, HK Grotesk" font-size="16" font-weight="500" line-spacing="20" letter-spacing="0.2" fill="#183B56">
+                        <tspan x="406" y="42.2">IDR 580,869.40</tspan>
+                    </text>
+                    <text id="-0.35%" font-family="HKGrotesk-SemiBold, HK Grotesk" font-size="16" font-weight="500" line-spacing="20" letter-spacing="0.2" fill="#E95432">
+                        <tspan x="621" y="42.2">-0.35%</tspan>
+                    </text>
+                </g>
+                <line x1="0" y1="68.5" x2="944" y2="68.5" id="Line" stroke="#EDEFF3"></line>
+            </g>
+        </g>
+    </g>
+</svg>

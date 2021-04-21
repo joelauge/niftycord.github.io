@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="587px" height="448px" viewBox="0 0 587 448" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Graph</title>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#FDD62B" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="45---Saas-with-Dashboard" transform="translate(-705.000000, -1599.000000)">
+            <g id="Feature" transform="translate(150.000000, 1599.000000)">
+                <g id="Graph" transform="translate(555.000000, 0.000000)">
+                    <rect id="Base" fill="#FFFFFF" x="0" y="32" width="527" height="384" rx="12"></rect>
+                    <text id="Impressions-&amp;-Reach" font-family="HKGrotesk-Bold, HK Grotesk" font-size="20" font-weight="bold" line-spacing="24" letter-spacing="0.2" fill="#183B56">
+                        <tspan x="30" y="80">Impressions &amp; Reach History</tspan>
+                    </text>
+                    <g id="Number" transform="translate(30.000000, 166.000000)" fill="#5A7184" font-family="OpenSans-Regular, Open Sans" font-size="14" font-weight="normal" line-spacing="20">
+                        <text id="1k">
+                            <tspan x="0" y="165">1k</tspan>
+                        </text>
+                        <text id="0-">
+                            <tspan x="0" y="215">0</tspan>
+                        </text>
+                        <text id="2k-">
+                            <tspan x="0" y="115">2k</tspan>
+                        </text>
+                        <text id="4k">
+                            <tspan x="0" y="65">4k</tspan>
+                        </text>
+                        <text id="6k">
+                            <tspan x="0" y="15">6k</tspan>
+                        </text>
+                    </g>
+                    <g id="Item" transform="translate(30.000000, 106.000000)">
+                        <rect id="Shape" fill="#B3BAC5" opacity="0.100000001" x="0" y="0" width="126" height="32" rx="4"></rect>
+                        <text id="Impressions" font-family="HKGrotesk-SemiBold, HK Grotesk" font-size="16" font-weight="500" line-spacing="20" letter-spacing="0.2" fill="#8C98A4">
+                            <tspan x="26" y="20">Impressions</tspan>
+                        </text>
+                        <circle id="Shape" fill="#36B37E" cx="14" cy="16" r="4"></circle>
+                    </g>
+                    <g id="Item" transform="translate(172.000000, 106.000000)">
+                        <rect id="Shape-" fill="#B3BAC5" opacity="0.100000001" x="0" y="0" width="83" height="32" rx="4"></rect>
+                        <text id="Reach" font-family="HKGrotesk-SemiBold, HK Grotesk" font-size="16" font-weight="500" line-spacing="20" letter-spacing="0.2" fill="#8C98A4">
+                            <tspan x="26" y="20">Reach</tspan>
+                        </text>
+                        <circle id="Shape--2" fill="#FAAD13" cx="14" cy="16" r="4"></circle>
+                    </g>
+                    <g id="Line" transform="translate(70.000000, 175.000000)" stroke="#EEF0F2" stroke-dasharray="4,4">
+                        <line x1="0" y1="0.5" x2="426.5" y2="0.5"></line>
+                        <line x1="0" y1="50.5" x2="426.5" y2="50.5"></line>
+                        <line x1="0" y1="100.5" x2="426.5" y2="100.5"></line>
+                        <line x1="0" y1="150.5" x2="426.5" y2="150.5"></line>
+                        <line x1="0" y1="200.5" x2="426.5" y2="200.5" id="Line-"></line>
+                    </g>
+                    <g id="Group-3" transform="translate(70.000000, 193.000000)">
+                        <path d="M0,133.387692 L37,170 L75.5,117.84 L82.2393796,113.863461 M93.2694496,107.355221 L135,82.7323077 L188.5,108.310769 L205.280681,101.09692 M222.270877,93.7930034 L248,82.7323077 L262.913498,65.4491338 M271.176969,55.8726416 L299.5,23.0492308 L355,43.1107692 L370.811085,54.472967 M378.955414,60.3256632 L388.5,67.1846154 L419.676808,40.9417592 M428.849821,33.2204408 L460,7 L515,23.0492308" id="Line" stroke="#36B37E" stroke-width="3" stroke-linecap="round"></path>
+                        <circle id="Shape" stroke="#FFFFFF" stroke-width="2" fill="#36B37E" cx="461" cy="7" r="6"></circle>
+                        <circle id="Shape" stroke="#FFFFFF" stroke-width="2" fill="#36B37E" cx="389" cy="67" r="6"></circle>
+                        <circle id="Shape" stroke="#FFFFFF" stroke-width="2" fill="#36B37E" cx="357" cy="44" r="6"></circle>
+                        <circle id="Shape" stroke="#FFFFFF" stroke-width="2" fill="#36B37E" cx="300" cy="23" r="6"></circle>
+                        <circle id="Shape" stroke="#FFFFFF" stroke-width="2" fill="#36B37E" cx="247" cy="82" r="6"></circle>
+                        <circle id="Shape" stroke="#FFFFFF" stroke-width="2" fill="#36B37E" cx="188" cy="108" r="6"></circle>
+                        <circle id="Shape" stroke="#FFFFFF" stroke-width="2" fill="#36B37E" cx="136" cy="82" r="6"></circle>
+                        <circle id="Shape" stroke="#FFFFFF" stroke-width="2" fill="#36B37E" cx="38" cy="170" r="6"></circle>
+                    </g>
+                    <g id="Group-5" transform="translate(70.000000, 214.000000)">
+                        <polyline id="Line" stroke="#FAAD13" stroke-width="3" stroke-linecap="round" points="0 19.5 35 52 75.5 76.5 135.5 137 188.5 110 248 31.5 299.5 52 355 82 388.5 6 460 26 515 72"></polyline>
+                        <path d="M0,19.5 L35,52 L75.5,76.5 L135.5,137 L188.5,110 L248,31.5 L299.5,52 L355,82 L388.5,6 L457,27 C457,54 457,99 457,162 C354.777778,162 202.444444,162 0,162 L0,19.5 Z" id="Path-14--2" fill="url(#linearGradient-1)" opacity="0.100000001"></path>
+                        <circle id="Shape" stroke="#FFFFFF" stroke-width="2" fill="#FAAD13" cx="38" cy="54" r="6"></circle>
+                        <circle id="Shape" stroke="#FFFFFF" stroke-width="2" fill="#FAAD13" cx="136" cy="136" r="6"></circle>
+                        <circle id="Shape" stroke="#FFFFFF" stroke-width="2" fill="#FAAD13" cx="188" cy="110" r="6"></circle>
+                        <circle id="Shape" stroke="#FFFFFF" stroke-width="2" fill="#FAAD13" cx="247" cy="31" r="6"></circle>
+                        <circle id="Shape" stroke="#FFFFFF" stroke-width="2" fill="#FAAD13" cx="301" cy="53" r="6"></circle>
+                        <circle id="Shape" stroke="#FFFFFF" stroke-width="2" fill="#FAAD13" cx="355" cy="82" r="6"></circle>
+                        <circle id="Shape" stroke="#FFFFFF" stroke-width="2" fill="#FAAD13" cx="389" cy="7" r="6"></circle>
+                        <circle id="Shape" stroke="#FFFFFF" stroke-width="2" fill="#FAAD13" cx="461" cy="27" r="6"></circle>
+                    </g>
+                    <g id="Icon" transform="translate(403.000000, 0.000000)">
+                        <circle id="Shape" fill="#FDF5E6" cx="32" cy="32" r="32"></circle>
+                        <g id="Iconspace_Signal-Tower_25px" transform="translate(15.000000, 15.000000)">
+                            <polygon id="Path" points="0 0 34 0 34 34 0 34"></polygon>
+                            <path d="M15.4900991,18.6631152 C14.3843328,18.0981835 13.6283387,16.9564674 13.6283387,15.64 C13.6283387,13.7622319 15.1664301,12.24 17.063762,12.24 C18.9610939,12.24 20.4991853,13.7622319 20.4991853,15.64 C20.4991853,16.9976223 19.6951852,18.1693965 18.5327077,18.7143939 L22.9379388,28.4028561 C23.4050976,29.4302824 22.9422335,30.637978 21.9041028,31.1003199 C21.638165,31.2187579 21.3498606,31.28 21.058237,31.28 L12.941254,31.28 C11.8028549,31.28 10.88,30.3666609 10.88,29.24 C10.88,28.9513834 10.9418801,28.6660517 11.0615521,28.4028561 L15.4900991,18.6631152 L15.4900991,18.6631152 Z" id="Combined-Shape" fill="#FAAD13" fill-rule="nonzero"></path>
+                            <path d="M17,3.74 C23.5721885,3.74 28.9,9.06781148 28.9,15.64 C28.9,19.5519249 26.9931558,23.1811246 23.7975842,25.408604 C23.3354468,25.7307378 22.6996693,25.6172424 22.3775356,25.1551049 C22.0554018,24.6929675 22.1688971,24.0571901 22.6310346,23.7350563 C25.2808692,21.8879839 26.86,18.8827348 26.86,15.64 C26.86,10.1944724 22.4455276,5.78 17,5.78 C11.5544724,5.78 7.14,10.1944724 7.14,15.64 C7.14,18.8827348 8.71913085,21.8879839 11.3689654,23.7350563 C11.8311029,24.0571901 11.9445982,24.6929675 11.6224644,25.1551049 C11.3003307,25.6172424 10.6645532,25.7307378 10.2024158,25.408604 C7.00684424,23.1811246 5.1,19.5519249 5.1,15.64 C5.1,9.06781148 10.4278115,3.74 17,3.74 Z M17,7.82 C21.3188667,7.82 24.82,11.3211333 24.82,15.64 C24.82,18.0144485 23.7517288,20.237589 21.9136298,21.7237679 C21.4755737,22.0779543 20.8333342,22.0099646 20.4791477,21.5719084 C20.1249613,21.1338523 20.1929511,20.4916129 20.6310072,20.1374264 C21.9914089,19.0374855 22.78,17.3965383 22.78,15.64 C22.78,12.4477941 20.1922059,9.86 17,9.86 C13.8077941,9.86 11.22,12.4477941 11.22,15.64 C11.22,17.3965383 12.0085911,19.0374855 13.3689928,20.1374264 C13.8070489,20.4916129 13.8750387,21.1338523 13.5208523,21.5719084 C13.1666658,22.0099646 12.5244263,22.0779543 12.0863702,21.7237679 C10.2482712,20.237589 9.18,18.0144485 9.18,15.64 C9.18,11.3211333 12.6811333,7.82 17,7.82 Z" id="Combined-Shape" fill="#FAAD13" fill-rule="nonzero"></path>
+                        </g>
+                    </g>
+                    <g id="Icon" transform="translate(267.000000, 384.000000)">
+                        <circle id="Shape" fill="#EAF7F2" cx="32" cy="32" r="32"></circle>
+                        <g id="iconspace_Visible_25px" transform="translate(15.000000, 15.000000)">
+                            <polygon id="Path" points="0 0 34 0 34 34 0 34"></polygon>
+                            <polygon id="Path" points="0 0 34 0 34 34 0 34"></polygon>
+                            <path d="M17,10.88 C21.94,10.88 26.3522921,14.256992 28.5082004,19.4596843 C28.5772665,19.6263564 28.5772665,19.8136436 28.5082004,19.9803157 C26.3522921,25.183008 21.94,28.56 17,28.56 C12.0599985,28.56 7.64770789,25.183008 5.4917996,19.9803157 C5.42273347,19.8136436 5.42273347,19.6263564 5.4917996,19.4596843 C7.64770789,14.256992 12.0599985,10.88 17,10.88 Z M17,16.32 C15.1222319,16.32 13.6,17.8422319 13.6,19.72 C13.6,21.5977681 15.1222319,23.12 17,23.12 C18.8777681,23.12 20.4,21.5977681 20.4,19.72 C20.4,17.8422319 18.8777681,16.32 17,16.32 Z" id="Path" fill="#36B37E" fill-rule="nonzero"></path>
+                            <path d="M17,17.68 C18.1266609,17.68 19.04,18.5933391 19.04,19.72 C19.04,20.8466609 18.1266609,21.76 17,21.76 C15.8733391,21.76 14.96,20.8466609 14.96,19.72 C14.96,18.5933391 15.8733391,17.68 17,17.68 Z M28.6012489,6.75875108 C28.9995837,7.15708586 28.9995837,7.80291414 28.6012489,8.20124892 L25.8812489,10.9212489 C25.4829141,11.3195837 24.8370859,11.3195837 24.4387511,10.9212489 C24.0404163,10.5229141 24.0404163,9.87708586 24.4387511,9.47875108 L27.1587511,6.75875108 C27.5570859,6.36041631 28.2029141,6.36041631 28.6012489,6.75875108 Z M6.84124892,6.75875108 L9.56124892,9.47875108 C9.95958369,9.87708586 9.95958369,10.5229141 9.56124892,10.9212489 C9.16291414,11.3195837 8.51708586,11.3195837 8.11875108,10.9212489 L5.39875108,8.20124892 C5.00041631,7.80291414 5.00041631,7.15708586 5.39875108,6.75875108 C5.79708586,6.36041631 6.44291414,6.36041631 6.84124892,6.75875108 Z M17,5.1 C17.5633304,5.1 18.02,5.55666956 18.02,6.12 L18.02,8.84 C18.02,9.40333044 17.5633304,9.86 17,9.86 C16.4366696,9.86 15.98,9.40333044 15.98,8.84 L15.98,6.12 C15.98,5.55666956 16.4366696,5.1 17,5.1 Z" id="Path" fill="#36B37E" fill-rule="nonzero"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

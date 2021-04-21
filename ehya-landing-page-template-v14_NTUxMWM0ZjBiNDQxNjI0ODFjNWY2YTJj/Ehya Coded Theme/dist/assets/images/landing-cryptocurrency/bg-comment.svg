@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="545px" height="210px" viewBox="0 0 545 210" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Base</title>
+    <g id="Desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="50---Cryptocurrency" transform="translate(-150.000000, -3530.000000)" fill="#FFFFFF">
+            <g id="Testimonial" transform="translate(0.000000, 3364.000000)">
+                <g id="Item" transform="translate(150.000000, 166.000000)">
+                    <path d="M8,0 L537,0 C541.418278,-8.11624501e-16 545,3.581722 545,8 L545,182 C545,186.418278 541.418278,190 537,190 L38.5,190 L38.5,190 L0,210 L0,8 C-5.41083001e-16,3.581722 3.581722,8.11624501e-16 8,0 Z" id="Base"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

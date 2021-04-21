@@ -1,0 +1,136 @@
+// Color
+
+$s-color-primary: #1565d8;
+$s-color-secondary: #506690;
+$s-color-success: #36b37e;
+$s-color-info: #00b8d9;
+$s-color-warning: #faad13;
+$s-color-danger: #f2607b;
+$s-color-black: #183b56;
+$s-color-gray: #5a7184;
+$s-color-gray-light: #b3bac5;
+$s-color-white: white;
+$s-color-border: #e5eaf4;
+$s-color-light-blue: #f9fbfe;
+$s-color-iris-blue: #00b8d9;
+$s-color-bright-red: #e95432;
+$s-color-regal-blue: #183b56;
+$s-color-dark-blue: #3f598a;
+$s-color-dark: #0d2436;
+
+$s-color-facebook: #1565d8;
+$s-color-instagram: #f56040;
+$s-color-twitter: #00b8d9;
+$s-color-youtube: #e95432;
+
+$s-color-light-blue-100: rgba(#f9fbfe, 0.1);
+$s-color-iris-blue-100: rgba(#00b8d9, 0.1);
+$s-color-bright-red-100: rgba(#e95432, 0.1);
+
+$s-color-light-blue-40: rgba(#f9fbfe, 0.04);
+$s-color-iris-blue-40: rgba(#00b8d9, 0.04);
+$s-color-bright-red-40: rgba(#e95432, 0.04);
+
+$s-color-primary-60: rgba($s-color-primary, 0.06);
+$s-color-success-60: rgba($s-color-success, 0.06);
+$s-color-iris-blue-60: rgba($s-color-iris-blue, 0.06);
+
+$s-color-primary-100: rgba($s-color-primary, 0.1);
+$s-color-secondary-100: rgba($s-color-secondary, 0.1);
+$s-color-success-100: rgba($s-color-success, 0.1);
+$s-color-info-100: rgba($s-color-info, 0.1);
+$s-color-warning-100: rgba($s-color-warning, 0.1);
+$s-color-danger-100: rgba($s-color-danger, 0.1);
+$s-color-black-100: rgba($s-color-black, 0.1);
+$s-color-gray-100: rgba($s-color-gray, 0.1);
+$s-color-gray-light-100: rgba($s-color-gray-light, 0.1);
+$s-color-white-100: rgba($s-color-white, 0.1);
+$s-color-dark-blue-100: rgba($s-color-dark-blue, 0.1);
+
+$s-color-primary-200: rgba($s-color-primary, 0.2);
+$s-color-secondary-200: rgba($s-color-secondary, 0.2);
+$s-color-success-200: rgba($s-color-success, 0.2);
+$s-color-info-200: rgba($s-color-info, 0.2);
+$s-color-warning-200: rgba($s-color-warning, 0.2);
+$s-color-danger-200: rgba($s-color-danger, 0.2);
+$s-color-black-200: rgba($s-color-black, 0.2);
+$s-color-gray-200: rgba($s-color-gray, 0.2);
+$s-color-gray-light-200: rgba($s-color-gray-light, 0.2);
+$s-color-white-200: rgba($s-color-white, 0.2);
+
+$s-color-primary-300: rgba($s-color-primary, 0.3);
+$s-color-secondary-300: rgba($s-color-secondary, 0.3);
+$s-color-success-300: rgba($s-color-success-100, 0.3);
+$s-color-info-300: rgba($s-color-info, 0.3);
+$s-color-warning-300: rgba($s-color-warning, 0.3);
+$s-color-danger-300: rgba($s-color-danger, 0.3);
+$s-color-black-300: rgba($s-color-black, 0.3);
+$s-color-gray-300: rgba($s-color-gray, 0.3);
+$s-color-gray-light-300: rgba($s-color-gray-light, 0.3);
+$s-color-white-300: rgba($s-color-white, 0.3);
+
+$s-color-primary-400: rgba($s-color-primary, 0.4);
+$s-color-secondary-400: rgba($s-color-secondary, 0.4);
+$s-color-success-400: rgba($s-color-success, 0.4);
+$s-color-info-400: rgba($s-color-info, 0.4);
+$s-color-warning-400: rgba($s-color-warning, 0.4);
+$s-color-danger-400: rgba($s-color-danger, 0.4);
+$s-color-black-400: rgba($s-color-black, 0.4);
+$s-color-gray-400: rgba($s-color-gray, 0.4);
+$s-color-gray-light-400: rgba($s-color-gray-light, 0.4);
+$s-color-white-400: rgba($s-color-white, 0.4);
+
+$s-color-primary-500: rgba($s-color-primary, 0.5);
+$s-color-secondary-500: rgba($s-color-secondary, 0.5);
+$s-color-success-500: rgba($s-color-success, 0.5);
+$s-color-info-500: rgba($s-color-info, 0.5);
+$s-color-warning-500: rgba($s-color-warning, 0.5);
+$s-color-danger-500: rgba($s-color-danger, 0.5);
+$s-color-black-500: rgba($s-color-black, 0.5);
+$s-color-gray-500: rgba($s-color-gray, 0.5);
+$s-color-gray-light-500: rgba($s-color-gray-light, 0.5);
+$s-color-white-500: rgba($s-color-white, 0.5);
+
+$s-color-primary-600: rgba($s-color-primary, 0.6);
+$s-color-secondary-600: rgba($s-color-secondary, 0.6);
+$s-color-success-600: rgba($s-color-success, 0.6);
+$s-color-info-600: rgba($s-color-info, 0.6);
+$s-color-warning-600: rgba($s-color-warning, 0.6);
+$s-color-danger-600: rgba($s-color-danger, 0.6);
+$s-color-black-600: rgba($s-color-black, 0.6);
+$s-color-gray-600: rgba($s-color-gray, 0.6);
+$s-color-gray-light-600: rgba($s-color-gray-light, 0.6);
+$s-color-white-600: rgba($s-color-white, 0.6);
+
+$s-color-primary-700: rgba($s-color-primary, 0.7);
+$s-color-secondary-700: rgba($s-color-secondary, 0.7);
+$s-color-success-700: rgba($s-color-success, 0.7);
+$s-color-info-700: rgba($s-color-info, 0.7);
+$s-color-warning-700: rgba($s-color-warning, 0.7);
+$s-color-danger-700: rgba($s-color-danger, 0.7);
+$s-color-black-700: rgba($s-color-black, 0.7);
+$s-color-gray-700: rgba($s-color-gray, 0.7);
+$s-color-gray-light-700: rgba($s-color-gray-light, 0.7);
+$s-color-white-700: rgba($s-color-white, 0.7);
+
+$s-color-primary-800: rgba($s-color-primary, 0.8);
+$s-color-secondary-800: rgba($s-color-secondary, 0.8);
+$s-color-success-800: rgba($s-color-success, 0.8);
+$s-color-info-800: rgba($s-color-info, 0.8);
+$s-color-warning-800: rgba($s-color-warning, 0.8);
+$s-color-danger-800: rgba($s-color-danger, 0.8);
+$s-color-black-800: rgba($s-color-black, 0.8);
+$s-color-gray-800: rgba($s-color-gray, 0.8);
+$s-color-gray-light-800: rgba($s-color-gray-light, 0.8);
+$s-color-white-800: rgba($s-color-white, 0.8);
+
+$s-color-primary-900: rgba($s-color-primary, 0.9);
+$s-color-secondary-900: rgba($s-color-secondary, 0.9);
+$s-color-success-900: rgba($s-color-success, 0.9);
+$s-color-info-900: rgba($s-color-info, 0.9);
+$s-color-warning-900: rgba($s-color-warning, 0.9);
+$s-color-danger-900: rgba($s-color-danger, 0.9);
+$s-color-black-900: rgba($s-color-black, 0.9);
+$s-color-gray-900: rgba($s-color-gray, 0.9);
+$s-color-gray-light-900: rgba($s-color-gray-light, 0.9);
+$s-color-white-900: rgba($s-color-white, 0.9);

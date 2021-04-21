@@ -1,0 +1,1547 @@
+body.landing-saas3 {
+    .section-desc {
+        font-size: 18px;
+        line-height: 1.78;
+        color: #5a7184;
+        font-family: "Open Sans", sans-serif;
+    }
+
+    .section-title {
+        font-size: 14px;
+        font-family: "hk_grotesksemibold", sans-serif;
+        line-height: 1.43;
+        letter-spacing: 2px;
+        color: #5a7184;
+    }
+
+    .tagline {
+        font-size: 36px;
+        font-weight: bold;
+        line-height: 1.33;
+        letter-spacing: 0.2px;
+        color: #183b56;
+    }
+}
+header.landing-saas3 {
+    .hero {
+        padding-top: 68px;
+        .hero-title {
+            font-size: 56px;
+            font-weight: bold;
+            line-height: 1.21;
+            letter-spacing: 0.2px;
+            color: #183b56;
+        }
+
+        .section-desc {
+            margin: {
+                top: 18px;
+                bottom: 40px;
+            }
+        }
+
+        .btn-container {
+            display: flex;
+            gap: 30px;
+        }
+
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 56px;
+            padding: 0 32px;
+            text-decoration: none;
+            border-radius: 12px;
+            font-size: 18px;
+            font-family: "Open Sans", sans-serif;
+            font-weight: bold;
+        }
+    }
+}
+
+.landing-saas3-partner {
+    padding: 100px 0;
+    .partner {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 104px;
+        margin-bottom: 100px;
+    }
+    img {
+        width: 116px;
+    }
+    .dots {
+        height: 62px;
+        background-image: url("../../assets/images/landing-saas3/dots.svg");
+    }
+}
+
+.landing-saas3-collab {
+    padding: {
+        bottom: 120px;
+    }
+    .tagline {
+        margin: {
+            top: 28px;
+            bottom: 15px;
+        }
+    }
+    .section-desc {
+        width: 384px;
+        margin-bottom: 34px;
+    }
+    a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 168px;
+        height: 56px;
+        margin: auto;
+        border-radius: 12px;
+        background-color: $s-color-primary;
+        color: $s-color-white;
+        font-size: 18px;
+        font-family: "Open Sans", sans-serif;
+        font-weight: bold;
+    }
+    img.image {
+        width: 682px;
+        padding: 40px {
+            right: 44px;
+            left: 36px;
+        }
+    }
+
+    div.image {
+        img {
+            height: 644px;
+            object-fit: cover;
+        }
+    }
+
+    .column-gap {
+        column-gap: 45px;
+    }
+
+    .gap {
+        gap: 50px;
+    }
+
+    .xl-w-544.gap {
+        gap: 33px;
+    }
+
+    .title {
+        font-size: 24px;
+        font-family: "hk_grotesksemibold", sans-serif;
+        line-height: 1.33;
+        letter-spacing: 0.2px;
+        color: #183b56;
+    }
+
+    .desc {
+        font-size: 16px;
+        line-height: 1.75;
+        color: #5a7184;
+    }
+
+    .collab-card {
+        width: 350px;
+        height: 262px;
+        padding: {
+            top: 30px;
+            right: 32px;
+            bottom: 30px;
+            left: 30px;
+        }
+        .title {
+            margin: {
+                top: 26px;
+                bottom: 16px;
+            }
+        }
+    }
+}
+
+.landing-saas3-review {
+    background-color: $s-color-black;
+    margin: 0 100px;
+    padding-top: 40px;
+    height: 378px;
+    border-radius: 16px;
+    .name {
+        font-size: 22px;
+        font-weight: bold;
+        line-height: 1.45;
+        letter-spacing: 0.2px;
+        color: #ffffff;
+        margin-right: 10px;
+    }
+
+    .job {
+        font-size: 18px;
+        color: #ffffff;
+    }
+
+    .review {
+        font-size: 28px;
+        font-family: "hk_grotesksemibold", sans-serif;
+        line-height: 1.71;
+        letter-spacing: 0.19px;
+        color: #ffffff;
+    }
+
+    img {
+        width: unset !important;
+        margin-right: 76px;
+    }
+
+    .owl-dots {
+        position: absolute;
+        top: 44px;
+        right: 11px;
+        line-height: 0;
+        .owl-dot {
+            width: 8px;
+            height: 8px;
+            background-color: $s-color-white-100;
+            border-radius: 50%;
+            margin: 0 6px;
+            &.active {
+                background-color: $s-color-white;
+            }
+        }
+    }
+
+    .btn-container {
+        top: 306px;
+        left: 460px;
+        z-index: 2;
+        a {
+            box-shadow: 0 28px 32px 0 rgba(0, 0, 0, 0.06);
+            color: #959ead;
+            &:hover {
+                color: #183b56;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .column-gap {
+        column-gap: 20px;
+    }
+}
+
+.landing-saas3-integration {
+    background-image: url("../../assets/images/landing-saas3/bg-left.svg"),
+        url("../../assets/images/landing-saas3/bg-right.svg");
+    background-repeat: no-repeat;
+    background-position: left center, right center;
+    padding: {
+        top: 84px;
+        bottom: 66px;
+    }
+    margin: 100px {
+        top: 212px;
+        bottom: 120px;
+    }
+    .tagline {
+        margin: 24px 0;
+    }
+    a {
+        font-size: 18px;
+    }
+    i {
+        font-size: 16px;
+    }
+}
+
+.landing-saas3-pricing {
+    height: 902px;
+    background-color: $s-color-gray-light-100;
+    padding-top: 80px;
+    .text-container {
+        width: 610px;
+    }
+    .tagline {
+        margin: 24px 0;
+    }
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 60px;
+        height: 34px;
+        input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+            &:checked + .slider {
+                background-color: #ccc;
+            }
+
+            &:focus + .slider {
+                box-shadow: 0 0 1px #ccc;
+            }
+
+            &:checked + .slider:before {
+                -webkit-transform: translateX(26px);
+                -ms-transform: translateX(26px);
+                transform: translateX(26px);
+            }
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #faad13;
+            border-radius: 18px;
+            -webkit-transition: 0.4s;
+            transition: 0.4s;
+            &:before {
+                position: absolute;
+                content: "";
+                height: 26px;
+                width: 26px;
+                left: 5px;
+                bottom: 5px;
+                background-color: white;
+                border-radius: 50%;
+                -webkit-transition: 0.4s;
+                transition: 0.4s;
+            }
+        }
+    }
+
+    .title {
+        font-size: 24px;
+        font-weight: bold;
+        line-height: 1.33;
+        letter-spacing: 0.2px;
+        color: #183b56;
+        margin-bottom: 8px;
+    }
+
+    .desc {
+        font-size: 16px;
+        line-height: 1.75;
+        color: #5a7184;
+    }
+
+    .cards {
+        display: flex;
+        flex-direction: column;
+        row-gap: 30px;
+        .pricing-card:last-child {
+            box-shadow: 0 26px 40px 0 rgba(0, 0, 0, 0.06);
+        }
+    }
+    .pricing-card {
+        display: flex;
+        align-items: center;
+        background-color: $s-color-white;
+        border-radius: 4px;
+        padding: 22px 50px;
+    }
+}
+
+.landing-saas3-download {
+    margin-top: 120px;
+    .container {
+        border-top: solid 1px #e3e7ed;
+        text-align: center;
+        padding: {
+            top: 80px;
+            bottom: 100px;
+        }
+    }
+
+    .tagline {
+        font-size: 40px !important;
+        font-family: "hk_grotesksemibold", sans-serif;
+        margin: {
+            top: 40px;
+            bottom: 24px;
+        }
+    }
+
+    .download-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 380px;
+        height: 345px;
+        background-color: $s-color-success-100;
+        color: $s-color-gray;
+        padding: {
+            top: 50px;
+            bottom: 40px;
+        }
+        &:hover {
+            background-color: $s-color-success;
+            color: $s-color-white;
+            a {
+                background-color: $s-color-white;
+                color: $s-color-black;
+                border-color: $s-color-white;
+                text-decoration: none;
+            }
+        }
+    }
+
+    .fab {
+        font-size: 42px;
+        margin-bottom: 48px;
+    }
+
+    .title {
+        font-size: 28px;
+        font-weight: bold;
+        line-height: 1.29;
+        letter-spacing: 0.2px;
+    }
+
+    .desc {
+        font-size: 16px;
+        line-height: 1.75;
+        margin: {
+            top: 12px;
+            bottom: 40px;
+        }
+    }
+    a {
+        width: fit-content;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 13px 45px;
+        margin: auto;
+        background-color: transparent;
+        border-radius: 12px;
+        border: solid 2px #36b37e;
+        font-family: "Open Sans", sans-serif;
+        color: $s-color-success;
+        font-weight: bold;
+    }
+}
+
+.landing-saas3-subscribe {
+    margin-bottom: 44px;
+    .container {
+        border-bottom: solid 1px #e3e7ed;
+        padding: {
+            top: 42px;
+            bottom: 62px;
+        }
+    }
+    .title {
+        font-size: 24px;
+        font-weight: bold;
+        line-height: 1.33;
+        letter-spacing: 0.2px;
+        color: #183b56;
+    }
+
+    .desc {
+        font-size: 16px;
+        line-height: 1.75;
+        color: #5a7184;
+        margin-top: 8px;
+    }
+
+    .custom-form {
+        display: flex;
+        width: 497px;
+    }
+    input {
+        flex: auto;
+        border-radius: 8px;
+        box-shadow: 0 -10px 35px 0 rgba(0, 0, 0, 0.03);
+        border: solid 1px #e5eaf4;
+        border-right: none;
+        outline: none;
+        font-family: "Open Sans", sans-serif;
+        color: $s-color-gray;
+        padding-left: 24px;
+    }
+    button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 148px;
+        height: 58px;
+        border-radius: 4px;
+        border: none;
+        background-color: $s-color-black;
+        font-family: "Open Sans", sans-serif;
+        color: $s-color-white;
+        font-weight: bold;
+    }
+
+    .form-group {
+        width: 497px;
+        box-shadow: 0 -10px 35px 0 rgba(0, 0, 0, 0.03);
+    }
+
+    input {
+        &:focus {
+            box-shadow: none;
+        }
+    }
+
+    .btn {
+        border-radius: 4px;
+    }
+}
+@media (min-width: $breakpoints-lg) and (max-width: ($breakpoints-xl - 0.02px)) {
+    body.landing-saas3 {
+        .section-desc {
+            font-size: 16px;
+        }
+    }
+    header.landing-saas3 {
+        .hero {
+            padding-top: 26px;
+            text-align: center;
+            .container {
+                max-width: 622px;
+                padding: 0;
+            }
+            .hero-title {
+                font-size: 48px;
+                padding: 0 116px;
+            }
+            .section-desc {
+                margin-bottom: 50px;
+                padding: 0 60px;
+            }
+            .btn-container {
+                justify-content: center;
+            }
+            img {
+                margin-top: 72px;
+            }
+        }
+    }
+    .landing-saas3-partner {
+        padding: 72px 0;
+        .container {
+            max-width: 668px;
+            padding: 0;
+        }
+        .partner {
+            gap: 39px;
+        }
+        img {
+            width: 87px;
+        }
+        .dots {
+            height: 36px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+    .landing-saas3-collab {
+        text-align: center;
+        padding-bottom: 80px;
+        .container {
+            max-width: 700px;
+            padding: 0;
+        }
+        .section-desc {
+            font-size: 18px !important;
+            width: 525px;
+        }
+        img.image {
+            margin-top: 22px;
+        }
+        .column-gap {
+            column-gap: 20px;
+        }
+        .collab-card {
+            width: 220px;
+            height: 235px;
+            border-radius: 8px;
+            border: solid 2px $s-color-gray-light-100;
+            padding: 22px {
+                right: 16px;
+                left: 20px;
+            }
+            text-align: left;
+            img {
+                width: 44px;
+            }
+            .title {
+                font-size: 16px;
+                margin: {
+                    top: 22px;
+                    bottom: 9px;
+                }
+            }
+            .desc {
+                font-size: 14px;
+            }
+        }
+        .gap {
+            gap: 56px;
+        }
+        .xl-w-544.gap {
+            gap: 50px;
+        }
+        div.image {
+            img {
+                width: 280px;
+                height: 331px;
+            }
+        }
+    }
+    .landing-saas3-review {
+        height: unset;
+        margin: 0;
+        border-radius: unset;
+        padding: {
+            top: 29px;
+            bottom: 21px;
+        }
+        .container {
+            max-width: 678px;
+            padding: 0;
+        }
+        img {
+            width: 203px !important;
+            margin-right: 55px;
+        }
+        .name {
+            font-size: 20px;
+        }
+        .review {
+            font-size: 22px;
+            padding-right: 21px;
+        }
+        .btn-container {
+            top: unset;
+            bottom: -46px;
+            left: 258px;
+        }
+    }
+    .landing-saas3-integration {
+        background-size: contain;
+        margin: 0 {
+            top: 115px;
+            bottom: 80px;
+        }
+        padding: {
+            top: 54px;
+            bottom: 35px;
+        }
+        .tagline {
+            font-size: 32px !important;
+        }
+    }
+    .landing-saas3-pricing {
+        height: 764px;
+        padding-top: 48px;
+        .container {
+            max-width: 698px;
+            padding: 0;
+        }
+        .tagline {
+            font-size: 32px !important;
+            margin-bottom: 20px;
+        }
+        .cards {
+            row-gap: 18px;
+        }
+        .pricing-card {
+            padding: 20px 30px;
+        }
+        .title {
+            font-size: 20px;
+        }
+        .desc {
+            font-size: 14px;
+        }
+    }
+    .landing-saas3-download {
+        margin-top: 130px;
+        .container {
+            max-width: 708px;
+            padding: 0 {
+                top: 46px;
+                bottom: 72px;
+            }
+        }
+        .tagline {
+            font-size: 32px !important;
+            margin: {
+                top: 24px;
+                bottom: 18px;
+            }
+        }
+        a {
+            padding: 13px 24px;
+        }
+        .download-card {
+            width: 236px;
+            height: fit-content;
+            padding: {
+                top: 36px;
+                bottom: 32px;
+            }
+        }
+        .fab {
+            margin-bottom: 46px;
+        }
+        .title {
+            font-size: 22px;
+        }
+        .desc {
+            font-size: 14px;
+            padding: 0 32px;
+            margin: {
+                top: 10px;
+                bottom: 30px;
+            }
+        }
+    }
+    .landing-saas3-subscribe {
+        text-align: center;
+        .container {
+            max-width: 497px;
+            padding: 40px 0;
+            border: none;
+        }
+        .desc {
+            margin-bottom: 36px;
+        }
+    }
+}
+
+@media (min-width: $breakpoints-md) and (max-width: ($breakpoints-lg - 0.02px)) {
+    body.landing-saas3 {
+        .section-desc {
+            font-size: 16px;
+        }
+    }
+    header.landing-saas3 {
+        .hero {
+            padding-top: 26px;
+            text-align: center;
+            .container {
+                max-width: 622px;
+                padding: 0 !important;
+            }
+            .hero-title {
+                font-size: 48px;
+                padding: 0 116px;
+            }
+            .section-desc {
+                margin-bottom: 50px;
+                padding: 0 60px;
+            }
+            .btn-container {
+                justify-content: center;
+            }
+            img {
+                margin-top: 72px;
+            }
+        }
+    }
+    .landing-saas3-partner {
+        padding: 72px 0;
+        .container {
+            max-width: 668px;
+            padding: 0 !important;
+        }
+        .partner {
+            gap: 39px;
+        }
+        img {
+            width: 87px;
+        }
+        .dots {
+            height: 36px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+    .landing-saas3-collab {
+        text-align: center;
+        padding-bottom: 80px;
+        .container {
+            max-width: 700px !important;
+            padding: 0;
+        }
+        .section-desc {
+            font-size: 18px !important;
+            width: 525px;
+        }
+        img.image {
+            margin-top: 22px;
+        }
+        .column-gap {
+            column-gap: 20px;
+        }
+        .collab-card {
+            width: 220px;
+            height: 235px;
+            border-radius: 8px;
+            border: solid 2px $s-color-gray-light-100;
+            padding: 22px {
+                right: 16px;
+                left: 20px;
+            }
+            text-align: left;
+            img {
+                width: 44px;
+            }
+            .title {
+                font-size: 16px;
+                margin: {
+                    top: 22px;
+                    bottom: 9px;
+                }
+            }
+            .desc {
+                font-size: 14px;
+            }
+        }
+        .gap {
+            gap: 56px;
+        }
+        .xl-w-544.gap {
+            gap: 50px;
+        }
+        div.image {
+            img {
+                width: 280px;
+                height: 331px;
+            }
+        }
+    }
+    .landing-saas3-review {
+        height: unset;
+        margin: 0;
+        border-radius: unset;
+        padding: {
+            top: 29px;
+            bottom: 21px;
+        }
+        .container {
+            max-width: 678px;
+            padding: 0 !important;
+        }
+        img {
+            width: 203px !important;
+            margin-right: 55px;
+        }
+        .name {
+            font-size: 20px;
+        }
+        .review {
+            font-size: 22px;
+            padding-right: 21px;
+        }
+        .btn-container {
+            top: unset;
+            bottom: -46px;
+            left: 258px;
+        }
+    }
+    .landing-saas3-integration {
+        background-size: contain;
+        margin: 0 {
+            top: 115px;
+            bottom: 80px;
+        }
+        padding: {
+            top: 54px;
+            bottom: 35px;
+        }
+        .tagline {
+            font-size: 32px !important;
+        }
+    }
+    .landing-saas3-pricing {
+        height: 764px;
+        padding-top: 48px;
+        .container {
+            max-width: 698px;
+            padding: 0 !important;
+        }
+        .tagline {
+            font-size: 32px !important;
+            margin-bottom: 20px;
+        }
+        .cards {
+            row-gap: 18px;
+        }
+        .pricing-card {
+            padding: 20px 30px;
+        }
+        .title {
+            font-size: 20px;
+        }
+        .desc {
+            font-size: 14px;
+        }
+    }
+    .landing-saas3-download {
+        margin-top: 130px;
+        .container {
+            max-width: 708px !important;
+            padding: 0 {
+                top: 46px;
+                bottom: 72px;
+            }
+        }
+        .tagline {
+            font-size: 32px !important;
+            margin: {
+                top: 24px;
+                bottom: 18px;
+            }
+        }
+        a {
+            padding: 13px 24px;
+        }
+        .download-card {
+            width: 236px;
+            height: fit-content;
+            padding: {
+                top: 36px;
+                bottom: 32px;
+            }
+        }
+        .fab {
+            margin-bottom: 46px;
+        }
+        .title {
+            font-size: 22px;
+        }
+        .desc {
+            font-size: 14px;
+            padding: 0 32px;
+            margin: {
+                top: 10px;
+                bottom: 30px;
+            }
+        }
+    }
+    .landing-saas3-subscribe {
+        text-align: center;
+        .container {
+            max-width: 497px !important;
+            padding: 40px 0;
+            border: none;
+        }
+        .desc {
+            margin-bottom: 36px;
+        }
+    }
+}
+
+@media (min-width: $breakpoints-sm) and (max-width: ($breakpoints-md - 0.02px)) {
+    body.landing-saas3 {
+        .section-desc {
+            font-size: 16px;
+        }
+    }
+    header.landing-saas3 {
+        .hero {
+            padding-top: 26px;
+            text-align: center;
+            .container {
+                max-width: 576px;
+                padding: 0 !important;
+            }
+            .hero-title {
+                font-size: 48px;
+                padding: 0 93px;
+            }
+            .section-desc {
+                margin-bottom: 50px;
+                padding: 0 37px;
+            }
+            .btn-container {
+                justify-content: center;
+            }
+            img {
+                margin-top: 72px;
+            }
+        }
+    }
+    .landing-saas3-partner {
+        padding: 72px 0;
+        .container {
+            max-width: 516pxpx;
+            padding: 0 !important;
+        }
+        .partner {
+            gap: 30px;
+        }
+        img {
+            width: calc(396px / 5);
+        }
+        .dots {
+            height: 36px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+    .landing-saas3-collab {
+        text-align: center;
+        padding-bottom: 80px;
+        .container {
+            max-width: 576px !important;
+            padding: 0;
+        }
+        .section-desc {
+            font-size: 18px !important;
+            width: 525px;
+        }
+        img.image {
+            width: 556px;
+            margin-top: 22px;
+        }
+        .column-gap {
+            column-gap: 20px;
+        }
+        .collab-card {
+            width: calc(496px / 3);
+            height: fit-content;
+            border-radius: 8px;
+            border: solid 2px $s-color-gray-light-100;
+            padding: 15px 15px 16px;
+            text-align: left;
+            img {
+                width: 44px;
+            }
+            .title {
+                font-size: 16px;
+                margin: {
+                    top: 22px;
+                    bottom: 9px;
+                }
+            }
+            .desc {
+                font-size: 14px;
+            }
+        }
+        .gap {
+            gap: 56px;
+        }
+        .xl-w-544.gap {
+            gap: 30px;
+        }
+        div.image {
+            img {
+                width: 240px;
+                height: auto;
+            }
+        }
+    }
+    .landing-saas3-review {
+        height: unset;
+        margin: 0;
+        border-radius: unset;
+        padding: {
+            top: 29px;
+            bottom: 21px;
+        }
+        .container {
+            max-width: 556px;
+            padding: 0 !important;
+        }
+        img {
+            width: 203px !important;
+            margin-right: 55px;
+        }
+        .name {
+            font-size: 20px;
+        }
+        .review {
+            font-size: 22px;
+            padding-right: 0;
+        }
+        .btn-container {
+            top: unset;
+            bottom: -46px;
+            left: 258px;
+        }
+    }
+    .landing-saas3-integration {
+        background-size: contain;
+        background-position: -100px center, 450px center;
+        margin: 0 {
+            top: 115px;
+            bottom: 80px;
+        }
+        padding: {
+            top: 54px;
+            bottom: 35px;
+        }
+        .tagline {
+            font-size: 32px !important;
+        }
+    }
+    .landing-saas3-pricing {
+        height: 832px;
+        padding-top: 48px;
+        .container {
+            max-width: 556px;
+            padding: 0 !important;
+        }
+        .text-container {
+            width: unset;
+        }
+        .tagline {
+            font-size: 32px !important;
+            margin-bottom: 20px;
+        }
+        .cards {
+            row-gap: 18px;
+        }
+        .pricing-card {
+            padding: 20px;
+        }
+        .title {
+            font-size: 20px;
+        }
+        .desc {
+            font-size: 14px;
+        }
+        .underline {
+            font-size: 14px;
+        }
+    }
+    .landing-saas3-download {
+        margin-top: 130px;
+        .container {
+            max-width: 576px !important;
+            padding: 0 {
+                top: 46px;
+                bottom: 72px;
+            }
+        }
+        .tagline {
+            font-size: 32px !important;
+            margin: {
+                top: 24px;
+                bottom: 18px;
+            }
+        }
+        a {
+            padding: 13px 24px;
+        }
+        .download-card {
+            width: calc(576px / 3);
+            height: fit-content;
+            padding: {
+                top: 36px;
+                bottom: 32px;
+            }
+        }
+        .fab {
+            margin-bottom: 46px;
+        }
+        .title {
+            font-size: 22px;
+        }
+        .desc {
+            font-size: 14px;
+            padding: 0 32px;
+            margin: {
+                top: 10px;
+                bottom: 30px;
+            }
+        }
+    }
+    .landing-saas3-subscribe {
+        text-align: center;
+        .container {
+            max-width: 497px !important;
+            padding: 40px 0;
+            border: none;
+        }
+        .desc {
+            margin-bottom: 36px;
+        }
+    }
+}
+
+@media (max-width: ($breakpoints-sm - 0.02px)) {
+    body.landing-saas3 {
+        #bp_mobile {
+            display: block;
+        }
+        .tagline {
+            font-size: 28px;
+        }
+        .section-desc {
+            font-size: 16px;
+        }
+    }
+    header.landing-saas3 {
+        .hero {
+            padding-top: 32px;
+            text-align: center;
+            .container {
+                max-width: 300px;
+                padding: 0;
+            }
+            .hero-title {
+                font-size: 32px;
+            }
+            .section-desc {
+                font-size: 16px;
+                padding: 0 17px;
+                margin: {
+                    top: 16px;
+                    bottom: 36px;
+                }
+            }
+            .btn-container {
+                flex-direction: column;
+                padding: 0 20px;
+                gap: 16px;
+            }
+            a {
+                height: 48px;
+                padding: 0;
+                font-size: 16px;
+            }
+            img {
+                margin-top: 36px;
+            }
+        }
+    }
+    .landing-saas3-partner {
+        padding: {
+            top: 40px;
+            bottom: 48px;
+        }
+        .container {
+            max-width: 268px;
+            padding: 0;
+        }
+        .partner {
+            flex-wrap: wrap;
+            column-gap: 34px;
+            row-gap: 24px;
+            width: 226px;
+            margin: auto {
+                bottom: 36px;
+            }
+        }
+        img {
+            width: 96px;
+        }
+        .dots {
+            height: 21px;
+            width: 268px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+    .landing-saas3-collab {
+        text-align: center;
+        .container {
+            max-width: 320px;
+            padding: 0;
+        }
+        .section-desc {
+            width: 272px;
+            margin-bottom: 24px;
+        }
+        .tagline {
+            margin: {
+                top: 22px;
+                bottom: 15px;
+            }
+        }
+        img.image {
+            width: 320px;
+            padding: 19px 20px 14px 17px;
+            margin-top: 30px;
+        }
+        .owl-carousel {
+            .owl-stage-outer {
+                overflow: visible;
+            }
+            .owl-item {
+                opacity: 0;
+                transition: opacity 500ms;
+            }
+            .owl-item.active {
+                opacity: 1;
+            }
+        }
+        .collab-card {
+            width: 280px;
+            height: 179px;
+            box-shadow: 0 26px 40px 0 rgba(0, 0, 0, 0.06);
+            border-radius: 12px;
+            padding: 15px 15px 16px;
+            text-align: left;
+            img {
+                width: 36px !important;
+            }
+            .title {
+                font-size: 16px;
+                margin: {
+                    top: 12px;
+                    bottom: 8px;
+                }
+            }
+            .desc {
+                width: unset;
+            }
+        }
+        .desc {
+            font-size: 14px;
+            width: 260px;
+        }
+        .xl-w-544.gap {
+            gap: 26px;
+        }
+        div.image {
+            img {
+                width: 280px;
+                height: auto;
+            }
+        }
+        .title {
+            font-size: 18px;
+            margin: {
+                top: 14px;
+                bottom: 8px;
+            }
+        }
+    }
+    .landing-saas3-review {
+        height: unset;
+        text-align: center;
+        margin: 0;
+        border-radius: 0;
+        padding: 0 {
+            bottom: 46px;
+        }
+        .container {
+            max-width: 280px;
+            padding: 0;
+        }
+        img {
+            width: 200px !important;
+            margin: auto {
+                top: -78px;
+            }
+        }
+        .name {
+            font-size: 20px;
+            margin: {
+                right: 0;
+                bottom: 8px;
+            }
+        }
+        .job {
+            font-size: 14px;
+        }
+        .review {
+            font-size: 20px;
+        }
+        .owl-carousel {
+            .owl-stage-outer {
+                overflow: visible;
+            }
+            .owl-item {
+                opacity: 0;
+                transition: opacity 500ms;
+            }
+            .owl-item.active {
+                opacity: 1;
+            }
+        }
+        .btn-container {
+            top: unset;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .owl-dots {
+            top: unset;
+            right: unset;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+    .landing-saas3-integration {
+        text-align: center;
+        background: none;
+        margin: 0;
+        padding: {
+            top: 56;
+            bottom: 64px;
+        }
+        .container {
+            max-width: 320px;
+            padding: 0;
+        }
+        .text-container {
+            width: 272px;
+        }
+        .tagline {
+            margin-top: 16px;
+        }
+        img {
+            width: 320px;
+        }
+    }
+    .landing-saas3-pricing {
+        height: 1227px;
+        padding-top: 48px;
+        .container {
+            max-width: 280px;
+            padding: 0;
+        }
+        .text-container {
+            width: unset;
+        }
+        .tagline {
+            margin: {
+                top: 22px;
+                bottom: 12px;
+            }
+        }
+        .switch {
+            margin: 0 14px;
+        }
+        .cards {
+            row-gap: 18px;
+        }
+        .pricing-card {
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 20px;
+        }
+        .desc {
+            font-size: 14px;
+        }
+        .title {
+            margin-bottom: 0;
+        }
+        .underline {
+            font-size: 12px;
+        }
+        .xs-py-10 {
+            padding: 10px 0;
+        }
+    }
+    .landing-saas3-download {
+        margin-top: 169px;
+        .container {
+            max-width: 280px;
+            padding: 0 {
+                top: 46px;
+            }
+        }
+        .tagline {
+            font-size: 28px !important;
+            margin: {
+                top: 24px;
+                bottom: 12px;
+            }
+        }
+        .flex {
+            gap: 20px;
+        }
+        .download-card {
+            width: 280px;
+            height: fit-content;
+            padding: {
+                top: 24px;
+                bottom: 20px;
+            }
+        }
+        .fab {
+            margin-bottom: 24px;
+        }
+        .title {
+            font-size: 22px;
+        }
+        .desc {
+            font-size: 14px;
+            margin: {
+                top: 8px;
+                bottom: 32px;
+            }
+        }
+        a {
+            width: 235px;
+            height: 48px;
+            padding: 0;
+        }
+    }
+    .landing-saas3-subscribe {
+        text-align: center;
+        padding-top: 72px;
+        margin-bottom: 0;
+        .container {
+            max-width: 280px;
+            padding: 0 {
+                bottom: 36px;
+            }
+        }
+        .desc {
+            font-size: 14px;
+            margin-top: 14px;
+        }
+        .custom-form {
+            flex-direction: column;
+            width: 100%;
+            gap: 10px;
+            padding: 12px 8px;
+            margin-top: 40px;
+            background-color: $s-color-white;
+            border-radius: 8px;
+            box-shadow: 0 -10px 35px 0 rgba(0, 0, 0, 0.03);
+        }
+        input {
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            border-right: solid 1px #e5eaf4;
+            height: 40px;
+            padding: 0 {
+                left: 16px;
+            }
+        }
+        button {
+            width: 100%;
+            height: 40px;
+            border-radius: 8px;
+        }
+    }
+}
+
+.bp_checking {
+    display: none;
+}
+
+@media (min-width: $breakpoints-sm) and (max-width: ($breakpoints-xl - 0.02px)) {
+    body.landing-saas3 {
+        #bp_tablet {
+            display: block;
+        }
+    }
+}

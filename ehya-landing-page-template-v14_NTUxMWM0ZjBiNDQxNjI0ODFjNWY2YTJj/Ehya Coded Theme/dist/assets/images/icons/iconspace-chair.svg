@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="42" height="36" viewBox="0 0 42 36">
+    <g fill="none" fill-rule="evenodd" transform="translate(-11 -14)">
+        <circle cx="32" cy="32" r="32"/>
+        <path fill="#154E84" fill-rule="nonzero" d="M47 35c0 .552-.448 1-1 1H18c-.552 0-1-.448-1-1V21c0-3.866 3.134-7 7-7h16c3.866 0 7 3.134 7 7v14z"/>
+        <path fill="#FFF" fill-rule="nonzero" d="M45 34V21c0-2.761-2.239-5-5-5H24c-2.761 0-5 2.239-5 5v13h26z"/>
+        <path fill="#154E84" fill-rule="nonzero" d="M11 29c0-2.761 2.239-5 5-5s5 2.239 5 5v16c0 .552-.448 1-1 1h-4c-1.657 0-3-1.343-3-3V33c-1.241-.93-2-2.4-2-4z"/>
+        <path fill="#FFF" fill-rule="nonzero" d="M19 44V29c0-1.657-1.343-3-3-3s-3 1.343-3 3c0 1.084.579 2.066 1.5 2.6.31.178.5.508.5.865V43c0 .552.448 1 1 1h3z"/>
+        <path fill="#154E84" fill-rule="nonzero" d="M53 29c0-2.761-2.239-5-5-5s-5 2.239-5 5v16c0 .552.448 1 1 1h4c1.657 0 3-1.343 3-3V33c1.241-.93 2-2.4 2-4z"/>
+        <path fill="#FFF" fill-rule="nonzero" d="M45 44V29c0-1.657 1.343-3 3-3s3 1.343 3 3c0 1.084-.579 2.066-1.5 2.6-.31.178-.5.508-.5.865V43c0 .552-.448 1-1 1h-3z"/>
+        <path fill="#154E84" fill-rule="nonzero" d="M19 40c0-.552.448-1 1-1h24c.552 0 1 .448 1 1v5c0 .552-.448 1-1 1H20c-.552 0-1-.448-1-1v-5z"/>
+        <path fill="#FFC200" fill-rule="nonzero" d="M21 41L21 44 43 44 43 41z"/>
+        <path fill="#154E84" fill-rule="nonzero" d="M15 45c0-.552.448-1 1-1h4c.552 0 1 .448 1 1v3c0 1.105-.895 2-2 2h-2c-1.105 0-2-.895-2-2v-3z"/>
+        <path fill="#52ABE2" fill-rule="nonzero" d="M17 46L17 48 19 48 19 46z"/>
+        <path fill="#154E84" fill-rule="nonzero" d="M43 45c0-.552.448-1 1-1h4c.552 0 1 .448 1 1v3c0 1.105-.895 2-2 2h-2c-1.105 0-2-.895-2-2v-3z"/>
+        <path fill="#52ABE2" fill-rule="nonzero" d="M45 46L45 48 47 48 47 46z"/>
+        <path fill="#154E84" fill-rule="nonzero" d="M19 35c0-.552.448-1 1-1h24c.552 0 1 .448 1 1v5c0 .552-.448 1-1 1H20c-.552 0-1-.448-1-1v-5z"/>
+        <path fill="#52ABE2" fill-rule="nonzero" d="M21 36L21 39 43 39 43 36z"/>
+    </g>
+</svg>

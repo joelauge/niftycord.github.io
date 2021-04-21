@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64px" height="64px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>iconspace_Chair</title>
+    <g id="[NEW-UPDATE-Landing]" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="51---E-Commerce" transform="translate(-1175.000000, -2819.000000)">
+            <g id="Ccategories" transform="translate(150.000000, 2787.000000)">
+                <g id="Item" transform="translate(975.000000, 0.000000)">
+                    <g id="iconspace_Chair" transform="translate(50.000000, 32.000000)">
+                        <circle id="Shape" cx="32" cy="32" r="32"></circle>
+                        <path d="M47,35 C47,35.5522847 46.5522847,36 46,36 L18,36 C17.4477153,36 17,35.5522847 17,35 L17,21 C17,17.1340068 20.1340068,14 24,14 L40,14 C43.8659932,14 47,17.1340068 47,21 L47,35 Z" id="Shape" fill="#183B56" fill-rule="nonzero"></path>
+                        <path d="M45,34 L45,21 C45,18.2385763 42.7614237,16 40,16 L24,16 C21.2385763,16 19,18.2385763 19,21 L19,34 L45,34 Z" id="Shape" fill="#FFFFFF" fill-rule="nonzero"></path>
+                        <path d="M11,29 C11,26.2385763 13.2385763,24 16,24 C18.7614237,24 21,26.2385763 21,29 L21,45 C21,45.5522847 20.5522847,46 20,46 L16,46 C14.3431458,46 13,44.6568542 13,43 L13,33.0005318 C11.7589937,32.0696125 11,30.6005074 11,29 Z" id="Shape" fill="#183B56" fill-rule="nonzero"></path>
+                        <path d="M19,44 L19,29 C19,27.3431458 17.6568542,26 16,26 C14.3431458,26 13,27.3431458 13,29 C13,30.0839642 13.5788737,31.0660026 14.500726,31.5992654 C14.8097179,31.7780075 15,32.1079052 15,32.4648712 L15,43 C15,43.5522847 15.4477153,44 16,44 L19,44 Z" id="Shape" fill="#FFFFFF" fill-rule="nonzero"></path>
+                        <path d="M43,29 C43,26.2385763 45.2385763,24 48,24 C50.7614237,24 53,26.2385763 53,29 L53,45 C53,45.5522847 52.5522847,46 52,46 L48,46 C46.3431458,46 45,44.6568542 45,43 L45,33.0005318 C43.7589937,32.0696125 43,30.6005074 43,29 Z" id="Shape" fill="#183B56" fill-rule="nonzero" transform="translate(48.000000, 35.000000) scale(-1, 1) translate(-48.000000, -35.000000) "></path>
+                        <path d="M51,44 L51,29 C51,27.3431458 49.6568542,26 48,26 C46.3431458,26 45,27.3431458 45,29 C45,30.0839642 45.5788737,31.0660026 46.500726,31.5992654 C46.8097179,31.7780075 47,32.1079052 47,32.4648712 L47,43 C47,43.5522847 47.4477153,44 48,44 L51,44 Z" id="Shape" fill="#FFFFFF" fill-rule="nonzero" transform="translate(48.000000, 35.000000) scale(-1, 1) translate(-48.000000, -35.000000) "></path>
+                        <path d="M19,40 C19,39.4477153 19.4477153,39 20,39 L44,39 C44.5522847,39 45,39.4477153 45,40 L45,45 C45,45.5522847 44.5522847,46 44,46 L20,46 C19.4477153,46 19,45.5522847 19,45 L19,40 Z" id="Shape" fill="#154E84" fill-rule="nonzero"></path>
+                        <polygon id="Shape" fill="#FFC200" fill-rule="nonzero" points="21 41 21 44 43 44 43 41"></polygon>
+                        <path d="M15,45 C15,44.4477153 15.4477153,44 16,44 L20,44 C20.5522847,44 21,44.4477153 21,45 L21,48 C21,49.1045695 20.1045695,50 19,50 L17,50 C15.8954305,50 15,49.1045695 15,48 L15,45 Z" id="Shape" fill="#183B56" fill-rule="nonzero"></path>
+                        <polygon id="Shape" fill="#36B37E" fill-rule="nonzero" points="17 46 17 48 19 48 19 46"></polygon>
+                        <path d="M43,45 C43,44.4477153 43.4477153,44 44,44 L48,44 C48.5522847,44 49,44.4477153 49,45 L49,48 C49,49.1045695 48.1045695,50 47,50 L45,50 C43.8954305,50 43,49.1045695 43,48 L43,45 Z" id="Shape" fill="#183B56" fill-rule="nonzero"></path>
+                        <polygon id="Shape" fill="#36B37E" fill-rule="nonzero" points="45 46 45 48 47 48 47 46"></polygon>
+                        <path d="M19,35 C19,34.4477153 19.4477153,34 20,34 L44,34 C44.5522847,34 45,34.4477153 45,35 L45,40 C45,40.5522847 44.5522847,41 44,41 L20,41 C19.4477153,41 19,40.5522847 19,40 L19,35 Z" id="Shape" fill="#154E84" fill-rule="nonzero"></path>
+                        <polygon id="Shape" fill="#36B37E" fill-rule="nonzero" points="21 36 21 39 43 39 43 36"></polygon>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

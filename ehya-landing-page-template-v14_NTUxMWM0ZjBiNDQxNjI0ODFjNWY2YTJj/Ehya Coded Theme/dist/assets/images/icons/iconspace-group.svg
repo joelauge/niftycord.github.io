@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+    <g fill="none" fill-rule="evenodd">
+        <circle cx="32" cy="32" r="32" fill="#E6F0FC"/>
+        <path fill="#154E84" fill-rule="nonzero" d="M15 16c0-.552.448-1 1-1h32c.552 0 1 .448 1 1v32c0 .552-.448 1-1 1H16c-.552 0-1-.448-1-1V16z"/>
+        <path fill="#FFF" fill-rule="nonzero" d="M17 17L17 47 47 47 47 17z"/>
+        <path fill="#154E84" fill-rule="nonzero" d="M11 12c0-.552.448-1 1-1h8c.552 0 1 .448 1 1v8c0 .552-.448 1-1 1h-8c-.552 0-1-.448-1-1v-8z"/>
+        <path fill="#FFC200" fill-rule="nonzero" d="M13 13L13 19 19 19 19 13z"/>
+        <path fill="#154E84" fill-rule="nonzero" d="M43 12c0-.552.448-1 1-1h8c.552 0 1 .448 1 1v8c0 .552-.448 1-1 1h-8c-.552 0-1-.448-1-1v-8z"/>
+        <path fill="#52ABE2" fill-rule="nonzero" d="M45 13L45 19 51 19 51 13z"/>
+        <path fill="#154E84" fill-rule="nonzero" d="M11 44c0-.552.448-1 1-1h8c.552 0 1 .448 1 1v8c0 .552-.448 1-1 1h-8c-.552 0-1-.448-1-1v-8z"/>
+        <path fill="#52ABE2" fill-rule="nonzero" d="M13 45L13 51 19 51 19 45z"/>
+        <path fill="#154E84" fill-rule="nonzero" d="M43 44c0-.552.448-1 1-1h8c.552 0 1 .448 1 1v8c0 .552-.448 1-1 1h-8c-.552 0-1-.448-1-1v-8z"/>
+        <path fill="#FFC200" fill-rule="nonzero" d="M45 45L45 51 51 51 51 45z"/>
+    </g>
+</svg>

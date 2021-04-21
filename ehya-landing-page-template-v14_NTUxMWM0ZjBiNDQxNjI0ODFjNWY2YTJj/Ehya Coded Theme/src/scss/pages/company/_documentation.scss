@@ -1,0 +1,222 @@
+body.company-documentation {
+  .overlay {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 40;
+    top: 0;
+    left: 0;
+    background-color: rgba(24, 59, 86, .3);
+    overflow-x: hidden;
+    transition: 0.5s;
+    display: none
+  }
+}
+
+header.company-documentation {
+  .sidebar-menu {
+    display: none;
+  }
+}
+
+main.company-documentation {
+  padding: {
+    top: 74px;
+    bottom: 131px;
+  }
+
+  .sidebar {
+    width: 282px;
+    height: fit-content;
+    border: 1px solid #eceef2;
+
+    padding: 11px {
+      top: 24px;
+      bottom: 16px;
+    }
+
+    .bg-info-100 {
+      padding: {
+        top: 13px;
+        bottom: 15px;
+      }
+    }
+
+    li {
+      font-size: 16px;
+      color: #183b56;
+
+      padding: {
+        right: 10px;
+        left: 13px;
+      }
+    }
+
+    .list-child {
+      >a {
+        font-size: 16px;
+        color: #183b56;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        padding: {
+          top: 13px;
+          bottom: 13px;
+        }
+
+        margin: {
+          left: 1px;
+        }
+      }
+
+      >a:hover {
+        text-decoration: none;
+      }
+    }
+
+    .list-child:hover {
+      background-color: $s-color-info-100;
+    }
+
+    .btn-primary {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      padding: {
+        top: 13px;
+        right: 22px;
+        bottom: 13px;
+      }
+    }
+  }
+
+  .content {
+    width: 818px;
+
+    .content-desc {
+      font-size: 16px;
+      line-height: 1.75;
+      color: #183b56;
+    }
+
+    .content-title {
+      font-size: 22px;
+      font-weight: 600;
+      line-height: 1.45;
+      letter-spacing: 0.2px;
+      color: #183b56;
+    }
+
+    .greeting {
+      font-size: 32px;
+      font-weight: bold;
+      line-height: 1.25;
+      letter-spacing: 0.2px;
+      color: #183b56;
+    }
+
+    .btn-outline-primary {
+      line-height: 1.43;
+      border-radius: 2000px;
+
+      padding: {
+        top: 11px;
+        right: 20px;
+        bottom: 9px;
+        left: 18px;
+      }
+    }
+
+    .author {
+      font-size: 14px;
+      line-height: 1.71;
+      color: #5a7184;
+      margin-top: 15px;
+    }
+
+    .profile-image {
+      img {
+        width: 100%;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+    }
+
+    .author-name::after {
+      content: "\a";
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: #b3bac5;
+      display: inline-block;
+      margin-right: 12px;
+    }
+
+    .image-big {
+      width: 684px;
+    }
+
+    .image-big.dashboard {
+      width: 782px;
+    }
+  }
+}
+
+// Mobile-Tab devices (tablets, < 992px)
+@media (min-width: $breakpoints-lg - 0.02px) {
+  main.company-documentation {
+    .overlay {
+      display: none !important;
+    }
+
+    .sidebar {
+      width: 282px !important;
+    }
+  }
+}
+
+@media (max-width: $breakpoints-lg - 0.02px) {
+  header.company-documentation {
+    .sidebar-menu {
+      display: block;
+    }
+  }
+
+  main.company-documentation {
+    .sidebar {
+      padding-right: 0px;
+      padding-left: 0px;
+      width: 0;
+      top: 0;
+      left: 0;
+
+      * {
+        visibility: hidden;
+      }
+    }
+  }
+}
+
+@media (max-width: $breakpoints-sm - 0.02px) {
+  main.company-documentation {
+    .content {
+      .author-name::after {
+        content: none;
+      }
+    }
+  }
+}
+
+.bp_checking {
+  display: none;
+}
+
+@media only screen and (max-width:767px) {
+  #bp_sm {
+    display: block;
+  }
+}

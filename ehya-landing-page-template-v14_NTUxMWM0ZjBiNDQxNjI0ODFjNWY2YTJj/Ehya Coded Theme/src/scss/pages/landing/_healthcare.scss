@@ -1,0 +1,652 @@
+body.landing-healthcare {
+    .section-title {
+        font-size: 48px;
+        font-weight: bold;
+        line-height: 1.21;
+        letter-spacing: 0.2px;
+        color: #183b56;
+    }
+
+    .section-desc {
+        font-size: 18px;
+        line-height: 1.78;
+        color: #5a7184;
+    }
+}
+
+header.landing-healthcare {
+    .hero {
+        padding-top: 63px;
+
+        .text-container {
+            width: 555px;
+        }
+
+        .container {
+            border-bottom: solid 1px #e3e7ed;
+
+            .section-information {
+                font-size: 14px;
+                font-weight: 600;
+                line-height: 1.43;
+                color: #183b56;
+                position: relative;
+                margin-top: 19px;
+                margin-bottom: 34px;
+                margin-left: 28px;
+            }
+
+            .section-information::before {
+                content: "";
+                position: absolute;
+                height: 2px;
+                border-top: 2px solid #344563;
+                top: 0;
+                width: 14px;
+                right: 100%;
+                margin-right: 12px;
+                top: 50%;
+            }
+
+            .form-group {
+                box-shadow: 0 -10px 35px 0 rgba(0, 0, 0, 0.03);
+
+                .btn {
+                    border-radius: 8px;
+                }
+            }
+
+            .form-group * {
+                border: none;
+            }
+
+            .hero-image {
+                width: 524px;
+            }
+        }
+
+        .custom-form {
+            width: 555px;
+            input {
+                font-family: "OpenSans", sans-serif;
+                font-size: 16px;
+                line-height: 1.75;
+                color: #5a7184;
+                border: none;
+                outline: none;
+                background-color: $s-color-white;
+                box-shadow: 0 -10px 35px 0 rgba(0, 0, 0, 0.03);
+                border-radius: 8px 0 0 8px;
+                flex: auto;
+                padding: {
+                    top: 15px;
+                    bottom: 15px;
+                    left: 20px;
+                }
+            }
+        }
+    }
+}
+
+.landing-healthcare-dashboard {
+    .container {
+        border-bottom: solid 1px #e3e7ed;
+
+        > div {
+            padding: {
+                right: 67px;
+                left: 67px;
+            }
+        }
+    }
+
+    .section-desc {
+        margin-left: 68px;
+        margin-right: 31px;
+    }
+
+    .dashboard-image {
+        margin-top: 72px;
+        margin-bottom: 55px;
+
+        img {
+            box-shadow: 0px 15px 35px 0 rgba(0, 0, 0, 0.05);
+        }
+    }
+
+    .column-gap {
+        column-gap: 20px;
+        .dashboard-card {
+            border: solid 2px rgba(179, 186, 197, 0.1);
+
+            padding: 20px {
+                top: 16px;
+                left: 24px;
+            }
+
+            .dashboard-number {
+                font-size: 32px;
+                font-weight: bold;
+                line-height: 1.25;
+                letter-spacing: 0.2px;
+                color: #1565d8;
+            }
+
+            .dashboard-title {
+                font-size: 16px;
+                font-weight: 600;
+                line-height: 1.25;
+                letter-spacing: 0.2px;
+                color: #183b56;
+                margin-top: 12px;
+                margin-bottom: 9px;
+            }
+
+            .dashboard-desc {
+                font-size: 14px;
+                line-height: 1.71;
+                color: #5a7184;
+            }
+        }
+    }
+}
+
+.landing-healthcare-protect {
+    border-bottom: solid 1px #e3e7ed;
+
+    .protect-card {
+        padding: 43px 70px 30px 24px;
+
+        .protect-title {
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 1.2;
+            letter-spacing: 0.2px;
+            color: #183b56;
+            margin-bottom: 18px;
+        }
+
+        .protect-desc {
+            font-size: 14px;
+            line-height: 1.71;
+            color: #5a7184;
+        }
+    }
+
+    .col-6:first-child {
+        .protect-image {
+            margin-bottom: 47px;
+            margin-left: 146px;
+        }
+    }
+
+    .col-6:nth-child(2) {
+        .protect-image {
+            margin-top: 25px;
+            margin-bottom: 37px;
+            margin-left: 104px;
+        }
+    }
+
+    .col-6:nth-child(3) {
+        .protect-image {
+            margin-top: 17px;
+            margin-bottom: 46px;
+            margin-left: 86px;
+        }
+    }
+
+    .col-6:last-child {
+        .protect-image {
+            margin-top: 23px;
+            margin-bottom: 46px;
+            margin-left: 146px;
+        }
+    }
+
+    .container {
+        > div {
+            padding: {
+                right: 65px;
+                left: 165px;
+            }
+
+            .section-title {
+                width: 502px;
+            }
+        }
+    }
+}
+
+.landing-healthcare-modern {
+    .container {
+        > div {
+            padding: {
+                right: 92px;
+                left: 79px;
+            }
+
+            .section-title {
+                margin-left: 18px;
+            }
+
+            .modern-title {
+                font-size: 24px;
+                font-weight: bold;
+                line-height: 1.33;
+                letter-spacing: 0.2px;
+                color: #183b56;
+            }
+
+            .modern-desc {
+                font-size: 16px;
+                line-height: 1.75;
+                color: #183b56;
+            }
+
+            .col-6:nth-child(2) {
+                > div {
+                    margin-left: 61.5px;
+
+                    .modern-image {
+                        margin-top: 134px;
+                    }
+                }
+            }
+
+            .col-6:last-child {
+                > div {
+                    margin-left: 61.5px;
+
+                    .modern-image {
+                        margin-top: 126px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.landing-healthcare-track {
+    background: linear-gradient(90deg, white 51%, rgba(21, 101, 216, 0.1) 49%);
+
+    padding: {
+        top: 54px;
+        bottom: 55px;
+    }
+
+    .container {
+        > .flex {
+            > div:first-child {
+                width: 353px;
+                margin-right: 108px;
+            }
+
+            .track-image {
+                width: 225px;
+                margin-right: 30px;
+                box-shadow: 0px 15px 35px 0px rgba(0, 0, 0, 0.05);
+                box-sizing: unset;
+            }
+
+            .track-image:nth-child(1) {
+                width: 262px;
+                box-shadow: none;
+            }
+        }
+    }
+
+    .section-title {
+        width: 353px;
+        line-height: 1.3;
+        position: relative;
+        margin-top: 33px;
+    }
+
+    .section-title::before {
+        content: "";
+        height: 5px;
+        border-top: 5px solid #344563;
+        width: 28px;
+        position: absolute;
+        top: -33px;
+    }
+
+    .section-desc {
+        margin-right: 7px;
+    }
+
+    .btn-container {
+        margin-top: 113px;
+
+        i:hover {
+            color: #183b56 !important;
+            border-color: #183b56 !important;
+            cursor: pointer;
+        }
+    }
+}
+
+.landing-healthcare-resources {
+    .container {
+        border-top: 1px solid #e3e7ed;
+    }
+
+    .section-title {
+        width: 540px;
+    }
+
+    .gap {
+        gap: 33px;
+    }
+
+    .resources-card {
+        border: solid 1px #ededed;
+        width: 260px;
+
+        padding: 37px {
+            top: 48px;
+            bottom: 28px;
+        }
+
+        .resources-image {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 64px;
+            height: 64px;
+            margin: auto;
+            border-radius: 8px;
+            box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.08);
+        }
+
+        .resources-title {
+            font-size: 20px;
+            font-weight: 600;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.2;
+            letter-spacing: 0.2px;
+            text-align: center;
+            color: #183b56;
+            margin-top: 42px;
+            margin-bottom: 14px;
+        }
+
+        .resources-desc {
+            font-size: 14px;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.71;
+            letter-spacing: normal;
+            text-align: center;
+            color: #5a7184;
+        }
+    }
+
+    .resources-card:hover {
+        background-color: rgba(179, 186, 197, 0.1);
+        border: 1px solid rgba(179, 186, 197, 0.1);
+    }
+}
+
+.landing-healthcare-subscription {
+    margin-bottom: 94px;
+
+    .input-group {
+        border: solid 1px #c3cad9;
+        max-width: 390px;
+    }
+
+    .input-group:hover {
+        box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.08);
+    }
+
+    .form-control {
+        padding-left: 12px;
+    }
+
+    .form-control:focus {
+        box-shadow: none;
+    }
+}
+
+.bp_checking {
+    display: none;
+}
+
+@media only screen and (max-width: ($breakpoints-sm - 0.02px)) {
+    body.landing-healthcare {
+        #bp_mobile {
+            display: block;
+        }
+    }
+}
+
+// Mobile-Tab devices (tablets, < 992px)
+@media (max-width: $breakpoints-lg - 0.02px) {
+    .landing-healthcare-dashboard {
+        .col-4 {
+            padding: {
+                right: 10px;
+                left: 10px;
+            }
+        }
+    }
+
+    .landing-healthcare-protect {
+        .protect-card {
+            padding: {
+                top: 42px;
+                right: 20px;
+                bottom: 36px;
+            }
+        }
+
+        .col-6:first-child {
+            .protect-image {
+                margin-bottom: 42px;
+                margin-left: 77px;
+            }
+        }
+
+        .col-6:nth-child(2) {
+            .protect-image {
+                margin-top: 0;
+                margin-bottom: 54px;
+                margin-left: 70px;
+            }
+        }
+
+        .col-6:nth-child(3) {
+            .protect-image {
+                margin-top: 0;
+                margin-bottom: 50px;
+                margin-left: 62px;
+            }
+        }
+
+        .col-6:last-child {
+            .protect-image {
+                margin-top: 6px;
+                margin-bottom: 46px;
+                margin-left: 73px;
+            }
+        }
+    }
+
+    .landing-healthcare-track {
+        background-image: none;
+
+        .md-absolute {
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+
+        .section-title::before {
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+
+        .container {
+            padding: 0 !important;
+
+            > .flex {
+                .track-image:nth-child(1) {
+                    width: 231px;
+                }
+
+                .track-image {
+                    width: 198px;
+                }
+
+                > .flex {
+                    background: linear-gradient(
+                        271deg,
+                        rgba(21, 101, 216, 0.1) 80%,
+                        white 20%
+                    );
+                }
+            }
+        }
+    }
+
+    .landing-healthcare-resources {
+        .row {
+            row-gap: 30px;
+        }
+    }
+}
+
+@media (min-width: $breakpoints-sm - 0.02px) and (max-width: $breakpoints-md - 0.02px) {
+    .landing-healthcare-resources {
+        .resources-card {
+            width: 235px;
+        }
+    }
+}
+
+@media (min-width: 474px) and (max-width: $breakpoints-sm - 0.02px) {
+    .resources-card:last-child {
+        display: none;
+    }
+}
+
+@media (max-width: $breakpoints-sm - 0.02px) {
+    body.landing-healthcare {
+        .section-title {
+            font-size: 28px;
+        }
+
+        .section-desc {
+            font-size: 16px;
+        }
+    }
+
+    header.landing-healthcare {
+        .section-title {
+            font-size: 32px;
+        }
+
+        .hero {
+            .container {
+                .section-information::before {
+                    top: -12px;
+                    left: 50%;
+                    right: 0;
+                }
+            }
+
+            .custom-form {
+                box-shadow: 0 -10px 35px 0 rgba(0, 0, 0, 0.03);
+                padding: 8px {
+                    top: 0px;
+                }
+                input {
+                    box-shadow: none;
+                    margin: {
+                        left: 12px;
+                    }
+                    padding-left: 0px;
+                }
+            }
+        }
+    }
+
+    .landing-healthcare-dashboard {
+        .dashboard-image {
+            img {
+                height: 271px;
+            }
+        }
+        .column-gap {
+            column-gap: 0px;
+            .dashboard-card {
+                width: 260px;
+            }
+        }
+    }
+
+    .landing-healthcare-protect {
+        .protect-image {
+            transform: scale(0.66);
+        }
+    }
+
+    .landing-healthcare-modern {
+        .row-gap {
+            row-gap: 64px;
+        }
+    }
+
+    .landing-healthcare-track {
+        .owl-item:first-child {
+            .track-image {
+                width: 212px !important;
+            }
+        }
+
+        .owl-item {
+            .track-image {
+                width: 181.64px !important;
+                margin-right: 0px !important;
+            }
+        }
+
+        .section-title::before {
+            top: -26px;
+        }
+
+        .container {
+            > .flex {
+                > .flex {
+                    background: linear-gradient(
+                        271deg,
+                        rgba(21, 101, 216, 0.1) 50%,
+                        white 50%
+                    );
+                }
+            }
+        }
+    }
+
+    .landing-healthcare-resources {
+        .gap {
+            gap: 15px;
+        }
+        .resources-card {
+            width: 140px;
+            padding: 20px 10px;
+            .resources-image {
+                width: 42px;
+                height: 42px;
+                img {
+                    width: 24px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="817" height="360" viewBox="0 0 817 360">
+    <g fill="none" fill-rule="evenodd">
+        <g>
+            <g>
+                <path fill="#B3BAC5" d="M0 0H323V360H0z" opacity=".1" transform="translate(-473 -376) translate(473 376) matrix(-1 0 0 1 323 0)"/>
+                <g stroke="#ECEEF2">
+                    <path d="M0 320L323 320M0 288L323 288M0 256L323 256M0 224L323 224M0 192L323 192M0 160L323 160M0 128L323 128M0 96L323 96M0 64L323 64M0 32L323 32M35 0L35 360M67 0L67 360M99 0L99 360M131 0L131 360M163 0L163 360M195 0L195 360M227 0L227 360M259 0L259 360M291 0L291 360" transform="translate(-473 -376) translate(473 376)"/>
+                </g>
+                <path stroke="#ECEEF2" d="M0.5 0.5H816.5V359.5H0.5z" transform="translate(-473 -376) translate(473 376)"/>
+                <g opacity=".1">
+                    <path fill="#B3BAC5" d="M0 0H429V279H0z" transform="translate(-473 -376) translate(473 376) translate(183 80)"/>
+                    <path fill="#1565D8" d="M140 0H429V72H140z" transform="translate(-473 -376) translate(473 376) translate(183 80)"/>
+                    <path fill="#183B56" d="M167 102H290V114H167z" transform="translate(-473 -376) translate(473 376) translate(183 80)"/>
+                    <path fill="#5A7184" d="M167 129H399V137H167zM167 152H399V160H167z" transform="translate(-473 -376) translate(473 376) translate(183 80)"/>
+                </g>
+                <g transform="translate(-473 -376) translate(473 376) translate(183 80)">
+                    <path fill="#FFF" d="M0 0H140V279H0z"/>
+                    <text fill="#183B56" font-family="HKGrotesk-Bold, HK Grotesk" font-size="56" font-weight="bold" letter-spacing=".2">
+                        <tspan x="26" y="141">Aa</tspan>
+                    </text>
+                    <path fill="#1565D8" d="M0 0H140V72H0z"/>
+                    <rect width="149" height="54" x="27" y="184" stroke="#00B8D9" stroke-width="2" rx="27"/>
+                </g>
+                <g>
+                    <g>
+                        <path d="M0 0H64V64H0z" transform="translate(-473 -376) translate(473 376) translate(580 120)"/>
+                        <path fill="#1565D8" d="M0 0H64V64H0z" transform="translate(-473 -376) translate(473 376) translate(580 120)"/>
+                    </g>
+                    <path fill="#FFF" fill-rule="nonzero" d="M25.25 41c.466 0 .844-.378.844-.844v-3.319c.995-.424 2.235-.777 4.023-.777 1.884 0 3.44 1.223 5.808 1.223 1.694 0 3.047-.573 4.307-1.437.305-.209.487-.556.487-.926v-8.547c0-.822-.853-1.366-1.6-1.02-1.207.56-2.687 1.12-4.11 1.12-1.885 0-3.44-1.223-5.81-1.223-.877 0-1.662.154-2.391.422.071-.187.13-.502.13-.703 0-.035-.002-.09-.004-.125-.063-1-.882-1.802-1.883-1.842-1.125-.046-2.051.852-2.051 1.967 0 .669.334 1.26.844 1.615v13.572c0 .466.378.844.843.844h.563z" transform="translate(-473 -376) translate(473 376) translate(580 120)"/>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

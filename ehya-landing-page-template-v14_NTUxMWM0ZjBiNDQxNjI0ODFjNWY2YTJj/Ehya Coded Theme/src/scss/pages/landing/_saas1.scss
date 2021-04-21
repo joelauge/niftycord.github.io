@@ -1,0 +1,781 @@
+body.landing-saas1 {
+    .section-title {
+        font-size: 40px;
+        font-weight: 600;
+        line-height: 1.3;
+        letter-spacing: 0.2px;
+        text-align: center;
+        color: #183b56;
+    }
+
+    .section-desc {
+        font-size: 18px;
+        line-height: 1.78;
+        text-align: center;
+        color: #5a7184;
+    }
+}
+
+header.landing-saas1 {
+    .hero {
+        .hero-title {
+            font-size: 48px;
+            font-weight: 600;
+            line-height: 1.25;
+            letter-spacing: 0.2px;
+            color: #ffffff;
+        }
+
+        .hero-desc {
+            font-size: 16px;
+            line-height: 1.75;
+            color: #fafafb;
+        }
+
+        .form-group {
+            width: 457px;
+
+            input,
+            button {
+                height: 46px;
+            }
+
+            button {
+                border-radius: 4px;
+            }
+        }
+    }
+}
+
+.landing-saas1-solution {
+    .text-container {
+        width: 690px;
+    }
+    .gap {
+        gap: 140px;
+    }
+
+    .solution-card {
+        width: 255px;
+        .image {
+            height: 247px;
+            text-align: center; 
+            img{
+                height: 100%;
+            }
+        }
+    }
+
+    .title {
+        font-size: 22px;
+        font-weight: 600;
+        line-height: 1.45;
+        letter-spacing: 0.2px;
+        text-align: center;
+        color: #183b56;
+    }
+
+    .desc {
+        font-size: 14px;
+        line-height: 1.71;
+        text-align: center;
+        color: #5a7184;
+    }
+}
+
+.landing-saas1-hiw {
+    > .container {
+        border-top: solid 1px #e3e7ed;
+        border-bottom: solid 1px #e3e7ed;
+    }
+
+    .hiw-card {
+        width: 878px;
+        height: 510px;
+        border: solid 1px #eceef2;
+        padding: {
+            top: 50px;
+            right: 98px;
+            bottom: 63px;
+        }
+    }
+
+    .image {
+        width: 555px;
+        height: 440px;
+        background-image: url("../../assets/images/landing-saas1/image.svg");
+        margin-left: -262px;
+    }
+
+    .text-container {
+        width: 427px;
+    }
+
+    .title {
+        font-size: 40px;
+        font-weight: 600;
+        line-height: 1.3;
+        letter-spacing: 0.2px;
+        color: #183b56;
+    }
+
+    .desc {
+        font-size: 18px;
+        line-height: 1.78;
+        color: #5a7184;
+    }
+}
+
+.landing-saas1-tools {
+    .text-container {
+        width: 690px;
+    }
+    .title {
+        font-size: 36px;
+        font-weight: 600;
+        line-height: 1.33;
+        letter-spacing: 0.2px;
+        color: #183b56;
+    }
+
+    .desc {
+        font-size: 18px;
+        line-height: 1.78;
+        color: #5a7184;
+    }
+
+    .btn {
+        border-radius: 0;
+    }
+
+    .image {
+        width: 38px;
+        height: 38px;
+        margin-right: 25px;
+    }
+
+    .row-gap {
+        row-gap: 120px;
+    }
+
+    .tracking-card {
+        width: 533px;
+        max-width: 100%;
+        height: 125px;
+        padding: 20px 36px 20px 25px;
+        border: solid 1px #eceef2;
+        .title {
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 1.2;
+            letter-spacing: 0.2px;
+            color: #183b56;
+        }
+        .desc {
+            font-size: 16px;
+            line-height: 1.75;
+            color: #5a7184;
+        }
+        &:hover {
+            box-shadow: 0 26px 40px 0 rgba(0, 0, 0, 0.06);
+            border-color: transparent;
+        }
+    }
+
+    .checklist.gap {
+        gap: 30px;
+        > div {
+            padding: {
+                top: 22px;
+                right: 20px;
+                bottom: 22px;
+                left: 24px;
+            }
+            box-shadow: 0 26px 40px 0 rgba(0, 0, 0, 0.06);
+        }
+    }
+
+    .gap {
+        gap: 20px;
+    }
+}
+
+.landing-saas1-review {
+    height: 730px;
+    .gap {
+        position: relative; 
+        gap: 30px;
+        width: 1910px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        /* margin: {
+            right: -235px;
+            left: -235px;
+        } */
+    }
+
+    .review-card {
+        width: 455px;
+        height: fit-content;
+        padding: 27px 30px 30px;
+    }
+
+    .review-card:nth-child(5),
+    .review-card:nth-child(6),
+    .review-card:nth-child(7),
+    .review-card:nth-child(8) {
+        box-shadow: 0 28px 32px 0 rgba(0, 0, 0, 0.06);
+    }
+    .review-card:nth-child(5) {
+        margin-top: -14px;
+    }
+
+    .review-card:last-child {
+        margin-top: -54px;
+    }
+
+    .name {
+        font-size: 20px;
+        font-weight: bold;
+        line-height: 1.2;
+        letter-spacing: 0.2px;
+        color: #183b56;
+    }
+
+    .place {
+        font-size: 14px;
+        line-height: 1.43;
+        color: #5a7184;
+    }
+
+    .review {
+        font-size: 16px;
+        line-height: 1.69;
+        color: #183b56;
+    }
+}
+
+.landing-saas1-book {
+    padding-top: 231px;
+    .title {
+        font-size: 48px;
+        font-weight: bold;
+        line-height: 1.25;
+        letter-spacing: 0.2px;
+        color: #ffffff;
+    }
+
+    .desc {
+        font-size: 18px;
+        line-height: 1.78;
+        color: #ffffff;
+    }
+
+    .btn-container{
+        gap: 30px;
+    }
+    .btn {
+        border-radius: 2000px;
+    }
+}
+
+@media (max-width: ($breakpoints-xl - 0.02px)) { //(max-width: 1199.98px)
+    body{
+        content: 'aawww5'; 
+    }
+}
+@media (max-width: ($breakpoints-lg - 0.02px)) { //(max-width: 991.98px)
+    header.landing-saas1 {
+        .hero {
+            padding-top: 26px;  
+            padding-bottom: 50px;
+            .hero-title {
+                margin-left: auto;
+                margin-right: auto; 
+                max-width: 450px;
+                width: 100%;
+            }
+        } 
+        .content{
+            flex-direction: column;  
+            text-align: center;
+            margin-bottom: 72px;
+            .illustration{
+                max-width: 640px;
+                width: 100%;
+                margin: 0;  
+            }
+        }
+        .content-text{
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 72px;
+            max-width: 505px;
+            width: 100%;
+        }
+        .form-submit-email{
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .logos{
+            .item{
+                display: flex;
+                align-items: center; justify-content: center; 
+                height: 23px;
+                flex: 1;
+            }
+            img{
+                margin: 0 20px;
+                max-width: 100%;
+                max-height: 100%;
+            }
+        }
+    }
+    .landing-saas1-solution{
+        padding-top: 80px;
+        padding-bottom: 80px;  
+        .text-container{
+            max-width: 100%;
+            .section-title{
+                max-width: 394px;
+                margin-left: auto; margin-right: auto;
+                padding: 0; 
+                font-size: 32px;
+            }
+        }
+        .gap{
+            gap: initial;
+        }
+        .solution-card-list{
+            margin-left: -40px;  
+            margin-right: -40px;  
+        }
+        .title{
+            font-size: 20px; 
+        }
+        .desc{
+            max-width: 185px;
+            margin: auto; margin-right: auto;   
+        }
+        .solution-card{
+            max-width: 232px;
+            .image{
+                height: 180px; 
+            }
+        }
+    }
+    .landing-saas1-hiw{
+        & >.container{
+            padding-top: 64px;
+            padding-bottom: 70px;  
+            @media (min-width: 768px){ 
+                padding-right: 0 !important;
+            }
+        }
+        .text-success{
+            margin-top: 30px;
+            margin-bottom: 22px;
+        }
+        .title{
+            font-size: 32px;
+            line-height: 1.25;
+        }
+        .desc{
+            margin-top: 18px;
+            margin-bottom: 24px; 
+            margin-right: 0; 
+            font-size: 16px;
+            line-height: 1.75;
+        }
+        .image{
+            width: 318px;
+            min-width: 318px;
+            height: 410px; 
+            border-radius: 12px;
+            margin-left: -160px;
+        }
+        .hiw-card{
+            width: 536px;
+            min-width: 536px; 
+            padding-top: 30px;
+            padding-right: 40px;
+            padding-bottom: 20px;
+            height: auto;
+        }
+        .text-container{
+            margin-left: 45px;
+        }
+    }
+    .landing-saas1-tools{
+        padding-top: 75px;
+        .title{
+            font-size: 28px;
+            line-height: 1.29;
+        }
+        .text-container{
+            max-width: 100%;
+        }
+        .text-container{
+            .section-title{
+              font-size: 32px;
+              line-height: 1.25;
+              max-width: 398px;
+              margin-left: auto; margin-right: auto; 
+              padding-left: 0; padding-right: 0;
+            }
+            .section-desc{
+                font-size: 16px;
+                line-height: 1.75;
+                margin-top: 24px;
+                margin-bottom: 72px;
+                max-width: 535px;
+                margin-left: auto; margin-right: auto; 
+            }
+        } 
+        .illustration{
+            max-width: 100%;
+        }
+        .saas1-tools-2-1{
+            row-gap: 48px;  
+            flex-direction: column-reverse; 
+            text-align: center;
+            .illustration{
+                margin-left: auto; margin-right: auto;  
+                width: 100%;
+            }
+            .text-cont{
+
+            }
+        }
+        .saas1-tools-2-2{
+            flex-direction: column;
+            text-align: center;
+            .inner-text{
+                margin: 0; 
+            }
+            .tracking-cards{
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 0;
+                margin: 0 -10px;
+            }
+            .tracking-card-col{
+                width: 33.333%;
+                flex: 0 0 33.333%;
+                padding: 0 10px; 
+            } 
+            .tracking-card{
+                text-align: left;
+                flex-direction: column;
+                gap: 20px;
+                height: 100%;
+                padding: 20px 30px 20px 20px; 
+                .image{
+                    width: 22px;
+                    height: 22px;
+                    margin: 0;
+                    img{
+                        width: 100%; height: 100%; 
+                    }
+                }
+                .title{
+                    font-size: 18px;
+                }   
+                .desc{  
+                    font-size: 14px;
+                    line-height: 1.71;  
+                }       
+            }
+        }
+        .saas1-tools-2-3{ 
+            flex-direction: column-reverse;
+            text-align: center;
+            gap: 56px;
+            .checklist{
+                justify-content: center;
+                gap: 12px;
+                max-width: 500px;
+                margin-left: auto; margin-right: auto; 
+                .checklist-item{
+                    padding: 15px;
+                } 
+            }
+            .illustration{
+                margin-left: auto; margin-right: auto;  
+            } 
+        }
+    }
+
+    .landing-saas1-review{
+        height: 620px; 
+        .review-cards{
+            gap: 20px; 
+            width: 1500px;
+        }
+        .review-card{
+            width: 318px;
+            padding: 20px;
+            .c-top{
+                margin-bottom: 20px; 
+            }
+            .avatar{
+                width: 40px;
+                height: 40px; 
+                margin-top: 0; 
+            }
+            .review{
+                font-size: 12px; 
+            }
+            .username{ 
+                margin-top: 3px;
+                .name{
+                    font-size: 14px;
+                    margin-bottom: 4px;
+                }
+                .place{
+                    font-size: 10px;
+                    line-height: 1.43;
+                }
+            }
+        }
+    }
+    .landing-saas1-book{
+        padding-top: 160px;
+        .title{
+            font-size: 40px;
+        }
+        .full-bg{
+            padding-top: 56px;
+            padding-bottom: 56px;
+        }
+        .inner-container{
+            flex-direction: column;  
+            text-align: center;  
+            gap: 56px;
+        }
+    }
+}
+@media (max-width: ($breakpoints-md - 0.02px)) { //(max-width: 767.98px)
+    body.landing-saas1{
+        .section-desc{
+            font-size: 14px;
+            line-height: 1.71; 
+            max-width: 100%;
+        }
+    }
+    header.landing-saas1{
+        .hero{
+            .hero-title{
+                font-size: 32px;
+                line-height: 1.25;
+                margin-bottom: 16px;
+            }
+            .form-submit-email{
+                width: 100%;
+                max-width: 400px;
+                margin-left: auto; margin-right: auto;
+                margin-top: 28px; 
+                .input-group{
+                    display: block;
+                    button{
+                        width: 100%; 
+                        height: 40px; 
+                    }
+                }
+            }
+        }
+        .content{
+            margin-bottom: 40px;
+        }
+        .content-text{
+            margin-bottom: 40px;
+        }
+        .logos{
+            flex-wrap: wrap;
+            row-gap: 22px; 
+            .item{
+                height: 30px;
+                flex: 0 0 50%;
+            }
+        }
+    }
+    .landing-saas1-solution{
+        padding-top: 56px; 
+        padding-bottom: 56px;
+        .text-container{
+            .section-title{
+                font-size: 28px;
+                line-height: 1.29;
+                margin-bottom: 16px;
+            }
+        }
+        .solution-card-list{
+            flex-wrap: wrap;
+            row-gap: 50px;
+        }
+        .solution-card{
+            max-width: 255px;  
+            .desc{
+                max-width: initial;
+            }
+        }
+    }
+    .landing-saas1-hiw{
+        &>.container{
+            padding-top: 56px;
+            padding-left: 0; padding-right: 0; 
+            padding-bottom: 0;
+            border-bottom: 0 none;
+        }
+        .hiw-card{
+            width: initial;
+            min-width: initial;
+            flex-direction: column;
+            padding: 10px 10px 36px 10px;
+            border-radius: 0;
+        } 
+        .image{
+            margin: -50px 0 0;
+            width: 100%; min-width: initial;
+            height: 180px;
+            border-radius: 0;
+            background-position: center;
+            background-size: cover;
+        }
+        .btn-play{
+            padding: 17px 24px;
+        }
+        .text-container{
+            text-align: center;
+            width: initial;
+            margin: 0 10px;
+            .text-success{
+                margin-bottom: 16px;
+            }
+            .title{
+                font-size: 24px;
+                line-height: 1.33;
+            }
+            .desc{
+                margin-top: 12px;
+            }
+        }
+    }
+    .landing-saas1-tools{
+        padding-top: 56px;
+        padding-bottom: 64px;
+        .row-gap{
+            row-gap: 64px;
+        }
+        .text-container{
+            .section-title{
+                font-size: 28px;
+                line-height: 1.29;
+            }
+            .section-desc{
+                font-size: 14px;
+                line-height: 1.71; 
+                margin-top: 16px;
+                margin-bottom: 64px; 
+            }
+        }
+        .title{
+            font-size: 24px;
+            line-height: 1.33;
+            margin-top: 22px;
+            margin-bottom: 14px;
+            padding: 0;
+        }
+        .desc{  
+            padding: 0;
+            font-size: 16px;
+            line-height: 1.75;
+            margin-bottom: 20px;
+        }
+
+        .saas1-tools-2-2{
+            .tracking-cards{
+                gap: 14px;
+            }
+            .tracking-card-col{
+                width: 100%;
+                flex: 0 0 100%;
+            }
+            .tracking-card{
+                padding: 20px;
+                gap: 15px;
+                .title{
+                    font-size: 16px;
+                    margin-top: 0;
+                    mask-border: 8px;
+                }
+                .desc{
+                    margin-bottom: 0;
+                }
+            }
+            .illustration{
+                margin-top: 36px;
+            }
+        }
+        .saas1-tools-2-3{
+            .checklist{
+                .checklist-item{
+                    padding: 10px;
+                }
+            }
+        }
+    }
+    .landing-saas1-review{  
+        padding-top: 48px;
+        .container{
+            .section-title{
+                font-size: 28px;
+                line-height: 1.29;
+                padding: 0 10px;
+            }
+            .section-desc{
+                font-size: 16px;
+                margin-top: 14px;
+                margin-bottom: 26px;
+            }
+        }
+        .btn{
+            margin-bottom: 42px;
+        }
+    }
+    .landing-saas1-book{
+        padding-top: 144px; 
+        .full-bg{
+            padding-top: 36px;
+            padding-bottom: 48px;
+        }
+        .inner-container{
+            gap: 28px;
+        }
+        .text-container{
+            max-width: 100%;
+        }
+        .title{
+            font-size: 28px;
+            line-height: 1.29;
+            margin-bottom: 16px; 
+        }
+        .desc{
+            font-size: 16px;
+            line-height: 1.75;
+        }
+        .btn-container{
+            flex-direction: column; 
+            gap: 20px; 
+            .btn{
+                min-width: 240px;
+            }
+        }
+    }
+}
+@media (max-width: ($breakpoints-sm - 0.02px)) { //(max-width: 575.98px)
+
+}
+@media (max-width: 487px) {
+
+}

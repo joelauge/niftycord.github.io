@@ -1,0 +1,829 @@
+header.company-styleguide {
+  .sidebar-menu {
+    display: none;
+  }
+}
+
+main.company-styleguide {
+  padding-bottom: 80px;
+
+  .sidebar {
+    padding: {
+      top: 6px;
+      right: 12px;
+      bottom: 20px;
+      left: 10px;
+    }
+
+    width: 263px;
+    height: fit-content;
+  }
+
+  .sidebar-title {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.2;
+    letter-spacing: 0.2px;
+    color: #183b56;
+    padding-left: 14px;
+  }
+
+  .sidebar-content {
+    >a {
+      font-size: 16px;
+      color: #183b56;
+      display: block;
+
+      padding: {
+        top: 13px;
+        bottom: 15px;
+        left: 14px;
+      }
+    }
+
+    >a:hover {
+      background-color: $s-color-white;
+      text-decoration: none;
+    }
+  }
+
+  .sidebar-content.active {
+    >a {
+      color: #1565d8;
+      background-color: white;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+  }
+
+  .content {
+    width: 817px;
+
+    .badge {
+      padding: 2px 8px;
+    }
+
+    hr {
+      margin-top: 56.5px;
+      margin-bottom: 55.5px;
+    }
+
+    .main-title {
+      font-size: 48px;
+      font-weight: bold;
+      line-height: 1.25;
+      letter-spacing: 0.2px;
+      color: #183b56;
+    }
+
+    .main-desc {
+      font-size: 18px;
+      line-height: 1.78;
+      color: #5a7184;
+    }
+
+    .content-title {
+      font-size: 28px;
+      font-weight: bold;
+      line-height: 1.29;
+      letter-spacing: 0.2px;
+      color: #183b56;
+    }
+
+    .content-desc {
+      font-size: 16px;
+      line-height: 1.75;
+      color: #183b56;
+    }
+
+    .new-title {
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 1.2;
+      letter-spacing: 0.2px;
+      color: #1565d8;
+    }
+
+    .new-date {
+      font-size: 14px;
+      line-height: 1.43;
+      color: #183b56;
+      margin-left: 13px;
+    }
+
+    .new-date::before {
+      content: "\A";
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #b3bac5;
+      display: inline-block;
+      margin-right: 12px;
+    }
+
+    .subcontent-logo {
+      padding: 36px {
+        right: 35px;
+        bottom: 48px;
+      }
+
+      .fa-download:hover {
+        opacity: .8;
+        cursor: pointer;
+      }
+    }
+
+    .logo-card {
+      img {
+        padding: 117px {
+          top: 70px;
+          bottom: 58px;
+        }
+      }
+    }
+
+    .logo-card.bg-black {
+      .flex {
+        background-color: #2f4e67;
+      }
+    }
+
+    .logo-title {
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 1.25;
+      letter-spacing: 0.2px;
+      color: #183b56;
+    }
+
+    .illustration-card {
+      height: 310px;
+
+      img {
+        padding: {
+          right: 91px;
+          left: 92px;
+        }
+
+        height: 100%;
+      }
+
+      .illustration-text {
+        height: 100%;
+        width: 321px;
+        padding: 0 53px;
+
+        .content-title {
+          margin-right: 74px;
+        }
+
+        .illustration-desc {
+          font-size: 14px;
+          line-height: 1.71;
+          color: #5a7184;
+        }
+      }
+    }
+
+    .subcontent-title {
+      font-size: 20px;
+      font-weight: bold;
+      line-height: 1.2;
+      letter-spacing: 0.2px;
+      color: #183b56;
+    }
+
+    .subcontent-desc {
+      font-size: 14px;
+      line-height: 1.71;
+      color: #5a7184;
+    }
+
+    .color-boxes {
+      margin: -19px;
+    }
+
+    .color-box-container {
+      padding: 19px;
+    }
+
+    .color-box {
+      width: 132px;
+      height: 144px;
+      border-radius: 4.8px;
+    }
+
+    .color-hex {
+      font-size: 14.4px;
+      font-weight: bold;
+      color: #183b56;
+    }
+
+    .color-name {
+      font-size: 10.8px;
+      font-weight: 600;
+      color: #5a7184;
+    }
+
+    .table-title {
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 1.25;
+      letter-spacing: 0.2px;
+      color: #183b56;
+    }
+
+    .typography-category {
+      width: 200px;
+    }
+
+    .typography-typeface {
+      width: 179px;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 1.43;
+      letter-spacing: 0.18px;
+      text-align: center;
+      color: #183b56;
+    }
+
+    .typography-font {
+      width: 153px;
+      font-size: 14px;
+      line-height: 1.43;
+      letter-spacing: 0.18px;
+      text-align: center;
+      color: #183b56;
+    }
+
+    .typography-size {
+      width: 128px;
+      font-size: 14px;
+      line-height: 1.43;
+      letter-spacing: 0.18px;
+      text-align: center;
+      color: #183b56;
+    }
+
+    .typography-spacing {
+      width: 153px;
+      font-size: 14px;
+      line-height: 1.43;
+      letter-spacing: 0.18px;
+      text-align: center;
+      color: #183b56;
+    }
+
+    .border-b {
+      border-width: 0 0 1px 0;
+      border-color: #e3e7ed;
+      border-style: solid;
+    }
+
+    .border-r {
+      border-width: 0 1px 1px 0;
+      border-color: #e3e7ed;
+      border-right-style: solid !important;
+    }
+
+    .row-h1 {
+      height: 88px;
+
+      .typography-category {
+        font-size: 56px;
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.21;
+        letter-spacing: 0.2px;
+        text-align: center;
+        color: #183b56;
+      }
+    }
+
+    .row-h2 {
+      height: 72px;
+
+      .typography-category {
+        font-size: 40px;
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.3;
+        letter-spacing: 0.2px;
+        text-align: center;
+        color: #183b56;
+      }
+    }
+
+    .row-h3 {
+      height: 60px;
+
+      .typography-category {
+        font-size: 32px;
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.25;
+        letter-spacing: 0.2px;
+        text-align: center;
+        color: #183b56;
+      }
+    }
+
+    .row-h4 {
+      height: 52px;
+
+      .typography-category {
+        font-size: 24px;
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.33;
+        letter-spacing: 0.2px;
+        text-align: center;
+        color: #183b56;
+      }
+    }
+
+    .row-h5 {
+      height: 44px;
+
+      .typography-category {
+        font-size: 20px;
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.2;
+        letter-spacing: 0.2px;
+        text-align: center;
+        color: #183b56;
+      }
+    }
+
+    .row-h6 {
+      height: 41px;
+
+      .typography-category {
+        font-size: 16px;
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.25;
+        letter-spacing: 0.2px;
+        text-align: center;
+        color: #183b56;
+      }
+    }
+
+    .row-p1 {
+      height: 55.5px;
+
+      .typography-category {
+        font-size: 18px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.78;
+        letter-spacing: normal;
+        text-align: center;
+        color: #183b56;
+      }
+    }
+
+    .row-p2 {
+      height: 49px;
+
+      .typography-category {
+        font-size: 16px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.75;
+        letter-spacing: normal;
+        text-align: center;
+        color: #183b56;
+      }
+    }
+
+    .row-p3 {
+      height: 45px;
+
+      .typography-category {
+        font-size: 14px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.71;
+        letter-spacing: normal;
+        text-align: center;
+        color: #183b56;
+      }
+    }
+
+    .row-icon {
+      height: 39.5px;
+
+      .typography-category {
+        font-size: 18px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        text-align: center;
+        color: #183b56;
+      }
+    }
+
+    .subcontent-icon {
+      .icon-name {
+        font-size: 16px;
+        font-weight: 600;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.25;
+        letter-spacing: 0.2px;
+        color: #183b56;
+      }
+
+      .senja-icon {
+        width: 524px;
+        height: 318px;
+        padding: 9px 22px;
+        box-shadow: 0px 28px 32px 0px rgba(0, 0, 0, 0.06);
+      }
+
+      .fa-icon {
+        width: 262px;
+        height: 318px;
+        box-shadow: 0px 28px 32px 0px rgba(0, 0, 0, 0.06);
+        padding: 38px 0;
+      }
+
+      img {
+        width: 30px;
+        height: 30px;
+        margin: 15px;
+      }
+    }
+
+    .varian-header {
+      padding: 14px 0;
+      margin-bottom: 38px;
+    }
+
+    .varian-description {
+      width: 507px;
+    }
+
+    .varian-title {
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 1.25;
+      letter-spacing: 0.2px;
+      color: #183b56;
+    }
+
+    .varian-desc {
+      font-size: 14px;
+      line-height: 1.71;
+      color: #5a7184;
+    }
+
+    .varian-button {
+      width: 310px;
+
+      .btn {
+        display: flex;
+        align-items: center;
+        width: 112px;
+        justify-content: center;
+      }
+
+      .btn-extended {
+        width: 129px;
+      }
+    }
+
+    .form-title {
+      font-weight: 600;
+      line-height: 1.25;
+      letter-spacing: 0.2px;
+      color: #183b56;
+      margin-bottom: 14px;
+    }
+
+    .form-group.no-title {
+      padding-top: 34px;
+    }
+
+    .input-group {
+      border: solid 1px #c3cad9;
+      margin-bottom: 42px;
+      width: 253px;
+
+      > :first-child {
+        padding-left: 20px;
+      }
+
+      > :nth-child(2) {
+        padding-left: 12px;
+      }
+
+      > :last-child {
+        padding-right: 20px;
+      }
+    }
+
+    .form-control.font-semibold::placeholder {
+      font-weight: 600;
+      color: #183b56;
+    }
+
+    .form-control:focus {
+      box-shadow: none;
+    }
+  }
+}
+
+// Mobile-Tab devices (tablets, < 992px)
+@media (min-width: $breakpoints-lg - 0.02px) {
+  main.company-styleguide {
+    .overlay {
+      display: none !important;
+    }
+
+    .sidebar {
+      width: 263px !important;
+    }
+  }
+}
+
+@media (max-width: $breakpoints-xl - 0.02px) {
+  main.company-styleguide {
+    .subcontent#form {
+      .input-group {
+        width: 213px;
+      }
+    }
+  }
+}
+
+@media (min-width: $breakpoints-md - 0.02px) and (max-width: $breakpoints-xl - 0.02px) {
+  main.company-styleguide {
+    .content {
+      width: 688px;
+
+      .subcontent-logo {
+        padding: {
+          right: 49px;
+          bottom: 37px;
+        }
+      }
+
+      .subcontent#illustration {
+        img {
+          width: 418px;
+          padding: 41px 77px;
+        }
+
+        .illustration-text {
+          width: 270px;
+        }
+      }
+
+      .subcontent-icon {
+        .senja-icon {
+          width: 419px;
+        }
+
+        .fa-icon {
+          width: 210px;
+        }
+      }
+
+      .subcontent#button {
+        .varian-button {
+          width: 201px;
+        }
+
+        .varian-description {
+          width: 487px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $breakpoints-lg - 0.02px) {
+  header.company-styleguide {
+    .sidebar-menu {
+      display: block;
+    }
+  }
+
+  main.company-styleguide {
+    .md-fixed {
+      top: 0;
+      left: 0;
+      width: 0;
+
+      padding: {
+        right: 0;
+        left: 0;
+      }
+
+      * {
+        visibility: hidden;
+      }
+
+    }
+
+    .sidebar-content.active {
+      >a {
+        color: #1565d8;
+        background-color: $s-color-gray-light-100;
+        border-radius: 8px;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+@media (max-width: $breakpoints-sm - 0.02px) {
+  main.company-styleguide {
+    .content {
+      .content-title {
+        font-size: 24px;
+      }
+
+      .content-desc {
+        font-size: 14px;
+      }
+
+      .subcontent#illustration {
+        .illustration-card {
+          >* {
+            background: transparent !important;
+          }
+        }
+      }
+
+      .subcontent#color {
+        .color-box-container {
+          padding: {
+            right: 10px;
+            left: 10px;
+          }
+        }
+      }
+
+      .subcontent#button {
+        .varian-button {
+          width: 105px;
+
+          .btn {
+            width: 74px;
+          }
+        }
+
+        .varian-description {
+          width: 175px;
+
+          .varian-title {
+            margin-left: 25px;
+          }
+        }
+      }
+
+      .typography-table {
+        width: fit-content;
+      }
+
+      .table-title {
+        font-size: 6.3px;
+      }
+
+      .typography-category {
+        width: 78px;
+      }
+
+      .typography-typeface {
+        width: 70.7px;
+        font-size: 5.5px;
+      }
+
+      .typography-font {
+        width: 59.7px;
+        font-size: 5.5px;
+      }
+
+      .typography-size {
+        width: 49.7px;
+        font-size: 5.5px;
+      }
+
+      .typography-spacing {
+        width: 59.7px;
+        font-size: 5.5px;
+      }
+
+      .row-h1 {
+        height: 33.7px;
+
+        .typography-category {
+          font-size: 21.9px;
+        }
+      }
+
+      .row-h2 {
+        height: 27.7px;
+
+        .typography-category {
+          font-size: 15.7px;
+        }
+      }
+
+      .row-h3 {
+        height: 23.7px;
+
+        .typography-category {
+          font-size: 12.5px;
+        }
+      }
+
+      .row-h4 {
+        height: 19.7px;
+
+        .typography-category {
+          font-size: 9.4px;
+        }
+      }
+
+      .row-h5 {
+        height: 16.7px;
+
+        .typography-category {
+          font-size: 7.8px;
+        }
+      }
+
+      .row-h6 {
+        height: 16.7px;
+
+        .typography-category {
+          font-size: 6.3px;
+        }
+      }
+
+      .row-p1 {
+        height: 20.7px;
+
+        .typography-category {
+          font-size: 7.1px;
+        }
+      }
+
+      .row-p2 {
+        height: 18.7px;
+
+        .typography-category {
+          font-size: 6.3px;
+        }
+      }
+
+      .row-p3 {
+        height: 17.7px;
+
+        .typography-category {
+          font-size: 5.5px;
+        }
+      }
+
+      .row-icon {
+        height: 15.7px;
+
+        .typography-category {
+          font-size: 7.1px;
+        }
+      }
+
+      .subcontent#form {
+        .input-group {
+          width: 272px;
+        }
+      }
+    }
+  }
+}
+
+.bp_checking {
+  display: none;
+}
+
+@media only screen and (max-width:575px) {
+  #bp_xs {
+    display: block;
+  }
+}

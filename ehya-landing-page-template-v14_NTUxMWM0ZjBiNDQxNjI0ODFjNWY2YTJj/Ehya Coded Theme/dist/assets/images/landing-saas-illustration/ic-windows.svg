@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 56 56">
+    <g fill="none" fill-rule="evenodd">
+        <g>
+            <g>
+                <g>
+                    <g>
+                        <g>
+                            <path d="M0 0H56V56H0z" transform="translate(-222 -3948) translate(150 3543) translate(0 297) translate(72 108)"/>
+                            <path stroke="#1565D8" stroke-width="2" d="M1 1H55V55H1z" transform="translate(-222 -3948) translate(150 3543) translate(0 297) translate(72 108)"/>
+                        </g>
+                        <text fill="#1565D8" font-family="FontAwesome5Brands-Regular, Font Awesome 5 Brands" font-size="16" transform="translate(-222 -3948) translate(150 3543) translate(0 297) translate(72 108)">
+                            <tspan x="21" y="34">windows</tspan>
+                        </text>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

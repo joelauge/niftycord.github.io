@@ -1,0 +1,1003 @@
+body.landing-crypto {
+    .section-title {
+        font-size: 36px;
+        letter-spacing: 0.2px;
+        line-height: 48px;
+    }
+    .section-desc {
+        font-family: "Open Sans", sans-serif;
+        font-size: 18px;
+        line-height: 32px;
+    }
+    .title {
+        font-family: "hk_grotesksemibold", sans-serif;
+        font-size: 22px;
+        letter-spacing: 0.2px;
+        line-height: 32px;
+    }
+    .desc {
+        font-family: "Open Sans", sans-serif;
+        font-size: 16px;
+        line-height: 28px;
+        color: #5a7184;
+    }
+}
+header.landing-crypto {
+    background: $s-color-primary;
+    .hero {
+        padding-top: 80px;
+        text-align: center;
+        color: $s-color-white;
+        .hero-title {
+            font-size: 48px;
+            letter-spacing: 0.2px;
+            line-height: 60px;
+            margin-bottom: 24px;
+        }
+        .custom-form {
+            display: flex;
+            justify-content: center;
+            background: $s-color-white;
+            width: 475px;
+            border-radius: 8px;
+            padding: 6px;
+            margin: auto {
+                top: 24px;
+                bottom: 48px;
+            }
+        }
+        input {
+            flex: auto;
+            padding-left: 18px;
+            border: none;
+            outline: none;
+            font-family: "Open Sans", sans-serif;
+            font-size: 16px;
+            line-height: unset;
+            color: $s-color-gray;
+        }
+        button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 140px;
+            height: 46px;
+            background-color: $s-color-success;
+            border: none;
+            border-radius: 4px;
+            color: $s-color-white;
+            font-family: "Open Sans", sans-serif;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        img {
+            box-shadow: 0 28px 32px 0 rgba(0, 0, 0, 0.06);
+            margin-bottom: -244px;
+        }
+    }
+}
+
+.landing-crypto-advantage {
+    padding-top: 364px;
+    .advantages {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 28px;
+        row-gap: 40px;
+    }
+    .advantage {
+        width: 361px;
+        height: 232px;
+        padding: {
+            right: 31px;
+            left: 44px;
+        }
+    }
+    .title {
+        margin: {
+            top: 26px;
+            bottom: 4px;
+        }
+    }
+}
+.landing-crypto-pairing {
+    text-align: center;
+    padding: {
+        top: 80px;
+        bottom: 100px;
+    }
+    .section-title {
+        font-size: 28px !important;
+        line-height: 36px !important;
+        margin-bottom: 82px;
+    }
+    .pairing-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 42px;
+    }
+}
+.landing-crypto-count {
+    background-color: $s-color-primary;
+    color: $s-color-white;
+    text-align: center;
+    padding: 40px 0;
+    .count-container {
+        display: flex;
+        gap: 16px;
+    }
+    .count {
+        width: 250px;
+        height: 178px;
+        padding-top: 40px;
+    }
+    .number {
+        font-size: 48px;
+        letter-spacing: 0.2px;
+        line-height: 48px;
+    }
+}
+.landing-crypto-portofolio {
+    padding: {
+        top: 100px;
+        bottom: 80px;
+    }
+    .title-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 56px;
+    }
+    .section-desc {
+        width: 555px;
+    }
+    .steps {
+        display: flex;
+        flex-direction: column;
+        gap: 45px;
+        margin-top: 34px;
+    }
+    .step {
+        display: flex;
+        width: 392px;
+        img {
+            width: 56px;
+            height: 56px;
+            margin-right: 28px;
+            border-radius: 50%;
+            box-shadow: 0 6px 24px 0 rgba(0, 0, 0, 0.04);
+        }
+    }
+    .title {
+        margin-bottom: 6px;
+    }
+}
+
+.landing-crypto-review {
+    background-color: $s-color-gray-light-100;
+    padding: {
+        top: 70px;
+        bottom: 100px;
+    }
+    .title-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 40px;
+    }
+    .review {
+        width: 545px;
+    }
+    .comment {
+        background-image: url(../../assets/images/landing-cryptocurrency/bg-comment.svg);
+        font-family: "Open Sans", sans-serif;
+        font-size: 20px;
+        color: $s-color-black;
+        line-height: 41px;
+        margin-bottom: 24px;
+        padding: {
+            top: 33px;
+            right: 21px;
+            bottom: 54px;
+            left: 34px;
+        }
+    }
+    .avatar {
+        width: 56px !important;
+        margin-right: 22px;
+    }
+    .name {
+        font-family: "hk_grotesksemibold", sans-serif;
+        font-size: 20px;
+        color: $s-color-black;
+        letter-spacing: 0.2px;
+        line-height: 24px;
+        margin-bottom: 6px;
+    }
+}
+.landing-crypto-start {
+    padding: 100px 0;
+    margin-bottom: 75px;
+    text-align: center;
+    .section-title {
+        font-size: 40px !important;
+        line-height: 52px !important;
+    }
+    .section-desc {
+        margin: {
+            top: 24px;
+            bottom: 32px;
+        }
+    }
+}
+
+@media (min-width: $breakpoints-lg) and (max-width: ($breakpoints-xl - 0.02px)) {
+    header.landing-crypto {
+        .hero {
+            padding-top: 48px;
+            .container {
+                max-width: 680px;
+                padding: 0;
+            }
+            .hero-title {
+                font-size: 40px;
+                line-height: 52px;
+            }
+            .custom-form {
+                margin: {
+                    top: 48px;
+                    bottom: 58px;
+                }
+            }
+            img {
+                width: 680px;
+                margin-bottom: -145px;
+            }
+        }
+    }
+    .landing-crypto-advantage {
+        padding-top: 225px;
+        .container {
+            max-width: 718px;
+            padding: 0;
+        }
+        .advantages {
+            column-gap: 20px;
+            row-gap: 36px;
+        }
+        .advantage {
+            width: 226px;
+            height: 259px;
+            padding: {
+                right: 6px;
+                left: 20px;
+            }
+            img {
+                width: 48px;
+            }
+        }
+        .advantage:nth-of-type(1) {
+            order: 1;
+        }
+        .advantage:nth-of-type(2) {
+            order: 5;
+        }
+        .advantage:nth-of-type(3) {
+            order: 6;
+        }
+        .advantage:nth-of-type(4) {
+            order: 3;
+            height: 229px;
+        }
+        .advantage:nth-of-type(5) {
+            order: 4;
+            height: 229px;
+        }
+        .advantage:nth-of-type(6) {
+            order: 2;
+            height: 229px;
+        }
+        .title {
+            font-size: 20px !important;
+        }
+        .desc {
+            font-size: 14px !important;
+        }
+    }
+    .landing-crypto-pairing {
+        padding-bottom: 80px;
+        .container {
+            max-width: 724px;
+            padding: 0;
+        }
+        .section-title {
+            margin-bottom: 66px;
+        }
+        .pairing-container {
+            gap: 22px;
+        }
+    }
+    .landing-crypto-count {
+        padding: 64px 0;
+        .container {
+            max-width: 725px;
+            padding: 0;
+        }
+        .count-container {
+            gap: 8px;
+        }
+        .count {
+            width: 176px;
+            height: 128px;
+            padding-top: 20px;
+        }
+        .number {
+            font-size: 36px;
+            margin-bottom: 11px;
+        }
+    }
+    .landing-crypto-portofolio {
+        padding-top: 80px;
+        .container {
+            max-width: 692px;
+            padding: 0;
+        }
+        .title-container {
+            flex-direction: column;
+            text-align: center;
+        }
+        .section-title {
+            margin-bottom: 42px;
+        }
+        .section-desc {
+            width: 575px;
+        }
+        .steps {
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 48px;
+            margin: {
+                top: 0;
+                bottom: 56px;
+            }
+        }
+        .step {
+            width: 322px;
+            img {
+                margin-right: 26px;
+            }
+        }
+    }
+    .landing-crypto-review {
+        padding: {
+            top: 52px;
+            bottom: 80px;
+        }
+        .container {
+            max-width: 728px;
+            padding: 0;
+        }
+        .relative {
+            margin-left: 20px;
+        }
+        .title-container {
+            margin-bottom: 36px;
+        }
+        .review {
+            width: 505px;
+        }
+        .comment {
+            background-size: cover;
+            font-size: 18px;
+            line-height: 36px;
+            padding-top: 30px;
+            margin-bottom: 28px;
+        }
+    }
+    .landing-crypto-start {
+        margin-bottom: 30px;
+        padding: {
+            top: 80px;
+            bottom: 90px;
+        }
+        .container {
+            max-width: 587px;
+            padding: 0;
+        }
+        .section-desc {
+            width: 525px;
+            margin: auto {
+                top: 24px;
+                bottom: 72px;
+            }
+        }
+    }
+}
+
+@media (min-width: $breakpoints-md) and (max-width: ($breakpoints-lg - 0.02px)) {
+    header.landing-crypto {
+        .hero {
+            padding-top: 48px;
+            .container {
+                max-width: 680px;
+                padding: 0 !important;
+            }
+            .hero-title {
+                font-size: 40px;
+                line-height: 52px;
+            }
+            .custom-form {
+                margin: {
+                    top: 48px;
+                    bottom: 58px;
+                }
+            }
+            img {
+                width: 680px;
+                margin-bottom: -145px;
+            }
+        }
+    }
+    .landing-crypto-advantage {
+        padding-top: 225px;
+        .container {
+            max-width: 718px;
+            padding: 0 !important;
+        }
+        .advantages {
+            column-gap: 20px;
+            row-gap: 36px;
+        }
+        .advantage {
+            width: 226px;
+            height: 259px;
+            padding: {
+                right: 6px;
+                left: 20px;
+            }
+            img {
+                width: 48px;
+            }
+        }
+        .advantage:nth-of-type(1) {
+            order: 1;
+        }
+        .advantage:nth-of-type(2) {
+            order: 5;
+        }
+        .advantage:nth-of-type(3) {
+            order: 6;
+        }
+        .advantage:nth-of-type(4) {
+            order: 3;
+            height: 229px;
+        }
+        .advantage:nth-of-type(5) {
+            order: 4;
+            height: 229px;
+        }
+        .advantage:nth-of-type(6) {
+            order: 2;
+            height: 229px;
+        }
+        .title {
+            font-size: 20px !important;
+        }
+        .desc {
+            font-size: 14px !important;
+        }
+    }
+    .landing-crypto-pairing {
+        padding-bottom: 80px;
+        .container {
+            max-width: 724px;
+            padding: 0 !important;
+        }
+        .section-title {
+            margin-bottom: 66px;
+        }
+        .pairing-container {
+            gap: 22px;
+        }
+    }
+    .landing-crypto-count {
+        padding: 64px 0;
+        .container {
+            max-width: 725px;
+            padding: 0 !important;
+        }
+        .count-container {
+            gap: 8px;
+        }
+        .count {
+            width: 176px;
+            height: 128px;
+            padding-top: 20px;
+        }
+        .number {
+            font-size: 36px;
+            margin-bottom: 11px;
+        }
+    }
+    .landing-crypto-portofolio {
+        padding-top: 80px;
+        .container {
+            max-width: 692px;
+            padding: 0 !important;
+        }
+        .title-container {
+            flex-direction: column;
+            text-align: center;
+        }
+        .section-title {
+            margin-bottom: 42px;
+        }
+        .section-desc {
+            width: 575px;
+        }
+        .steps {
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 48px;
+            margin: {
+                top: 0;
+                bottom: 56px;
+            }
+        }
+        .step {
+            width: 322px;
+            img {
+                margin-right: 26px;
+            }
+        }
+    }
+    .landing-crypto-review {
+        padding: {
+            top: 52px;
+            bottom: 80px;
+        }
+        .container {
+            max-width: 728px;
+            padding: 0 !important;
+        }
+        .relative {
+            margin-left: 20px;
+        }
+        .title-container {
+            margin-bottom: 36px;
+        }
+        .review {
+            width: 505px;
+        }
+        .comment {
+            background-size: cover;
+            font-size: 18px;
+            line-height: 36px;
+            padding-top: 30px;
+            margin-bottom: 28px;
+        }
+    }
+    .landing-crypto-start {
+        margin-bottom: 30px;
+        padding: {
+            top: 80px;
+            bottom: 90px;
+        }
+        .container {
+            max-width: 587px;
+            padding: 0 !important;
+        }
+        .section-desc {
+            width: 525px;
+            margin: auto {
+                top: 24px;
+                bottom: 72px;
+            }
+        }
+    }
+}
+
+@media (min-width: $breakpoints-sm) and (max-width: ($breakpoints-md - 0.02px)) {
+    header.landing-crypto {
+        .hero {
+            padding-top: 48px;
+            .container {
+                max-width: 556px;
+                padding: 0 !important;
+            }
+            .hero-title {
+                font-size: 40px;
+                line-height: 52px;
+            }
+            .custom-form {
+                margin: {
+                    top: 48px;
+                    bottom: 58px;
+                }
+            }
+            img {
+                width: 556px;
+                margin-bottom: -145px;
+            }
+        }
+    }
+    .landing-crypto-advantage {
+        padding-top: 225px;
+        .container {
+            max-width: 472px;
+            padding: 0 !important;
+        }
+        .advantages {
+            column-gap: 20px;
+            row-gap: 36px;
+        }
+        .advantage {
+            width: 226px;
+            height: 259px;
+            padding: {
+                right: 6px;
+                left: 20px;
+            }
+            img {
+                width: 48px;
+            }
+        }
+        .title {
+            font-size: 20px !important;
+        }
+        .desc {
+            font-size: 14px !important;
+        }
+    }
+    .landing-crypto-pairing {
+        padding-bottom: 80px;
+        .container {
+            max-width: 351px;
+            padding: 0 !important;
+        }
+        .section-title {
+            margin-bottom: 66px;
+        }
+        .pairing-container {
+            gap: 22px;
+        }
+        img {
+            display: none;
+        }
+        img:nth-child(1) {
+            display: unset;
+        }
+        img:nth-child(2) {
+            display: unset;
+        }
+    }
+    .landing-crypto-count {
+        padding: 64px 0;
+        .container {
+            max-width: 360px;
+            padding: 0 !important;
+        }
+        .count-container {
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+        .count {
+            width: 176px;
+            height: 128px;
+            padding-top: 20px;
+        }
+        .number {
+            font-size: 36px;
+            margin-bottom: 11px;
+        }
+    }
+    .landing-crypto-portofolio {
+        padding-top: 80px;
+        .container {
+            max-width: 392px;
+            padding: 0 !important;
+        }
+        .title-container {
+            flex-direction: column;
+            text-align: center;
+        }
+        .section-title {
+            margin-bottom: 42px;
+        }
+        .section-desc {
+            width: 100%;
+        }
+        .steps {
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 48px;
+            margin: {
+                top: 0;
+                bottom: 56px;
+            }
+        }
+    }
+    .landing-crypto-review {
+        padding: {
+            top: 52px;
+            bottom: 80px;
+        }
+        .container {
+            max-width: 536px;
+            padding: 0 !important;
+        }
+        .relative {
+            margin-left: 20px;
+        }
+        .title-container {
+            margin-bottom: 36px;
+        }
+        .review {
+            width: 450px;
+        }
+        .comment {
+            background-size: cover;
+            font-size: 18px;
+            line-height: 36px;
+            padding-top: 30px;
+            margin-bottom: 28px;
+        }
+    }
+    .landing-crypto-start {
+        margin-bottom: 30px;
+        padding: {
+            top: 80px;
+            bottom: 90px;
+        }
+        .container {
+            max-width: 525px;
+            padding: 0 !important;
+        }
+        .section-desc {
+            margin: {
+                top: 24px;
+                bottom: 72px;
+            }
+        }
+    }
+}
+
+@media (max-width: ($breakpoints-sm - 0.02px)) {
+    body.landing-crypto {
+        .section-title {
+            font-size: 24px;
+            line-height: 32px;
+        }
+        .section-desc {
+            font-size: 16px;
+            line-height: 28px;
+        }
+        .title {
+            font-size: 16px;
+            line-height: 20px;
+        }
+        .desc {
+            font-size: 14px;
+            line-height: 24px;
+        }
+    }
+    header.landing-crypto {
+        .hero {
+            padding-top: 36px;
+            .container {
+                max-width: 300px;
+                padding: 0;
+            }
+            .hero-title {
+                font-size: 28px;
+                line-height: 36px;
+                margin-bottom: 18px;
+            }
+            .custom-form {
+                flex-direction: column;
+                width: 280px;
+                background-color: transparent;
+                padding: 0;
+                margin-bottom: 36px;
+            }
+            input {
+                height: 42px;
+                border-radius: 8px;
+                padding-left: 0;
+                text-align: center;
+                margin-bottom: 14px;
+            }
+            button {
+                width: 100%;
+                height: 42px;
+                border-radius: 8px;
+            }
+            img {
+                width: 100%;
+                margin-bottom: -76px;
+            }
+        }
+    }
+    .landing-crypto-advantage {
+        padding-top: 132px;
+        .container {
+            max-width: 280px;
+            padding: 0;
+        }
+        .advantages {
+            row-gap: 36px;
+        }
+        .advantage {
+            width: 100%;
+            height: 220px;
+            padding: {
+                right: 36px;
+                left: 24px;
+            }
+        }
+        .advantage::nth-of-type(1) {
+            order: 1;
+        }
+        .advantage::nth-of-type(2) {
+            order: 2;
+        }
+        .advantage::nth-of-type(3) {
+            order: 5;
+        }
+        .advantage::nth-of-type(4) {
+            order: 3;
+        }
+        .advantage::nth-of-type(5) {
+            order: 4;
+        }
+        .advantage::nth-of-type(6) {
+            order: 6;
+        }
+        img {
+            width: 48px;
+        }
+        .title {
+            margin: {
+                top: 24px;
+                bottom: 8px;
+            }
+        }
+    }
+    .landing-crypto-pairing {
+        padding: 56px 0;
+        .container {
+            max-width: 300px;
+            padding: 0;
+        }
+        .section-title {
+            width: 201px;
+            margin: auto {
+                bottom: 26px;
+            }
+        }
+        .pairing-container {
+            gap: 24px;
+        }
+        img {
+            width: 300px;
+            display: none;
+        }
+        img:nth-child(1) {
+            display: unset;
+        }
+        img:nth-child(2) {
+            display: unset;
+        }
+    }
+    .landing-crypto-count {
+        padding: 36px 0;
+        .container {
+            max-width: 306px;
+            padding: 0;
+        }
+        .count-container {
+            flex-wrap: wrap;
+            gap: 0;
+        }
+        .count {
+            width: 153px;
+            height: 104px;
+            padding-top: 12px;
+        }
+        .number {
+            font-size: 28px;
+            line-height: 36px;
+        }
+        .section-desc {
+            font-size: 14px !important;
+            line-height: 24px !important;
+        }
+    }
+    .landing-crypto-portofolio {
+        padding: 56px 0;
+        .container {
+            max-width: 280px;
+            padding: 0;
+        }
+        .title-container {
+            flex-direction: column;
+            text-align: center;
+            margin-bottom: 36px;
+        }
+        .section-title {
+            margin-bottom: 16px;
+        }
+        .section-desc {
+            width: 100%;
+        }
+        .steps {
+            gap: 20px;
+            margin-top: 0;
+        }
+        .step {
+            width: 276px;
+            img {
+                width: 36px;
+                height: 36px;
+                margin-right: 20px;
+            }
+        }
+        .title {
+            margin-bottom: 10px;
+        }
+    }
+    .landing-crypto-review {
+        padding: {
+            top: 36px;
+            bottom: 48px;
+        }
+        .container {
+            max-width: 267px;
+            padding: 0;
+        }
+        .title-container {
+            justify-content: center;
+            margin-bottom: 24px;
+        }
+        .review {
+            width: 267px;
+        }
+        .comment {
+            font-size: 16px;
+            line-height: 28px;
+            text-align: center;
+            padding: 20px {
+                bottom: 37px;
+            }
+        }
+        .avatar {
+            width: 36px !important;
+            margin-right: 10px;
+        }
+        .name {
+            font-size: 16px;
+            line-height: 20px;
+        }
+        .desc {
+            line-height: 20px !important;
+        }
+    }
+    .landing-crypto-start {
+        margin-bottom: 5px;
+        padding: 48px 0;
+        .container {
+            max-width: 280px;
+            padding: 0;
+        }
+        .section-title {
+            font-size: 24px !important;
+            line-height: 32px !important;
+        }
+        .section-desc {
+            margin: {
+                top: 20px;
+                bottom: 36px;
+            }
+        }
+    }
+}

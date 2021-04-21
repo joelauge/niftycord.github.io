@@ -1,0 +1,624 @@
+body.landing-job {
+    .section-title {
+        font-size: 56px;
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.21;
+        letter-spacing: 0.2px;
+        color: #183b56;
+    }
+
+    .section-desc {
+        font-size: 18px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.78;
+        letter-spacing: normal;
+        color: #5a7184;
+    }
+}
+
+header.landing-job {
+    background-image: url(../../../dist/assets/images/landing-job/hero-bg.svg);
+
+    .hero {
+        padding-top: 35px;
+
+        .section-title {
+            width: 448px;
+        }
+
+        .form-group {
+            width: 812px;
+            position: relative;
+            z-index: 2;
+
+            .input-group {
+                box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.08);
+
+                .line {
+                    margin: -16px {
+                        right: 27px;
+                        left: 0;
+                    }
+                }
+
+                .btn.btn-white {
+                    padding-right: 0;
+                    padding-left: 14px;
+                    border: none;
+                }
+
+                .btn.btn-success {
+                    border-radius: 4px;
+                    margin-left: 95px;
+                    width: 159px;
+                }
+
+                input {
+                    padding-right: 0;
+                    padding-left: 18px;
+                }
+
+                .flex:nth-child(1) {
+                    input {
+                        width: 245px;
+                    }
+                }
+
+                .flex:nth-child(3) {
+                    input {
+                        width: 173px;
+                    }
+                }
+
+                input:focus {
+                    box-shadow: none;
+                    outline: none;
+                }
+            }
+        }
+
+        .hero-desc {
+            font-size: 14px;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.71;
+            letter-spacing: normal;
+            color: #5a7184;
+        }
+
+        .hero-image {
+            width: 509px;
+        }
+
+        .items-start {
+            margin-left: -275px;
+
+            > img {
+                margin-right: -31px;
+            }
+        }
+
+        .dropdown-content {
+            display: none;
+            width: 343px;
+            top: 88px;
+            left: 293px;
+
+            > li {
+                padding: 16px 0;
+            }
+
+            > li:hover {
+                cursor: pointer;
+            }
+        }
+
+        .show {
+            display: block;
+        }
+
+        input.dropbtn:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+.landing-job-popular {
+    .btn.btn-outline-success {
+        margin-top: 35px;
+    }
+
+    .carousel-stage-padding {
+        margin-left: -148px;
+        margin-right: -148px;
+    }
+
+    .carousel-margin {
+        padding: 0 14px;
+    }
+
+    .job-card {
+        padding: 24px 14px 18px 24px;
+
+        img {
+            padding: 12px 11px;
+            width: unset !important;
+        }
+
+        .job-title {
+            font-size: 24px;
+            font-weight: bold;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.33;
+            letter-spacing: 0.2px;
+            color: #183b56;
+        }
+
+        .jobs-desc {
+            font-size: 24px;
+            font-weight: bold;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.33;
+            letter-spacing: 0.2px;
+            color: #183b56;
+        }
+
+        .fa-arrow-right {
+            padding: 20px;
+        }
+    }
+}
+
+.landing-job-opened {
+    .section-title.text-48 {
+        width: 339px;
+    }
+
+    .section-desc {
+        > b:hover {
+            cursor: pointer;
+        }
+
+        > i:hover {
+            cursor: pointer;
+        }
+    }
+
+    .bg-white.rounded-4 {
+        padding: 30px {
+            right: 38px;
+        }
+
+        width: 360px;
+    }
+
+    .bg-transparent.rounded-4 {
+        border: solid 1px #e5eaf4;
+        width: 360px;
+    }
+
+    .opened-badge {
+        border-radius: 20px;
+        width: fit-content;
+    }
+
+    .opened-title {
+        font-size: 22px;
+        font-weight: 600;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.45;
+        letter-spacing: 0.2px;
+        color: #183b56;
+    }
+
+    .opened-information {
+        font-size: 16px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.75;
+        letter-spacing: normal;
+        color: #5a7184;
+    }
+
+    .badge-title {
+        font-size: 14px;
+        font-weight: 600;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.43;
+        letter-spacing: normal;
+        color: #183b56;
+    }
+
+    .dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+    }
+
+    .company-image {
+        width: 40px;
+        height: 40px;
+    }
+
+    .company-name {
+        font-size: 16px;
+        font-weight: 600;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.25;
+        letter-spacing: 0.2px;
+        color: #183b56;
+        margin-left: 10px;
+        margin-right: 24px;
+    }
+
+    .company-hour {
+        font-size: 14px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.71;
+        letter-spacing: normal;
+        color: #5a7184;
+    }
+
+    .tips-image {
+        width: 360px;
+        height: 420px;
+        background-image: url(../../../dist/assets/images/landing-job/photo1@2x.png);
+        background-size: cover;
+        display: flex;
+        align-items: flex-end;
+        padding: 29px 24px;
+
+        .btn {
+            line-height: 1.43;
+            padding: 8px 18px;
+            border-radius: 20px;
+        }
+    }
+
+    .btn.btn-outline-success {
+        border-radius: 2000px;
+    }
+
+    .btn-white:hover {
+        box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.08);
+        opacity: 1;
+    }
+}
+
+.landing-job-companies {
+    .section-title {
+        width: 521px;
+    }
+
+    .companies-carousel-container {
+        margin-top: 42px;
+        margin-left: -65px;
+    }
+
+    .btn-container {
+        margin-left: 708px;
+        margin-bottom: 42px;
+
+        i:hover {
+            color: #183b56 !important;
+            border-color: #183b56 !important;
+            cursor: pointer;
+        }
+    }
+
+    .companies-image {
+        width: 460px;
+        height: 580px;
+    }
+
+    .companies-carousel-item {
+        padding: 0 15px;
+    }
+
+    .companies-card {
+        width: 270px;
+
+        padding: 72px {
+            right: 33px;
+            left: 34px;
+        }
+
+        hr {
+            width: 61px;
+            border: 4px solid rgba(90, 113, 132, 0.1);
+            border-radius: 2px;
+            margin-top: 31px;
+            margin-bottom: 38px;
+        }
+
+        .companies-desc {
+            font-size: 16px;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.75;
+            letter-spacing: normal;
+            text-align: center;
+            color: #5a7184;
+        }
+    }
+}
+
+.landing-job-article {
+    .section-title {
+        width: 457px;
+    }
+
+    .section-desc {
+        width: 580px;
+        margin-left: -10px;
+    }
+
+    .article-card {
+        width: 555px;
+        height: 140px;
+        padding: 30px;
+    }
+
+    .card-title {
+        font-size: 24px;
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.33;
+        letter-spacing: 0.2px;
+        color: #183b56;
+    }
+
+    .card-author {
+        font-size: 16px;
+        font-weight: 600;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.25;
+        letter-spacing: 0.2px;
+        color: #3eb683;
+
+        .text-opensans {
+            font-size: 14px;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.71;
+            letter-spacing: normal;
+            color: #5a7184;
+        }
+    }
+}
+
+.landing-job-search {
+    padding-top: 110px;
+    padding-bottom: 205px;
+
+    .section-title {
+        span {
+            color: #3db582;
+            text-decoration: underline;
+        }
+    }
+
+    .section-title::after {
+        font-family: "Font Awesome 5 Free";
+        content: "\f078";
+        color: #3db582;
+        font-size: 24px;
+    }
+
+    .btn.btn-success {
+        margin-top: 51px;
+        border-radius: 4px;
+    }
+}
+
+@media (max-width: ($breakpoints-xl - 0.02px)) {
+    .landing-job-companies {
+        .btn-container {
+            margin-left: 450px;
+        }
+    }
+}
+
+@media (max-width: ($breakpoints-lg - 0.02px)) {
+    header.landing-job {
+        background: #dff3fa;
+
+        .hero {
+            .form-group {
+                position: absolute;
+                bottom: -231px;
+            }
+
+            .dropdown-content {
+                left: 241px;
+            }
+
+            .hero-image {
+                img {
+                    width: 680px;
+                    height: 450px;
+                    object-fit: cover;
+                    object-position: center bottom;
+                }
+            }
+        }
+    }
+
+    .landing-job-popular {
+        padding-top: 311px;
+
+        .carousel-margin {
+            padding: 8px;
+        }
+
+        .job-card {
+            width: 222px;
+
+            padding: {
+                top: 30px;
+                right: 3px;
+                bottom: 18px;
+                left: 20px;
+            }
+        }
+
+        .md-absolute {
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+
+    .landing-job-opened {
+        > .container {
+            padding: {
+                right: 0 !important;
+                left: 0 !important;
+            }
+        }
+
+        .bg-white.rounded-4 {
+            width: 320px;
+        }
+
+        .bg-transparent.rounded-4 {
+            width: 320px;
+        }
+    }
+
+    .landing-job-article {
+        > .container {
+            padding: {
+                right: 0 !important;
+                left: 0 !important;
+            }
+        }
+    }
+
+    .landing-job-companies {
+        .section-title {
+            width: 373px;
+        }
+
+        .companies-image {
+            height: 504px;
+        }
+
+        .btn-container {
+            margin-left: 460px;
+        }
+    }
+}
+
+@media (max-width: ($breakpoints-md - 0.02px)) {
+    .landing-job-opened {
+        .bg-transparent.rounded-4,
+        .bg-white.rounded-4 {
+            width: 360px;
+        }
+    }
+}
+
+@media (max-width: ($breakpoints-sm - 0.02px)) {
+    header.landing-job {
+        .hero {
+            .form-group {
+                left: 50%;
+                transform: translateX(-50%);
+                bottom: -277px;
+            }
+
+            .hero-image {
+                img {
+                    height: 281px !important;
+                    width: 300px !important;
+                    object-position: center;
+                }
+            }
+        }
+    }
+
+    .landing-job-popular {
+        padding-top: 277px;
+
+        .job-card {
+            height: 204px;
+
+            padding: {
+                top: 20px;
+                right: 14px;
+                bottom: 14px;
+                left: 14px;
+            }
+        }
+    }
+
+    .landing-job-opened {
+        .bg-transparent.rounded-4,
+        .bg-white.rounded-4 {
+            width: 290px;
+        }
+
+        .bg-transparent.rounded-4 {
+            padding: {
+                top: 38px;
+                bottom: 38px;
+            }
+        }
+    }
+
+    .landing-job-article {
+        .article-card {
+            width: 290px;
+
+            padding: {
+                top: 20px;
+                right: 0;
+                bottom: 20px;
+                left: 18px;
+            }
+        }
+    }
+
+    .landing-job-companies {
+        .xs-absolute {
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .companies-image {
+            width: 290px;
+            height: 420px;
+        }
+    }
+}
+
+.bp_checking {
+    display: none;
+}
+
+@media only screen and (min-width: ($breakpoints-lg - 0.02px)) {
+    body.landing-job {
+        #bp_desktop {
+            display: block;
+        }
+    }
+}

@@ -1,0 +1,552 @@
+body.landing-saas-illustration {
+    .form-group {
+        width: 415px;
+
+        .input-group {
+            border-radius: 29px;
+
+            .form-control {
+                padding: {
+                    right: 18px;
+                    left: 18px;
+                }
+
+                height: unset;
+                border-style: none;
+            }
+
+            .form-control:focus {
+                box-shadow: none;
+            }
+
+            .input-group-append {
+                .btn.btn-success.btn-sm {
+                    border-radius: 2000px;
+                    font-size: 16px;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+
+    .section-title {
+        font-size: 40px;
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.3;
+        letter-spacing: 0.2px;
+        color: #183b56;
+    }
+
+    .section-desc {
+        font-size: 18px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.78;
+        letter-spacing: normal;
+        color: #5a7184;
+    }
+
+    .xs-w-30 {
+        width: 30px;
+    }
+
+    .xs-h-30 {
+        height: 30px;
+    }
+}
+
+header.landing-saas-illustration {
+    .hero {
+        .hero-title {
+            font-size: 56px;
+            font-weight: bold;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.21;
+            letter-spacing: 0.2px;
+            color: #183b56;
+        }
+
+        .hero-desc {
+            font-size: 18px;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.78;
+            letter-spacing: normal;
+            color: #5a7184;
+            margin-bottom: 46px;
+        }
+
+        .custom-form {
+            width: 415px;
+            height: 58px;
+            background-color: $s-color-white;
+            border-radius: 29px;
+            box-shadow: 0 -10px 35px 0 rgba(0, 0, 0, 0.03);
+            padding: 6px {
+                left: 24px;
+            }
+            input {
+                flex: auto;
+                border: none;
+                outline: none;
+                font-family: "OpenSans", sans-serif;
+                font-size: 16px;
+                font-weight: normal;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: 1.75;
+                letter-spacing: normal;
+                color: #5a7184;
+            }
+
+            button {
+                border-radius: 2000px;
+            }
+        }
+    }
+}
+
+.landing-saas-illustration-help {
+    .help-card {
+        padding: 10px;
+        padding-right: 45px;
+        padding-left: 0;
+
+        > div {
+            padding-bottom: 10px;
+            border-left: 2px solid transparent;
+        }
+
+        width: 467px;
+
+        .help-card-title {
+            font-size: 24px;
+            font-weight: bold;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.33;
+            letter-spacing: 0.2px;
+            color: #183b56;
+            margin-bottom: 10px;
+        }
+
+        .help-card-desc {
+            font-size: 16px;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.75;
+            letter-spacing: normal;
+            color: #5a7184;
+        }
+
+        .help-ill {
+            width: 606px;
+        }
+    }
+
+    .help-card:hover {
+        background-color: rgba(179, 186, 197, 0.1);
+
+        > div {
+            border-left: 2px solid #5a7184;
+        }
+    }
+}
+
+.landing-saas-illustration-save-time {
+    background-color: #f9fbfe;
+
+    .flex.items-center.py-2px {
+        // margin-left: 79px;
+        // margin-right: 135px;
+
+        > div:nth-child(2) {
+            width: 485px;
+        }
+    }
+
+    .save-time-ill {
+        margin-left: -78px;
+        margin-right: 70px;
+    }
+
+    .save-time-line {
+        width: 454px;
+        height: 1px;
+        background-image: url(../../../dist/assets/images/pattern/dashed-border.svg);
+        background-repeat: repeat-x;
+        background-size: 9px 1px;
+    }
+
+    .save-time-name {
+        font-size: 16px;
+        font-weight: normal;
+        color: #5a7184;
+
+        b {
+            font-size: 16px;
+            font-weight: 600;
+            color: #183b56;
+        }
+    }
+}
+
+.landing-saas-illustration-member {
+    padding-bottom: 130px;
+
+    .support-list {
+        font-family: "hk_grotesksemibold";
+    }
+
+    .text-container {
+        width: 485px;
+    }
+
+    .member-ill {
+        width: 646px;
+
+        img {
+            margin-left: -150px;
+        }
+    }
+
+    .container {
+        > .flex {
+            > div:last-child {
+                width: 573px;
+            }
+
+            i {
+                margin-left: 10px;
+            }
+        }
+    }
+}
+
+.landing-saas-illustration-customer {
+    .container {
+        border-color: #e3e7ed;
+        border-width: 0 0 1px 0;
+    }
+
+    img {
+        width: 100%;
+        max-width: 20%;
+        flex: 0 0 20%;
+        position: relative;
+    }
+}
+
+.landing-saas-illustration-workflow {
+    .section-desc {
+        width: 583px;
+
+        margin: auto {
+            top: 24px;
+            bottom: 56px;
+        }
+    }
+
+    .workflow-title {
+        font-size: 24px;
+        font-weight: 600;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.33;
+        letter-spacing: 0.2px;
+        text-align: center;
+        color: #183b56;
+    }
+
+    .gap {
+        gap: 30px;
+    }
+
+    .workflow-card {
+        width: 360px;
+        .border-2 {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+        }
+
+        .border-primary:hover {
+            border-color: rgba(21, 101, 216, 0.6) !important;
+        }
+
+        .border-success:hover {
+            border-color: rgba(54, 179, 126, 0.6) !important;
+        }
+
+        .border-bright-red:hover {
+            border-color: rgba(233, 84, 50, 0.6) !important;
+        }
+    }
+}
+
+.landing-saas-illustration-subscription {
+    margin-bottom: 95px;
+
+    .ill-subscription {
+        width: 776px;
+
+        img {
+            margin-top: 45px;
+            margin-left: -190px;
+        }
+    }
+}
+
+@media (min-width: $breakpoints-lg) and (max-width: ($breakpoints-xl - 0.02px)) {
+    .landing-saas-illustration-help {
+        .help-card {
+            width: 421px;
+        }
+    }
+
+    .landing-saas-illustration-save-time {
+        .save-time-ill {
+            margin-right: 44px;
+            margin-left: -62px;
+            img {
+                width: 576px;
+            }
+        }
+    }
+
+    .landing-saas-illustration-member {
+        .text-container {
+            width: 640px;
+        }
+
+        .member-ill {
+            width: 768px;
+
+            img {
+                margin-left: unset;
+            }
+        }
+
+        .container {
+            > .flex {
+                > div:last-child {
+                    width: 640px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: $breakpoints-md) and (max-width: ($breakpoints-lg - 0.02px)) {
+    body.landing-saas-illustration {
+        .form-group {
+            .input-group {
+                .form-control {
+                    height: 46px;
+                }
+            }
+        }
+    }
+
+    header.landing-saas-illustration {
+        .hero {
+            .hero-desc {
+                width: 555px;
+            }
+
+            .form-group {
+                width: 465px;
+            }
+        }
+    }
+
+    .landing-saas-illustration-help {
+        .gap {
+            gap: 18px;
+        }
+        .help-card {
+            width: 225px;
+            height: 280px;
+            padding: {
+                top: 0px;
+                right: 26px;
+                bottom: 27px;
+                left: 26px;
+            }
+            > div {
+                border-top: 2px solid transparent;
+                border-left: none !important;
+                text-align: center;
+                padding: {
+                    top: 19px;
+                    right: 0px;
+                    bottom: 0px;
+                    left: 0px;
+                }
+            }
+
+            &:hover {
+                > div {
+                    border-top: 2px solid #5a7184;
+                }
+            }
+        }
+    }
+
+    .landing-saas-illustration-member {
+        .text-container {
+            width: 640px;
+        }
+
+        .member-ill {
+            width: 768px;
+            img {
+                margin-left: unset;
+            }
+        }
+    }
+
+    .landing-saas-illustration-customer {
+        img {
+            max-width: 25%;
+            flex: 0 0 25%;
+        }
+    }
+
+    .landing-saas-illustration-workflow {
+        .gap {
+            gap: 20px;
+            margin: 0 -38px;
+        }
+        .workflow-card {
+            width: 220px;
+            .border-2 {
+                width: 40px;
+                height: 40px;
+            }
+        }
+    }
+
+    .landing-saas-illustration-subscription {
+        .ill-subscription {
+            width: unset;
+            img {
+                margin-left: unset;
+            }
+        }
+
+        .text-container {
+            width: 482px;
+        }
+    }
+}
+
+@media (min-width: $breakpoints-sm) and (max-width: ($breakpoints-md - 0.02px)) {
+    .landing-saas-illustration-workflow {
+        .section-desc {
+            width: unset;
+        }
+    }
+
+    .landing-saas-illustration-customer {
+        img {
+            max-width: 25%;
+            flex: 0 0 25%;
+        }
+    }
+}
+
+@media (min-width: $breakpoints-xs) and (max-width: ($breakpoints-sm - 0.02px)) {
+    body.landing-saas-illustration {
+        .section-title {
+            font-size: 28px;
+        }
+
+        .section-desc {
+            font-size: 16px;
+        }
+    }
+
+    header.landing-saas-illustration {
+        .hero {
+            .custom-form {
+                width: 100%;
+                height: auto;
+                border-radius: 8px;
+                padding: 16px;
+                input {
+                    flex: auto;
+                    text-align: center;
+                    margin-bottom: 26px;
+                }
+
+                button {
+                    border-radius: 8px;
+                }
+            }
+        }
+    }
+
+    .landing-saas-illustration-help {
+        .help-card {
+            width: 100%;
+            padding-right: 18px;
+
+            .help-card-title {
+                font-size: 16px;
+            }
+
+            .help-card-desc {
+                font-size: 14px;
+            }
+
+            > div {
+                padding: {
+                    top: 14px;
+                    bottom: 14px;
+                }
+            }
+        }
+    }
+
+    .landing-saas-illustration-member {
+        .xs-w-126 {
+            width: 126px;
+        }
+
+        .xs-w-113 {
+            width: 113px;
+        }
+
+        .xs-w-310 {
+            width: 310px;
+        }
+    }
+
+    .landing-saas-illustration-customer {
+        img {
+            max-width: 50%;
+            flex: 0 0 50%;
+        }
+    }
+
+    .landing-saas-illustration-workflow {
+        .gap {
+            gap: 24px;
+        }
+
+        .workflow-card {
+            width: 260px;
+            .border-2 {
+                width: 40px;
+                height: 40px;
+            }
+        }
+    }
+}

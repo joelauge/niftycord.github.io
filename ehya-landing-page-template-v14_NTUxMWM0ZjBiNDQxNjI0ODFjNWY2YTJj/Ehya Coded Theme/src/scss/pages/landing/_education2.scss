@@ -1,0 +1,1561 @@
+body.landing-education2 {
+    .section-title {
+        font-size: 14px;
+        font-family: "hk_grotesksemibold", sans-serif;
+        line-height: 1.43;
+        letter-spacing: 2px;
+        text-align: center;
+    }
+
+    .section-desc {
+        font-size: 40px;
+        font-family: "hk_grotesksemibold", sans-serif;
+        line-height: 1.3;
+        letter-spacing: 0.2px;
+        text-align: center;
+        color: #183b56;
+    }
+}
+header.landing-education2 {
+    background-image: url("../../assets/images/landing-education2/light1.svg"),
+        url("../../assets/images/landing-education2/light2.svg");
+    background-position: left top, right bottom;
+    background-repeat: no-repeat;
+    .hero {
+        padding-top: 44px;
+    }
+    .badge {
+        margin-bottom: 36px;
+    }
+    .hero-title {
+        font-size: 56px;
+        font-family: "hk_grotesksemibold", sans-serif;
+        line-height: 1.21;
+        letter-spacing: 0.2px;
+        color: #ffffff;
+    }
+
+    .hero-desc {
+        font-size: 16px;
+        line-height: 1.7;
+        color: #b3bac5;
+        margin: {
+            top: 24px;
+            bottom: 52px;
+        }
+    }
+
+    .btn-container {
+        display: flex;
+        column-gap: 25px;
+    }
+
+    .column-gap {
+        column-gap: 25px;
+    }
+}
+
+.landing-education2-step {
+    height: 574px;
+    background-color: $s-color-info-100;
+    padding-top: 100px;
+    margin-right: 50px;
+    .title-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-right: 32px;
+        margin-bottom: 60px;
+        .title {
+            width: 504px;
+            font-size: 48px;
+            font-family: "hk_grotesksemibold", sans-serif;
+            line-height: 1.25;
+            letter-spacing: 0.2px;
+            color: #183b56;
+        }
+
+        .desc {
+            width: 457px;
+            font-size: 18px;
+            line-height: 1.78;
+            color: #5a7184;
+        }
+    }
+
+    .image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 40px;
+        width: 682px;
+        height: 430px;
+        background-image: url("../../assets/images/landing-education2/image/11.svg");
+    }
+
+    .fa-play {
+        width: 90px;
+        height: 90px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $s-color-white;
+        border-radius: 50%;
+    }
+
+    .step-card {
+        width: 458px;
+        height: 502px;
+        background-color: $s-color-white;
+        padding: {
+            top: 40px;
+            left: 40px;
+        }
+        > .title {
+            font-size: 28px;
+            font-family: "hk_grotesksemibold", sans-serif;
+            line-height: 1.29;
+            letter-spacing: 0.2px;
+            color: #183b56;
+            margin-bottom: 40px;
+        }
+    }
+
+    .steps {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .step {
+        display: flex;
+        .title {
+            font-size: 18px;
+            font-family: "hk_grotesksemibold", sans-serif;
+            line-height: 1.22;
+            letter-spacing: 0.23px;
+            color: #183b56;
+        }
+
+        .desc {
+            font-size: 14px;
+            line-height: 1.71;
+            color: #5a7184;
+        }
+    }
+
+    .number {
+        font-size: 16px;
+        font-family: "hk_grotesksemibold", sans-serif;
+        line-height: 1.25;
+        letter-spacing: 0.2px;
+        color: #183b56;
+        margin-top: 18px;
+    }
+
+    .icon {
+        padding: 18px;
+        border: solid 0.6px #eceef2;
+        border-radius: 50%;
+        margin: {
+            right: 22px;
+            left: 22px;
+        }
+    }
+}
+
+.landing-education2-why {
+    padding: {
+        top: 336px;
+        bottom: 100px;
+    }
+    .gap {
+        gap: 45px;
+    }
+
+    .why-card {
+        width: 350px;
+        height: 423px;
+        padding: 91px 32px 42px 30px;
+        background-color: $s-color-gray-light-100;
+    }
+
+    img {
+        margin-bottom: 40px;
+    }
+
+    .title {
+        font-size: 28px;
+        font-family: "hk_grotesksemibold", sans-serif;
+        line-height: 1.29;
+        letter-spacing: 0.2px;
+        color: #183b56;
+    }
+
+    .desc {
+        font-size: 16px;
+        line-height: 1.75;
+        color: #5a7184;
+        margin: {
+            top: 18px;
+            bottom: 32px;
+        }
+    }
+}
+
+.landing-education2-testimoni {
+    background-color: $s-color-warning-100;
+    padding: {
+        top: 80px;
+        bottom: 72px;
+    }
+    margin: {
+        right: 50px;
+        left: 50px;
+    }
+
+    .container {
+        text-align: center;
+    }
+
+    .section-desc {
+        margin: {
+            top: 24px;
+            bottom: 64px;
+        }
+    }
+
+    .testimoni {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+        margin-bottom: 72px;
+    }
+
+    .text {
+        font-size: 20px;
+        font-family: "hk_groteskmedium", sans-serif;
+        line-height: 1.2;
+        letter-spacing: 0.2px;
+        color: #183b56;
+    }
+
+    img {
+        box-shadow: 0 43px 85px 0 rgba($color: #000000, $alpha: 0.1);
+        margin-right: 16px;
+    }
+
+    .testimoni-card {
+        display: flex;
+        align-items: center;
+        background-color: $s-color-white;
+        border-radius: 16px;
+        padding: {
+            top: 20px;
+            bottom: 20px;
+            left: 20px;
+        }
+    }
+
+    .testimoni-card:nth-child(1) {
+        padding-right: 23px;
+    }
+
+    .testimoni-card:nth-child(2) {
+        padding-right: 17px;
+    }
+
+    .testimoni-card:nth-child(3) {
+        padding-right: 31px;
+    }
+
+    .testimoni-card:nth-child(4) {
+        padding-right: 37px;
+    }
+
+    .testimoni-card:nth-child(5) {
+        padding-right: 31px;
+    }
+
+    .testimoni-card:nth-child(6) {
+        padding-right: 24px;
+    }
+
+    .testimoni-card:nth-child(7) {
+        padding-right: 23px;
+    }
+
+    .btn {
+        width: 260px;
+        height: 56px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        line-height: unset;
+        border-radius: 0;
+        margin: auto;
+    }
+}
+
+.landing-education2-partner {
+    padding: {
+        top: 100px;
+        bottom: 100px;
+    }
+    .title {
+        width: 297px;
+        font-size: 32px;
+        font-family: "hk_grotesksemibold", sans-serif;
+        line-height: 1.25;
+        letter-spacing: 0.2px;
+        color: #183b56;
+    }
+
+    .partner {
+        width: 760px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+}
+
+.landing-education2-class {
+    padding: {
+        top: 80px;
+        bottom: 100px;
+    }
+
+    .section-desc {
+        margin: {
+            top: 24px;
+            bottom: 64px;
+        }
+    }
+
+    .title {
+        font-size: 20px;
+        font-family: "hk_grotesksemibold", sans-serif;
+        line-height: 1.2;
+        letter-spacing: 0.2px;
+        text-align: center;
+        color: #183b56;
+        margin: {
+            top: 20px;
+            bottom: 10px;
+        }
+    }
+
+    .gap {
+        gap: 30px;
+    }
+
+    .class-card {
+        width: 262px;
+        height: 300px;
+        border: solid 0.6px #eceef2;
+        border-radius: 4px;
+        background-color: $s-color-white;
+        padding: {
+            top: 10px;
+            right: 10px;
+            bottom: 22px;
+            left: 10px;
+        }
+    }
+
+    .fa-search {
+        box-shadow: 0 28px 32px 0 rgba(0, 0, 0, 0.06);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 72px;
+        height: 72px;
+        background-color: $s-color-white;
+        border-radius: 50%;
+        margin: 60px auto;
+    }
+}
+
+.landing-education2-join {
+    background-color: $s-color-gray-light-100;
+    padding-top: 80px;
+    .title {
+        width: 427px;
+        font-size: 40px;
+        font-family: "hk_grotesksemibold", sans-serif;
+        line-height: 1.3;
+        letter-spacing: 0.2px;
+        color: #183b56;
+    }
+
+    .desc {
+        width: 457px;
+        font-size: 18px;
+        line-height: 1.78;
+        color: #5a7184;
+        margin-bottom: 18px;
+    }
+
+    img {
+        margin-left: 16px;
+    }
+}
+
+@media (min-width: $breakpoints-lg) and (max-width: ($breakpoints-xl - 0.02px)) {
+    header.landing-education2 {
+        .hero {
+            padding-top: 26px;
+            .container {
+                max-width: 503px;
+                padding: 0;
+            }
+        }
+        .badge {
+            margin-bottom: 22px;
+        }
+        .hero-title {
+            font-size: 48px;
+        }
+        .hero-desc {
+            margin: {
+                top: 18px;
+                bottom: 40px;
+            }
+        }
+        .btn-container {
+            justify-content: center;
+        }
+        .hero-image {
+            width: 363px;
+            margin: auto;
+            margin-top: 63px;
+        }
+    }
+
+    .landing-education2-step {
+        height: 359px;
+        margin-right: unset;
+        padding-top: 72px;
+        .container {
+            max-width: 682px;
+            padding: 0;
+        }
+        .title-container {
+            flex-direction: column;
+            padding-right: unset;
+            margin-bottom: 36px;
+            text-align: center;
+            .title {
+                font-size: 32px;
+                width: unset;
+                margin-bottom: 20px;
+            }
+
+            .desc {
+                font-size: 16px;
+                width: 570px;
+            }
+        }
+
+        .image {
+            margin-top: unset;
+            width: 682px;
+            height: 270px;
+            background-position: center;
+        }
+
+        .step-card {
+            width: unset;
+            height: unset;
+            padding-left: 30px;
+        }
+
+        .steps {
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+
+        .step {
+            .desc {
+                width: 185px;
+            }
+        }
+
+        .icon {
+            padding: 16px {
+                right: 15px;
+                bottom: 15px;
+            }
+            margin: {
+                right: 14px;
+                left: 20px;
+            }
+            img {
+                width: 25px;
+            }
+        }
+    }
+
+    .landing-education2-why {
+        padding: {
+            top: 563px;
+            bottom: 72px;
+        }
+
+        .container {
+            max-width: 700px;
+            padding: 0;
+        }
+
+        .section-desc {
+            font-size: 32px !important;
+        }
+
+        .gap {
+            gap: 20px;
+        }
+
+        .why-card {
+            width: 220px;
+            height: 366px;
+            padding: 30px {
+                left: 20px;
+            }
+        }
+
+        img {
+            width: 42px;
+            margin-bottom: 24px;
+        }
+
+        .title {
+            font-size: 22px;
+        }
+
+        .desc {
+            font-size: 14px;
+        }
+    }
+
+    .landing-education2-testimoni {
+        margin: 0;
+        .container {
+            max-width: 656px;
+            padding: 0;
+        }
+
+        .section-desc {
+            font-size: 32px !important;
+            margin-bottom: 48px;
+        }
+
+        .testimoni {
+            margin-bottom: 64px;
+            column-gap: 15px;
+            row-gap: 24px;
+        }
+
+        .testimoni-card {
+            padding: 16px {
+                right: 20px !important;
+            }
+        }
+
+        .text {
+            font-size: 18px;
+            text-align: left;
+        }
+
+        img {
+            width: 45px;
+        }
+
+        .testimoni-card:nth-child(1),
+        .testimoni-card:nth-child(7) {
+            width: 337px;
+        }
+
+        .testimoni-card:nth-child(2) {
+            width: 264px;
+        }
+
+        .testimoni-card:nth-child(6) {
+            width: 304px;
+        }
+    }
+
+    .landing-education2-partner {
+        padding: {
+            top: 80px;
+            bottom: 72px;
+        }
+        .container {
+            max-width: 541px;
+            padding: 0;
+        }
+
+        .title {
+            width: unset;
+            margin-bottom: 56px;
+        }
+
+        .partner {
+            width: 460px;
+            justify-content: space-between;
+        }
+
+        img {
+            width: 107px;
+        }
+    }
+
+    .landing-education2-class {
+        padding: {
+            top: 72px;
+            bottom: 56px;
+        }
+
+        .container {
+            max-width: 698px;
+            .container {
+                padding: 0;
+            }
+        }
+
+        .gap {
+            gap: 19px;
+        }
+
+        .class-card {
+            width: 220px;
+            height: 270px;
+            padding: 10px 10px 21px;
+        }
+
+        img {
+            width: 200px;
+        }
+
+        .fa-search {
+            margin: {
+                top: 46px;
+                bottom: 56px;
+            }
+        }
+    }
+
+    .landing-education2-join {
+        padding-top: 53px;
+        margin-bottom: 31px;
+        .container {
+            max-width: 702px;
+            padding: 0;
+        }
+
+        .desc {
+            margin: {
+                top: 24px;
+                bottom: 24px;
+            }
+        }
+
+        img {
+            width: 702px;
+        }
+    }
+}
+
+@media (min-width: $breakpoints-md) and (max-width: ($breakpoints-lg - 0.02px)) {
+    header.landing-education2 {
+        .hero {
+            padding-top: 26px;
+            .container {
+                max-width: 503px;
+                padding: 0 !important;
+            }
+        }
+        .badge {
+            margin-bottom: 22px;
+        }
+        .hero-title {
+            font-size: 48px;
+        }
+        .hero-desc {
+            margin: {
+                top: 18px;
+                bottom: 40px;
+            }
+        }
+        .btn-container {
+            justify-content: center;
+        }
+        .hero-image {
+            width: 363px;
+            margin: auto;
+            margin-top: 63px;
+        }
+    }
+
+    .landing-education2-step {
+        height: 359px;
+        margin-right: unset;
+        padding-top: 72px;
+        .container {
+            max-width: 682px;
+            padding: 0 !important;
+        }
+        .title-container {
+            flex-direction: column;
+            padding-right: unset;
+            margin-bottom: 36px;
+            text-align: center;
+            .title {
+                font-size: 32px;
+                width: unset;
+                margin-bottom: 20px;
+            }
+
+            .desc {
+                font-size: 16px;
+                width: 570px;
+            }
+        }
+
+        .image {
+            margin-top: unset;
+            width: 682px;
+            height: 270px;
+            background-position: center;
+        }
+
+        .step-card {
+            width: unset;
+            height: unset;
+            padding-left: 30px;
+        }
+
+        .steps {
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+
+        .step {
+            .desc {
+                width: 185px;
+            }
+        }
+
+        .icon {
+            padding: 16px {
+                right: 15px;
+                bottom: 15px;
+            }
+            margin: {
+                right: 14px;
+                left: 20px;
+            }
+            img {
+                width: 25px;
+            }
+        }
+    }
+
+    .landing-education2-why {
+        padding: {
+            top: 563px;
+            bottom: 72px;
+        }
+
+        .container {
+            max-width: 700px;
+            padding: 0 !important;
+        }
+
+        .section-desc {
+            font-size: 32px !important;
+        }
+
+        .gap {
+            gap: 20px;
+        }
+
+        .why-card {
+            width: 220px;
+            height: 366px;
+            padding: 30px {
+                left: 20px;
+            }
+        }
+
+        img {
+            width: 42px;
+            margin-bottom: 24px;
+        }
+
+        .title {
+            font-size: 22px;
+        }
+
+        .desc {
+            font-size: 14px;
+        }
+    }
+
+    .landing-education2-testimoni {
+        margin: 0;
+        .container {
+            max-width: 656px;
+            padding: 0 !important;
+        }
+
+        .section-desc {
+            font-size: 32px !important;
+            margin-bottom: 48px;
+        }
+
+        .testimoni {
+            margin-bottom: 64px;
+            column-gap: 15px;
+            row-gap: 24px;
+        }
+
+        .testimoni-card {
+            padding: 16px {
+                right: 20px !important;
+            }
+        }
+
+        .text {
+            font-size: 18px;
+            text-align: left;
+        }
+
+        img {
+            width: 45px;
+        }
+
+        .testimoni-card:nth-child(1),
+        .testimoni-card:nth-child(7) {
+            width: 337px;
+        }
+
+        .testimoni-card:nth-child(2) {
+            width: 264px;
+        }
+
+        .testimoni-card:nth-child(6) {
+            width: 304px;
+        }
+    }
+
+    .landing-education2-partner {
+        padding: {
+            top: 80px;
+            bottom: 72px;
+        }
+        .container {
+            max-width: 541px;
+            padding: 0 !important;
+        }
+
+        .title {
+            width: unset;
+            margin-bottom: 56px;
+        }
+
+        .partner {
+            width: 460px;
+            justify-content: space-between;
+        }
+
+        img {
+            width: 107px;
+        }
+    }
+
+    .landing-education2-class {
+        padding: {
+            top: 72px;
+            bottom: 56px;
+        }
+
+        .container {
+            max-width: 698px;
+            padding: {
+                right: 0 !important;
+                left: 0 !important;
+            }
+        }
+
+        .gap {
+            gap: 19px;
+        }
+
+        .class-card {
+            width: 220px;
+            height: 270px;
+            padding: 10px 10px 21px;
+        }
+
+        img {
+            width: 200px;
+        }
+
+        .fa-search {
+            margin: {
+                top: 46px;
+                bottom: 56px;
+            }
+        }
+    }
+
+    .landing-education2-join {
+        padding-top: 53px;
+        margin-bottom: 31px;
+        .container {
+            max-width: 702px;
+            padding: 0 !important;
+        }
+
+        .desc {
+            margin: {
+                top: 24px;
+                bottom: 24px;
+            }
+        }
+
+        img {
+            width: 702px;
+        }
+    }
+}
+
+@media (min-width: $breakpoints-sm) and (max-width: ($breakpoints-md - 0.02px)) {
+    header.landing-education2 {
+        .hero {
+            padding-top: 26px;
+        }
+        .badge {
+            margin-bottom: 22px;
+        }
+        .hero-title {
+            font-size: 48px;
+        }
+        .hero-desc {
+            margin: {
+                top: 18px;
+                bottom: 40px;
+            }
+        }
+        .btn-container {
+            justify-content: center;
+        }
+        .hero-image {
+            width: 363px;
+            margin: auto;
+            margin-top: 63px;
+        }
+    }
+
+    .landing-education2-step {
+        height: 359px;
+        margin-right: unset;
+        padding-top: 72px;
+
+        .container {
+            max-width: 576px;
+            padding: 0;
+        }
+
+        .title-container {
+            flex-direction: column;
+            padding-right: unset;
+            margin-bottom: 36px;
+            text-align: center;
+            .title {
+                font-size: 32px;
+                width: unset;
+                margin-bottom: 20px;
+                padding: 0 64px;
+            }
+
+            .desc {
+                font-size: 16px;
+                width: 570px;
+            }
+        }
+
+        .image {
+            margin: auto {
+                top: unset;
+                bottom: 0;
+            }
+            width: calc(100% - 64px);
+            height: 270px;
+            background-position: center;
+        }
+
+        .step-card {
+            width: unset;
+            height: unset;
+            padding-left: 30px;
+        }
+
+        .steps {
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+
+        .step {
+            .desc {
+                width: 130px;
+            }
+        }
+
+        .icon {
+            padding: 16px {
+                right: 15px;
+                bottom: 15px;
+            }
+            margin: {
+                right: 14px;
+                left: 20px;
+            }
+            img {
+                width: 25px;
+            }
+        }
+    }
+
+    .landing-education2-why {
+        padding: {
+            top: 563px;
+            bottom: 72px;
+        }
+
+        .container {
+            max-width: 100%;
+        }
+
+        .section-desc {
+            font-size: 32px !important;
+        }
+
+        .gap {
+            gap: 20px;
+        }
+
+        .why-card {
+            width: 280px;
+            height: auto;
+            padding: 24px 10px 26px;
+            text-align: center;
+        }
+
+        img {
+            width: 42px;
+            margin-bottom: 16px;
+        }
+
+        .title {
+            font-size: 18px;
+        }
+
+        .desc {
+            font-size: 14px;
+            margin: {
+                top: 14px;
+                bottom: 20px;
+            }
+        }
+    }
+
+    .landing-education2-testimoni {
+        margin: 0;
+        .container {
+            max-width: 100%;
+        }
+        .section-desc {
+            font-size: 32px !important;
+            margin-bottom: 48px;
+        }
+
+        .testimoni {
+            margin-bottom: 64px;
+            column-gap: 15px;
+            row-gap: 24px;
+        }
+
+        .testimoni-card {
+            padding: 16px {
+                right: 20px !important;
+            }
+        }
+
+        .text {
+            font-size: 18px;
+            text-align: left;
+        }
+
+        img {
+            width: 45px;
+        }
+
+        .testimoni-card:nth-child(1),
+        .testimoni-card:nth-child(7) {
+            width: 337px;
+        }
+
+        .testimoni-card:nth-child(2) {
+            width: 264px;
+        }
+
+        .testimoni-card:nth-child(6) {
+            width: 304px;
+        }
+    }
+
+    .landing-education2-partner {
+        padding: {
+            top: 80px;
+            bottom: 72px;
+        }
+
+        .title {
+            width: unset;
+            margin-bottom: 56px;
+        }
+
+        .partner {
+            width: 460px;
+            justify-content: space-between;
+        }
+
+        img {
+            width: 107px;
+        }
+    }
+
+    .landing-education2-class {
+        padding: {
+            top: 72px;
+            bottom: 56px;
+        }
+
+        .gap {
+            gap: 19px;
+        }
+
+        .class-card {
+            width: 220px;
+            height: 270px;
+            padding: 10px 10px 21px;
+        }
+
+        img {
+            width: 200px;
+        }
+
+        .fa-search {
+            margin: {
+                top: 46px;
+                bottom: 56px;
+            }
+        }
+    }
+
+    .landing-education2-join {
+        padding-top: 53px;
+        margin-bottom: 31px;
+
+        .desc {
+            margin: {
+                top: 24px;
+                bottom: 24px;
+            }
+        }
+
+        img {
+            width: calc(100% - 64px);
+            margin: auto;
+        }
+    }
+}
+
+@media (max-width: ($breakpoints-sm - 0.02px)) {
+    header.landing-education2 {
+        .hero {
+            padding-top: 34px;
+            .container {
+                max-width: 300px;
+                padding: 0;
+            }
+        }
+
+        .badge {
+            margin-bottom: 26px;
+        }
+
+        .hero-title {
+            font-size: 32px;
+        }
+
+        .hero-desc {
+            padding: 0 15px;
+            margin: {
+                top: 16px;
+                bottom: 28px;
+            }
+        }
+
+        .btn-container {
+            justify-content: center;
+            column-gap: 21px;
+            img {
+                width: 119px;
+            }
+        }
+
+        .hero-image {
+            width: 228px;
+            margin: auto {
+                top: 46px;
+            }
+        }
+    }
+
+    .landing-education2-step {
+        height: 387px;
+        margin-right: 0;
+        padding-top: 48px;
+        .container {
+            max-width: 300px;
+            padding: 0;
+        }
+        .title-container {
+            flex-direction: column;
+            padding-right: 0;
+            margin-bottom: 32px;
+            text-align: center;
+
+            .title {
+                font-size: 28px;
+                padding: 0 10px;
+                margin-bottom: 16px;
+            }
+
+            .desc {
+                font-size: 14px;
+                padding: 0 15px;
+            }
+
+            .title,
+            .desc {
+                width: unset;
+            }
+        }
+
+        .image {
+            width: 300px;
+            height: 180px;
+            margin-top: 0;
+            background-position: center;
+            background-size: cover;
+        }
+
+        .fa-play {
+            display: none;
+        }
+
+        .steps {
+            gap: 20px;
+        }
+
+        .step-card {
+            width: unset;
+            padding: {
+                top: 36px;
+                left: 0;
+            }
+            > .title {
+                font-size: 24px;
+                text-align: center;
+                margin-bottom: 18px;
+            }
+        }
+
+        .step {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .number {
+            margin: {
+                top: 0;
+                right: 5px;
+            }
+        }
+
+        .icon {
+            padding: 16px 15px 15px 16px;
+            margin: 0;
+            img {
+                width: 25px;
+            }
+        }
+    }
+
+    .landing-education2-why {
+        padding: {
+            top: 819px;
+            bottom: 48px;
+        }
+
+        .container {
+            max-width: 280px;
+            padding: 0;
+        }
+
+        .section-desc {
+            font-size: 28px !important;
+        }
+
+        .gap {
+            gap: 18px;
+        }
+
+        .why-card {
+            width: 280px;
+            height: 248px;
+            padding: 22px 10px 26px;
+            text-align: center;
+        }
+
+        img {
+            width: 40px;
+            margin-bottom: 20px;
+        }
+
+        .title {
+            font-size: 18px;
+            padding: 0 40px;
+        }
+
+        .desc {
+            font-size: 14px;
+            padding: 0 8px;
+            margin: {
+                top: 14px;
+                bottom: 20px;
+            }
+        }
+    }
+
+    .landing-education2-testimoni {
+        margin: 0;
+        padding: {
+            top: 36px;
+            bottom: 40px;
+        }
+
+        .container {
+            padding: 0;
+            max-width: 320px;
+        }
+
+        .section-desc {
+            font-size: 28px !important;
+            margin: {
+                top: 18px;
+                bottom: 36px;
+            }
+        }
+
+        .testimoni {
+            column-gap: 10px;
+            row-gap: 15px;
+            justify-content: flex-start;
+            margin-bottom: 48px;
+        }
+
+        .testimoni-card {
+            padding: 15px !important                                                                                   {
+                left: 16px;
+            }
+        }
+
+        .testimoni-card:nth-child(1) {
+            order: 2;
+            width: 266px;
+        }
+
+        .testimoni-card:nth-child(2) {
+            order: 1;
+            width: 229px;
+            margin-left: -212px;
+        }
+
+        .testimoni-card:nth-child(3) {
+            order: 4;
+            margin-left: 12px;
+        }
+
+        .testimoni-card:nth-child(4) {
+            order: 3;
+            width: 229px;
+            margin-right: -212px;
+        }
+
+        .testimoni-card:nth-child(5) {
+            order: 5;
+            margin-right: -141px;
+        }
+
+        .testimoni-card:nth-child(6) {
+            order: 6;
+            width: 238px;
+            margin-left: -145px;
+        }
+
+        .testimoni-card:nth-child(8) {
+            order: 7;
+        }
+
+        img {
+            width: 34px;
+            margin-right: 12px;
+        }
+
+        .text {
+            font-size: 14px;
+            text-align: left;
+        }
+
+        .btn {
+            width: 200px;
+            height: 48px;
+        }
+    }
+
+    .landing-education2-partner {
+        padding: {
+            top: 48px;
+            bottom: 0;
+        }
+
+        .title {
+            width: 217px;
+            font-size: 20px;
+            margin-bottom: 36px;
+        }
+
+        .gap {
+            column-gap: 54px;
+        }
+
+        .partner {
+            flex-direction: column;
+            width: unset;
+            flex-wrap: unset;
+            justify-content: unset;
+            row-gap: 24px;
+        }
+    }
+
+    .landing-education2-class {
+        padding: {
+            top: 64px;
+            bottom: 48px;
+        }
+
+        .container {
+            max-width: 280px;
+            padding: 0;
+        }
+
+        .section-desc {
+            font-size: 28px !important;
+            padding: 0 2px;
+            margin: {
+                top: 26px;
+                bottom: 28px;
+            }
+        }
+
+        .gap {
+            gap: 16px;
+        }
+
+        .class-card {
+            width: 280px;
+            height: 216px;
+            padding-bottom: 24px;
+        }
+
+        .bg-info-100 {
+            height: 178px;
+            .title {
+                margin: 0;
+            }
+        }
+
+        img {
+            width: 260px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+
+        .title {
+            font-size: 18px;
+            margin: {
+                top: 23px;
+                bottom: 13px;
+            }
+        }
+
+        .fa-search {
+            width: 56px;
+            height: 56px;
+            margin: {
+                top: 18px;
+                bottom: 22px;
+            }
+        }
+    }
+
+    .landing-education2-join {
+        padding-top: 36px;
+        .container {
+            max-width: 320px;
+            padding: 0;
+        }
+
+        .title {
+            font-size: 28px;
+            width: unset;
+            padding: 0 15px;
+        }
+
+        .desc {
+            font-size: 14px;
+            width: unset;
+            padding: 0 17px;
+            margin: {
+                top: 16px;
+                bottom: 24px;
+            }
+        }
+
+        img {
+            margin-left: 0;
+            width: 320px;
+            height: 160px;
+            object-fit: cover;
+        }
+    }
+}

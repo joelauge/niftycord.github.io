@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="608px" height="514px" viewBox="0 0 608 514" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Graph</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="329" height="398" rx="12"></rect>
+        <filter x="-22.2%" y="-11.8%" width="144.4%" height="136.7%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="26" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="20" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.06 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <rect id="path-3" x="0" y="0" width="209" height="398" rx="12"></rect>
+        <filter x="-34.9%" y="-11.8%" width="169.9%" height="136.7%" filterUnits="objectBoundingBox" id="filter-4">
+            <feOffset dx="0" dy="26" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="20" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.06 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="[NEW-UPDATE-Landing]" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="57---SaaS-01" transform="translate(-150.000000, -4137.000000)">
+            <g id="Graph" transform="translate(150.000000, 4137.000000)">
+                <rect id="Base" fill="#36B37E" opacity="0.100000001" x="0" y="0" width="397" height="498" rx="12"></rect>
+                <g id="Item" transform="translate(50.000000, 50.000000)">
+                    <g id="Elements/Shape/Fill/12-R">
+                        <g id="Shadow" fill="black" fill-opacity="1">
+                            <use filter="url(#filter-2)" xlink:href="#path-1"></use>
+                        </g>
+                        <rect id="Fill" fill="#FFFFFF" x="0" y="0" width="329" height="398" rx="12"></rect>
+                    </g>
+                    <g id="Button" transform="translate(28.000000, 322.000000)">
+                        <g id="Background">
+                            <rect id="Shadow" x="0" y="0" width="253" height="48" rx="4"></rect>
+                            <rect id="Fill" fill="#00B8D9" x="0" y="0" width="253" height="48" rx="4"></rect>
+                        </g>
+                        <g id="Content" transform="translate(57.602210, 13.000000)" fill="#FFFFFF">
+                            <text id="Icon" font-family="FontAwesome5Free-Solid, Font Awesome 5 Free" font-size="14" font-weight="800">
+                                <tspan x="0.25" y="16">file</tspan>
+                            </text>
+                            <text id="Label" font-family="OpenSans-Bold, Open Sans" font-size="16" font-weight="bold">
+                                <tspan x="17.2929688" y="17">Process Export</tspan>
+                            </text>
+                        </g>
+                    </g>
+                    <g id="Tittle" transform="translate(28.000000, 28.000000)">
+                        <text id="Export-data.." font-family="HKGrotesk-SemiBold, HK Grotesk" font-size="24" font-weight="500" line-spacing="32" letter-spacing="0.2" fill="#183B56">
+                            <tspan x="0" y="22">Export data..</tspan>
+                        </text>
+                        <g id="iconspace_Delete-2_25px" transform="translate(227.000000, 4.000000)">
+                            <polygon id="Path" points="0 0 26 0 26 23 0 23"></polygon>
+                            <path d="M11.8852616,11.6012599 L7.22929426,6.91620344 C6.92337292,6.60837079 6.92359736,6.1095011 7.22979554,5.80194678 C7.53599373,5.49439247 8.03221465,5.4946181 8.33813598,5.80245074 L12.9944258,10.4878317 L17.6625267,5.80178473 C17.9688139,5.49432002 18.4650347,5.49469085 18.7708669,5.80261299 C19.0766991,6.11053514 19.0763303,6.60940475 18.7700431,6.91686945 L14.102265,11.6025924 L18.768601,16.2980823 C19.0745224,16.6059149 19.0742979,17.1047846 18.7680998,17.4123389 C18.4619016,17.7198932 17.9656806,17.7196676 17.6597593,17.411835 L12.9931008,12.7160206 L8.33747331,17.3895463 C8.0311861,17.697011 7.53496527,17.6966401 7.22913306,17.388718 C6.92330086,17.0807959 6.92366972,16.5819262 7.22995693,16.2744615 L11.8852616,11.6012599 Z" id="Path" fill="#B3BAC5"></path>
+                        </g>
+                    </g>
+                    <g transform="translate(28.000000, 88.000000)">
+                        <rect id="Base" stroke="#ECEEF2" x="0.5" y="0.5" width="252" height="91" rx="8"></rect>
+                        <text id="Period-to-export" font-family="HKGrotesk-SemiBold, HK Grotesk" font-size="20" font-weight="500" line-spacing="24" letter-spacing="0.2" fill="#183B56">
+                            <tspan x="80" y="40">Period to export</tspan>
+                        </text>
+                        <text id="Current-month" font-family="OpenSans-Regular, Open Sans" font-size="16" font-weight="normal" fill="#5A7184">
+                            <tspan x="80" y="65">Current month</tspan>
+                        </text>
+                        <text id="chevron-down" font-family="FontAwesome5Free-Solid, Font Awesome 5 Free" font-size="14" font-weight="800" fill="#5A7184">
+                            <tspan x="202.375" y="66">chevron-down</tspan>
+                        </text>
+                        <g id="Iconspace_Cristmass-Date_25px" transform="translate(22.000000, 32.000000)">
+                            <polygon id="Path" points="0 0 28 0 28 28 0 28"></polygon>
+                            <path d="M19.6,2.24 C19.9092795,2.24 20.16,2.49072054 20.16,2.8 L20.16,4.48 L24.08,4.48 C25.0078384,4.48 25.76,5.23216162 25.76,6.16 L25.76,20.72 C25.76,23.5035151 23.5035151,25.76 20.72,25.76 L7.28,25.76 C4.49648486,25.76 2.24,23.5035151 2.24,20.72 L2.24,6.16 C2.24,5.23216162 2.99216162,4.48 3.92,4.48 L7.84,4.48 L7.84,2.8 C7.84,2.49072054 8.09072054,2.24 8.4,2.24 C8.70927946,2.24 8.96,2.49072054 8.96,2.8 L8.96,4.48 L19.04,4.48 L19.04,2.8 C19.04,2.49072054 19.2907205,2.24 19.6,2.24 Z M24.64,10.08 L3.36,10.08 L3.36,20.72 C3.36,22.8849562 5.11504378,24.64 7.28,24.64 L20.72,24.64 C22.8849562,24.64 24.64,22.8849562 24.64,20.72 L24.64,10.08 Z M11.76,13.44 C12.0692795,13.44 12.32,13.6907205 12.32,14 L12.32,14 L12.32,17.3641016 C12.32,17.673381 12.0692795,17.9241016 11.76,17.9241016 L11.76,17.9241016 L7.84,17.9241016 L7.84,20.157334 L11.76,20.157334 C12.0692795,20.157334 12.32,20.4080545 12.32,20.717334 C12.32,21.0266134 12.0692795,21.277334 11.76,21.277334 L11.76,21.277334 L7.28,21.277334 C6.97072054,21.277334 6.72,21.0266134 6.72,20.717334 L6.72,20.717334 L6.72,17.3641016 C6.72,17.0548221 6.97072054,16.8041016 7.28,16.8041016 L7.28,16.8041016 L11.2,16.8041016 L11.2,14.56 L7.28,14.56 C6.97072054,14.56 6.72,14.3092795 6.72,14 C6.72,13.6907205 6.97072054,13.44 7.28,13.44 L7.28,13.44 Z M20.72,13.44 C21.0292795,13.44 21.28,13.6907205 21.28,14 C21.28,14.3092795 21.0292795,14.56 20.72,14.56 L16.8,14.56 L16.8,16.8041016 L20.72,16.8041016 C21.0292795,16.8041016 21.28,17.0548221 21.28,17.3641016 L21.28,20.717334 C21.28,21.0266134 21.0292795,21.277334 20.72,21.277334 L16.24,21.277334 C15.9307205,21.277334 15.68,21.0266134 15.68,20.717334 C15.68,20.4080545 15.9307205,20.157334 16.24,20.157334 L20.16,20.157334 L20.16,17.9241016 L16.24,17.9241016 C15.9307205,17.9241016 15.68,17.673381 15.68,17.3641016 L15.68,14 C15.68,13.6907205 15.9307205,13.44 16.24,13.44 L20.72,13.44 Z M7.84,5.6 L3.92,5.6 C3.61072054,5.6 3.36,5.85072054 3.36,6.16 L3.36,8.96 L24.64,8.96 L24.64,6.16 C24.64,5.85072054 24.3892795,5.6 24.08,5.6 L20.16,5.6 L20.16,6.16 C20.16,6.46927946 19.9092795,6.72 19.6,6.72 C19.2907205,6.72 19.04,6.46927946 19.04,6.16 L19.04,5.6 L8.96,5.6 L8.96,6.16 C8.96,6.46927946 8.70927946,6.72 8.4,6.72 C8.09072054,6.72 7.84,6.46927946 7.84,6.16 L7.84,5.6 Z" id="Path" fill="#00B8D9"></path>
+                        </g>
+                    </g>
+                    <g transform="translate(28.000000, 200.000000)">
+                        <rect id="Base" stroke="#ECEEF2" x="0.5" y="0.5" width="252" height="91" rx="8"></rect>
+                        <text id="Export-data" font-family="HKGrotesk-SemiBold, HK Grotesk" font-size="20" font-weight="500" line-spacing="24" letter-spacing="0.2" fill="#183B56">
+                            <tspan x="80" y="40">Export data</tspan>
+                        </text>
+                        <g id="iconspace_Pencil-1_25px" transform="translate(212.000000, 50.000000)">
+                            <polygon id="Path" points="0 0 18 0 18 18 0 18"></polygon>
+                            <path d="M14.1698667,7.14860728 L15.731092,5.5873819 C15.8765332,5.44194072 15.8765332,5.20613399 15.731092,5.06069281 L13.6594801,2.98908088 C13.5140389,2.84363971 13.2782322,2.84363971 13.132791,2.98908088 L11.5710833,4.55078865 L14.1698667,7.14860728 L14.1698667,7.14860728 Z M13.6290897,7.68938424 L11.0303063,5.09156561 L3.5687362,12.5531357 L2.97071454,15.7494584 L6.16703722,15.1514367 L13.6290897,7.68938424 L13.6290897,7.68938424 Z M14.168597,2.479964 L16.2402089,4.55157593 C16.6668276,4.9781946 16.6668276,5.66988011 16.2402089,6.09649878 L6.59734862,15.7393591 C6.54601345,15.7906942 6.48035683,15.8253091 6.4089962,15.8386604 L2.58637895,16.5538598 C2.33763415,16.6003992 2.11977376,16.3825388 2.16631311,16.133794 L2.88151247,12.3111767 C2.89486381,12.2398161 2.92947867,12.1741595 2.98081383,12.1228243 L12.6236741,2.479964 C13.0502928,2.05334533 13.7419783,2.05334533 14.168597,2.479964 Z" id="Path" fill="#00B8D9"></path>
+                        </g>
+                        <text id="23-data-selected" font-family="OpenSans-Regular, Open Sans" font-size="16" font-weight="normal" fill="#00B8D9">
+                            <tspan x="80" y="65">23 data selected</tspan>
+                        </text>
+                        <g id="iconspace_Newspaper_25px" transform="translate(23.000000, 33.000000)">
+                            <polygon id="path" points="0 0 26 0 26 26 0 26"></polygon>
+                            <path d="M21.32,2.08 C22.7559403,2.08 23.92,3.24405965 23.92,4.68 L23.92,20.28 C23.92,22.2903165 22.2903165,23.92 20.28,23.92 L4.68,23.92 C3.24405965,23.92 2.08,22.7559403 2.08,21.32 L2.08,15.08 C2.08,13.6440597 3.24405965,12.48 4.68,12.48 L6.24,12.48 L6.24,4.68 C6.24,3.24405965 7.40405965,2.08 8.84,2.08 L21.32,2.08 Z M21.32,3.12 L8.84,3.12 C7.97843579,3.12 7.28,3.81843579 7.28,4.68 L7.28,12.945918 L7.27722156,12.945918 C7.27905856,12.9636948 7.28,12.9817375 7.28,13 L7.28,21.32 C7.28,21.9053151 7.08658869,22.4454565 6.76019042,22.88 L20.28,22.88 C21.7159403,22.88 22.88,21.7159403 22.88,20.28 L22.88,4.68 C22.88,3.81843579 22.1815642,3.12 21.32,3.12 Z M6.24,13.52 L4.68,13.52 C3.81843579,13.52 3.12,14.2184358 3.12,15.08 L3.12,21.32 C3.12,22.1815642 3.81843579,22.88 4.68,22.88 C5.54156421,22.88 6.24,22.1815642 6.24,21.32 L6.24,13.52 Z M19.24,18.72 C19.5271881,18.72 19.76,18.9528119 19.76,19.24 C19.76,19.5271881 19.5271881,19.76 19.24,19.76 L10.92,19.76 C10.6328119,19.76 10.4,19.5271881 10.4,19.24 C10.4,18.9528119 10.6328119,18.72 10.92,18.72 L19.24,18.72 Z M19.24,14.56 C19.5271881,14.56 19.76,14.7928119 19.76,15.08 C19.76,15.3671881 19.5271881,15.6 19.24,15.6 L10.92,15.6 C10.6328119,15.6 10.4,15.3671881 10.4,15.08 C10.4,14.7928119 10.6328119,14.56 10.92,14.56 L19.24,14.56 Z M19.24,6.24 C19.5271881,6.24 19.76,6.47281193 19.76,6.76 L19.76,10.92 C19.76,11.2071881 19.5271881,11.44 19.24,11.44 L10.92,11.44 C10.6328119,11.44 10.4,11.2071881 10.4,10.92 L10.4,6.76 C10.4,6.47281193 10.6328119,6.24 10.92,6.24 L19.24,6.24 Z M18.72,7.28 L11.44,7.28 L11.44,10.4 L18.72,10.4 L18.72,7.28 Z" id="path" fill="#00B8D9"></path>
+                        </g>
+                    </g>
+                </g>
+                <g id="Item" transform="translate(359.000000, 50.000000)">
+                    <g id="Elements/Shape/Fill/12-R">
+                        <g id="Shadow" fill="black" fill-opacity="1">
+                            <use filter="url(#filter-4)" xlink:href="#path-3"></use>
+                        </g>
+                        <rect id="Fill" fill="#FFFFFF" x="0" y="0" width="209" height="398" rx="12"></rect>
+                    </g>
+                    <g transform="translate(20.000000, 92.000000)">
+                        <text id="XLS" font-family="HKGrotesk-Medium, HK Grotesk" font-size="20" font-weight="400" line-spacing="24" letter-spacing="0.2" fill="#183B56">
+                            <tspan x="98" y="27">XLS</tspan>
+                        </text>
+                        <g id="Badges/Primary/Small-Copy-3" transform="translate(42.000000, 0.000000)">
+                            <g id="Layer">
+                                <rect id="Shadow" x="0" y="0" width="42" height="42" rx="4"></rect>
+                                <rect id="Fill" fill="#36B37E" x="0" y="0" width="42" height="42" rx="4"></rect>
+                            </g>
+                            <g id="Content" transform="translate(12.000000, 11.000000)" fill="#FFFFFF" font-family="OpenSans-Bold, Open Sans" font-size="14" font-weight="bold" line-spacing="20">
+                                <text id="Label">
+                                    <tspan x="0.376464844" y="15">XL</tspan>
+                                </text>
+                            </g>
+                        </g>
+                        <g id="iconspace_Approve-1_25px" transform="translate(0.000000, 7.000000)">
+                            <polygon id="Path" points="0 0 28 0 28 28 0 28"></polygon>
+                            <polygon id="Path" points="0 0 28 0 28 28 0 28"></polygon>
+                            <path d="M19.6,4.48 C21.7649562,4.48 23.52,6.23504378 23.52,8.4 L23.52,19.6 C23.52,21.7649562 21.7649562,23.52 19.6,23.52 L8.4,23.52 C6.23504378,23.52 4.48,21.7649562 4.48,19.6 L4.48,8.4 C4.48,6.23504378 6.23504378,4.48 8.4,4.48 L19.6,4.48 Z M17.7071896,10.2006375 C17.4645238,10.00889 17.1123622,10.0501675 16.9206148,10.2928334 L16.9206148,10.2928334 L12.8821424,15.4037193 L11.0321342,13.5891322 C10.8113371,13.3725626 10.4567812,13.3759896 10.2402116,13.5967868 C10.0236419,13.8175839 10.027069,14.1721397 10.2478661,14.3887094 L10.2478661,14.3887094 L12.5429101,16.6398114 C12.7806063,16.8729566 13.1680063,16.8484509 13.3744295,16.5872123 L13.3744295,16.5872123 L17.7993855,10.9872123 C17.991133,10.7445464 17.9498554,10.3923849 17.7071896,10.2006375 Z" id="Path" fill="#2E2E2E" fill-rule="nonzero"></path>
+                        </g>
+                    </g>
+                    <g transform="translate(20.000000, 157.000000)">
+                        <text id="Xero" font-family="HKGrotesk-Medium, HK Grotesk" font-size="20" font-weight="400" line-spacing="24" letter-spacing="0.2" fill="#183B56">
+                            <tspan x="98" y="27">Xero</tspan>
+                        </text>
+                        <g id="Badges/Primary/Small-Copy-4" transform="translate(41.500000, 0.000000)">
+                            <g id="Layer">
+                                <rect id="Shadow" x="0" y="0" width="43" height="42" rx="4"></rect>
+                                <rect id="Fill" fill="#00B8D9" x="0" y="0" width="43" height="42" rx="4"></rect>
+                            </g>
+                            <g id="Content" transform="translate(12.000000, 11.000000)" fill="#FFFFFF" font-family="OpenSans-Bold, Open Sans" font-size="14" font-weight="bold" line-spacing="20">
+                                <text id="Label">
+                                    <tspan x="0.209960938" y="15">XR</tspan>
+                                </text>
+                            </g>
+                        </g>
+                        <g id="iconspace_Approve-1_25px-Copy" transform="translate(0.000000, 7.000000)">
+                            <polygon id="Path" points="0 0 28 0 28 28 0 28"></polygon>
+                            <polygon id="Path" points="0 0 28 0 28 28 0 28"></polygon>
+                            <path d="M19.6,4.48 C21.7649562,4.48 23.52,6.23504378 23.52,8.4 L23.52,19.6 C23.52,21.7649562 21.7649562,23.52 19.6,23.52 L8.4,23.52 C6.23504378,23.52 4.48,21.7649562 4.48,19.6 L4.48,8.4 C4.48,6.23504378 6.23504378,4.48 8.4,4.48 L19.6,4.48 Z M17.7071896,10.2006375 C17.4645238,10.00889 17.1123622,10.0501675 16.9206148,10.2928334 L16.9206148,10.2928334 L12.8821424,15.4037193 L11.0321342,13.5891322 C10.8113371,13.3725626 10.4567812,13.3759896 10.2402116,13.5967868 C10.0236419,13.8175839 10.027069,14.1721397 10.2478661,14.3887094 L10.2478661,14.3887094 L12.5429101,16.6398114 C12.7806063,16.8729566 13.1680063,16.8484509 13.3744295,16.5872123 L13.3744295,16.5872123 L17.7993855,10.9872123 C17.991133,10.7445464 17.9498554,10.3923849 17.7071896,10.2006375 Z" id="Path" fill="#2E2E2E" fill-rule="nonzero"></path>
+                        </g>
+                    </g>
+                    <g transform="translate(23.000000, 222.000000)">
+                        <text id="DATEV" font-family="HKGrotesk-Medium, HK Grotesk" font-size="20" font-weight="400" line-spacing="24" letter-spacing="0.2" fill="#183B56">
+                            <tspan x="95" y="27">DATEV</tspan>
+                        </text>
+                        <g id="Badges/Primary/Small-Copy-5" transform="translate(38.500000, 0.000000)">
+                            <g id="Layer">
+                                <rect id="Shadow" x="0" y="0" width="43" height="42" rx="4"></rect>
+                                <rect id="Fill" fill="#1565D8" x="0" y="0" width="43" height="42" rx="4"></rect>
+                            </g>
+                            <g id="Content" transform="translate(12.000000, 11.000000)" fill="#FFFFFF" font-family="OpenSans-Bold, Open Sans" font-size="14" font-weight="bold" line-spacing="20">
+                                <text id="Label">
+                                    <tspan x="0.264648438" y="15">DT</tspan>
+                                </text>
+                            </g>
+                        </g>
+                        <g id="iconspace_Reduce-Item_25px-Copy" transform="translate(0.000000, 10.000000)">
+                            <polygon id="Path" points="0 0 23 0 23 23 0 23"></polygon>
+                            <polygon id="Path" points="0 0 23 0 23 23 0 23"></polygon>
+                            <path d="M4.90666667,2.71619048 C3.69690007,2.71619048 2.71619048,3.69690007 2.71619048,4.90666667 L2.71619048,17.1733333 C2.71619048,18.3830999 3.69690007,19.3638095 4.90666667,19.3638095 L17.1733333,19.3638095 C18.3830999,19.3638095 19.3638095,18.3830999 19.3638095,17.1733333 L19.3638095,4.90666667 C19.3638095,3.69690007 18.3830999,2.71619048 17.1733333,2.71619048 L4.90666667,2.71619048 Z M4.90666667,1.84 L17.1733333,1.84 C18.8670066,1.84 20.24,3.21299343 20.24,4.90666667 L20.24,17.1733333 C20.24,18.8670066 18.8670066,20.24 17.1733333,20.24 L4.90666667,20.24 C3.21299343,20.24 1.84,18.8670066 1.84,17.1733333 L1.84,4.90666667 C1.84,3.21299343 3.21299343,1.84 4.90666667,1.84 Z" id="Path" fill="#B3BAC5"></path>
+                        </g>
+                    </g>
+                    <g id="Item-Copy-6" transform="translate(23.000000, 287.000000)">
+                        <text id="Sage" font-family="HKGrotesk-Medium, HK Grotesk" font-size="20" font-weight="400" line-spacing="24" letter-spacing="0.2" fill="#183B56">
+                            <tspan x="95" y="27">Sage</tspan>
+                        </text>
+                        <g id="Badges/Primary/Small-Copy-5" transform="translate(38.500000, 0.000000)">
+                            <g id="Layer">
+                                <rect id="Shadow" x="0" y="0" width="43" height="42" rx="4"></rect>
+                                <rect id="Fill" fill="#FAAD13" x="0" y="0" width="43" height="42" rx="4"></rect>
+                            </g>
+                            <g id="Content" transform="translate(12.000000, 11.000000)" fill="#FFFFFF" font-family="OpenSans-Bold, Open Sans" font-size="14" font-weight="bold" line-spacing="20">
+                                <text id="Label">
+                                    <tspan x="0.264648438" y="15">DT</tspan>
+                                </text>
+                            </g>
+                        </g>
+                        <g id="iconspace_Reduce-Item_25px-Copy" transform="translate(0.000000, 10.000000)">
+                            <polygon id="Path" points="0 0 23 0 23 23 0 23"></polygon>
+                            <polygon id="Path" points="0 0 23 0 23 23 0 23"></polygon>
+                            <path d="M4.90666667,2.71619048 C3.69690007,2.71619048 2.71619048,3.69690007 2.71619048,4.90666667 L2.71619048,17.1733333 C2.71619048,18.3830999 3.69690007,19.3638095 4.90666667,19.3638095 L17.1733333,19.3638095 C18.3830999,19.3638095 19.3638095,18.3830999 19.3638095,17.1733333 L19.3638095,4.90666667 C19.3638095,3.69690007 18.3830999,2.71619048 17.1733333,2.71619048 L4.90666667,2.71619048 Z M4.90666667,1.84 L17.1733333,1.84 C18.8670066,1.84 20.24,3.21299343 20.24,4.90666667 L20.24,17.1733333 C20.24,18.8670066 18.8670066,20.24 17.1733333,20.24 L4.90666667,20.24 C3.21299343,20.24 1.84,18.8670066 1.84,17.1733333 L1.84,4.90666667 C1.84,3.21299343 3.21299343,1.84 4.90666667,1.84 Z" id="Path" fill="#B3BAC5"></path>
+                        </g>
+                    </g>
+                    <g id="Tittle" transform="translate(28.000000, 28.000000)" fill="#183B56" font-family="HKGrotesk-SemiBold, HK Grotesk" font-size="22" font-weight="500" letter-spacing="0.2" line-spacing="32">
+                        <text id="Export-to">
+                            <tspan x="0" y="20">Export to</tspan>
+                        </text>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

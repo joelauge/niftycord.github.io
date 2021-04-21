@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="320px" height="611px" viewBox="0 0 320 611" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Maps</title>
+    <defs>
+        <polygon id="path-1" points="0 20 320 4.45164738e-14 320 591 0 611"></polygon>
+    </defs>
+    <g id="Mobile" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="60---SaaS-04---Mobile" transform="translate(0.000000, -5286.000000)">
+            <g id="Maps" transform="translate(0.000000, 5286.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Mask" fill="#00B8D9" xlink:href="#path-1"></use>
+            </g>
+        </g>
+    </g>
+</svg>

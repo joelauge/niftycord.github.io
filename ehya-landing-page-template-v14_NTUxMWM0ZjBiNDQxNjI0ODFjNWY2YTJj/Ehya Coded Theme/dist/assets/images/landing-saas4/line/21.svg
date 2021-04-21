@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="2px" height="69px" viewBox="0 0 2 69" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Line</title>
+    <g id="Tablet" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-dasharray="10,10">
+        <g id="60---SaaS-04---Tablet" transform="translate(-380.000000, -3116.000000)" stroke="#979797">
+            <g id="Step-Copy" transform="translate(0.000000, 2387.000000)">
+                <line x1="381" y1="729" x2="381" y2="798" id="Line"></line>
+            </g>
+        </g>
+    </g>
+</svg>

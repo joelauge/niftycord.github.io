@@ -1,0 +1,753 @@
+body.landing-fashion {
+    .badge {
+        border-radius: 2000px;
+    }
+
+    .section-title {
+        font-size: 48px;
+        font-weight: bold;
+        line-height: 1.25;
+        letter-spacing: 0.2px;
+        color: #183b56;
+    }
+
+    .section-desc {
+        font-size: 20px;
+        line-height: 1.8;
+        color: #5a7184;
+    }
+}
+
+header.landing-fashion {
+    .hero {
+        .text-container {
+            background-image: url(../../../dist/assets/images/landing-fashion/header-image@2x.png);
+            background-size: cover;
+
+            padding: {
+                top: 62px;
+                right: 42px;
+                bottom: 36px;
+                left: 107px;
+            }
+
+            margin: {
+                right: -70px;
+                left: -70px;
+            }
+        }
+
+        .hero-title {
+            font-size: 56px;
+            font-weight: bold;
+            line-height: 1.21;
+            letter-spacing: 0.2px;
+            color: #183b56;
+
+            margin: {
+                top: 33px;
+                right: 633px;
+                bottom: 28px;
+            }
+        }
+
+        .section-desc {
+            margin-right: 530px;
+        }
+
+        .btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            line-height: unset;
+            height: 56px;
+            width: 233px;
+            font-size: 18px;
+        }
+
+        .image {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+            border: solid 0.8px rgba(21, 101, 216, 0.2);
+        }
+
+        img {
+            width: 22px;
+            height: 22px;
+        }
+
+        .leading-normal {
+            transform: rotate(-90deg);
+            right: -24px;
+            bottom: 106px;
+        }
+    }
+}
+
+.landing-fashion-collection {
+    .column-gap {
+        column-gap: 30px;
+    }
+
+    .row-gap {
+        row-gap: 30px;
+    }
+
+    .text-container {
+        width: 392px;
+    }
+
+    .collection-image {
+        width: 320px;
+    }
+}
+
+.landing-fashion-trending {
+    .filter-title {
+        font-size: 18px;
+        font-weight: normal;
+        color: #5a7184;
+    }
+
+    .filter-title:hover {
+        cursor: pointer;
+    }
+
+    .cards {
+        margin: -25px -15px;
+    }
+
+    .gap {
+        padding: 25px 15px;
+    }
+
+    .trending-image {
+        width: 260px;
+        height: 350px;
+    }
+
+    .text-container {
+        padding: 0 10px;
+
+        i {
+            line-height: 1.6;
+            letter-spacing: 0.17px;
+        }
+    }
+
+    .trending-card.bg-primary {
+        width: 260px;
+        height: 350px;
+
+        div {
+            width: 112px;
+            font-size: 24px;
+            font-weight: bold;
+            line-height: 1.33;
+            letter-spacing: 0.2px;
+            text-align: center;
+            color: #ffffff;
+        }
+    }
+
+    .trending-name {
+        font-size: 24px;
+        font-weight: bold;
+        line-height: 1.33;
+        letter-spacing: 0.2px;
+        color: #183b56;
+    }
+}
+
+.landing-fashion-review {
+    .container {
+        border-bottom: solid 1px #e5eaf4;
+    }
+
+    .review-card {
+        padding: 0 170px;
+    }
+
+    .review {
+        font-size: 20px;
+        line-height: 2.1;
+        letter-spacing: 0.13px;
+        color: #183b56;
+        font-family: "hk_groteskregular", sans-serif;
+    }
+
+    .review-author {
+        font-size: 20px;
+        font-weight: bold;
+        line-height: 1.2;
+        letter-spacing: 0.2px;
+        color: #183b56;
+    }
+
+    .owl-dots {
+        text-align: center;
+        line-height: normal;
+        margin-top: 45px;
+    }
+
+    .owl-dot {
+        width: 5px;
+        height: 5px;
+        border-radius: 2.5px;
+        background-color: #b3bac5 !important;
+        margin: 0 8px;
+        line-height: normal;
+    }
+
+    .owl-dot.active {
+        background-color: #183b56 !important;
+    }
+}
+
+.landing-fashion-subscription {
+    margin-bottom: 95px;
+    background: url(../../../dist/assets/images/landing-fashion/pattern1.svg)
+            left center no-repeat,
+        url(../../../dist/assets/images/landing-fashion/pattern2.svg) right
+            center no-repeat;
+    .text-container {
+        width: 485px;
+    }
+
+    .subscription-desc {
+        font-size: 18px;
+        line-height: 1.78;
+        color: #ffffff;
+        margin-top: 14px;
+    }
+
+    .custom-form {
+        display: flex;
+        width: 447px;
+        background-color: white;
+        border-radius: 8px;
+        padding: 4px;
+        margin-top: 40px;
+
+        div {
+            display: flex;
+            flex: auto;
+            align-items: center;
+            padding-left: 16px;
+            background-color: white;
+        }
+
+        input {
+            border: none;
+            outline: none;
+            padding-left: 12px;
+            font-family: "Open Sans", sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            color: #959ead;
+        }
+
+        button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 4px;
+            line-height: unset;
+            height: 48px;
+            padding: 0 27px;
+        }
+    }
+}
+
+.landing-fashion-story {
+    i:hover {
+        color: #183b56 !important;
+        border-color: #183b56 !important;
+        cursor: pointer;
+        -webkit-transition: all ease 500ms;
+        -moz-transition: all ease 500ms;
+        -o-transition: all ease 500ms;
+        transition: all ease 500ms;
+    }
+
+    .slick-slide {
+        outline: none;
+    }
+
+    .story-container {
+        margin-right: -10px;
+    }
+
+    .title-container {
+        width: 374px;
+    }
+
+    .section-title {
+        width: 287px;
+    }
+
+    .stories-container {
+        width: 680px !important;
+        padding: 0 9px;
+    }
+
+    .stories {
+        margin: 0 -9px;
+        padding-top: 10px;
+    }
+
+    .gap-x {
+        padding: 0 9px;
+    }
+
+    .story-card {
+        width: 322px;
+    }
+
+    .story-image {
+        width: 312px;
+        margin-bottom: -20px;
+    }
+
+    .text-container {
+        width: 312px;
+        height: 178px;
+        background-color: #fafdff;
+        position: relative;
+        z-index: 1;
+
+        padding: 20px {
+            right: 32px;
+        }
+    }
+
+    .card-text {
+        font-size: 22px;
+        line-height: 1.45;
+        letter-spacing: 0.2px;
+        color: #183b56;
+        font-family: "hk_grotesksemibold", sans-serif;
+    }
+}
+
+@media (min-width: $breakpoints-lg - 0.02px) and (max-width: ($breakpoints-xl - 0.02px)) {
+    header.landing-fashion {
+        .hero {
+            .text-container {
+                background-position-x: -215px;
+            }
+
+            .hero-title {
+                margin-right: 401px;
+            }
+
+            .section-desc {
+                margin-right: 430px;
+            }
+        }
+    }
+    .landing-fashion-collection {
+        .text-container {
+            width: 672px;
+        }
+    }
+
+    .landing-fashion-story {
+        .title-container {
+            width: 510px;
+        }
+
+        .section-title {
+            width: unset;
+        }
+    }
+}
+
+@media (min-width: $breakpoints-md - 0.02px) and (max-width: ($breakpoints-lg - 0.02px)) {
+    header.landing-fashion {
+        .hero {
+            .text-container {
+                background-position-x: -257px;
+                margin: {
+                    right: -39px;
+                    left: -38px;
+                }
+                padding: {
+                    top: 36px;
+                    right: 17px;
+                    left: 28px;
+                }
+            }
+
+            .hero-title {
+                margin-right: 210px;
+            }
+
+            .section-desc {
+                margin-right: 214px;
+            }
+
+            .btn {
+                line-height: unset;
+                height: 56px;
+            }
+
+            .leading-normal {
+                right: -42px;
+                bottom: 89px;
+            }
+        }
+    }
+
+    .landing-fashion-collection {
+        .container {
+            padding: {
+                right: 24px !important;
+                left: 24px !important;
+            }
+        }
+
+        .text-container {
+            width: 672px;
+        }
+    }
+
+    .landing-fashion-trending {
+        .cards {
+            margin: -24px;
+        }
+
+        .gap {
+            padding: 24px;
+        }
+
+        .trending-image {
+            width: 280px;
+        }
+
+        .trending-card.bg-primary {
+            width: 280px;
+        }
+    }
+
+    .landing-fashion-review {
+        .owl-dots {
+            margin-top: 36px;
+        }
+    }
+
+    .landing-fashion-story {
+        .container {
+            padding: 0 10px !important;
+        }
+        .title-container {
+            width: 510px;
+            text-align: center;
+            margin: auto;
+        }
+
+        .section-title {
+            width: unset;
+        }
+
+        .stories-container {
+            width: 700px !important;
+        }
+
+        .story-card {
+            width: 332px;
+        }
+
+        .story-image,
+        .text-container {
+            width: 322px;
+        }
+    }
+
+    .landing-fashion-subscription {
+        background-position: left top, right bottom;
+
+        .form-group {
+            width: 447px;
+
+            > .input-group {
+                .input-group-append {
+                    > .btn {
+                        min-width: 143px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: $breakpoints-sm - 0.02px) and (max-width: ($breakpoints-md - 0.02px)) {
+    header.landing-fashion {
+        .hero {
+            .container {
+                max-width: 555px;
+                padding: 0px;
+            }
+
+            .text-container {
+                margin: 0;
+                background-position-x: -277px;
+                padding: {
+                    top: 36px;
+                    right: 17px;
+                    left: 28px;
+                }
+            }
+
+            .hero-title {
+                margin-right: 64px;
+            }
+
+            .section-desc {
+                margin-right: 68px;
+            }
+        }
+    }
+
+    .landing-fashion-trending {
+        .cards {
+            margin: -25px -10px;
+        }
+
+        .gap {
+            padding: 25px 10px;
+        }
+    }
+
+    .landing-fashion-collection {
+        .text-container {
+            width: 100%;
+            text-align: center;
+        }
+
+        .collection-image {
+            height: 230px;
+            border-radius: 8px;
+
+            img {
+                height: 100%;
+                width: unset;
+                object-fit: cover;
+                border-radius: 8px;
+            }
+        }
+    }
+
+    .landing-fashion-story {
+        .title-container {
+            width: 510px;
+        }
+
+        .section-title {
+            width: unset;
+        }
+    }
+
+    .landing-fashion-subscription {
+        background-position: left top, right bottom;
+    }
+}
+
+@media (max-width: ($breakpoints-sm - 0.02px)) {
+    body.landing-fashion {
+        .section-title {
+            font-size: 28px;
+        }
+    }
+
+    header.landing-fashion {
+        .hero {
+            .text-container {
+                background-image: url(../../../dist/assets/images/landing-fashion/xs-header-image@2x.png);
+                background-size: cover;
+                background-position-x: -160px;
+                text-align: center;
+                margin: 0;
+                padding: 20px {
+                    top: 381px;
+                    bottom: 40px;
+                }
+            }
+
+            .hero-title,
+            .section-desc {
+                margin-right: 0;
+            }
+
+            .leading-normal {
+                top: 95px;
+                bottom: unset;
+                right: -46px;
+            }
+
+            .image {
+                width: 22px;
+                height: 22px;
+            }
+
+            img {
+                width: 15px;
+                height: 15px;
+            }
+
+            .btn {
+                height: 48px;
+            }
+        }
+    }
+
+    .landing-fashion-collection {
+        .text-container {
+            width: unset;
+            text-align: center;
+        }
+
+        .collection-image {
+            height: 230px;
+            border-radius: 8px;
+
+            img {
+                height: 100%;
+                width: unset;
+                object-fit: cover;
+                border-radius: 8px;
+            }
+        }
+
+        .not-owl-carousel {
+            display: none;
+        }
+    }
+
+    .landing-fashion-trending {
+        .gap {
+            padding: 12px 5px;
+        }
+
+        .trending-image {
+            width: 140px;
+            height: 170px;
+        }
+
+        .trending-card.bg-primary {
+            width: 140px;
+            height: 170px;
+        }
+
+        .trending-card {
+            position: relative;
+
+            a {
+                position: absolute;
+                bottom: 0;
+                left: 45px;
+            }
+        }
+    }
+
+    .landing-fashion-review {
+        .container {
+            padding: 0 20px;
+        }
+
+        .owl-dots {
+            margin-top: 24px;
+        }
+    }
+
+    .landing-fashion-story {
+        .title-container {
+            width: unset;
+            text-align: center;
+        }
+
+        .section-title {
+            width: unset;
+        }
+
+        .stories-container {
+            width: unset !important;
+        }
+
+        .story-card {
+            width: 280px;
+        }
+
+        .story-image {
+            width: 270px;
+        }
+
+        .text-container {
+            width: 270px;
+            padding-right: 20px;
+        }
+
+        .stories {
+            margin: -12px 0;
+        }
+
+        .gap-x {
+            padding: 12px 0;
+        }
+    }
+
+    .landing-fashion-subscription {
+        background: none;
+
+        .custom-form {
+            flex-direction: column;
+            width: 100%;
+            padding: 0px;
+            background-color: unset;
+            margin-top: 36px;
+
+            div {
+                height: 48px;
+                align-items: center;
+                border-radius: 8px;
+                margin-bottom: 10px;
+                padding-left: 20px;
+            }
+
+            button {
+                border-radius: 8px;
+            }
+        }
+    }
+}
+
+@media (max-width: 370px) {
+    .landing-fashion-collection {
+        .container {
+            padding: 0 15px;
+        }
+        .not-owl-carousel {
+            display: flex;
+        }
+        .owl-carousel {
+            display: none !important;
+        }
+
+        .collection-image {
+            width: 290px;
+            height: 300px;
+            img {
+                width: 100%;
+            }
+        }
+
+        .collection-image.small {
+            width: 138px;
+            height: 97px;
+        }
+    }
+}
