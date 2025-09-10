@@ -180,13 +180,80 @@
     <script src="discord-install.js"></script>
     
     <script>
-        // Hide loading after a short delay
-        setTimeout(() => {
+        // Process OAuth callback and show success message
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const code = urlParams.get('code');
+            const guildId = urlParams.get('guild_id');
+            const error = urlParams.get('error');
+            
             const loading = document.getElementById('loading');
-            if (loading) {
-                loading.classList.remove('show');
-            }
-        }, 2000);
+            const successContainer = document.getElementById('install-success');
+            const errorContainer = document.getElementById('install-error');
+            
+            // Hide loading after processing
+            setTimeout(() => {
+                if (loading) {
+                    loading.style.display = 'none';
+                }
+                
+                if (error) {
+                    // Show error message
+                    if (errorContainer) {
+                        errorContainer.style.display = 'block';
+                        errorContainer.innerHTML = `
+                            <div class="error-message">
+                                <div class="error-icon">❌</div>
+                                <h2>Installation Failed</h2>
+                                <p>Discord installation failed: ${error}</p>
+                                <div class="action-buttons">
+                                    <button onclick="window.location.href='index.html'" class="btn btn-primary">Try Again</button>
+                                    <button onclick="window.close()" class="btn btn-secondary">Close</button>
+                                </div>
+                            </div>
+                        `;
+                    }
+                } else if (code) {
+                    // Show success message with NiftyCord logo
+                    if (successContainer) {
+                        successContainer.style.display = 'block';
+                        successContainer.innerHTML = `
+                            <div class="success-message">
+                                <img src="../assets/images/niftycord_cordlogo_512px.png" alt="NiftyCord Logo" class="success-logo">
+                                <h2>NiftyCord Bot Installed Successfully!</h2>
+                                <p>Your Discord server is now ready for NFT trading. Here's what you can do next:</p>
+                                <ul class="next-steps">
+                                    <li>🔧 Use <code>/admin setup</code> to configure your server</li>
+                                    <li>🎨 Use <code>/admin mint</code> to create NFT collections</li>
+                                    <li>👥 Your members can use <code>/niftywallet</code> to create wallets</li>
+                                    <li>🏪 Use <code>/marketplace</code> to browse and trade NFTs</li>
+                                </ul>
+                                <div class="action-buttons">
+                                    <button onclick="window.close()" class="btn btn-primary">Close Window</button>
+                                    <button onclick="window.open('https://discord.com/channels/@me', '_blank')" class="btn btn-secondary">Open Discord</button>
+                                </div>
+                            </div>
+                        `;
+                    }
+                } else {
+                    // No code or error - show generic error
+                    if (errorContainer) {
+                        errorContainer.style.display = 'block';
+                        errorContainer.innerHTML = `
+                            <div class="error-message">
+                                <div class="error-icon">❌</div>
+                                <h2>Installation Failed</h2>
+                                <p>No authorization code received from Discord.</p>
+                                <div class="action-buttons">
+                                    <button onclick="window.location.href='index.html'" class="btn btn-primary">Try Again</button>
+                                    <button onclick="window.close()" class="btn btn-secondary">Close</button>
+                                </div>
+                            </div>
+                        `;
+                    }
+                }
+            }, 1500);
+        });
     </script>
 </body>
 </html>
