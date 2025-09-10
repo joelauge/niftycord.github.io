@@ -30,7 +30,7 @@ const DiscordConfig = {
         const baseUrl = 'https://discord.com/api/oauth2/authorize';
         const params = new URLSearchParams({
             client_id: this.clientId,
-            redirect_uri: encodeURIComponent(this.redirectUri),
+            redirect_uri: this.redirectUri, // Don't double-encode - URLSearchParams handles encoding
             response_type: 'code',
             scope: this.scope,
             permissions: this.permissions
