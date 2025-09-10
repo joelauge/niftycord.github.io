@@ -94,7 +94,7 @@ class DiscordInstallHandler {
             successContainer.style.display = 'block';
             successContainer.innerHTML = `
                 <div class="success-message">
-                    <div class="success-icon">✅</div>
+                    <img src="../assets/images/niftycord_cordlogo_512px.png" alt="NiftyCord Logo" class="success-logo">
                     <h2>NiftyCord Bot Installed Successfully!</h2>
                     <p>Your Discord server is now ready for NFT trading. Here's what you can do next:</p>
                     <ul class="next-steps">
