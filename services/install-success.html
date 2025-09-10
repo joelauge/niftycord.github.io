@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NiftyCord Bot Installation - Success</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon-16x16.png">
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/fontawesome/fontawesome.min.css">
+    <link rel="stylesheet" href="../assets/css/fontawesome/solid.min.css">
+    <link rel="stylesheet" href="../assets/css/fontawesome/brands.min.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <style>
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 0;
+            font-family: 'Open Sans', sans-serif;
+        }
+        
+        .success-container {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 600px;
+            margin: 0 auto;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        
+        .success-icon {
+            font-size: 4rem;
+            color: #28a745;
+            margin-bottom: 20px;
+        }
+        
+        .error-icon {
+            font-size: 4rem;
+            color: #dc3545;
+            margin-bottom: 20px;
+        }
+        
+        .success-message h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+        
+        .error-message h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+        
+        .next-steps {
+            text-align: left;
+            margin: 30px 0;
+            padding: 0;
+            list-style: none;
+        }
+        
+        .next-steps li {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+            font-size: 16px;
+        }
+        
+        .next-steps li:last-child {
+            border-bottom: none;
+        }
+        
+        .next-steps code {
+            background: #f8f9fa;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            color: #e83e8c;
+        }
+        
+        .action-buttons {
+            margin-top: 30px;
+        }
+        
+        .btn {
+            padding: 12px 24px;
+            margin: 0 10px;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .btn-primary {
+            background: #00D4AA;
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: #00b894;
+            transform: translateY(-2px);
+        }
+        
+        .btn-secondary {
+            background: #6c757d;
+            color: white;
+        }
+        
+        .btn-secondary:hover {
+            background: #5a6268;
+            transform: translateY(-2px);
+        }
+        
+        .loading {
+            display: none;
+        }
+        
+        .loading.show {
+            display: block;
+        }
+        
+        .spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #00D4AA;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 20px auto;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .error-message {
+            color: #dc3545;
+        }
+        
+        .success-message {
+            color: #28a745;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="success-container">
+            <!-- Loading State -->
+            <div id="loading" class="loading show">
+                <div class="spinner"></div>
+                <h2>Processing Installation...</h2>
+                <p>Please wait while we complete your NiftyCord bot installation.</p>
+            </div>
+            
+            <!-- Success State -->
+            <div id="install-success" class="success-message" style="display: none;">
+                <!-- Content will be populated by JavaScript -->
+            </div>
+            
+            <!-- Error State -->
+            <div id="install-error" class="error-message" style="display: none;">
+                <!-- Content will be populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Include Discord Configuration and Installation Handler -->
+    <script src="discord-config.js"></script>
+    <script src="discord-install.js"></script>
+    
+    <script>
+        // Hide loading after a short delay
+        setTimeout(() => {
+            const loading = document.getElementById('loading');
+            if (loading) {
+                loading.classList.remove('show');
+            }
+        }, 2000);
+    </script>
+</body>
+</html>

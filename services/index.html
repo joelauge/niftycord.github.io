@@ -55,7 +55,7 @@
                             <a class="nav-link" href="#">Help</a>
                         </li>
                         <li class="nav-item">
-                            <a class="btn btn-outline-white"
+                            <a class="btn btn-outline-white" id="nav-connect-discord"
                                 href="#">Connect to Discord</a>
                         </li>
                     </ul>
@@ -76,7 +76,7 @@
                             <p class="text-opensans md-text-20 leading-relaxed text-white mb-40 xl-mb-48 wow fadeInUp">
                                 Install it on any Discord server to enable members to buy, sell, trade & store unique items directly within Discord.</p>
                             <div class="mb-16 wow fadeInUp" style="margin-bottom:30px;">
-                                <button type="button"
+                                <button type="button" id="install-discord-btn"
                                     class="btn btn-white btn-lg btn-rounded mb-12 md-mb-0 xl-mb-0 md-mx-8 xl-mx-8"> <i
                                         class="fab fa-discord mr-6px"></i>Install to Discord</button>
                            
@@ -602,7 +602,7 @@
                 </div>
                 <div class="col-12 col-sm-12 col-lg-7 col-xl-7">
                     <div class="text-center xl-h-full xl-flex xl-justify-end xl-items-center">
-                        <button type="button"
+                        <button type="button" id="cta-connect-discord"
                             class="btn btn-white btn-lg btn-rounded mb-12 xl-mb-0 md-mx-8 xl-mx-8 wow fadeInUp"><i
                                 class="fab fa-discord mr-6px"></i> Connect to Discord</button>
                         <button type="button"
@@ -693,6 +693,61 @@
     <script src="../assets/js/bootstrap.min.js"></script>
     <script src="../assets/js/wow.min.js"></script>
     <script src="../assets/js/index.js"></script>
+    
+    <!-- Discord Configuration -->
+    <script src="discord-config.js"></script>
+    
+    <!-- Discord Installation Handler -->
+    <script src="discord-install.js"></script>
+    
+    <script>
+        // Discord Installation Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get all Discord installation buttons
+            const installButtons = [
+                document.getElementById('install-discord-btn'),
+                document.getElementById('nav-connect-discord'),
+                document.getElementById('cta-connect-discord')
+            ];
+            
+            // Add click handlers to all buttons
+            installButtons.forEach(button => {
+                if (button) {
+                    button.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        
+                        // Show loading state
+                        const originalText = button.innerHTML;
+                        button.innerHTML = '<i class="fas fa-spinner fa-spin mr-6px"></i>Connecting...';
+                        button.disabled = true;
+                        
+                        // Start Discord installation
+                        if (typeof discordInstall !== 'undefined') {
+                            discordInstall.installBot();
+                        } else {
+                            console.error('Discord installation handler not loaded');
+                            button.innerHTML = originalText;
+                            button.disabled = false;
+                        }
+                    });
+                }
+            });
+            
+            // Add hover effects
+            installButtons.forEach(button => {
+                if (button) {
+                    button.addEventListener('mouseenter', function() {
+                        this.style.transform = 'translateY(-2px)';
+                        this.style.transition = 'all 0.3s ease';
+                    });
+                    
+                    button.addEventListener('mouseleave', function() {
+                        this.style.transform = 'translateY(0)';
+                    });
+                }
+            });
+        });
+    </script>
     <!--end:javascript-->
 
 </body>
