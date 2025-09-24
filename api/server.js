@@ -35,6 +35,7 @@ app.use(cors({
     origin: [
         process.env.FRONTEND_URL || 'http://localhost:3001',
         'https://niftycord.com',
+        'https://niftycord.github.io',
         'https://*.railway.app'
     ],
     credentials: true
