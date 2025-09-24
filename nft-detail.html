@@ -489,8 +489,8 @@
         const urlParams = new URLSearchParams(window.location.search);
         const nftId = urlParams.get('id');
         
-        // API base URL
-        const API_BASE = 'http://localhost:3001';
+        // API base URL - use GitHub Pages for production
+        const API_BASE = window.location.hostname === 'niftycord.com' ? 'https://niftycord.com/api' : 'http://localhost:3001';
         
         // Load NFT data
         async function loadNFTData() {
