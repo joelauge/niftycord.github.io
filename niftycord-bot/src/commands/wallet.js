@@ -1,6 +1,7 @@
 const { SlashCommandBuilder, EmbedBuilder } = require('discord.js');
 const Wallet = require('../models/Wallet');
 const polkadotService = require('../services/polkadot');
+const ErrorHandler = require('../services/errorHandler');
 
 module.exports = {
     data: new SlashCommandBuilder()
@@ -28,7 +29,8 @@ module.exports = {
         ),
 
     async execute(interaction) {
-        const subcommand = interaction.options.getSubcommand();
+        try {
+            const subcommand = interaction.options.getSubcommand();
 
         if (subcommand === 'create') {
             try {
@@ -47,7 +49,7 @@ module.exports = {
                         .setColor(0xFFA500)
                         .setTimestamp();
 
-                    return await interaction.reply({ embeds: [embed] });
+                    return await interaction.editReply({ embeds: [embed] });
                 }
 
                 // Create new wallet with Polkadot
@@ -82,7 +84,7 @@ module.exports = {
                     .setColor(0x00D4AA)
                     .setTimestamp();
 
-                await interaction.reply({ embeds: [embed] });
+                await interaction.editReply({ embeds: [embed] });
 
             } catch (error) {
                 console.error('Wallet creation error:', error);
@@ -92,12 +94,15 @@ module.exports = {
                     .setColor(0xFF0000)
                     .setTimestamp();
 
-                await interaction.reply({ embeds: [embed] });
+                await interaction.editReply({ embeds: [embed] });
             }
         }
 
         if (subcommand === 'balance') {
             try {
+                // Defer the reply to prevent timeout
+                await interaction.deferReply();
+                
                 const wallet = await Wallet.findOne({ discordId: interaction.user.id });
                 
                 if (!wallet) {
@@ -107,7 +112,7 @@ module.exports = {
                         .setColor(0xFF0000)
                         .setTimestamp();
 
-                    return await interaction.reply({ embeds: [embed] });
+                    return await interaction.editReply({ embeds: [embed] });
                 }
 
                 // Get real balance from Polkadot
@@ -126,7 +131,7 @@ module.exports = {
                     .setColor(0x00D4AA)
                     .setTimestamp();
 
-                await interaction.reply({ embeds: [embed] });
+                await interaction.editReply({ embeds: [embed] });
 
             } catch (error) {
                 console.error('Balance check error:', error);
@@ -136,7 +141,7 @@ module.exports = {
                     .setColor(0xFF0000)
                     .setTimestamp();
 
-                await interaction.reply({ embeds: [embed] });
+                await interaction.editReply({ embeds: [embed] });
             }
         }
 
@@ -151,7 +156,7 @@ module.exports = {
                         .setColor(0xFF0000)
                         .setTimestamp();
 
-                    return await interaction.reply({ embeds: [embed] });
+                    return await interaction.editReply({ embeds: [embed] });
                 }
 
                 const embed = new EmbedBuilder()
@@ -165,7 +170,7 @@ module.exports = {
                     .setColor(0x00D4AA)
                     .setTimestamp();
 
-                await interaction.reply({ embeds: [embed] });
+                await interaction.editReply({ embeds: [embed] });
 
             } catch (error) {
                 console.error('Address check error:', error);
@@ -175,12 +180,15 @@ module.exports = {
                     .setColor(0xFF0000)
                     .setTimestamp();
 
-                await interaction.reply({ embeds: [embed] });
+                await interaction.editReply({ embeds: [embed] });
             }
         }
 
         if (subcommand === 'nfts') {
             try {
+                // Defer the reply to prevent timeout
+                await interaction.deferReply();
+                
                 const wallet = await Wallet.findOne({ discordId: interaction.user.id }).populate('nfts');
                 
                 if (!wallet) {
@@ -190,7 +198,7 @@ module.exports = {
                         .setColor(0xFF0000)
                         .setTimestamp();
 
-                    return await interaction.reply({ embeds: [embed] });
+                    return await interaction.editReply({ embeds: [embed] });
                 }
 
                 if (wallet.nfts.length === 0) {
@@ -203,7 +211,7 @@ module.exports = {
                         .setColor(0x00D4AA)
                         .setTimestamp();
 
-                    return await interaction.reply({ embeds: [embed] });
+                    return await interaction.editReply({ embeds: [embed] });
                 }
 
                 const embed = new EmbedBuilder()
@@ -227,7 +235,7 @@ module.exports = {
                     embed.setFooter({ text: `Showing 25 of ${wallet.nfts.length} NFTs` });
                 }
 
-                await interaction.reply({ embeds: [embed] });
+                await interaction.editReply({ embeds: [embed] });
 
             } catch (error) {
                 console.error('NFTs check error:', error);
@@ -237,8 +245,12 @@ module.exports = {
                     .setColor(0xFF0000)
                     .setTimestamp();
 
-                await interaction.reply({ embeds: [embed] });
+                await interaction.editReply({ embeds: [embed] });
             }
+        }
+
+        } catch (error) {
+            await ErrorHandler.handleCommandError(interaction, error, 'niftywallet', subcommand);
         }
     },
 };

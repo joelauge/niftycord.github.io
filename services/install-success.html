@@ -13,20 +13,25 @@
     <link rel="stylesheet" href="../assets/css/main.css">
     <style>
         body {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../assets/images/chainbanner.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
             min-height: 100vh;
             padding: 40px 0;
             font-family: 'Open Sans', sans-serif;
         }
         
         .success-container {
-            background: white;
+            background: rgba(255, 255, 255, 0.95);
             border-radius: 20px;
             padding: 40px;
             max-width: 600px;
             margin: 0 auto;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
             text-align: center;
+            backdrop-filter: blur(10px);
         }
         
         .success-icon {

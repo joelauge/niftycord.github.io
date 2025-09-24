@@ -1,0 +1,35 @@
+{
+  "name": "niftycord-api",
+  "version": "1.0.0",
+  "description": "NiftyCord NFT Marketplace API",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "start-env": "node start-with-env.js",
+    "dev": "nodemon server.js",
+    "setup": "node setup.js",
+    "setup-discord": "node setup-discord-oauth.js",
+    "setup-auto": "node setup-from-bot.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "mongoose": "^7.5.0",
+    "dotenv": "^16.3.1",
+    "express-session": "^1.17.3",
+    "passport": "^0.6.0",
+    "passport-discord": "^0.1.4",
+    "express-rate-limit": "^6.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "keywords": [
+    "nft",
+    "marketplace",
+    "discord",
+    "blockchain"
+  ],
+  "author": "NiftyCord Team",
+  "license": "MIT"
+}

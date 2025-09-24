@@ -105,3 +105,4 @@ nftSchema.index({ collection: 1, isActive: 1 });
 
 module.exports = mongoose.model('NFT', nftSchema);
 
+

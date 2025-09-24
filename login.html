@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+    <title>Login - NiftyCord</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/fontawesome/fontawesome.min.css">
+    <link rel="stylesheet" href="assets/css/fontawesome/solid.min.css">
+    <link rel="stylesheet" href="assets/css/fontawesome/brands.min.css">
+    <link rel="stylesheet" href="assets/css/fontawesome/regular.min.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <style>
+        :root {
+            --primary-color: #00D4AA;
+            --secondary-color: #FF6B6B;
+            --dark-bg: #1a1a1a;
+            --card-bg: #2d2d2d;
+            --text-primary: #ffffff;
+            --text-secondary: #b0b0b0;
+            --border-color: #404040;
+        }
+
+        body {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('assets/images/chainbanner.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: var(--text-primary);
+            font-family: 'Open Sans', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .login-container {
+            background-color: rgba(45, 45, 45, 0.95);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+            border: 1px solid var(--border-color);
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+            backdrop-filter: blur(10px);
+        }
+
+        .logo {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .login-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: var(--text-primary);
+        }
+
+        .login-subtitle {
+            color: var(--text-secondary);
+            margin-bottom: 40px;
+            font-size: 1.1rem;
+        }
+
+        .discord-login-btn {
+            background: linear-gradient(45deg, #5865F2, #4752C4);
+            border: none;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            width: 100%;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .discord-login-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(88, 101, 242, 0.3);
+            color: white;
+            text-decoration: none;
+        }
+
+        .features {
+            text-align: left;
+            margin-top: 30px;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 15px;
+            color: var(--text-secondary);
+        }
+
+        .feature-icon {
+            color: var(--primary-color);
+            font-size: 1.2rem;
+        }
+
+        .error-message {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 12px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-size: 0.9rem;
+        }
+
+        .loading {
+            display: none;
+            color: var(--primary-color);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 480px) {
+            .login-container {
+                margin: 20px;
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login-container">
+        <div class="logo">
+            <img src="assets/images/niftycord_cordlogo_512px.png" alt="NiftyCord Logo">
+        </div>
+        
+        <h1 class="login-title">NiftyCord</h1>
+        <p class="login-subtitle">NFT Trading Platform for Discord Communities</p>
+
+        <div id="errorMessage" class="error-message" style="display: none;"></div>
+        <div id="loadingMessage" class="loading">Redirecting to Discord...</div>
+
+        <a href="/auth/discord" class="discord-login-btn" id="loginBtn">
+            <i class="fab fa-discord"></i>
+            Login with Discord
+        </a>
+
+        <div class="features">
+            <div class="feature-item">
+                <i class="fas fa-check feature-icon"></i>
+                <span>View your NFT collection</span>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-check feature-icon"></i>
+                <span>Trade with other users</span>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-check feature-icon"></i>
+                <span>Manage your marketplace listings</span>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-check feature-icon"></i>
+                <span>Access across all Discord servers</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Check for error messages in URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const error = urlParams.get('error');
+        
+        if (error) {
+            const errorMessage = document.getElementById('errorMessage');
+            const loginBtn = document.getElementById('loginBtn');
+            const loadingMessage = document.getElementById('loadingMessage');
+            
+            if (error === 'discord_auth_failed') {
+                errorMessage.textContent = 'Discord authentication failed. Please try again.';
+                errorMessage.style.display = 'block';
+            }
+        }
+
+        // Add loading state to login button
+        document.getElementById('loginBtn').addEventListener('click', function() {
+            this.style.display = 'none';
+            document.getElementById('loadingMessage').style.display = 'block';
+        });
+
+        // Check if user is already logged in
+        fetch('/auth/me')
+            .then(response => response.json())
+            .then(data => {
+                if (data.success && data.user) {
+                    // User is already logged in, redirect to marketplace
+                    window.location.href = '/marketplace';
+                }
+            })
+            .catch(error => {
+                console.log('Not logged in');
+            });
+    </script>
+</body>
+
+</html>
+
+

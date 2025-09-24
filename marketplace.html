@@ -1,0 +1,928 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+    <title>NiftyCord Marketplace - Polkadot NFT Trading Platform</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/fontawesome/fontawesome.min.css">
+    <link rel="stylesheet" href="assets/css/fontawesome/solid.min.css">
+    <link rel="stylesheet" href="assets/css/fontawesome/brands.min.css">
+    <link rel="stylesheet" href="assets/css/fontawesome/regular.min.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <style>
+        :root {
+            --primary-color: #00D4AA;
+            --secondary-color: #FF6B6B;
+            --dark-bg: #1a1a1a;
+            --card-bg: #2d2d2d;
+            --text-primary: #ffffff;
+            --text-secondary: #b0b0b0;
+            --border-color: #404040;
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            color: var(--text-primary);
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .sidebar {
+            position: fixed;
+            left: 0;
+            top: 0;
+            height: 100vh;
+            width: 250px;
+            background-color: var(--card-bg);
+            border-right: 1px solid var(--border-color);
+            z-index: 1000;
+            padding: 20px;
+        }
+
+        .sidebar-logo {
+            display: flex;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+
+        .sidebar-logo img {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .sidebar-logo h3 {
+            color: var(--text-primary);
+            margin: 0;
+            font-weight: 600;
+        }
+
+        .nav-menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .nav-menu li {
+            margin-bottom: 15px;
+        }
+
+        .nav-menu a {
+            display: flex;
+            align-items: center;
+            color: var(--text-secondary);
+            text-decoration: none;
+            padding: 12px 16px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-menu a:hover,
+        .nav-menu a.active {
+            background-color: var(--primary-color);
+            color: var(--text-primary);
+        }
+
+        .nav-menu i {
+            margin-right: 12px;
+            width: 20px;
+            text-align: center;
+        }
+
+        .main-content {
+            margin-left: 250px;
+            padding: 30px;
+            min-height: 100vh;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .search-bar {
+            position: relative;
+            width: 300px;
+        }
+
+        .search-bar input {
+            width: 100%;
+            padding: 12px 16px 12px 45px;
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            color: var(--text-primary);
+        }
+
+        .search-bar i {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-secondary);
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .notification-badge {
+            position: relative;
+            background: none;
+            border: none;
+            color: var(--text-secondary);
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .notification-badge::after {
+            content: '';
+            position: absolute;
+            top: -2px;
+            right: -2px;
+            width: 8px;
+            height: 8px;
+            background-color: var(--secondary-color);
+            border-radius: 50%;
+        }
+
+        .balance-section {
+            background: linear-gradient(rgba(0, 212, 170, 0.8), rgba(0, 184, 148, 0.8)), url('assets/images/chainbanner.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 30px;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .balance-main {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+
+        .balance-amount {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        .balance-currency {
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin-left: 10px;
+        }
+
+        .balance-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn-action {
+            background-color: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .btn-action:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+            color: white;
+        }
+
+        .balance-cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .balance-card {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 12px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+
+        .balance-card h4 {
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+            opacity: 0.8;
+        }
+
+        .balance-card .amount {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        .progress-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .progress-item {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .progress-item h5 {
+            font-size: 0.8rem;
+            margin-bottom: 8px;
+            opacity: 0.8;
+        }
+
+        .progress-bar {
+            height: 6px;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 3px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background-color: white;
+            border-radius: 3px;
+            transition: width 0.3s ease;
+        }
+
+        .nft-section {
+            background-color: var(--card-bg);
+            border-radius: 16px;
+            padding: 30px;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        .upload-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .nft-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .nft-table th {
+            text-align: left;
+            padding: 15px 10px;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            font-weight: 500;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .nft-table td {
+            padding: 20px 10px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .nft-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .nft-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(45deg, var(--primary-color), #00B894);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+        }
+
+        .nft-info h6 {
+            margin: 0 0 5px 0;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .nft-info p {
+            margin: 0;
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+        }
+
+        .price-change {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .price-up {
+            color: #00D4AA;
+        }
+
+        .price-down {
+            color: #FF6B6B;
+        }
+
+        .load-more {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .load-more-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .floating-popup {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background-color: #00D4AA;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0, 212, 170, 0.3);
+        }
+
+        .floating-popup .close {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        .floating-popup .send-btn {
+            background-color: white;
+            color: var(--primary-color);
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            .sidebar {
+                transform: translateX(-100%);
+                transition: transform 0.3s ease;
+            }
+
+            .sidebar.open {
+                transform: translateX(0);
+            }
+
+            .main-content {
+                margin-left: 0;
+                padding: 20px;
+            }
+
+            .balance-cards {
+                grid-template-columns: 1fr;
+            }
+
+            .progress-section {
+                grid-template-columns: 1fr;
+            }
+
+            .search-bar {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+            .header {
+                flex-direction: column;
+                align-items: stretch;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-logo">
+            <img src="assets/images/niftycord_cordlogo_512px.png" alt="NiftyCord">
+            <h3>NiftyCord</h3>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="#" class="nav-link"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="#" class="nav-link"><i class="fas fa-chart-line"></i> Marketplace</a></li>
+            <li><a href="#" class="nav-link"><i class="fas fa-tag"></i> Prices</a></li>
+            <li><a href="#" class="nav-link active"><i class="fas fa-folder"></i> NFTs/Items/Assets</a></li>
+            <li><a href="#" class="nav-link"><i class="fas fa-gift"></i> Promotions</a></li>
+            <li><a href="#" class="nav-link"><i class="fas fa-wave-square"></i> Activities</a></li>
+            <li><a href="#" class="nav-link"><i class="fas fa-bell"></i> Notifications</a></li>
+            <li><a href="#" class="nav-link"><i class="fas fa-cog"></i> Settings</a></li>
+        </ul>
+        <div style="position: absolute; bottom: 20px; left: 20px; right: 20px;">
+            <div style="display: flex; align-items: center; gap: 10px;">
+                <i class="fas fa-moon"></i>
+                <div style="flex: 1; height: 4px; background-color: var(--border-color); border-radius: 2px;">
+                    <div style="width: 70%; height: 100%; background-color: var(--primary-color); border-radius: 2px;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Header -->
+        <div class="header">
+            <div class="search-bar">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Search NFTs, collections, or users..." id="searchInput">
+            </div>
+            <div class="header-actions">
+                <button class="notification-badge">
+                    <i class="fas fa-bell"></i>
+                </button>
+                <button class="btn-action">
+                    <i class="fas fa-download"></i>
+                </button>
+                <select class="btn-action" style="background-color: var(--card-bg); border: 1px solid var(--border-color);">
+                    <option>Eng/USD</option>
+                    <option>Eng/EUR</option>
+                    <option>Eng/BTC</option>
+                </select>
+                <button class="btn-action">
+                    <i class="fas fa-shield-alt"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Balance Section -->
+        <div class="balance-section">
+            <div class="balance-main">
+                <div>
+                    <h2 class="balance-amount">0.26231428 <span class="balance-currency">DOT</span></h2>
+                    <p style="margin: 5px 0 0 0; opacity: 0.8;">3,700.96 USD</p>
+                </div>
+                <div class="balance-actions">
+                    <a href="#" class="btn-action">Withdraw</a>
+                    <a href="#" class="btn-action">Deposit</a>
+                </div>
+            </div>
+            
+            <div class="balance-cards">
+                <div class="balance-card">
+                    <h4>Marketplace Balance</h4>
+                    <p class="amount">122,040,203.45 DOT</p>
+                    <p style="margin: 5px 0 0 0; opacity: 0.8;">130,000,700.96 USD</p>
+                </div>
+                <div class="balance-card">
+                    <h4>NFT/Asset Balances</h4>
+                    <p class="amount">0.256567545 DOT</p>
+                    <p style="margin: 5px 0 0 0; opacity: 0.8;">3,700.96 USD</p>
+                </div>
+            </div>
+
+            <div class="progress-section">
+                <div class="progress-item">
+                    <h5>Exchange Balance</h5>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 75%; background-color: #9B59B6;"></div>
+                    </div>
+                </div>
+                <div class="progress-item">
+                    <h5>NFT/Asset Balances</h5>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 45%; background-color: var(--primary-color);"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- NFT Section -->
+        <div class="nft-section">
+            <div class="section-header">
+                <h3 class="section-title">Polkadot NFTs/Items/Assets</h3>
+                <button class="upload-btn">
+                    <i class="fas fa-upload"></i>
+                    Upload
+                </button>
+            </div>
+
+            <table class="nft-table">
+                <thead>
+                    <tr>
+                        <th>ASSET <i class="fas fa-upload"></i></th>
+                        <th>COIN</th>
+                        <th>24H MARKET</th>
+                        <th>CURRENT VALUE</th>
+                        <th>AVAILABLE IN MARKET</th>
+                        <th>TOTAL VALUE (USD)</th>
+                    </tr>
+                </thead>
+                <tbody id="nftTableBody">
+                    <!-- NFT data will be loaded here -->
+                </tbody>
+            </table>
+
+            <div class="load-more">
+                <button class="load-more-btn" onclick="loadMoreNFTs()">Load more</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating Popup -->
+    <div class="floating-popup" id="floatingPopup">
+        <span>Send Item to An Email Address</span>
+        <button class="send-btn">Send Now</button>
+        <button class="close" onclick="closePopup()">&times;</button>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script>
+        // API Configuration
+        const API_BASE_URL = 'http://localhost:3001/api';
+        
+        // User authentication state
+        let currentUser = null;
+        
+        // Authentication functions
+        async function checkAuth() {
+            try {
+                const response = await fetch('/auth/me', { credentials: 'include' });
+                const data = await response.json();
+                
+                if (data.success && data.user) {
+                    currentUser = data.user;
+                    updateUIForLoggedInUser();
+                    return true;
+                } else {
+                    currentUser = null;
+                    updateUIForLoggedOutUser();
+                    return false;
+                }
+            } catch (error) {
+                console.error('Auth check failed:', error);
+                currentUser = null;
+                updateUIForLoggedOutUser();
+                return false;
+            }
+        }
+        
+        function updateUIForLoggedInUser() {
+            // Update header with user info
+            const headerActions = document.querySelector('.header-actions');
+            if (headerActions && currentUser) {
+                // Add user profile button
+                const userProfile = document.createElement('button');
+                userProfile.className = 'btn-action';
+                userProfile.innerHTML = `<i class="fas fa-user"></i> ${currentUser.username}`;
+                userProfile.onclick = () => showUserMenu();
+                headerActions.appendChild(userProfile);
+                
+                // Add logout button
+                const logoutBtn = document.createElement('button');
+                logoutBtn.className = 'btn-action';
+                logoutBtn.innerHTML = '<i class="fas fa-sign-out-alt"></i> Logout';
+                logoutBtn.onclick = () => logout();
+                headerActions.appendChild(logoutBtn);
+            }
+            
+            // Update balance section for user
+            updateUserBalance();
+        }
+        
+        function updateUIForLoggedOutUser() {
+            // Show login prompt
+            const balanceSection = document.querySelector('.balance-section');
+            if (balanceSection) {
+                balanceSection.innerHTML = `
+                    <div style="text-align: center; padding: 40px;">
+                        <h2 style="margin-bottom: 20px; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">Welcome to NiftyCord</h2>
+                        <p style="margin-bottom: 30px; opacity: 0.9; text-shadow: 1px 1px 2px rgba(0,0,0,0.5);">Login with Discord to view your NFT collection and start trading!</p>
+                        <a href="/login" class="btn-action" style="display: inline-block; text-decoration: none; box-shadow: 0 4px 8px rgba(0,0,0,0.3);">
+                            <i class="fab fa-discord"></i> Login with Discord
+                        </a>
+                    </div>
+                `;
+            }
+        }
+        
+        function updateUserBalance() {
+            // This would fetch user's actual balance from the API
+            // For now, we'll show a placeholder
+            const balanceAmount = document.querySelector('.balance-amount');
+            if (balanceAmount && currentUser) {
+                balanceAmount.innerHTML = `Welcome, <span class="balance-currency">${currentUser.username}</span>`;
+            }
+        }
+        
+        function showUserMenu() {
+            // Simple user menu - could be expanded
+            alert(`User: ${currentUser.username}\nDiscord ID: ${currentUser.id}\nHas Wallet: ${currentUser.hasWallet ? 'Yes' : 'No'}`);
+        }
+        
+        function logout() {
+            if (confirm('Are you sure you want to logout?')) {
+                window.location.href = '/auth/logout';
+            }
+        }
+        
+        // Fallback sample data
+        const sampleNFTs = [
+            {
+                name: "Sword of Sacrifice",
+                icon: "⚔️",
+                coin: "DOT",
+                marketChange: 2.05,
+                currentValue: "266.6454898",
+                usdValue: "$144.04",
+                available: "1",
+                totalValue: "$144.04"
+            },
+            {
+                name: "Magic Hammer",
+                icon: "🔨",
+                coin: "DOT",
+                marketChange: -2.05,
+                currentValue: "19,266.6454898",
+                usdValue: "$2,134.325",
+                available: "1",
+                totalValue: "$2,134.325"
+            },
+            {
+                name: "Helios Soothsayer",
+                icon: "🔮",
+                coin: "DOT",
+                marketChange: 2.05,
+                currentValue: "19,266.6454898",
+                usdValue: "$2,134.325",
+                available: "50",
+                totalValue: "$2,134.325"
+            },
+            {
+                name: "Kilgeth Sword",
+                icon: "🗡️",
+                coin: "DOT",
+                marketChange: -2.05,
+                currentValue: "19,266.6454898",
+                usdValue: "$2,134.325",
+                available: "5",
+                totalValue: "$2,134.325"
+            },
+            {
+                name: "+3 Wineskin of Healing",
+                icon: "🍷",
+                coin: "DOT",
+                marketChange: 2.05,
+                currentValue: "19,266.6454898",
+                usdValue: "$2,134.325",
+                available: "75",
+                totalValue: "$2,134.325"
+            },
+            {
+                name: "Pistol Grip",
+                icon: "🔫",
+                coin: "DOT",
+                marketChange: -2.05,
+                currentValue: "19,266.6454898",
+                usdValue: "$2,134.325",
+                available: "25",
+                totalValue: "$2,134.325"
+            },
+            {
+                name: "Invisible Bag of Holding",
+                icon: "🎒",
+                coin: "DOT",
+                marketChange: 2.05,
+                currentValue: "19,266.6454898",
+                usdValue: "$2,134.325",
+                available: "25",
+                totalValue: "$2,134.325"
+            },
+            {
+                name: "+1 Lute of Songs",
+                icon: "🎵",
+                coin: "DOT",
+                marketChange: -2.05,
+                currentValue: "19,266.6454898",
+                usdValue: "$2,134.325",
+                available: "25",
+                totalValue: "$2,134.325"
+            }
+        ];
+
+        let currentPage = 1;
+        const itemsPerPage = 8;
+        let allNFTs = [];
+
+        // API Functions
+        async function fetchNFTs(page = 1, search = '') {
+            try {
+                const response = await fetch(`${API_BASE_URL}/nfts?page=${page}&limit=${itemsPerPage}&search=${encodeURIComponent(search)}`);
+                const data = await response.json();
+                
+                if (data.success) {
+                    return data.data;
+                } else {
+                    console.error('API Error:', data.error);
+                    return sampleNFTs; // Fallback to sample data
+                }
+            } catch (error) {
+                console.error('Fetch Error:', error);
+                return sampleNFTs; // Fallback to sample data
+            }
+        }
+
+        async function fetchUserNFTs(page = 1, search = '') {
+            try {
+                const response = await fetch(`${API_BASE_URL}/my-nfts?page=${page}&limit=${itemsPerPage}&search=${encodeURIComponent(search)}`, {
+                    credentials: 'include'
+                });
+                const data = await response.json();
+                
+                if (data.success) {
+                    return data.data;
+                } else {
+                    console.error('API Error:', data.error);
+                    return sampleNFTs; // Fallback to sample data
+                }
+            } catch (error) {
+                console.error('Fetch Error:', error);
+                return sampleNFTs; // Fallback to sample data
+            }
+        }
+
+        async function fetchStats() {
+            try {
+                const response = await fetch(`${API_BASE_URL}/stats`);
+                const data = await response.json();
+                
+                if (data.success) {
+                    updateStats(data.data);
+                }
+            } catch (error) {
+                console.error('Stats Error:', error);
+            }
+        }
+
+        function updateStats(stats) {
+            // Update the balance section with real stats
+            const balanceAmount = document.querySelector('.balance-amount');
+            if (balanceAmount) {
+                balanceAmount.innerHTML = `${stats.totalNFTs} <span class="balance-currency">NFTs</span>`;
+            }
+            
+            // Add connection status indicator
+            const statusIndicator = document.createElement('div');
+            statusIndicator.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                background-color: ${stats.offline ? '#FF6B6B' : '#00D4AA'};
+                color: white;
+                padding: 8px 16px;
+                border-radius: 20px;
+                font-size: 12px;
+                font-weight: 600;
+                z-index: 1000;
+                box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            `;
+            statusIndicator.textContent = stats.offline ? '🔄 Offline Mode' : '✅ Live Data';
+            document.body.appendChild(statusIndicator);
+            
+            // Remove after 5 seconds
+            setTimeout(() => {
+                if (statusIndicator.parentNode) {
+                    statusIndicator.parentNode.removeChild(statusIndicator);
+                }
+            }, 5000);
+        }
+
+        function renderNFTs(nfts) {
+            const tbody = document.getElementById('nftTableBody');
+            tbody.innerHTML = '';
+
+            nfts.forEach(nft => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>
+                        <div class="nft-item">
+                            <div class="nft-icon">${nft.icon}</div>
+                            <div class="nft-info">
+                                <h6>${nft.name}</h6>
+                                <p>${nft.coin}</p>
+                            </div>
+                        </div>
+                    </td>
+                    <td>${nft.coin}</td>
+                    <td>
+                        <div class="price-change ${nft.marketChange > 0 ? 'price-up' : 'price-down'}">
+                            <i class="fas fa-${nft.marketChange > 0 ? 'arrow-up' : 'arrow-down'}"></i>
+                            ${Math.abs(nft.marketChange)}%
+                        </div>
+                    </td>
+                    <td>${nft.currentValue} / ${nft.usdValue}</td>
+                    <td>${nft.available} / ${nft.usdValue}</td>
+                    <td>${nft.totalValue} / ${nft.usdValue}</td>
+                `;
+                tbody.appendChild(row);
+            });
+        }
+
+        async function loadMoreNFTs() {
+            currentPage++;
+            const newNFTs = await fetchNFTs(currentPage, document.getElementById('searchInput').value);
+            allNFTs = [...allNFTs, ...newNFTs];
+            renderNFTs(allNFTs);
+        }
+
+        function closePopup() {
+            document.getElementById('floatingPopup').style.display = 'none';
+        }
+
+        async function searchNFTs() {
+            const searchTerm = document.getElementById('searchInput').value;
+            currentPage = 1;
+            allNFTs = await fetchNFTs(1, searchTerm);
+            renderNFTs(allNFTs);
+        }
+
+        // Initialize the page
+        document.addEventListener('DOMContentLoaded', async function() {
+            // Check authentication first
+            const isAuthenticated = await checkAuth();
+            
+            if (isAuthenticated) {
+                // Load user's NFTs if logged in
+                allNFTs = await fetchUserNFTs(1);
+                renderNFTs(allNFTs);
+            } else {
+                // Load public NFTs if not logged in
+                allNFTs = await fetchNFTs(1);
+                renderNFTs(allNFTs);
+            }
+            
+            // Load stats
+            await fetchStats();
+            
+            // Add search functionality
+            document.getElementById('searchInput').addEventListener('input', searchNFTs);
+        });
+
+        // Mobile sidebar toggle
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('open');
+        }
+    </script>
+</body>
+
+</html>

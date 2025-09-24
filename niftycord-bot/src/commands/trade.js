@@ -63,6 +63,11 @@ module.exports = {
             subcommand
                 .setName('list')
                 .setDescription('List your pending trade offers')
+        )
+        .addSubcommand(subcommand =>
+            subcommand
+                .setName('offers')
+                .setDescription('List your pending trade offers (alias for list)')
         ),
 
     async execute(interaction) {
@@ -85,7 +90,7 @@ module.exports = {
                         .setColor(0xFF0000)
                         .setTimestamp();
 
-                    return await interaction.reply({ embeds: [embed] });
+                    return await interaction.editReply({ embeds: [embed] });
                 }
 
                 // Get receiver's wallet
@@ -98,7 +103,7 @@ module.exports = {
                         .setColor(0xFF0000)
                         .setTimestamp();
 
-                    return await interaction.reply({ embeds: [embed] });
+                    return await interaction.editReply({ embeds: [embed] });
                 }
 
                 // Find offered NFT
@@ -115,7 +120,7 @@ module.exports = {
                         .setColor(0xFF0000)
                         .setTimestamp();
 
-                    return await interaction.reply({ embeds: [embed] });
+                    return await interaction.editReply({ embeds: [embed] });
                 }
 
                 // Find requested NFT
@@ -132,7 +137,7 @@ module.exports = {
                         .setColor(0xFF0000)
                         .setTimestamp();
 
-                    return await interaction.reply({ embeds: [embed] });
+                    return await interaction.editReply({ embeds: [embed] });
                 }
 
                 // Create trade offer
@@ -165,7 +170,7 @@ module.exports = {
                     .setColor(0x00D4AA)
                     .setTimestamp();
 
-                await interaction.reply({ embeds: [embed] });
+                await interaction.editReply({ embeds: [embed] });
 
             } catch (error) {
                 console.error('Trade offer error:', error);
@@ -175,7 +180,7 @@ module.exports = {
                     .setColor(0xFF0000)
                     .setTimestamp();
 
-                await interaction.reply({ embeds: [embed] });
+                await interaction.editReply({ embeds: [embed] });
             }
         }
 
@@ -201,7 +206,7 @@ module.exports = {
                         .setColor(0xFF0000)
                         .setTimestamp();
 
-                    return await interaction.reply({ embeds: [embed] });
+                    return await interaction.editReply({ embeds: [embed] });
                 }
 
                 // Check if trade has expired
@@ -215,7 +220,7 @@ module.exports = {
                         .setColor(0xFF0000)
                         .setTimestamp();
 
-                    return await interaction.reply({ embeds: [embed] });
+                    return await interaction.editReply({ embeds: [embed] });
                 }
 
                 // Execute the trade on blockchain
@@ -264,7 +269,7 @@ module.exports = {
                     .setColor(0x00D4AA)
                     .setTimestamp();
 
-                await interaction.reply({ embeds: [embed] });
+                await interaction.editReply({ embeds: [embed] });
 
             } catch (error) {
                 console.error('Trade accept error:', error);
@@ -274,7 +279,7 @@ module.exports = {
                     .setColor(0xFF0000)
                     .setTimestamp();
 
-                await interaction.reply({ embeds: [embed] });
+                await interaction.editReply({ embeds: [embed] });
             }
         }
 
@@ -295,7 +300,7 @@ module.exports = {
                         .setColor(0xFF0000)
                         .setTimestamp();
 
-                    return await interaction.reply({ embeds: [embed] });
+                    return await interaction.editReply({ embeds: [embed] });
                 }
 
                 trade.status = 'rejected';
@@ -311,7 +316,7 @@ module.exports = {
                     .setColor(0xFF0000)
                     .setTimestamp();
 
-                await interaction.reply({ embeds: [embed] });
+                await interaction.editReply({ embeds: [embed] });
 
             } catch (error) {
                 console.error('Trade reject error:', error);
@@ -321,12 +326,15 @@ module.exports = {
                     .setColor(0xFF0000)
                     .setTimestamp();
 
-                await interaction.reply({ embeds: [embed] });
+                await interaction.editReply({ embeds: [embed] });
             }
         }
 
-        if (subcommand === 'list') {
+        if (subcommand === 'list' || subcommand === 'offers') {
             try {
+                // Defer the reply to prevent timeout
+                await interaction.deferReply();
+                
                 const wallet = await Wallet.findOne({ discordId: interaction.user.id });
                 
                 if (!wallet) {
@@ -336,7 +344,7 @@ module.exports = {
                         .setColor(0xFF0000)
                         .setTimestamp();
 
-                    return await interaction.reply({ embeds: [embed] });
+                    return await interaction.editReply({ embeds: [embed] });
                 }
 
                 // Get user's pending trades
@@ -359,7 +367,7 @@ module.exports = {
                         .setColor(0xFFA500)
                         .setTimestamp();
 
-                    return await interaction.reply({ embeds: [embed] });
+                    return await interaction.editReply({ embeds: [embed] });
                 }
 
                 const embed = new EmbedBuilder()
@@ -383,7 +391,7 @@ module.exports = {
                     });
                 });
 
-                await interaction.reply({ embeds: [embed] });
+                await interaction.editReply({ embeds: [embed] });
 
             } catch (error) {
                 console.error('Trade list error:', error);
@@ -393,7 +401,7 @@ module.exports = {
                     .setColor(0xFF0000)
                     .setTimestamp();
 
-                await interaction.reply({ embeds: [embed] });
+                await interaction.editReply({ embeds: [embed] });
             }
         }
     },

@@ -55,12 +55,28 @@ module.exports = {
             const name = interaction.options.getString('name');
             const description = interaction.options.getString('description');
 
+            // Validate required parameters
+            if (!name || !description) {
+                const errorEmbed = new EmbedBuilder()
+                    .setTitle('❌ Missing Required Parameters')
+                    .setDescription('Please provide both collection name and description.')
+                    .addFields(
+                        { name: 'Usage', value: '`/admin mint name:"Collection Name" description:"Collection Description"`', inline: false },
+                        { name: 'Example', value: '`/admin mint name:"My Art Collection" description:"A collection of digital artworks"`', inline: false }
+                    )
+                    .setColor(0xFF6B6B)
+                    .setTimestamp();
+
+                await interaction.reply({ embeds: [errorEmbed], ephemeral: true });
+                return;
+            }
+
             const embed = new EmbedBuilder()
                 .setTitle('🎨 NFT Collection Created!')
                 .setDescription(`**${name}** collection has been created successfully!`)
                 .addFields(
-                    { name: 'Collection Name', value: name, inline: true },
-                    { name: 'Description', value: description, inline: true },
+                    { name: 'Collection Name', value: name || 'Not provided', inline: true },
+                    { name: 'Description', value: description || 'Not provided', inline: true },
                     { name: 'Status', value: 'Ready for minting', inline: true }
                 )
                 .setColor(0x00D4AA)

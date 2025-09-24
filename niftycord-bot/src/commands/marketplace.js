@@ -1,7 +1,8 @@
-const { SlashCommandBuilder, EmbedBuilder } = require('discord.js');
+const { SlashCommandBuilder, EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle } = require('discord.js');
 const NFT = require('../models/NFT');
 const Wallet = require('../models/Wallet');
 const polkadotService = require('../services/polkadot');
+const ErrorHandler = require('../services/errorHandler');
 
 module.exports = {
     data: new SlashCommandBuilder()
@@ -58,10 +59,14 @@ module.exports = {
         ),
 
     async execute(interaction) {
-        const subcommand = interaction.options.getSubcommand();
+        try {
+            const subcommand = interaction.options.getSubcommand();
 
         if (subcommand === 'browse') {
             try {
+                // Defer the reply to prevent timeout
+                await interaction.deferReply();
+                
                 // Get NFTs for sale from all servers
                 const nftsForSale = await NFT.find({ 
                     isForSale: true, 
@@ -76,10 +81,32 @@ module.exports = {
                     const embed = new EmbedBuilder()
                         .setTitle('🛒 NFT Marketplace')
                         .setDescription('No NFTs are currently for sale. Be the first to list one!')
+                        .addFields({
+                            name: '💡 Want to list your NFT?',
+                            value: 'Click the buttons below to manage your NFTs or browse the web marketplace!',
+                            inline: false
+                        })
                         .setColor(0x00D4AA)
                         .setTimestamp();
 
-                    return await interaction.reply({ embeds: [embed] });
+                    // Create action row with buttons
+                    const row = new ActionRowBuilder()
+                        .addComponents(
+                            new ButtonBuilder()
+                                .setCustomId('marketplace_list_nfts')
+                                .setLabel('📦 My NFTs')
+                                .setStyle(ButtonStyle.Primary),
+                            new ButtonBuilder()
+                                .setLabel('🌐 Web Marketplace')
+                                .setStyle(ButtonStyle.Link)
+                                .setURL('http://localhost:3002/marketplace'),
+                            new ButtonBuilder()
+                                .setCustomId('marketplace_help')
+                                .setLabel('❓ Help')
+                                .setStyle(ButtonStyle.Secondary)
+                        );
+
+                    return await interaction.editReply({ embeds: [embed], components: [row] });
                 }
 
                 const embed = new EmbedBuilder()
@@ -111,7 +138,24 @@ module.exports = {
                     inline: false
                 });
 
-                await interaction.reply({ embeds: [embed] });
+                // Create action row with buttons
+                const row = new ActionRowBuilder()
+                    .addComponents(
+                        new ButtonBuilder()
+                            .setCustomId('marketplace_list_nfts')
+                            .setLabel('📦 My NFTs')
+                            .setStyle(ButtonStyle.Primary),
+                        new ButtonBuilder()
+                            .setLabel('🌐 Web Marketplace')
+                            .setStyle(ButtonStyle.Link)
+                            .setURL('http://localhost:3002/marketplace'),
+                        new ButtonBuilder()
+                            .setCustomId('marketplace_refresh')
+                            .setLabel('🔄 Refresh')
+                            .setStyle(ButtonStyle.Secondary)
+                    );
+
+                await interaction.editReply({ embeds: [embed], components: [row] });
 
             } catch (error) {
                 console.error('Marketplace browse error:', error);
@@ -121,12 +165,15 @@ module.exports = {
                     .setColor(0xFF0000)
                     .setTimestamp();
 
-                await interaction.reply({ embeds: [embed] });
+                await interaction.editReply({ embeds: [embed] });
             }
         }
 
         if (subcommand === 'search') {
             try {
+                // Defer the reply to prevent timeout
+                await interaction.deferReply();
+                
                 const query = interaction.options.getString('query');
                 
                 // Search NFTs by name, description, or collection
@@ -154,7 +201,7 @@ module.exports = {
                         .setColor(0xFFA500)
                         .setTimestamp();
 
-                    return await interaction.reply({ embeds: [embed] });
+                    return await interaction.editReply({ embeds: [embed] });
                 }
 
                 const embed = new EmbedBuilder()
@@ -172,7 +219,7 @@ module.exports = {
                     });
                 });
 
-                await interaction.reply({ embeds: [embed] });
+                await interaction.editReply({ embeds: [embed] });
 
             } catch (error) {
                 console.error('Marketplace search error:', error);
@@ -182,12 +229,15 @@ module.exports = {
                     .setColor(0xFF0000)
                     .setTimestamp();
 
-                await interaction.reply({ embeds: [embed] });
+                await interaction.editReply({ embeds: [embed] });
             }
         }
 
         if (subcommand === 'list') {
             try {
+                // Defer the reply to prevent timeout
+                await interaction.deferReply();
+                
                 // Get user's wallet
                 const wallet = await Wallet.findOne({ discordId: interaction.user.id });
                 
@@ -198,7 +248,7 @@ module.exports = {
                         .setColor(0xFF0000)
                         .setTimestamp();
 
-                    return await interaction.reply({ embeds: [embed] });
+                    return await interaction.editReply({ embeds: [embed] });
                 }
 
                 // Get user's NFTs
@@ -216,7 +266,7 @@ module.exports = {
                         .setColor(0xFFA500)
                         .setTimestamp();
 
-                    return await interaction.reply({ embeds: [embed] });
+                    return await interaction.editReply({ embeds: [embed] });
                 }
 
                 const embed = new EmbedBuilder()
@@ -234,7 +284,7 @@ module.exports = {
                     });
                 });
 
-                await interaction.reply({ embeds: [embed] });
+                await interaction.editReply({ embeds: [embed] });
 
             } catch (error) {
                 console.error('NFT list error:', error);
@@ -244,7 +294,7 @@ module.exports = {
                     .setColor(0xFF0000)
                     .setTimestamp();
 
-                await interaction.reply({ embeds: [embed] });
+                await interaction.editReply({ embeds: [embed] });
             }
         }
 
@@ -261,7 +311,7 @@ module.exports = {
                         .setColor(0xFF0000)
                         .setTimestamp();
 
-                    return await interaction.reply({ embeds: [embed] });
+                    return await interaction.editReply({ embeds: [embed] });
                 }
 
                 // Get user's wallet
@@ -274,7 +324,7 @@ module.exports = {
                         .setColor(0xFF0000)
                         .setTimestamp();
 
-                    return await interaction.reply({ embeds: [embed] });
+                    return await interaction.editReply({ embeds: [embed] });
                 }
 
                 // Find the NFT
@@ -291,7 +341,7 @@ module.exports = {
                         .setColor(0xFF0000)
                         .setTimestamp();
 
-                    return await interaction.reply({ embeds: [embed] });
+                    return await interaction.editReply({ embeds: [embed] });
                 }
 
                 if (nft.isForSale) {
@@ -301,7 +351,7 @@ module.exports = {
                         .setColor(0xFFA500)
                         .setTimestamp();
 
-                    return await interaction.reply({ embeds: [embed] });
+                    return await interaction.editReply({ embeds: [embed] });
                 }
 
                 // Update NFT to be for sale
@@ -320,7 +370,7 @@ module.exports = {
                     .setColor(0x00D4AA)
                     .setTimestamp();
 
-                await interaction.reply({ embeds: [embed] });
+                await interaction.editReply({ embeds: [embed] });
 
             } catch (error) {
                 console.error('NFT sell error:', error);
@@ -330,12 +380,15 @@ module.exports = {
                     .setColor(0xFF0000)
                     .setTimestamp();
 
-                await interaction.reply({ embeds: [embed] });
+                await interaction.editReply({ embeds: [embed] });
             }
         }
 
         if (subcommand === 'buy') {
             try {
+                // Defer the reply to prevent timeout
+                await interaction.deferReply();
+                
                 const nftId = interaction.options.getString('nft_id');
 
                 // Get buyer's wallet
@@ -348,7 +401,7 @@ module.exports = {
                         .setColor(0xFF0000)
                         .setTimestamp();
 
-                    return await interaction.reply({ embeds: [embed] });
+                    return await interaction.editReply({ embeds: [embed] });
                 }
 
                 // Find the NFT
@@ -365,7 +418,7 @@ module.exports = {
                         .setColor(0xFF0000)
                         .setTimestamp();
 
-                    return await interaction.reply({ embeds: [embed] });
+                    return await interaction.editReply({ embeds: [embed] });
                 }
 
                 if (nft.owner._id.toString() === buyerWallet._id.toString()) {
@@ -375,7 +428,7 @@ module.exports = {
                         .setColor(0xFF0000)
                         .setTimestamp();
 
-                    return await interaction.reply({ embeds: [embed] });
+                    return await interaction.editReply({ embeds: [embed] });
                 }
 
                 // Check buyer's balance
@@ -389,7 +442,7 @@ module.exports = {
                         .setColor(0xFF0000)
                         .setTimestamp();
 
-                    return await interaction.reply({ embeds: [embed] });
+                    return await interaction.editReply({ embeds: [embed] });
                 }
 
                 // Transfer NFT ownership
@@ -418,7 +471,7 @@ module.exports = {
                     .setColor(0x00D4AA)
                     .setTimestamp();
 
-                await interaction.reply({ embeds: [embed] });
+                await interaction.editReply({ embeds: [embed] });
 
             } catch (error) {
                 console.error('NFT buy error:', error);
@@ -428,8 +481,12 @@ module.exports = {
                     .setColor(0xFF0000)
                     .setTimestamp();
 
-                await interaction.reply({ embeds: [embed] });
+                await interaction.editReply({ embeds: [embed] });
             }
+        }
+
+        } catch (error) {
+            await ErrorHandler.handleCommandError(interaction, error, 'marketplace', subcommand);
         }
     },
 };
