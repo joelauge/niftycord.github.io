@@ -113,7 +113,16 @@
                         <div class="container" style="margin-top:50px">
                         	<div class="row">
                         		<div id="video-container" style="position: relative; width: 100%; max-width: 1496px; height: 677px; margin: 0 auto;">
-                        			<iframe id="youtube-video" width="1496" height="677" src="https://www.youtube.com/embed/88VIFGYLmWo?controls=1&modestbranding=1&rel=0&showinfo=0" title="NiftyCord" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="border-radius: 12px; width: 100%; height: 100%;"></iframe>
+                        			<!-- Video placeholder that will be replaced by JavaScript -->
+                        			<div id="video-placeholder" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 12px; padding: 60px 40px; text-align: center; color: white; height: 100%; display: flex; flex-direction: column; justify-content: center; cursor: pointer; transition: all 0.3s ease;" onclick="openYouTubeVideo()">
+                        				<i class="fas fa-play-circle" style="font-size: 80px; margin-bottom: 30px; color: #ffd700; transition: all 0.3s ease;"></i>
+                        				<h3 style="margin-bottom: 20px; font-weight: bold; font-size: 28px;">NiftyCord Demo Video</h3>
+                        				<p style="margin-bottom: 30px; font-size: 18px; opacity: 0.9; max-width: 500px; margin-left: auto; margin-right: auto;">Watch how NiftyCord revolutionizes NFT trading directly within Discord servers</p>
+                        				<div style="background: #ff0000; color: white; padding: 15px 30px; border-radius: 8px; display: inline-block; font-weight: bold; transition: all 0.3s ease;">
+                        					<i class="fab fa-youtube"></i> Watch Demo on YouTube
+                        				</div>
+                        				<p style="margin-top: 20px; font-size: 14px; opacity: 0.7;">Click anywhere to open the video</p>
+                        			</div>
                         		</div>
                         	</div>
                         </div>
@@ -732,53 +741,33 @@
     <script src="discord-install.js"></script>
     
     <script>
-        // YouTube Video Loading Handler
+        // YouTube Video Handler - Direct link approach
+        function openYouTubeVideo() {
+            window.open('https://www.youtube.com/watch?v=88VIFGYLmWo', '_blank');
+        }
+        
+        // Add hover effects to video placeholder
         document.addEventListener('DOMContentLoaded', function() {
-            const videoContainer = document.getElementById('video-container');
-            const iframe = document.getElementById('youtube-video');
-            
-            if (iframe && videoContainer) {
-                // Add loading state
-                iframe.style.opacity = '0';
-                iframe.style.transition = 'opacity 0.5s ease';
-                
-                // Set a timeout to show fallback if video doesn't load
-                const loadTimeout = setTimeout(() => {
-                    if (iframe.style.opacity === '0') {
-                        console.log('YouTube video failed to load, showing fallback');
-                        videoContainer.innerHTML = `
-                            <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 12px; padding: 60px 40px; text-align: center; color: white; height: 100%; display: flex; flex-direction: column; justify-content: center;">
-                                <i class="fas fa-video" style="font-size: 64px; margin-bottom: 30px; color: #ffd700;"></i>
-                                <h3 style="margin-bottom: 20px; font-weight: bold;">NiftyCord Demo Video</h3>
-                                <p style="margin-bottom: 30px; font-size: 16px; opacity: 0.9;">Watch how NiftyCord revolutionizes NFT trading on Discord</p>
-                                <a href="https://www.youtube.com/watch?v=88VIFGYLmWo" target="_blank" 
-                                   style="background: #ff0000; color: white; padding: 15px 30px; border-radius: 8px; text-decoration: none; display: inline-block; font-weight: bold; transition: all 0.3s ease;">
-                                    <i class="fab fa-youtube"></i> Watch Demo on YouTube
-                                </a>
-                            </div>
-                        `;
+            const videoPlaceholder = document.getElementById('video-placeholder');
+            if (videoPlaceholder) {
+                videoPlaceholder.addEventListener('mouseenter', function() {
+                    this.style.transform = 'scale(1.02)';
+                    this.style.boxShadow = '0 20px 40px rgba(0,0,0,0.3)';
+                    const playIcon = this.querySelector('.fas.fa-play-circle');
+                    if (playIcon) {
+                        playIcon.style.transform = 'scale(1.1)';
+                        playIcon.style.color = '#fff';
                     }
-                }, 5000); // 5 second timeout
-                
-                iframe.addEventListener('load', function() {
-                    clearTimeout(loadTimeout);
-                    iframe.style.opacity = '1';
                 });
                 
-                iframe.addEventListener('error', function() {
-                    clearTimeout(loadTimeout);
-                    console.log('YouTube video failed to load, showing fallback');
-                    videoContainer.innerHTML = `
-                        <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 12px; padding: 60px 40px; text-align: center; color: white; height: 100%; display: flex; flex-direction: column; justify-content: center;">
-                            <i class="fas fa-video" style="font-size: 64px; margin-bottom: 30px; color: #ffd700;"></i>
-                            <h3 style="margin-bottom: 20px; font-weight: bold;">NiftyCord Demo Video</h3>
-                            <p style="margin-bottom: 30px; font-size: 16px; opacity: 0.9;">Watch how NiftyCord revolutionizes NFT trading on Discord</p>
-                            <a href="https://www.youtube.com/watch?v=88VIFGYLmWo" target="_blank" 
-                               style="background: #ff0000; color: white; padding: 15px 30px; border-radius: 8px; text-decoration: none; display: inline-block; font-weight: bold; transition: all 0.3s ease;">
-                                <i class="fab fa-youtube"></i> Watch Demo on YouTube
-                            </a>
-                        </div>
-                    `;
+                videoPlaceholder.addEventListener('mouseleave', function() {
+                    this.style.transform = 'scale(1)';
+                    this.style.boxShadow = 'none';
+                    const playIcon = this.querySelector('.fas.fa-play-circle');
+                    if (playIcon) {
+                        playIcon.style.transform = 'scale(1)';
+                        playIcon.style.color = '#ffd700';
+                    }
                 });
             }
         });
