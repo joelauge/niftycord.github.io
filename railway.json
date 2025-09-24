@@ -5,7 +5,7 @@
     "buildCommand": "cd api && npm install"
   },
   "deploy": {
-    "startCommand": "cd api && npm start",
+    "startCommand": "cd api && node railway-start.js",
     "healthcheckPath": "/api/health",
     "healthcheckTimeout": 300,
     "restartPolicyType": "ON_FAILURE",
