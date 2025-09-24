@@ -21,21 +21,114 @@ require('./auth/discord');
 const { requireAuth, requireWallet, optionalAuth } = require('./middleware/auth');
 
 const app = express();
-const PORT = config.API_PORT;
+const PORT = process.env.PORT || config.API_PORT;
 
-// Rate limiting
+// Rate limiting (relaxed for development)
 const limiter = rateLimit({
     windowMs: 15 * 60 * 1000, // 15 minutes
-    max: 100 // limit each IP to 100 requests per windowMs
+    max: 1000 // limit each IP to 1000 requests per windowMs (increased for development)
 });
 
 // Middleware
 app.use(limiter);
 app.use(cors({
-    origin: process.env.FRONTEND_URL || 'http://localhost:3001',
+    origin: [
+        process.env.FRONTEND_URL || 'http://localhost:3001',
+        'https://niftycord.com',
+        'https://*.railway.app'
+    ],
     credentials: true
 }));
 app.use(express.json());
+
+// Health check endpoint for Railway
+app.get('/api/health', (req, res) => {
+    res.json({ 
+        status: 'healthy', 
+        timestamp: new Date().toISOString(),
+        mongodb: mongoose.connection.readyState === 1 ? 'connected' : 'disconnected'
+    });
+});
+
+// Serve NFT detail page with server-side rendered meta tags for Discord unfurling
+// This must come BEFORE express.static to intercept the request
+app.get('/nft-detail.html', async (req, res) => {
+    try {
+        const nftId = req.query.id;
+        console.log('🔍 NFT Detail Request:', { nftId, query: req.query });
+        
+        if (!nftId) {
+            console.log('❌ No NFT ID provided, serving static page');
+            return res.sendFile(path.join(__dirname, '../nft-detail.html'));
+        }
+        
+        // Fetch NFT data by nftId (not MongoDB _id)
+        console.log('🔍 Fetching NFT from database:', nftId);
+        const nft = await NFT.findOne({ nftId: nftId }).populate('owner');
+        console.log('📊 NFT found:', nft ? 'YES' : 'NO', nft ? { name: nft.name, price: nft.price } : '');
+        
+        if (!nft) {
+            console.log('❌ NFT not found, serving static page');
+            return res.sendFile(path.join(__dirname, '../nft-detail.html'));
+        }
+        
+        // Read the HTML template
+        const fs = require('fs');
+        let html = fs.readFileSync(path.join(__dirname, '../nft-detail.html'), 'utf8');
+        
+        // Replace meta tags with actual NFT data
+        const nftName = nft.name || 'Unnamed NFT';
+        const nftDescription = nft.description || 'View this NFT on the NiftyCord marketplace';
+        const nftImage = nft.image || 'https://niftycord.com/assets/images/niftycord_logo_word.png';
+        const nftPrice = nft.price ? `${nft.price} DOT` : 'Not for sale';
+        const currentUrl = `${req.protocol}://${req.get('host')}${req.originalUrl}`;
+        
+        // Update meta tags
+        console.log('🔄 Replacing meta tags with NFT data:', { nftName, nftDescription, nftPrice });
+        html = html.replace(
+            /<meta property="og:title" id="og-title" content="[^"]*">/,
+            `<meta property="og:title" content="${nftName} - NiftyCord Marketplace">`
+        );
+        html = html.replace(
+            /<meta property="og:description" id="og-description" content="[^"]*">/,
+            `<meta property="og:description" content="${nftDescription} | Price: ${nftPrice}">`
+        );
+        html = html.replace(
+            /<meta property="og:image" id="og-image" content="[^"]*">/,
+            `<meta property="og:image" content="${nftImage}">`
+        );
+        html = html.replace(
+            /<meta property="og:url" id="og-url" content="">/,
+            `<meta property="og:url" content="${currentUrl}">`
+        );
+        html = html.replace(
+            /<meta name="twitter:title" id="twitter-title" content="[^"]*">/,
+            `<meta name="twitter:title" content="${nftName} - NiftyCord Marketplace">`
+        );
+        html = html.replace(
+            /<meta name="twitter:description" id="twitter-description" content="[^"]*">/,
+            `<meta name="twitter:description" content="${nftDescription} | Price: ${nftPrice}">`
+        );
+        html = html.replace(
+            /<meta name="twitter:image" id="twitter-image" content="[^"]*">/,
+            `<meta name="twitter:image" content="${nftImage}">`
+        );
+        html = html.replace(
+            /<title id="page-title">[^<]*<\/title>/,
+            `<title>${nftName} - NiftyCord Marketplace</title>`
+        );
+        
+        console.log('✅ Successfully rendered NFT detail page with meta tags');
+        res.setHeader('Content-Type', 'text/html');
+        res.send(html);
+        
+    } catch (error) {
+        console.error('Error serving NFT detail page:', error);
+        // Fallback to static page
+        res.sendFile(path.join(__dirname, '../nft-detail.html'));
+    }
+});
+
 app.use(express.static(path.join(__dirname, '../')));
 
 // Session configuration
@@ -455,7 +548,7 @@ app.get('/api/nfts', optionalAuth, async (req, res) => {
 
 app.get('/api/nfts/:id', async (req, res) => {
     try {
-        const nft = await NFT.findById(req.params.id).populate('owner');
+        const nft = await NFT.findOne({ nftId: req.params.id }).populate('owner');
         
         if (!nft) {
             return res.status(404).json({
