@@ -1,0 +1,37 @@
+# Jekyll configuration for GitHub Pages
+# Exclude directories that shouldn't be processed
+exclude:
+  - node_modules/
+  - niftycord-bot/node_modules/
+  - api/node_modules/
+  - niftycord-bot/
+  - api/
+  - .gitignore
+  - README.md
+  - package.json
+  - package-lock.json
+
+# Include only what we need for the static site
+include:
+  - assets/
+  - services/
+  - index.html
+  - CNAME
+
+# Disable Jekyll processing for certain files
+keep_files:
+  - assets/
+
+# Set the base URL for GitHub Pages
+baseurl: ""
+url: "https://niftycord.com"
+
+# Disable unnecessary Jekyll features
+markdown: kramdown
+highlighter: rouge
+
+# Exclude from processing
+exclude_from_processing:
+  - node_modules/
+  - niftycord-bot/
+  - api/
