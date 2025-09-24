@@ -4,6 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title id="page-title">NFT Detail - NiftyCord Marketplace</title>
+    
+    <!-- Discord Unfurl Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="NiftyCord">
+    <meta property="og:title" id="og-title" content="NFT Detail - NiftyCord Marketplace">
+    <meta property="og:description" id="og-description" content="View this NFT on the NiftyCord marketplace">
+    <meta property="og:image" id="og-image" content="https://niftycord.com/assets/images/niftycord_logo_word.png">
+    <meta property="og:url" id="og-url" content="">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@NiftyCord">
+    <meta name="twitter:title" id="twitter-title" content="NFT Detail - NiftyCord Marketplace">
+    <meta name="twitter:description" id="twitter-description" content="View this NFT on the NiftyCord marketplace">
+    <meta name="twitter:image" id="twitter-image" content="https://niftycord.com/assets/images/niftycord_logo_word.png">
+    
+    <!-- Discord Specific Meta Tags -->
+    <meta name="theme-color" content="#00D4AA">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -290,7 +308,8 @@
                 const nft = await response.json();
                 
                 // Update page title
-                document.getElementById('page-title').textContent = `${nft.name} - NiftyCord Marketplace`;
+                const pageTitle = `${nft.name || 'Unnamed NFT'} - NiftyCord Marketplace`;
+                document.getElementById('page-title').textContent = pageTitle;
                 
                 // Update NFT details
                 document.getElementById('nft-title').textContent = nft.name || 'Unnamed NFT';
@@ -304,6 +323,9 @@
                 if (nft.image) {
                     document.getElementById('nft-image').src = nft.image;
                 }
+                
+                // Update Discord unfurl meta tags
+                updateDiscordMetaTags(nft, nftId);
                 
                 // Update status badge
                 const statusBadge = document.getElementById('status-badge');
@@ -364,6 +386,29 @@
         document.getElementById('marketplace-btn').addEventListener('click', () => {
             window.location.href = 'marketplace.html';
         });
+        
+        // Update Discord unfurl meta tags
+        function updateDiscordMetaTags(nft, nftId) {
+            const currentUrl = window.location.href;
+            const nftName = nft.name || 'Unnamed NFT';
+            const nftDescription = nft.description || 'View this NFT on the NiftyCord marketplace';
+            const nftImage = nft.image || 'https://niftycord.com/assets/images/niftycord_logo_word.png';
+            const nftPrice = nft.price ? `${nft.price} DOT` : 'Not for sale';
+            
+            // Update Open Graph tags
+            document.getElementById('og-title').setAttribute('content', `${nftName} - NiftyCord Marketplace`);
+            document.getElementById('og-description').setAttribute('content', `${nftDescription} | Price: ${nftPrice}`);
+            document.getElementById('og-image').setAttribute('content', nftImage);
+            document.getElementById('og-url').setAttribute('content', currentUrl);
+            
+            // Update Twitter Card tags
+            document.getElementById('twitter-title').setAttribute('content', `${nftName} - NiftyCord Marketplace`);
+            document.getElementById('twitter-description').setAttribute('content', `${nftDescription} | Price: ${nftPrice}`);
+            document.getElementById('twitter-image').setAttribute('content', nftImage);
+            
+            // Update page title
+            document.title = `${nftName} - NiftyCord Marketplace`;
+        }
         
         // Load data when page loads
         document.addEventListener('DOMContentLoaded', loadNFTData);
