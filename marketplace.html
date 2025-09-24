@@ -48,19 +48,15 @@
         .sidebar-logo {
             display: flex;
             align-items: center;
+            justify-content: center;
             margin-bottom: 40px;
+            padding: 10px 0;
         }
 
         .sidebar-logo img {
-            width: 40px;
-            height: 40px;
-            margin-right: 10px;
-        }
-
-        .sidebar-logo h3 {
-            color: var(--text-primary);
-            margin: 0;
-            font-weight: 600;
+            width: 100%;
+            max-width: 200px;
+            height: auto;
         }
 
         .nav-menu {
@@ -453,8 +449,7 @@
     <!-- Sidebar -->
     <div class="sidebar" id="sidebar">
         <div class="sidebar-logo">
-            <img src="assets/images/niftycord_logo_word.png" alt="NiftyCord">
-            <h3>NiftyCord</h3>
+            <img src="assets/images/niftycord_logo_word.png" alt="NiftyCord" style="width: 100%; max-width: 200px;">
         </div>
         <ul class="nav-menu">
             <li><a href="#" class="nav-link"><i class="fas fa-home"></i> Home</a></li>
@@ -492,9 +487,9 @@
                     <i class="fas fa-download"></i>
                 </button>
                 <select class="btn-action" style="background-color: var(--card-bg); border: 1px solid var(--border-color);">
-                    <option>Eng/USD</option>
-                    <option>Eng/EUR</option>
-                    <option>Eng/BTC</option>
+                    <option>DOT/USD</option>
+                    <option>DOT/EUR</option>
+                    <option>DOT/BTC</option>
                 </select>
                 <button class="btn-action">
                     <i class="fas fa-shield-alt"></i>
@@ -563,6 +558,7 @@
                         <th>CURRENT VALUE</th>
                         <th>AVAILABLE IN MARKET</th>
                         <th>TOTAL VALUE (USD)</th>
+                        <th>SHARE</th>
                     </tr>
                 </thead>
                 <tbody id="nftTableBody">
@@ -847,22 +843,31 @@
         }
 
         function renderNFTs(nfts) {
+            console.log('🎨 Rendering NFTs:', nfts);
             const tbody = document.getElementById('nftTableBody');
             tbody.innerHTML = '';
 
             nfts.forEach(nft => {
+                console.log('🎨 Rendering NFT:', { 
+                    name: nft.name, 
+                    nftId: nft.nftId, 
+                    id: nft.id, 
+                    _id: nft._id 
+                });
                 const row = document.createElement('tr');
                 row.innerHTML = `
                     <td>
                         <div class="nft-item">
-                            <div class="nft-icon">${nft.icon}</div>
+                            <div class="nft-icon">
+                                <img src="${nft.image || 'assets/images/niftycord_logo_word.png'}" alt="${nft.name}" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                            </div>
                             <div class="nft-info">
                                 <h6>${nft.name}</h6>
-                                <p>${nft.coin}</p>
+                                <p>${nft.coin || 'DOT'}</p>
                             </div>
                         </div>
                     </td>
-                    <td>${nft.coin}</td>
+                    <td>${nft.coin || 'DOT'}</td>
                     <td>
                         <div class="price-change ${nft.marketChange > 0 ? 'price-up' : 'price-down'}">
                             <i class="fas fa-${nft.marketChange > 0 ? 'arrow-up' : 'arrow-down'}"></i>
@@ -872,6 +877,11 @@
                     <td>${nft.currentValue} / ${nft.usdValue}</td>
                     <td>${nft.available} / ${nft.usdValue}</td>
                     <td>${nft.totalValue} / ${nft.usdValue}</td>
+                    <td>
+                        <button class="btn-action share-btn" onclick="copyShareLink('${nft.nftId || nft.id || nft._id}')" title="Share NFT">
+                            <i class="fas fa-share-alt"></i>
+                        </button>
+                    </td>
                 `;
                 tbody.appendChild(row);
             });
@@ -916,6 +926,112 @@
             // Add search functionality
             document.getElementById('searchInput').addEventListener('input', searchNFTs);
         });
+
+        // Copy share link function
+        function copyShareLink(nftId) {
+            console.log('🔗 Copy share link called with nftId:', nftId);
+            
+            if (!nftId || nftId === 'undefined') {
+                showToast('NFT ID not found', 'error');
+                return;
+            }
+            
+            const shareUrl = `http://localhost:3001/nft-detail.html?id=${nftId}`;
+            console.log('🔗 Share URL:', shareUrl);
+            
+            // Get the button that was clicked
+            const clickedButton = event.target.closest('.share-btn');
+            
+            // Try modern clipboard API first
+            if (navigator.clipboard && window.isSecureContext) {
+                navigator.clipboard.writeText(shareUrl).then(() => {
+                    console.log('✅ Clipboard API success');
+                    showCopySuccess(clickedButton);
+                }).catch(err => {
+                    console.error('❌ Clipboard API failed: ', err);
+                    // Fallback to legacy method
+                    fallbackCopyToClipboard(shareUrl, clickedButton);
+                });
+            } else {
+                console.log('🔄 Using fallback copy method');
+                // Fallback for older browsers or non-secure contexts
+                fallbackCopyToClipboard(shareUrl, clickedButton);
+            }
+        }
+        
+        // Fallback copy method
+        function fallbackCopyToClipboard(text, button) {
+            try {
+                const textArea = document.createElement('textarea');
+                textArea.value = text;
+                textArea.style.position = 'fixed';
+                textArea.style.left = '-999999px';
+                textArea.style.top = '-999999px';
+                document.body.appendChild(textArea);
+                textArea.focus();
+                textArea.select();
+                
+                const successful = document.execCommand('copy');
+                document.body.removeChild(textArea);
+                
+                if (successful) {
+                    showCopySuccess(button);
+                } else {
+                    showToast('Failed to copy link', 'error');
+                }
+            } catch (err) {
+                console.error('Fallback copy failed: ', err);
+                showToast('Failed to copy link', 'error');
+            }
+        }
+        
+        // Show success feedback
+        function showCopySuccess(button) {
+            // Show success feedback
+            if (button) {
+                const originalIcon = button.innerHTML;
+                button.innerHTML = '<i class="fas fa-check"></i>';
+                button.style.color = '#00D4AA';
+                
+                // Reset after 2 seconds
+                setTimeout(() => {
+                    button.innerHTML = originalIcon;
+                    button.style.color = '';
+                }, 2000);
+            }
+            
+            // Show toast notification
+            showToast('Share link copied to clipboard!');
+        }
+        
+        // Show toast notification
+        function showToast(message, type = 'success') {
+            const toast = document.createElement('div');
+            toast.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                background: ${type === 'success' ? '#00D4AA' : '#FF6B6B'};
+                color: white;
+                padding: 12px 20px;
+                border-radius: 8px;
+                z-index: 10000;
+                font-size: 14px;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+                transition: all 0.3s ease;
+            `;
+            toast.textContent = message;
+            document.body.appendChild(toast);
+            
+            // Remove after 3 seconds
+            setTimeout(() => {
+                toast.style.opacity = '0';
+                toast.style.transform = 'translateX(100%)';
+                setTimeout(() => {
+                    document.body.removeChild(toast);
+                }, 300);
+            }, 3000);
+        }
 
         // Mobile sidebar toggle
         function toggleSidebar() {

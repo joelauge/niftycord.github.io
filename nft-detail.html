@@ -32,103 +32,235 @@
     <link rel="stylesheet" href="assets/css/animate.css">
     <link rel="stylesheet" href="assets/css/main.css">
     <style>
-        body {
-            background: white;
-            font-family: 'Open Sans', sans-serif;
+        :root {
+            --primary-color: #00D4AA;
+            --secondary-color: #FF6B6B;
+            --dark-bg: #1a1a1a;
+            --card-bg: #2d2d2d;
+            --text-primary: #ffffff;
+            --text-secondary: #b0b0b0;
+            --border-color: #404040;
         }
-        
+
+        body {
+            background-color: var(--dark-bg);
+            color: var(--text-primary);
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .sidebar {
+            position: fixed;
+            left: 0;
+            top: 0;
+            height: 100vh;
+            width: 250px;
+            background-color: var(--card-bg);
+            border-right: 1px solid var(--border-color);
+            z-index: 1000;
+            padding: 20px;
+        }
+
+        .sidebar-logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 40px;
+            padding: 10px 0;
+        }
+
+        .sidebar-logo img {
+            width: 100%;
+            max-width: 200px;
+            height: auto;
+        }
+
+        .nav-menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .nav-menu li {
+            margin-bottom: 10px;
+        }
+
+        .nav-link {
+            display: flex;
+            align-items: center;
+            color: var(--text-secondary);
+            text-decoration: none;
+            padding: 12px 15px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover {
+            background-color: rgba(0, 212, 170, 0.1);
+            color: var(--primary-color);
+        }
+
+        .nav-link i {
+            margin-right: 10px;
+            width: 20px;
+        }
+
+        .main-content {
+            margin-left: 250px;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .header-bar {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .search-container {
+            position: relative;
+            flex: 1;
+            max-width: 400px;
+        }
+
+        .search-input {
+            width: 100%;
+            background-color: var(--dark-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 12px 40px 12px 15px;
+            color: var(--text-primary);
+            font-size: 14px;
+        }
+
+        .search-input::placeholder {
+            color: var(--text-secondary);
+        }
+
+        .search-icon {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-secondary);
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .btn-action {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            padding: 10px 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-action:hover {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+            color: white;
+        }
+
         .nft-container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 40px 20px;
         }
-        
-        .nft-header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 30px;
-            border-radius: 15px;
-            margin-bottom: 30px;
-            text-align: center;
-        }
-        
+
         .nft-content {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 40px;
+            gap: 30px;
             margin-bottom: 40px;
         }
-        
+
         .nft-image-section {
-            background: #f8f9fa;
-            border-radius: 15px;
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
             padding: 30px;
             text-align: center;
         }
-        
+
         .nft-image {
             max-width: 100%;
             height: 400px;
             object-fit: cover;
             border-radius: 10px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
         }
-        
+
         .nft-details {
-            background: #f8f9fa;
-            border-radius: 15px;
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
             padding: 30px;
         }
-        
+
         .nft-title {
             font-size: 2.5rem;
             font-weight: bold;
-            color: #2c3e50;
+            color: var(--text-primary);
             margin-bottom: 20px;
         }
-        
+
         .nft-description {
             font-size: 1.1rem;
-            color: #6c757d;
+            color: var(--text-secondary);
             margin-bottom: 30px;
             line-height: 1.6;
         }
-        
+
         .nft-stats {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 20px;
             margin-bottom: 30px;
         }
-        
+
         .stat-card {
-            background: white;
+            background-color: var(--dark-bg);
+            border: 1px solid var(--border-color);
             padding: 20px;
             border-radius: 10px;
             text-align: center;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
-        
+
         .stat-value {
             font-size: 1.5rem;
             font-weight: bold;
-            color: #667eea;
+            color: var(--primary-color);
         }
-        
+
         .stat-label {
-            color: #6c757d;
+            color: var(--text-secondary);
             font-size: 0.9rem;
             margin-top: 5px;
         }
-        
+
         .action-buttons {
             display: flex;
             gap: 15px;
             flex-wrap: wrap;
         }
-        
+
         .btn-copy {
-            background: #28a745;
+            background: var(--primary-color);
             color: white;
             border: none;
             padding: 12px 24px;
@@ -136,13 +268,16 @@
             cursor: pointer;
             font-weight: bold;
             transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
-        
+
         .btn-copy:hover {
-            background: #218838;
+            background: #00B894;
             transform: translateY(-2px);
         }
-        
+
         .btn-discord {
             background: #7289da;
             color: white;
@@ -152,15 +287,18 @@
             cursor: pointer;
             font-weight: bold;
             transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
-        
+
         .btn-discord:hover {
             background: #5b6eae;
             transform: translateY(-2px);
         }
-        
+
         .btn-marketplace {
-            background: #667eea;
+            background: var(--primary-color);
             color: white;
             border: none;
             padding: 12px 24px;
@@ -168,13 +306,16 @@
             cursor: pointer;
             font-weight: bold;
             transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
-        
+
         .btn-marketplace:hover {
-            background: #5a6fd8;
+            background: #00B894;
             transform: translateY(-2px);
         }
-        
+
         .status-badge {
             display: inline-block;
             padding: 8px 16px;
@@ -183,45 +324,61 @@
             font-size: 0.9rem;
             margin-bottom: 20px;
         }
-        
+
         .status-for-sale {
-            background: #d4edda;
-            color: #155724;
+            background: rgba(0, 212, 170, 0.2);
+            color: var(--primary-color);
+            border: 1px solid var(--primary-color);
         }
-        
+
         .status-auction {
-            background: #f8d7da;
-            color: #721c24;
+            background: rgba(255, 107, 107, 0.2);
+            color: var(--secondary-color);
+            border: 1px solid var(--secondary-color);
         }
-        
+
         .status-sold {
-            background: #d1ecf1;
-            color: #0c5460;
+            background: rgba(176, 176, 176, 0.2);
+            color: var(--text-secondary);
+            border: 1px solid var(--text-secondary);
         }
-        
+
         .copy-success {
             position: fixed;
             top: 20px;
             right: 20px;
-            background: #28a745;
+            background: var(--primary-color);
             color: white;
             padding: 15px 25px;
             border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
             z-index: 1000;
             display: none;
         }
-        
+
         @media (max-width: 768px) {
+            .sidebar {
+                transform: translateX(-100%);
+                transition: transform 0.3s ease;
+            }
+
+            .sidebar.open {
+                transform: translateX(0);
+            }
+
+            .main-content {
+                margin-left: 0;
+            }
+
             .nft-content {
                 grid-template-columns: 1fr;
                 gap: 20px;
             }
-            
+
             .nft-stats {
                 grid-template-columns: 1fr;
             }
-            
+
             .action-buttons {
                 justify-content: center;
             }
@@ -229,55 +386,94 @@
     </style>
 </head>
 <body>
-    <div class="nft-container">
-        <!-- Header -->
-        <div class="nft-header">
-            <h1>NiftyCord Marketplace</h1>
-            <p>NFT Detail Page</p>
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-logo">
+            <img src="assets/images/niftycord_logo_word.png" alt="NiftyCord" style="width: 100%; max-width: 200px;">
         </div>
-        
-        <!-- NFT Content -->
-        <div class="nft-content">
-            <!-- Image Section -->
-            <div class="nft-image-section">
-                <img id="nft-image" src="assets/images/placeholder-nft.jpg" alt="NFT Image" class="nft-image">
+        <ul class="nav-menu">
+            <li><a href="index.html" class="nav-link"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="marketplace.html" class="nav-link"><i class="fas fa-store"></i> Marketplace</a></li>
+            <li><a href="#" class="nav-link"><i class="fas fa-chart-line"></i> Prices</a></li>
+            <li><a href="#" class="nav-link active"><i class="fas fa-gem"></i> NFTs/Items/Assets</a></li>
+            <li><a href="#" class="nav-link"><i class="fas fa-tags"></i> Promotions</a></li>
+            <li><a href="#" class="nav-link"><i class="fas fa-history"></i> Activities</a></li>
+            <li><a href="#" class="nav-link"><i class="fas fa-bell"></i> Notifications</a></li>
+            <li><a href="#" class="nav-link"><i class="fas fa-cog"></i> Settings</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Header Bar -->
+        <div class="header-bar">
+            <div class="search-container">
+                <input type="text" class="search-input" placeholder="Search NFTs, collections, or user!" id="searchInput">
+                <i class="fas fa-search search-icon"></i>
             </div>
-            
-            <!-- Details Section -->
-            <div class="nft-details">
-                <div id="status-badge" class="status-badge status-for-sale">🟢 For Sale</div>
-                <h2 id="nft-title" class="nft-title">Loading...</h2>
-                <p id="nft-description" class="nft-description">Loading description...</p>
-                
-                <div class="nft-stats">
-                    <div class="stat-card">
-                        <div id="nft-price" class="stat-value">Loading...</div>
-                        <div class="stat-label">Price</div>
-                    </div>
-                    <div class="stat-card">
-                        <div id="nft-id" class="stat-value">Loading...</div>
-                        <div class="stat-label">NFT ID</div>
-                    </div>
-                    <div class="stat-card">
-                        <div id="nft-owner" class="stat-value">Loading...</div>
-                        <div class="stat-label">Owner</div>
-                    </div>
-                    <div class="stat-card">
-                        <div id="nft-watchers" class="stat-value">0</div>
-                        <div class="stat-label">Watchers</div>
-                    </div>
+            <div class="header-actions">
+                <button class="btn-action">
+                    <i class="fas fa-bell"></i>
+                </button>
+                <button class="btn-action">
+                    <i class="fas fa-download"></i>
+                </button>
+                <select class="btn-action" style="background-color: var(--card-bg); border: 1px solid var(--border-color);">
+                    <option>DOT/USD</option>
+                    <option>DOT/EUR</option>
+                    <option>DOT/BTC</option>
+                </select>
+                <button class="btn-action">
+                    <i class="fas fa-shield-alt"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- NFT Container -->
+        <div class="nft-container">
+            <!-- NFT Content -->
+            <div class="nft-content">
+                <!-- Image Section -->
+                <div class="nft-image-section">
+                    <img id="nft-image" src="assets/images/niftycord_logo_word.png" alt="NFT Image" class="nft-image">
                 </div>
                 
-                <div class="action-buttons">
-                    <button id="copy-link-btn" class="btn-copy">
-                        <i class="fas fa-copy"></i> Copy Link
-                    </button>
-                    <button id="copy-discord-btn" class="btn-discord">
-                        <i class="fab fa-discord"></i> Copy Discord Link
-                    </button>
-                    <button id="marketplace-btn" class="btn-marketplace">
-                        <i class="fas fa-store"></i> View Marketplace
-                    </button>
+                <!-- Details Section -->
+                <div class="nft-details">
+                    <div id="status-badge" class="status-badge status-for-sale">🟢 For Sale</div>
+                    <h2 id="nft-title" class="nft-title">Loading...</h2>
+                    <p id="nft-description" class="nft-description">Loading description...</p>
+                    
+                    <div class="nft-stats">
+                        <div class="stat-card">
+                            <div id="nft-price" class="stat-value">Loading...</div>
+                            <div class="stat-label">Price</div>
+                        </div>
+                        <div class="stat-card">
+                            <div id="nft-id" class="stat-value">Loading...</div>
+                            <div class="stat-label">NFT ID</div>
+                        </div>
+                        <div class="stat-card">
+                            <div id="nft-owner" class="stat-value">Loading...</div>
+                            <div class="stat-label">Owner</div>
+                        </div>
+                        <div class="stat-card">
+                            <div id="nft-watchers" class="stat-value">0</div>
+                            <div class="stat-label">Watchers</div>
+                        </div>
+                    </div>
+                    
+                    <div class="action-buttons">
+                        <button id="copy-link-btn" class="btn-copy">
+                            <i class="fas fa-copy"></i> Copy Link
+                        </button>
+                        <button id="copy-discord-btn" class="btn-discord">
+                            <i class="fab fa-discord"></i> Copy Discord Link
+                        </button>
+                        <button id="marketplace-btn" class="btn-marketplace">
+                            <i class="fas fa-store"></i> View Marketplace
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -304,46 +500,92 @@
             }
             
             try {
-                const response = await fetch(`${API_BASE}/api/nft/${nftId}`);
-                const nft = await response.json();
+                const response = await fetch(`${API_BASE}/api/nfts/${nftId}`);
+                const result = await response.json();
                 
-                // Update page title
+                if (!result.success) {
+                    throw new Error(result.error || 'Failed to fetch NFT');
+                }
+                
+                const nft = result.data;
+                
+                // Update page title (only if element exists)
                 const pageTitle = `${nft.name || 'Unnamed NFT'} - NiftyCord Marketplace`;
-                document.getElementById('page-title').textContent = pageTitle;
+                const pageTitleElement = document.getElementById('page-title');
+                if (pageTitleElement) {
+                    pageTitleElement.textContent = pageTitle;
+                }
                 
-                // Update NFT details
-                document.getElementById('nft-title').textContent = nft.name || 'Unnamed NFT';
-                document.getElementById('nft-description').textContent = nft.description || 'No description available';
-                document.getElementById('nft-price').textContent = nft.price ? `${nft.price} DOT` : 'Not for sale';
-                document.getElementById('nft-id').textContent = nftId;
-                document.getElementById('nft-owner').textContent = nft.owner || 'Unknown';
-                document.getElementById('nft-watchers').textContent = nft.watchers || '0';
+                // Update NFT details (only if elements exist)
+                const nftTitleElement = document.getElementById('nft-title');
+                if (nftTitleElement) {
+                    nftTitleElement.textContent = nft.name || 'Unnamed NFT';
+                }
                 
-                // Update image
+                const nftDescriptionElement = document.getElementById('nft-description');
+                if (nftDescriptionElement) {
+                    nftDescriptionElement.textContent = nft.description || 'No description available';
+                }
+                
+                const nftPriceElement = document.getElementById('nft-price');
+                if (nftPriceElement) {
+                    nftPriceElement.textContent = nft.price ? `${nft.price} DOT` : 'Not for sale';
+                }
+                
+                const nftIdElement = document.getElementById('nft-id');
+                if (nftIdElement) {
+                    nftIdElement.textContent = nftId;
+                }
+                
+                const nftOwnerElement = document.getElementById('nft-owner');
+                if (nftOwnerElement) {
+                    nftOwnerElement.textContent = nft.owner?.username || 'Unknown';
+                }
+                
+                const nftWatchersElement = document.getElementById('nft-watchers');
+                if (nftWatchersElement) {
+                    nftWatchersElement.textContent = nft.watchers || '0';
+                }
+                
+                // Update image (only if element exists)
                 if (nft.image) {
-                    document.getElementById('nft-image').src = nft.image;
+                    const nftImageElement = document.getElementById('nft-image');
+                    if (nftImageElement) {
+                        nftImageElement.src = nft.image;
+                    }
                 }
                 
                 // Update Discord unfurl meta tags
                 updateDiscordMetaTags(nft, nftId);
                 
-                // Update status badge
+                // Update status badge (only if element exists)
                 const statusBadge = document.getElementById('status-badge');
-                if (nft.status === 'for_sale') {
-                    statusBadge.textContent = '🟢 For Sale';
-                    statusBadge.className = 'status-badge status-for-sale';
-                } else if (nft.status === 'auction') {
-                    statusBadge.textContent = '🔴 Live Auction';
-                    statusBadge.className = 'status-badge status-auction';
-                } else if (nft.status === 'sold') {
-                    statusBadge.textContent = '🔵 Sold';
-                    statusBadge.className = 'status-badge status-sold';
+                if (statusBadge) {
+                    if (nft.isForSale) {
+                        statusBadge.textContent = '🟢 For Sale';
+                        statusBadge.className = 'status-badge status-for-sale';
+                    } else if (nft.status === 'auction') {
+                        statusBadge.textContent = '🔴 Live Auction';
+                        statusBadge.className = 'status-badge status-auction';
+                    } else if (nft.status === 'sold') {
+                        statusBadge.textContent = '🔵 Sold';
+                        statusBadge.className = 'status-badge status-sold';
+                    } else {
+                        statusBadge.textContent = '⚪ Not Listed';
+                        statusBadge.className = 'status-badge status-not-listed';
+                    }
                 }
                 
             } catch (error) {
                 console.error('Error loading NFT data:', error);
-                document.getElementById('nft-title').textContent = 'Error loading NFT';
-                document.getElementById('nft-description').textContent = 'Failed to load NFT data. Please try again later.';
+                const nftTitleElement = document.getElementById('nft-title');
+                if (nftTitleElement) {
+                    nftTitleElement.textContent = 'Error loading NFT';
+                }
+                const nftDescriptionElement = document.getElementById('nft-description');
+                if (nftDescriptionElement) {
+                    nftDescriptionElement.textContent = 'Failed to load NFT data. Please try again later.';
+                }
             }
         }
         
@@ -410,6 +652,12 @@
             document.title = `${nftName} - NiftyCord Marketplace`;
         }
         
+        // Mobile sidebar toggle
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('open');
+        }
+
         // Load data when page loads
         document.addEventListener('DOMContentLoaded', loadNFTData);
     </script>
