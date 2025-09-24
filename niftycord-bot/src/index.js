@@ -372,7 +372,16 @@ async function handleConfirmSell(interaction) {
         .setColor(0x00D4AA)
         .setTimestamp();
     
-    await interaction.editReply({ embeds: [embed] });
+    // Create button for web marketplace
+    const marketplaceButton = new ButtonBuilder()
+        .setCustomId(`view_marketplace_${nftId}`)
+        .setLabel('View on Web Marketplace')
+        .setStyle(ButtonStyle.Primary)
+        .setEmoji('🌐');
+    
+    const row = new ActionRowBuilder().addComponents(marketplaceButton);
+    
+    await interaction.editReply({ embeds: [embed], components: [row] });
 }
 
 async function handleCancelSell(interaction) {
@@ -384,6 +393,31 @@ async function handleCancelSell(interaction) {
         .setTitle('❌ Sale Cancelled')
         .setDescription('NFT sale has been cancelled.')
         .setColor(0xFF0000)
+        .setTimestamp();
+    
+    await interaction.editReply({ embeds: [embed] });
+}
+
+async function handleViewMarketplace(interaction) {
+    const { EmbedBuilder } = require('discord.js');
+    
+    await interaction.deferReply({ flags: 64 });
+    
+    // Parse the custom ID: view_marketplace_{nftId}
+    const parts = interaction.customId.split('_');
+    const nftId = parts[2];
+    
+    // Create the marketplace URL
+    const marketplaceUrl = `https://niftycord.com/nft-detail.html?id=${nftId}`;
+    
+    const embed = new EmbedBuilder()
+        .setTitle('🌐 Web Marketplace')
+        .setDescription(`View your NFT listing on the web marketplace!`)
+        .addFields(
+            { name: 'NFT ID', value: nftId, inline: true },
+            { name: 'Marketplace Link', value: `[View on Web Marketplace](${marketplaceUrl})`, inline: false }
+        )
+        .setColor(0x7289DA)
         .setTimestamp();
     
     await interaction.editReply({ embeds: [embed] });
@@ -608,6 +642,8 @@ async function handleButtonInteraction(interaction) {
                 await handleRemoveSale(interaction);
             } else if (interaction.customId.startsWith('update_price_')) {
                 await handleUpdatePrice(interaction);
+            } else if (interaction.customId.startsWith('view_marketplace_')) {
+                await handleViewMarketplace(interaction);
             } else if (interaction.customId === 'nft_next') {
                 await handleNextNFT(interaction);
             } else {
