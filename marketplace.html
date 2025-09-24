@@ -583,8 +583,10 @@
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
     <script>
-        // API Configuration - Using local server temporarily
-        const API_BASE_URL = 'http://localhost:3001/api';
+        // API Configuration - detect environment
+        const API_BASE_URL = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' 
+            ? 'http://localhost:3001/api' 
+            : 'https://niftycordgithubio-production.up.railway.app/api';
         
         // Check if Railway API is available
         async function checkRailwayAPI() {
@@ -953,7 +955,9 @@
                 return;
             }
             
-            const shareUrl = `http://localhost:3001/nft-detail.html?id=${nftId}`;
+            const shareUrl = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' 
+                ? `http://localhost:3001/nft-detail.html?id=${nftId}`
+                : `https://niftycord.github.io/nft-detail.html?id=${nftId}`;
             console.log('🔗 Share URL:', shareUrl);
             
             // Get the button that was clicked

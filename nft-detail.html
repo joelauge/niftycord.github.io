@@ -489,8 +489,10 @@
         const urlParams = new URLSearchParams(window.location.search);
         const nftId = urlParams.get('id');
         
-        // API base URL - use GitHub Pages for production
-        const API_BASE = 'http://localhost:3001';
+        // API base URL - detect environment
+        const API_BASE = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' 
+            ? 'http://localhost:3001' 
+            : 'https://niftycordgithubio-production.up.railway.app';
         
         // Load NFT data
         async function loadNFTData() {
