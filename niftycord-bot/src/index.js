@@ -408,7 +408,7 @@ async function handleViewMarketplace(interaction) {
     const nftId = parts[2];
     
     // Create the marketplace URL
-    const marketplaceUrl = `https://niftycord.com/nft-detail.html?id=${nftId}`;
+                const marketplaceUrl = `https://niftycordgithubio-production.up.railway.app/nft-detail.html?id=${nftId}`;
     
     const embed = new EmbedBuilder()
         .setTitle('🌐 Web Marketplace')
