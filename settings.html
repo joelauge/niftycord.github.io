@@ -661,15 +661,15 @@
                         <div class="settings-group">
                             <h4 class="group-title">Connected Wallets</h4>
                             
-                            <div class="setting-item">
+                            <div class="setting-item" id="walletConnectionItem">
                                 <div class="setting-info">
                                     <div class="setting-label">Polkadot Wallet</div>
-                                    <div class="setting-description">Connect your Polkadot wallet for NFT transactions</div>
+                                    <div class="setting-description" id="walletDescription">Checking wallet connection...</div>
                                 </div>
-                                <div class="setting-control">
-                                    <button class="btn btn-primary" onclick="connectWallet('polkadot')">
-                                        <i>🔗</i> Connect
-                                    </button>
+                                <div class="setting-control" id="walletControl">
+                                    <div class="loading" style="padding: 0.5rem;">
+                                        <i>⏳</i>
+                                    </div>
                                 </div>
                             </div>
 
@@ -986,10 +986,96 @@
             return userRole === 'admin';
         }
 
+        // Check wallet connection status
+        async function checkWalletConnection() {
+            try {
+                // API base URL - dynamically select based on hostname
+                const API_BASE = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' 
+                    ? 'http://localhost:3001' 
+                    : 'https://niftycordgithubio-production.up.railway.app';
+
+                // Check if user is authenticated with Discord
+                const authResponse = await fetch(`${API_BASE}/api/auth/status`, {
+                    credentials: 'include'
+                });
+                
+                if (!authResponse.ok) {
+                    showWalletNotConnected();
+                    return;
+                }
+
+                const authData = await authResponse.json();
+                
+                if (!authData.authenticated) {
+                    showWalletNotConnected();
+                    return;
+                }
+
+                // Check if user has a wallet associated with their Discord account
+                const walletResponse = await fetch(`${API_BASE}/api/user/wallet`, {
+                    credentials: 'include'
+                });
+
+                if (walletResponse.ok) {
+                    const walletData = await walletResponse.json();
+                    if (walletData.wallet && walletData.wallet.address) {
+                        showWalletConnected(walletData.wallet);
+                    } else {
+                        showWalletNotConnected();
+                    }
+                } else {
+                    showWalletNotConnected();
+                }
+            } catch (error) {
+                console.error('Error checking wallet connection:', error);
+                showWalletNotConnected();
+            }
+        }
+
+        // Show wallet connected state
+        function showWalletConnected(wallet) {
+            const description = document.getElementById('walletDescription');
+            const control = document.getElementById('walletControl');
+            
+            description.textContent = `Connected: ${wallet.address.substring(0, 8)}...${wallet.address.substring(wallet.address.length - 8)}`;
+            description.style.color = 'var(--success-color)';
+            
+            control.innerHTML = `
+                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                    <span style="color: var(--success-color); font-size: 1.2rem;">✅</span>
+                    <span style="color: var(--success-color); font-weight: 600;">Connected</span>
+                </div>
+            `;
+        }
+
+        // Show wallet not connected state
+        function showWalletNotConnected() {
+            const description = document.getElementById('walletDescription');
+            const control = document.getElementById('walletControl');
+            
+            description.textContent = 'Connect your Polkadot wallet for NFT transactions';
+            description.style.color = 'var(--text-secondary)';
+            
+            control.innerHTML = `
+                <button class="btn btn-primary" onclick="connectWallet('polkadot')">
+                    <i>🔗</i> Connect
+                </button>
+            `;
+        }
+
         // Connect wallet function
         function connectWallet(type) {
             showToast(`Connecting ${type} wallet...`, 'success');
             // This would integrate with your wallet connection logic
+            // For now, we'll simulate a connection after 2 seconds
+            setTimeout(() => {
+                // Simulate successful connection
+                const mockWallet = {
+                    address: '5GmcABdg9DRWp8vMuWie8zuaa1QzmkhKAWDMcvJVisfHyCkn'
+                };
+                showWalletConnected(mockWallet);
+                showToast('Wallet connected successfully!', 'success');
+            }, 2000);
         }
 
         // Show toast notification
@@ -1005,7 +1091,10 @@
         }
 
         // Load settings when page loads
-        document.addEventListener('DOMContentLoaded', loadSettings);
+        document.addEventListener('DOMContentLoaded', function() {
+            loadSettings();
+            checkWalletConnection();
+        });
 
         // Add some demo admin functionality
         function toggleAdminMode() {

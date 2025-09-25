@@ -661,6 +661,67 @@ app.get('/health', (req, res) => {
     });
 });
 
+// Authentication status endpoint
+app.get('/api/auth/status', (req, res) => {
+    if (req.session && req.session.userId) {
+        res.json({
+            authenticated: true,
+            userId: req.session.userId
+        });
+    } else {
+        res.json({
+            authenticated: false,
+            userId: null
+        });
+    }
+});
+
+// User wallet endpoint
+app.get('/api/user/wallet', requireAuth, async (req, res) => {
+    try {
+        // Check if MongoDB is connected
+        if (mongoose.connection.readyState !== 1) {
+            console.log('🔄 MongoDB not connected, returning no wallet');
+            return res.json({
+                success: true,
+                wallet: null
+            });
+        }
+
+        // Find user by Discord ID
+        const user = await User.findOne({ discordId: req.session.userId });
+        
+        if (!user) {
+            return res.json({
+                success: true,
+                wallet: null
+            });
+        }
+
+        // Check if user has a wallet address
+        if (user.walletAddress) {
+            res.json({
+                success: true,
+                wallet: {
+                    address: user.walletAddress,
+                    connected: true
+                }
+            });
+        } else {
+            res.json({
+                success: true,
+                wallet: null
+            });
+        }
+    } catch (error) {
+        console.error('Error fetching user wallet:', error);
+        res.status(500).json({
+            success: false,
+            error: 'Failed to fetch wallet information'
+        });
+    }
+});
+
 // Start server
 app.listen(PORT, () => {
     console.log(`🌐 NiftyCord API server running on port ${PORT}`);
