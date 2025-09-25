@@ -171,7 +171,7 @@ app.get('/nft-detail.html', async (req, res) => {
         console.log('📊 NFT found:', nft ? 'YES' : 'NO', nft ? { name: nft.name, price: nft.price } : '');
         
         // Read the HTML template
-        const htmlPath = path.join(__dirname, '..', 'nft-detail.html');
+        const htmlPath = path.join(process.cwd(), 'nft-detail.html');
         let html = fs.readFileSync(htmlPath, 'utf8');
         
         // Replace meta tags with NFT data
