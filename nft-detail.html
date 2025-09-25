@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">NFT Detail - NiftyCord</title>
+    
+    <!-- Open Graph Meta Tags for Discord Unfurl -->
+    <meta property="og:title" content="NFT Detail - NiftyCord" id="og-title">
+    <meta property="og:description" content="View this NFT on NiftyCord marketplace" id="og-description">
+    <meta property="og:image" content="https://niftycord.github.io/assets/images/niftycord_logo_word.png" id="og-image">
+    <meta property="og:url" content="" id="og-url">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="NiftyCord">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="NFT Detail - NiftyCord" id="twitter-title">
+    <meta name="twitter:description" content="View this NFT on NiftyCord marketplace" id="twitter-description">
+    <meta name="twitter:image" content="https://niftycord.github.io/assets/images/niftycord_logo_word.png" id="twitter-image">
+    
+    <!-- Discord Theme Color -->
+    <meta name="theme-color" content="#00D4AA">
+    
+    <style>
+        :root {
+            --primary-color: #00D4AA;
+            --secondary-color: #6366F1;
+            --background-dark: #0F0F23;
+            --background-card: #1A1A2E;
+            --text-primary: #FFFFFF;
+            --text-secondary: #A0A0A0;
+            --border-color: #2D2D44;
+            --success-color: #10B981;
+            --warning-color: #F59E0B;
+            --error-color: #EF4444;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--background-dark);
+            color: var(--text-primary);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .container {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 280px;
+            background: var(--background-card);
+            border-right: 1px solid var(--border-color);
+            padding: 2rem 0;
+            position: fixed;
+            height: 100vh;
+            overflow-y: auto;
+            z-index: 1000;
+        }
+
+        .sidebar-logo {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 0 2rem;
+        }
+
+        .sidebar-logo img {
+            width: 100%;
+            max-width: 200px;
+            height: auto;
+        }
+
+        .sidebar-menu {
+            list-style: none;
+            padding: 0 1rem;
+        }
+
+        .sidebar-menu li {
+            margin-bottom: 0.5rem;
+        }
+
+        .sidebar-menu a {
+            display: flex;
+            align-items: center;
+            padding: 1rem;
+            color: var(--text-secondary);
+            text-decoration: none;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .sidebar-menu a:hover {
+            background: rgba(99, 102, 241, 0.1);
+            color: var(--text-primary);
+        }
+
+        .sidebar-menu a.active {
+            background: var(--secondary-color);
+            color: var(--text-primary);
+        }
+
+        .sidebar-menu i {
+            margin-right: 1rem;
+            width: 20px;
+            text-align: center;
+        }
+
+        /* Main Content */
+        .main-content {
+            flex: 1;
+            margin-left: 280px;
+            padding: 2rem;
+        }
+
+        /* Header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .header-left h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .search-box {
+            position: relative;
+        }
+
+        .search-box input {
+            background: var(--background-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 0.75rem 1rem 0.75rem 2.5rem;
+            color: var(--text-primary);
+            width: 300px;
+            font-size: 0.9rem;
+        }
+
+        .search-box input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+
+        .search-box i {
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-secondary);
+        }
+
+        .currency-selector {
+            background: var(--background-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 0.75rem 1rem;
+            color: var(--text-primary);
+            font-size: 0.9rem;
+            cursor: pointer;
+        }
+
+        .currency-selector:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+
+        /* NFT Detail Card */
+        .nft-detail-card {
+            background: var(--background-card);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .nft-header {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .nft-image {
+            flex: 0 0 300px;
+            height: 300px;
+            border-radius: 16px;
+            overflow: hidden;
+            background: var(--background-dark);
+        }
+
+        .nft-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .nft-info {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .nft-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nft-description {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .nft-price {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .nft-status {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+
+        .status-available {
+            background: rgba(16, 185, 129, 0.2);
+            color: var(--success-color);
+            border: 1px solid var(--success-color);
+        }
+
+        .status-sold {
+            background: rgba(239, 68, 68, 0.2);
+            color: var(--error-color);
+            border: 1px solid var(--error-color);
+        }
+
+        .status-trading {
+            background: rgba(245, 158, 11, 0.2);
+            color: var(--warning-color);
+            border: 1px solid var(--warning-color);
+        }
+
+        /* Action Buttons */
+        .action-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #00B894;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: var(--secondary-color);
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background: #4F46E5;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--text-primary);
+            border: 1px solid var(--border-color);
+        }
+
+        .btn-outline:hover {
+            background: var(--background-card);
+            border-color: var(--primary-color);
+        }
+
+        /* NFT Details */
+        .nft-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .detail-item {
+            background: var(--background-dark);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1.5rem;
+        }
+
+        .detail-label {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .detail-value {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        /* Loading State */
+        .loading {
+            text-align: center;
+            padding: 4rem 2rem;
+            color: var(--text-secondary);
+        }
+
+        .loading i {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        /* Error State */
+        .error {
+            text-align: center;
+            padding: 4rem 2rem;
+            color: var(--error-color);
+        }
+
+        .error i {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .sidebar {
+                transform: translateX(-100%);
+                transition: transform 0.3s ease;
+            }
+
+            .sidebar.open {
+                transform: translateX(0);
+            }
+
+            .main-content {
+                margin-left: 0;
+                padding: 1rem;
+            }
+
+            .header {
+                flex-direction: column;
+                gap: 1rem;
+                align-items: stretch;
+            }
+
+            .header-right {
+                justify-content: space-between;
+            }
+
+            .search-box input {
+                width: 100%;
+            }
+
+            .nft-header {
+                flex-direction: column;
+            }
+
+            .nft-image {
+                flex: none;
+                width: 100%;
+                height: 250px;
+            }
+
+            .action-buttons {
+                flex-direction: column;
+            }
+        }
+
+        /* Toast Notifications */
+        .toast {
+            position: fixed;
+            top: 2rem;
+            right: 2rem;
+            background: var(--success-color);
+            color: white;
+            padding: 1rem 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            z-index: 10000;
+            transform: translateX(400px);
+            transition: transform 0.3s ease;
+        }
+
+        .toast.show {
+            transform: translateX(0);
+        }
+
+        .toast.error {
+            background: var(--error-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <nav class="sidebar">
+            <div class="sidebar-logo">
+                <img src="assets/images/niftycord_logo_word.png" alt="NiftyCord">
+            </div>
+            <ul class="sidebar-menu">
+                <li><a href="marketplace.html"><i>🏠</i> Marketplace</a></li>
+                <li><a href="#" class="active"><i>🎨</i> NFT Details</a></li>
+                <li><a href="#"><i>👤</i> Profile</a></li>
+                <li><a href="#"><i>⚙️</i> Settings</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="header">
+                <div class="header-left">
+                    <h1>NFT Details</h1>
+                </div>
+                <div class="header-right">
+                    <div class="search-box">
+                        <i>🔍</i>
+                        <input type="text" placeholder="Search NFTs...">
+                    </div>
+                    <select class="currency-selector">
+                        <option value="DOT/USD">DOT/USD</option>
+                        <option value="DOT/EUR">DOT/EUR</option>
+                        <option value="DOT/BTC">DOT/BTC</option>
+                    </select>
+                </div>
+            </header>
+
+            <!-- NFT Detail Card -->
+            <div class="nft-detail-card">
+                <div id="loading-state" class="loading">
+                    <i>⏳</i>
+                    <p>Loading NFT details...</p>
+                </div>
+
+                <div id="error-state" class="error" style="display: none;">
+                    <i>❌</i>
+                    <p>Error loading NFT</p>
+                </div>
+
+                <div id="nft-content" style="display: none;">
+                    <div class="nft-header">
+                        <div class="nft-image">
+                            <img id="nft-image" src="" alt="NFT Image">
+                        </div>
+                        <div class="nft-info">
+                            <h2 id="nft-title" class="nft-title">NFT Title</h2>
+                            <p id="nft-description" class="nft-description">NFT Description</p>
+                            <div id="nft-price" class="nft-price">0 DOT</div>
+                            <div id="nft-status" class="nft-status status-available">Available</div>
+                        </div>
+                    </div>
+
+                    <div class="action-buttons">
+                        <button class="btn btn-primary" onclick="copyLink()">
+                            <i>🔗</i> Copy Link
+                        </button>
+                        <button class="btn btn-secondary" onclick="copyDiscordLink()">
+                            <i>💬</i> Copy Discord Link
+                        </button>
+                        <a href="marketplace.html" class="btn btn-outline">
+                            <i>🏠</i> View Marketplace
+                        </a>
+                    </div>
+
+                    <div class="nft-details">
+                        <div class="detail-item">
+                            <div class="detail-label">Owner</div>
+                            <div id="nft-owner" class="detail-value">Unknown</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">Creator</div>
+                            <div id="nft-creator" class="detail-value">Unknown</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">Collection</div>
+                            <div id="nft-collection" class="detail-value">Unknown</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">Blockchain</div>
+                            <div id="nft-blockchain" class="detail-value">Polkadot</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">Transaction Hash</div>
+                            <div id="nft-tx-hash" class="detail-value">Unknown</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">Created</div>
+                            <div id="nft-created" class="detail-value">Unknown</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast"></div>
+
+    <script>
+        // Get NFT ID from URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const nftId = urlParams.get('id');
+
+        // API base URL - dynamically select based on hostname
+        const API_BASE = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' 
+            ? 'http://localhost:3001' 
+            : 'https://niftycordgithubio-production.up.railway.app';
+
+        // Load NFT data
+        async function loadNFTData() {
+            if (!nftId) {
+                showError('No NFT ID provided');
+                return;
+            }
+
+            try {
+                const response = await fetch(`${API_BASE}/api/nfts/${nftId}`);
+                const result = await response.json();
+
+                if (result.success && result.data) {
+                    const nft = result.data;
+                    displayNFT(nft);
+                } else {
+                    showError(result.error || 'NFT not found');
+                }
+            } catch (error) {
+                console.error('Error loading NFT:', error);
+                showError('Failed to load NFT data');
+            }
+        }
+
+        // Display NFT data
+        function displayNFT(nft) {
+            // Hide loading state
+            document.getElementById('loading-state').style.display = 'none';
+            
+            // Show NFT content
+            const nftContent = document.getElementById('nft-content');
+            nftContent.style.display = 'block';
+
+            // Update page title
+            const pageTitle = document.getElementById('page-title');
+            if (pageTitle) {
+                pageTitle.textContent = `${nft.name} - NiftyCord`;
+            }
+
+            // Update Open Graph meta tags
+            const ogTitle = document.getElementById('og-title');
+            if (ogTitle) {
+                ogTitle.setAttribute('content', `${nft.name} - NiftyCord`);
+            }
+
+            const ogDescription = document.getElementById('og-description');
+            if (ogDescription) {
+                ogDescription.setAttribute('content', nft.description || 'View this NFT on NiftyCord marketplace');
+            }
+
+            const ogImage = document.getElementById('og-image');
+            if (ogImage) {
+                ogImage.setAttribute('content', nft.image || 'https://niftycord.github.io/assets/images/niftycord_logo_word.png');
+            }
+
+            const ogUrl = document.getElementById('og-url');
+            if (ogUrl) {
+                ogUrl.setAttribute('content', window.location.href);
+            }
+
+            // Update Twitter Card meta tags
+            const twitterTitle = document.getElementById('twitter-title');
+            if (twitterTitle) {
+                twitterTitle.setAttribute('content', `${nft.name} - NiftyCord`);
+            }
+
+            const twitterDescription = document.getElementById('twitter-description');
+            if (twitterDescription) {
+                twitterDescription.setAttribute('content', nft.description || 'View this NFT on NiftyCord marketplace');
+            }
+
+            const twitterImage = document.getElementById('twitter-image');
+            if (twitterImage) {
+                twitterImage.setAttribute('content', nft.image || 'https://niftycord.github.io/assets/images/niftycord_logo_word.png');
+            }
+
+            // Update NFT content
+            const nftTitle = document.getElementById('nft-title');
+            if (nftTitle) {
+                nftTitle.textContent = nft.name || 'Unnamed NFT';
+            }
+
+            const nftDescription = document.getElementById('nft-description');
+            if (nftDescription) {
+                nftDescription.textContent = nft.description || 'No description provided';
+            }
+
+            const nftImage = document.getElementById('nft-image');
+            if (nftImage) {
+                nftImage.src = nft.image || 'assets/images/niftycord_logo_word.png';
+                nftImage.alt = nft.name || 'NFT Image';
+            }
+
+            const nftPrice = document.getElementById('nft-price');
+            if (nftPrice) {
+                nftPrice.textContent = `${nft.price || '0'} DOT`;
+            }
+
+            // Update status
+            const nftStatus = document.getElementById('nft-status');
+            if (nftStatus) {
+                if (nft.isForSale) {
+                    nftStatus.textContent = 'Available for Sale';
+                    nftStatus.className = 'nft-status status-available';
+                } else if (nft.isTradable) {
+                    nftStatus.textContent = 'Available for Trade';
+                    nftStatus.className = 'nft-status status-trading';
+                } else {
+                    nftStatus.textContent = 'Not Available';
+                    nftStatus.className = 'nft-status status-sold';
+                }
+            }
+
+            // Update details
+            const nftOwner = document.getElementById('nft-owner');
+            if (nftOwner) {
+                nftOwner.textContent = nft.owner?.username || 'Unknown';
+            }
+
+            const nftCreator = document.getElementById('nft-creator');
+            if (nftCreator) {
+                nftCreator.textContent = nft.creator?.username || 'Unknown';
+            }
+
+            const nftCollection = document.getElementById('nft-collection');
+            if (nftCollection) {
+                nftCollection.textContent = nft.collection || 'Unknown';
+            }
+
+            const nftBlockchain = document.getElementById('nft-blockchain');
+            if (nftBlockchain) {
+                nftBlockchain.textContent = nft.blockchain || 'Polkadot';
+            }
+
+            const nftTxHash = document.getElementById('nft-tx-hash');
+            if (nftTxHash) {
+                nftTxHash.textContent = nft.transactionHash || 'Unknown';
+            }
+
+            const nftCreated = document.getElementById('nft-created');
+            if (nftCreated) {
+                nftCreated.textContent = nft.createdAt ? new Date(nft.createdAt).toLocaleDateString() : 'Unknown';
+            }
+        }
+
+        // Show error state
+        function showError(message) {
+            document.getElementById('loading-state').style.display = 'none';
+            const errorState = document.getElementById('error-state');
+            errorState.style.display = 'block';
+            const errorText = errorState.querySelector('p');
+            if (errorText) {
+                errorText.textContent = message;
+            }
+        }
+
+        // Copy link to clipboard
+        function copyLink() {
+            const link = window.location.href;
+            copyToClipboard(link, 'Link copied to clipboard!');
+        }
+
+        // Copy Discord link to clipboard
+        function copyDiscordLink() {
+            const link = window.location.href;
+            copyToClipboard(link, 'Discord link copied to clipboard!');
+        }
+
+        // Copy text to clipboard
+        function copyToClipboard(text, message) {
+            if (navigator.clipboard && window.isSecureContext) {
+                navigator.clipboard.writeText(text).then(() => {
+                    showToast(message, 'success');
+                }).catch(() => {
+                    fallbackCopyToClipboard(text, message);
+                });
+            } else {
+                fallbackCopyToClipboard(text, message);
+            }
+        }
+
+        // Fallback copy method
+        function fallbackCopyToClipboard(text, message) {
+            const textArea = document.createElement('textarea');
+            textArea.value = text;
+            textArea.style.position = 'fixed';
+            textArea.style.left = '-999999px';
+            textArea.style.top = '-999999px';
+            document.body.appendChild(textArea);
+            textArea.focus();
+            textArea.select();
+            
+            try {
+                document.execCommand('copy');
+                showToast(message, 'success');
+            } catch (err) {
+                showToast('Failed to copy link', 'error');
+            }
+            
+            document.body.removeChild(textArea);
+        }
+
+        // Show toast notification
+        function showToast(message, type = 'success') {
+            const toast = document.getElementById('toast');
+            toast.textContent = message;
+            toast.className = `toast ${type}`;
+            toast.classList.add('show');
+            
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 3000);
+        }
+
+        // Load NFT data when page loads
+        document.addEventListener('DOMContentLoaded', loadNFTData);
+    </script>
+</body>
+</html>
