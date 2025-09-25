@@ -1,0 +1,5 @@
+niftycord-bot/
+node_modules/
+.git/
+.DS_Store
+*.log
