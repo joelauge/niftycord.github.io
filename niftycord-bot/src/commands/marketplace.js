@@ -99,7 +99,7 @@ module.exports = {
                             new ButtonBuilder()
                                 .setLabel('🌐 Web Marketplace')
                                 .setStyle(ButtonStyle.Link)
-                                .setURL('http://localhost:3002/marketplace'),
+                                .setURL('http://localhost:3001/marketplace'),
                             new ButtonBuilder()
                                 .setCustomId('marketplace_help')
                                 .setLabel('❓ Help')
@@ -148,7 +148,7 @@ module.exports = {
                         new ButtonBuilder()
                             .setLabel('🌐 Web Marketplace')
                             .setStyle(ButtonStyle.Link)
-                            .setURL('http://localhost:3002/marketplace'),
+                            .setURL('http://localhost:3001/marketplace'),
                         new ButtonBuilder()
                             .setCustomId('marketplace_refresh')
                             .setLabel('🔄 Refresh')

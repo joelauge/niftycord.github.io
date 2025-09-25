@@ -4,7 +4,7 @@
   "description": "NiftyCord Discord Bot for NFT Trading",
   "main": "src/index.js",
   "scripts": {
-    "start": "node src/index.js",
+    "start": "cd ../api && npm install && PORT=$PORT node railway-start.js",
     "dev": "nodemon src/index.js"
   },
   "keywords": [

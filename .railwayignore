@@ -3,3 +3,7 @@ node_modules/
 .git/
 .DS_Store
 *.log
+assets/
+services/
+*.html
+CNAME
