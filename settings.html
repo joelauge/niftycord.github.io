@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - NiftyCord</title>
+    
+    <style>
+        :root {
+            --primary-color: #00D4AA;
+            --secondary-color: #6366F1;
+            --background-dark: #0F0F23;
+            --background-card: #1A1A2E;
+            --text-primary: #FFFFFF;
+            --text-secondary: #A0A0A0;
+            --border-color: #2D2D44;
+            --success-color: #10B981;
+            --warning-color: #F59E0B;
+            --error-color: #EF4444;
+            --info-color: #3B82F6;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--background-dark);
+            color: var(--text-primary);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .container {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 280px;
+            background: var(--background-card);
+            border-right: 1px solid var(--border-color);
+            padding: 2rem 0;
+            position: fixed;
+            height: 100vh;
+            overflow-y: auto;
+            z-index: 1000;
+        }
+
+        .sidebar-logo {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 0 2rem;
+        }
+
+        .sidebar-logo img {
+            width: 100%;
+            max-width: 200px;
+            height: auto;
+        }
+
+        .sidebar-menu {
+            list-style: none;
+            padding: 0 1rem;
+        }
+
+        .sidebar-menu li {
+            margin-bottom: 0.5rem;
+        }
+
+        .sidebar-menu a {
+            display: flex;
+            align-items: center;
+            padding: 1rem;
+            color: var(--text-secondary);
+            text-decoration: none;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .sidebar-menu a:hover {
+            background: rgba(99, 102, 241, 0.1);
+            color: var(--text-primary);
+        }
+
+        .sidebar-menu a.active {
+            background: var(--secondary-color);
+            color: var(--text-primary);
+        }
+
+        .sidebar-menu i {
+            margin-right: 1rem;
+            width: 20px;
+            text-align: center;
+        }
+
+        /* Main Content */
+        .main-content {
+            flex: 1;
+            margin-left: 280px;
+            padding: 2rem;
+        }
+
+        /* Header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .header-left h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .search-box {
+            position: relative;
+        }
+
+        .search-box input {
+            background: var(--background-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 0.75rem 1rem 0.75rem 2.5rem;
+            color: var(--text-primary);
+            width: 300px;
+            font-size: 0.9rem;
+        }
+
+        .search-box input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+
+        .search-box i {
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-secondary);
+        }
+
+        .currency-selector {
+            background: var(--background-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 0.75rem 1rem;
+            color: var(--text-primary);
+            font-size: 0.9rem;
+            cursor: pointer;
+        }
+
+        .currency-selector:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+
+        /* Settings Content */
+        .settings-content {
+            max-width: 1200px;
+        }
+
+        .settings-header {
+            margin-bottom: 2rem;
+        }
+
+        .settings-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .settings-subtitle {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+        }
+
+        /* Settings Sections */
+        .settings-sections {
+            display: grid;
+            gap: 2rem;
+        }
+
+        .settings-section {
+            background: var(--background-card);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .section-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .section-description {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-top: 0.25rem;
+        }
+
+        /* Settings Groups */
+        .settings-group {
+            margin-bottom: 2rem;
+        }
+
+        .settings-group:last-child {
+            margin-bottom: 0;
+        }
+
+        .group-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+        }
+
+        /* Setting Items */
+        .setting-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem;
+            background: var(--background-dark);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            margin-bottom: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .setting-item:hover {
+            border-color: var(--primary-color);
+            background: rgba(0, 212, 170, 0.05);
+        }
+
+        .setting-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .setting-info {
+            flex: 1;
+        }
+
+        .setting-label {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.25rem;
+        }
+
+        .setting-description {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            line-height: 1.4;
+        }
+
+        .setting-control {
+            margin-left: 1rem;
+        }
+
+        /* Toggle Switch */
+        .toggle-switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 30px;
+        }
+
+        .toggle-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .toggle-slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: var(--border-color);
+            transition: 0.3s;
+            border-radius: 30px;
+        }
+
+        .toggle-slider:before {
+            position: absolute;
+            content: "";
+            height: 22px;
+            width: 22px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: 0.3s;
+            border-radius: 50%;
+        }
+
+        input:checked + .toggle-slider {
+            background-color: var(--primary-color);
+        }
+
+        input:checked + .toggle-slider:before {
+            transform: translateX(30px);
+        }
+
+        /* Select Dropdown */
+        .setting-select {
+            background: var(--background-card);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 0.75rem 1rem;
+            color: var(--text-primary);
+            font-size: 0.9rem;
+            min-width: 150px;
+        }
+
+        .setting-select:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+
+        /* Input Field */
+        .setting-input {
+            background: var(--background-card);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 0.75rem 1rem;
+            color: var(--text-primary);
+            font-size: 0.9rem;
+            min-width: 200px;
+        }
+
+        .setting-input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+
+        /* Admin Badge */
+        .admin-badge {
+            display: inline-flex;
+            align-items: center;
+            background: linear-gradient(135deg, var(--warning-color), #F97316);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-left: 0.5rem;
+        }
+
+        .admin-badge i {
+            margin-right: 0.25rem;
+        }
+
+        /* Save Button */
+        .save-button {
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            padding: 1rem 2rem;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 2rem;
+        }
+
+        .save-button:hover {
+            background: #00B894;
+            transform: translateY(-2px);
+        }
+
+        .save-button:disabled {
+            background: var(--border-color);
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        /* Toast Notifications */
+        .toast {
+            position: fixed;
+            top: 2rem;
+            right: 2rem;
+            background: var(--success-color);
+            color: white;
+            padding: 1rem 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            z-index: 10000;
+            transform: translateX(400px);
+            transition: transform 0.3s ease;
+        }
+
+        .toast.show {
+            transform: translateX(0);
+        }
+
+        .toast.error {
+            background: var(--error-color);
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .sidebar {
+                transform: translateX(-100%);
+                transition: transform 0.3s ease;
+            }
+
+            .sidebar.open {
+                transform: translateX(0);
+            }
+
+            .main-content {
+                margin-left: 0;
+                padding: 1rem;
+            }
+
+            .header {
+                flex-direction: column;
+                gap: 1rem;
+                align-items: stretch;
+            }
+
+            .header-right {
+                justify-content: space-between;
+            }
+
+            .search-box input {
+                width: 100%;
+            }
+
+            .setting-item {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 1rem;
+            }
+
+            .setting-control {
+                margin-left: 0;
+                align-self: flex-end;
+            }
+        }
+
+        /* Loading State */
+        .loading {
+            text-align: center;
+            padding: 4rem 2rem;
+            color: var(--text-secondary);
+        }
+
+        .loading i {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <nav class="sidebar">
+            <div class="sidebar-logo">
+                <img src="assets/images/niftycord_logo_word.png" alt="NiftyCord">
+            </div>
+            <ul class="sidebar-menu">
+                <li><a href="marketplace.html"><i>🏠</i> Marketplace</a></li>
+                <li><a href="#"><i>🎨</i> NFTs</a></li>
+                <li><a href="#" class="active"><i>⚙️</i> Settings</a></li>
+                <li><a href="#"><i>👤</i> Profile</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="header">
+                <div class="header-left">
+                    <h1>Settings</h1>
+                </div>
+                <div class="header-right">
+                    <div class="search-box">
+                        <i>🔍</i>
+                        <input type="text" placeholder="Search settings...">
+                    </div>
+                    <select class="currency-selector">
+                        <option value="DOT/USD">DOT/USD</option>
+                        <option value="DOT/EUR">DOT/EUR</option>
+                        <option value="DOT/BTC">DOT/BTC</option>
+                    </select>
+                </div>
+            </header>
+
+            <!-- Settings Content -->
+            <div class="settings-content">
+                <div class="settings-header">
+                    <h2 class="settings-title">Server Settings</h2>
+                    <p class="settings-subtitle">Configure your preferences and server-level permissions</p>
+                </div>
+
+                <div class="settings-sections">
+                    <!-- User Preferences Section -->
+                    <div class="settings-section">
+                        <div class="section-header">
+                            <div class="section-icon">👤</div>
+                            <div>
+                                <h3 class="section-title">User Preferences</h3>
+                                <p class="section-description">Personalize your NiftyCord experience</p>
+                            </div>
+                        </div>
+
+                        <div class="settings-group">
+                            <h4 class="group-title">Display Preferences</h4>
+                            
+                            <div class="setting-item">
+                                <div class="setting-info">
+                                    <div class="setting-label">Default Currency</div>
+                                    <div class="setting-description">Choose your preferred currency for displaying prices</div>
+                                </div>
+                                <div class="setting-control">
+                                    <select class="setting-select" id="defaultCurrency">
+                                        <option value="DOT">DOT</option>
+                                        <option value="USD">USD</option>
+                                        <option value="EUR">EUR</option>
+                                        <option value="BTC">BTC</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="setting-item">
+                                <div class="setting-info">
+                                    <div class="setting-label">Theme</div>
+                                    <div class="setting-description">Choose your preferred color theme</div>
+                                </div>
+                                <div class="setting-control">
+                                    <select class="setting-select" id="theme">
+                                        <option value="dark">Dark</option>
+                                        <option value="light">Light</option>
+                                        <option value="auto">Auto</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="setting-item">
+                                <div class="setting-info">
+                                    <div class="setting-label">Show Price Changes</div>
+                                    <div class="setting-description">Display 24h price change indicators</div>
+                                </div>
+                                <div class="setting-control">
+                                    <label class="toggle-switch">
+                                        <input type="checkbox" id="showPriceChanges" checked>
+                                        <span class="toggle-slider"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="settings-group">
+                            <h4 class="group-title">Notification Preferences</h4>
+                            
+                            <div class="setting-item">
+                                <div class="setting-info">
+                                    <div class="setting-label">Email Notifications</div>
+                                    <div class="setting-description">Receive email updates about your NFTs and trades</div>
+                                </div>
+                                <div class="setting-control">
+                                    <label class="toggle-switch">
+                                        <input type="checkbox" id="emailNotifications" checked>
+                                        <span class="toggle-slider"></span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="setting-item">
+                                <div class="setting-info">
+                                    <div class="setting-label">Discord Notifications</div>
+                                    <div class="setting-description">Receive notifications in Discord when trades occur</div>
+                                </div>
+                                <div class="setting-control">
+                                    <label class="toggle-switch">
+                                        <input type="checkbox" id="discordNotifications" checked>
+                                        <span class="toggle-slider"></span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="setting-item">
+                                <div class="setting-info">
+                                    <div class="setting-label">Price Alert Threshold</div>
+                                    <div class="setting-description">Get notified when NFT prices change by this percentage</div>
+                                </div>
+                                <div class="setting-control">
+                                    <input type="number" class="setting-input" id="priceAlertThreshold" value="10" min="1" max="100">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Wallet Settings Section -->
+                    <div class="settings-section">
+                        <div class="section-header">
+                            <div class="section-icon">💼</div>
+                            <div>
+                                <h3 class="section-title">Wallet Settings</h3>
+                                <p class="section-description">Manage your wallet connections and preferences</p>
+                            </div>
+                        </div>
+
+                        <div class="settings-group">
+                            <h4 class="group-title">Connected Wallets</h4>
+                            
+                            <div class="setting-item">
+                                <div class="setting-info">
+                                    <div class="setting-label">Polkadot Wallet</div>
+                                    <div class="setting-description">Connect your Polkadot wallet for NFT transactions</div>
+                                </div>
+                                <div class="setting-control">
+                                    <button class="btn btn-primary" onclick="connectWallet('polkadot')">
+                                        <i>🔗</i> Connect
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="setting-item">
+                                <div class="setting-info">
+                                    <div class="setting-label">Auto-approve Transactions</div>
+                                    <div class="setting-description">Automatically approve small transactions under 1 DOT</div>
+                                </div>
+                                <div class="setting-control">
+                                    <label class="toggle-switch">
+                                        <input type="checkbox" id="autoApprove" checked>
+                                        <span class="toggle-slider"></span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="setting-item">
+                                <div class="setting-info">
+                                    <div class="setting-label">Transaction Fee Preference</div>
+                                    <div class="setting-description">Choose your preferred transaction fee speed</div>
+                                </div>
+                                <div class="setting-control">
+                                    <select class="setting-select" id="feePreference">
+                                        <option value="slow">Slow (Lower Fee)</option>
+                                        <option value="normal" selected>Normal</option>
+                                        <option value="fast">Fast (Higher Fee)</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Inventory Settings Section -->
+                    <div class="settings-section">
+                        <div class="section-header">
+                            <div class="section-icon">📦</div>
+                            <div>
+                                <h3 class="section-title">Inventory Settings</h3>
+                                <p class="section-description">Configure how your NFT collection is displayed and managed</p>
+                            </div>
+                        </div>
+
+                        <div class="settings-group">
+                            <h4 class="group-title">Display Options</h4>
+                            
+                            <div class="setting-item">
+                                <div class="setting-info">
+                                    <div class="setting-label">Default Sort Order</div>
+                                    <div class="setting-description">How your NFTs are sorted by default</div>
+                                </div>
+                                <div class="setting-control">
+                                    <select class="setting-select" id="sortOrder">
+                                        <option value="newest">Newest First</option>
+                                        <option value="oldest">Oldest First</option>
+                                        <option value="price-high">Price: High to Low</option>
+                                        <option value="price-low">Price: Low to High</option>
+                                        <option value="name">Name A-Z</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="setting-item">
+                                <div class="setting-info">
+                                    <div class="setting-label">Show Hidden NFTs</div>
+                                    <div class="setting-description">Display NFTs that are marked as hidden</div>
+                                </div>
+                                <div class="setting-control">
+                                    <label class="toggle-switch">
+                                        <input type="checkbox" id="showHidden">
+                                        <span class="toggle-slider"></span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="setting-item">
+                                <div class="setting-info">
+                                    <div class="setting-label">Items Per Page</div>
+                                    <div class="setting-description">Number of NFTs to display per page</div>
+                                </div>
+                                <div class="setting-control">
+                                    <select class="setting-select" id="itemsPerPage">
+                                        <option value="12">12</option>
+                                        <option value="24" selected>24</option>
+                                        <option value="48">48</option>
+                                        <option value="96">96</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Admin Settings Section -->
+                    <div class="settings-section" id="adminSettings" style="display: none;">
+                        <div class="section-header">
+                            <div class="section-icon">👑</div>
+                            <div>
+                                <h3 class="section-title">Server Administration</h3>
+                                <p class="section-description">Manage server-level permissions and settings</p>
+                                <span class="admin-badge">
+                                    <i>🔒</i> Admin Only
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="settings-group">
+                            <h4 class="group-title">User Permissions</h4>
+                            
+                            <div class="setting-item">
+                                <div class="setting-info">
+                                    <div class="setting-label">Allow Users to Mint NFTs</div>
+                                    <div class="setting-description">Enable users to create and mint new NFTs for sale</div>
+                                </div>
+                                <div class="setting-control">
+                                    <label class="toggle-switch">
+                                        <input type="checkbox" id="allowMinting" checked>
+                                        <span class="toggle-slider"></span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="setting-item">
+                                <div class="setting-info">
+                                    <div class="setting-label">Allow Public Trading</div>
+                                    <div class="setting-description">Enable trading between users on this server</div>
+                                </div>
+                                <div class="setting-control">
+                                    <label class="toggle-switch">
+                                        <input type="checkbox" id="allowTrading" checked>
+                                        <span class="toggle-slider"></span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="setting-item">
+                                <div class="setting-info">
+                                    <div class="setting-label">Require Admin Approval for Listings</div>
+                                    <div class="setting-description">All new NFT listings must be approved by an admin</div>
+                                </div>
+                                <div class="setting-control">
+                                    <label class="toggle-switch">
+                                        <input type="checkbox" id="requireApproval">
+                                        <span class="toggle-slider"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="settings-group">
+                            <h4 class="group-title">Server Configuration</h4>
+                            
+                            <div class="setting-item">
+                                <div class="setting-info">
+                                    <div class="setting-label">Maximum NFT Price</div>
+                                    <div class="setting-description">Set the maximum price users can list NFTs for (in DOT)</div>
+                                </div>
+                                <div class="setting-control">
+                                    <input type="number" class="setting-input" id="maxPrice" value="1000" min="1" max="10000">
+                                </div>
+                            </div>
+
+                            <div class="setting-item">
+                                <div class="setting-info">
+                                    <div class="setting-label">Trading Fee Percentage</div>
+                                    <div class="setting-description">Percentage fee charged on successful trades (0-10%)</div>
+                                </div>
+                                <div class="setting-control">
+                                    <input type="number" class="setting-input" id="tradingFee" value="2.5" min="0" max="10" step="0.1">
+                                </div>
+                            </div>
+
+                            <div class="setting-item">
+                                <div class="setting-info">
+                                    <div class="setting-label">Auto-Delete Inactive Listings</div>
+                                    <div class="setting-description">Automatically remove listings that haven't been updated in 30 days</div>
+                                </div>
+                                <div class="setting-control">
+                                    <label class="toggle-switch">
+                                        <input type="checkbox" id="autoDeleteInactive">
+                                        <span class="toggle-slider"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="settings-group">
+                            <h4 class="group-title">Moderation</h4>
+                            
+                            <div class="setting-item">
+                                <div class="setting-info">
+                                    <div class="setting-label">Content Filtering</div>
+                                    <div class="setting-description">Automatically filter inappropriate content in NFT descriptions</div>
+                                </div>
+                                <div class="setting-control">
+                                    <label class="toggle-switch">
+                                        <input type="checkbox" id="contentFiltering" checked>
+                                        <span class="toggle-slider"></span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="setting-item">
+                                <div class="setting-info">
+                                    <div class="setting-label">Report System</div>
+                                    <div class="setting-description">Enable users to report inappropriate NFTs or users</div>
+                                </div>
+                                <div class="setting-control">
+                                    <label class="toggle-switch">
+                                        <input type="checkbox" id="reportSystem" checked>
+                                        <span class="toggle-slider"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Save Button -->
+                <button class="save-button" onclick="saveSettings()">
+                    <i>💾</i> Save Settings
+                </button>
+            </div>
+        </main>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast"></div>
+
+    <script>
+        // Check if user is admin (this would come from your authentication system)
+        const isAdmin = checkAdminStatus();
+        
+        if (isAdmin) {
+            document.getElementById('adminSettings').style.display = 'block';
+        }
+
+        // Load saved settings
+        function loadSettings() {
+            const settings = JSON.parse(localStorage.getItem('niftycordSettings') || '{}');
+            
+            // Load user preferences
+            document.getElementById('defaultCurrency').value = settings.defaultCurrency || 'DOT';
+            document.getElementById('theme').value = settings.theme || 'dark';
+            document.getElementById('showPriceChanges').checked = settings.showPriceChanges !== false;
+            document.getElementById('emailNotifications').checked = settings.emailNotifications !== false;
+            document.getElementById('discordNotifications').checked = settings.discordNotifications !== false;
+            document.getElementById('priceAlertThreshold').value = settings.priceAlertThreshold || 10;
+            
+            // Load wallet settings
+            document.getElementById('autoApprove').checked = settings.autoApprove !== false;
+            document.getElementById('feePreference').value = settings.feePreference || 'normal';
+            
+            // Load inventory settings
+            document.getElementById('sortOrder').value = settings.sortOrder || 'newest';
+            document.getElementById('showHidden').checked = settings.showHidden || false;
+            document.getElementById('itemsPerPage').value = settings.itemsPerPage || 24;
+            
+            // Load admin settings (if admin)
+            if (isAdmin) {
+                document.getElementById('allowMinting').checked = settings.allowMinting !== false;
+                document.getElementById('allowTrading').checked = settings.allowTrading !== false;
+                document.getElementById('requireApproval').checked = settings.requireApproval || false;
+                document.getElementById('maxPrice').value = settings.maxPrice || 1000;
+                document.getElementById('tradingFee').value = settings.tradingFee || 2.5;
+                document.getElementById('autoDeleteInactive').checked = settings.autoDeleteInactive || false;
+                document.getElementById('contentFiltering').checked = settings.contentFiltering !== false;
+                document.getElementById('reportSystem').checked = settings.reportSystem !== false;
+            }
+        }
+
+        // Save settings
+        function saveSettings() {
+            const settings = {
+                // User preferences
+                defaultCurrency: document.getElementById('defaultCurrency').value,
+                theme: document.getElementById('theme').value,
+                showPriceChanges: document.getElementById('showPriceChanges').checked,
+                emailNotifications: document.getElementById('emailNotifications').checked,
+                discordNotifications: document.getElementById('discordNotifications').checked,
+                priceAlertThreshold: parseInt(document.getElementById('priceAlertThreshold').value),
+                
+                // Wallet settings
+                autoApprove: document.getElementById('autoApprove').checked,
+                feePreference: document.getElementById('feePreference').value,
+                
+                // Inventory settings
+                sortOrder: document.getElementById('sortOrder').value,
+                showHidden: document.getElementById('showHidden').checked,
+                itemsPerPage: parseInt(document.getElementById('itemsPerPage').value),
+            };
+
+            // Add admin settings if user is admin
+            if (isAdmin) {
+                settings.allowMinting = document.getElementById('allowMinting').checked;
+                settings.allowTrading = document.getElementById('allowTrading').checked;
+                settings.requireApproval = document.getElementById('requireApproval').checked;
+                settings.maxPrice = parseInt(document.getElementById('maxPrice').value);
+                settings.tradingFee = parseFloat(document.getElementById('tradingFee').value);
+                settings.autoDeleteInactive = document.getElementById('autoDeleteInactive').checked;
+                settings.contentFiltering = document.getElementById('contentFiltering').checked;
+                settings.reportSystem = document.getElementById('reportSystem').checked;
+            }
+
+            // Save to localStorage (in a real app, this would be sent to your API)
+            localStorage.setItem('niftycordSettings', JSON.stringify(settings));
+            
+            showToast('Settings saved successfully!', 'success');
+        }
+
+        // Check admin status (mock function - replace with real authentication)
+        function checkAdminStatus() {
+            // This would typically check with your authentication system
+            // For demo purposes, we'll check if the user has admin role
+            const userRole = localStorage.getItem('userRole') || 'user';
+            return userRole === 'admin';
+        }
+
+        // Connect wallet function
+        function connectWallet(type) {
+            showToast(`Connecting ${type} wallet...`, 'success');
+            // This would integrate with your wallet connection logic
+        }
+
+        // Show toast notification
+        function showToast(message, type = 'success') {
+            const toast = document.getElementById('toast');
+            toast.textContent = message;
+            toast.className = `toast ${type}`;
+            toast.classList.add('show');
+            
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 3000);
+        }
+
+        // Load settings when page loads
+        document.addEventListener('DOMContentLoaded', loadSettings);
+
+        // Add some demo admin functionality
+        function toggleAdminMode() {
+            const currentRole = localStorage.getItem('userRole') || 'user';
+            const newRole = currentRole === 'admin' ? 'user' : 'admin';
+            localStorage.setItem('userRole', newRole);
+            location.reload();
+        }
+
+        // Add admin toggle button for demo purposes
+        document.addEventListener('DOMContentLoaded', function() {
+            const header = document.querySelector('.header-left');
+            const adminToggle = document.createElement('button');
+            adminToggle.textContent = isAdmin ? '👑 Admin Mode' : '👤 User Mode';
+            adminToggle.style.cssText = `
+                background: var(--secondary-color);
+                color: white;
+                border: none;
+                border-radius: 8px;
+                padding: 0.5rem 1rem;
+                font-size: 0.9rem;
+                cursor: pointer;
+                margin-left: 1rem;
+            `;
+            adminToggle.onclick = toggleAdminMode;
+            header.appendChild(adminToggle);
+        });
+    </script>
+</body>
+</html>
